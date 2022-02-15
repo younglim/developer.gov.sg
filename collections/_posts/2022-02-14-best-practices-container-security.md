@@ -24,10 +24,9 @@ They offer a better way to create, package, and use software across different en
 The diagram below provides a general high-level overview of container architecture implementation and several key components: 
 
 
-## THE IMPORTANCE OF CONTAINER SECURITY
+### THE IMPORTANCE OF CONTAINER SECURITY
 Containers have grown popular among developers due to their reusability and agility in deploying services faster. Consequently, attackers have more chances to exploit insecure containers and their architecture. Here are some of the common weaknesses:
 
 
-# BEST PRACTICES FOR MANAGING CONTAINER SECURITY
-
+### BEST PRACTICES FOR MANAGING CONTAINER SECURITY
 When it comes to insecure containers and their architecture, the best security practices should be carried out to prevent, mitigate, and deter threats to the container components. Here are some of the key container components, common attacks and vulnerabilities they are subjected to, and the recommended general best practices to ameliorate the probability of each attack.
