@@ -18,15 +18,19 @@ tags:
 
 They offer a better way to create, package, and use software across different environments efficiently. As such, organisations are veering towards containers-based application and away from traditionally heavy loaded virtual machine workloads in the following cases:
 
-
+![CS_cases](/assets/img/cs_cases.png)
 
 ### TYPICAL HIGH-LEVEL CONTAINERISED SYSTEM ARCHITECTURE
 The diagram below provides a general high-level overview of container architecture implementation and several key components: 
-
+![CS_components](/assets/img/cs_components.png)
 
 ### THE IMPORTANCE OF CONTAINER SECURITY
 Containers have grown popular among developers due to their reusability and agility in deploying services faster. Consequently, attackers have more chances to exploit insecure containers and their architecture. Here are some of the common weaknesses:
-
+![CS_importance](/assets/img/cs_weakness.png)
 
 ### BEST PRACTICES FOR MANAGING CONTAINER SECURITY
 When it comes to insecure containers and their architecture, the best security practices should be carried out to prevent, mitigate, and deter threats to the container components. Here are some of the key container components, common attacks and vulnerabilities they are subjected to, and the recommended general best practices to ameliorate the probability of each attack.
+
+![CS_best_practices](/assets/img/cs_bestpractices.png)
+
+Developers play an important role in not only code security but also in enhancing the security posture of applications by hardening containerised applications with the recommended security practices. More detailed practices and guidance are also available in the application container security guide by the National Institute of Standards and Technology (NIST) (SP 800-190). For a head start in secure container deployments, organisations are recommended to explore Container Stack – the SGTS Runtime product. The platform incorporates IM8 compliance and best practices from NIST.
