@@ -37,3 +37,5 @@ When it comes to insecure containers and their architecture, the best security p
 ![CS_best_practices](/assets/img/cs_bestpractices.png)
 
 Developers play an important role in not only code security but also in enhancing the security posture of applications by hardening containerised applications with the recommended security practices. More detailed practices and guidance are also available in the application container security guide by the National Institute of Standards and Technology (NIST) (SP 800-190). For a head start in secure container deployments, organisations are recommended to explore [Container Stack](https://www.developer.tech.gov.sg/singapore-government-tech-stack/runtime/container-stack) – the SGTS Runtime product. The platform incorporates IM8 compliance and best practices from NIST.
+
+To find out more, contact the team at enquiries_cstack@tech.gov.sg or sign up [here](http://go.gov.sg/cstack-signup). Click [here](https://docs.developer.tech.gov.sg/docs/container-stack-user-guide/#/getting-started/quick-start/) for documented tutorials to get started.
