@@ -21,7 +21,7 @@ They offer a better way to create, package, and use software across different en
 ![CS_cases](/assets/img/cs_cases.png)
 
 ### TYPICAL HIGH-LEVEL CONTAINERISED SYSTEM ARCHITECTURE
-The diagram below provides a general high-level overview of container architecture implementation and several key components: 
+
 ![CS_components](/assets/img/cs_architecture.png)
 
 The key components include:
