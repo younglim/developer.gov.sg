@@ -18,7 +18,7 @@ It is challenging to manage the cybersecurity posture of a cloud-hosted system, 
 
 Effective cybersecurity posture management requires:
 
-- **Suffcient log insights** to accurately detect security events
+- **Sufficient log insights** to accurately detect security events
 - **Proactive remediation** of security issues detected
 
 Manual approaches to log analysis and remediation, however, require significant time and effort, and include the possibility of human error. This article explores how automation can be used to simplify these tasks and help the system achieve a strong cybersecurity posture.
