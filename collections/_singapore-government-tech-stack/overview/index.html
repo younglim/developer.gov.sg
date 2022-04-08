@@ -3,7 +3,7 @@ title: Singapore Government Tech Stack
 redirect_from:
   - /singapore-government-tech-stack/
   - /sgts/
-layout: layout-page-sidenav
+layout: layout-page
 ---
 
 <h2>Introducing Singapore Government Tech Stack</h2>
@@ -146,8 +146,419 @@ layout: layout-page-sidenav
 </p>
 <p>
   Watch Kevin KB Ng, Director of CODEX, present on
-  <a href="https://www.youtube.com/watch?v=Cg6aV1IC1jE&feature=youtu.be">SGTS during STACK 2020.</a>
+  <a href="https://www.youtube.com/watch?v=Cg6aV1IC1jE&feature=youtu.be"
+    >SGTS during STACK 2020.</a
+  >
 </p>
 <p>
-  <i>Get in touch with us at <a href="mailto:ask_codex@tech.gov.sg">ask_codex@tech.gov.sg</a>.</i>
+  <i
+    >Get in touch with us at
+    <a href="mailto:ask_codex@tech.gov.sg">ask_codex@tech.gov.sg</a>.</i
+  >
 </p>
+<!--Anba Start-->
+<h3>Singapore Government Tech Stack (SGTS)</h3>
+<div class="padding--bottom--sm">
+  <section
+    id="service-layer"
+    class="sgds-section "
+    style="background-color: #E2EFF8; border-style: dashed; border-color: #0161AF;"
+  >
+    <div id="service-layer-header" class="sgds-container is-fluid">
+      <div class="row">
+        <div class="col is-8">
+          <h5>Services Layer</h5>
+        </div>
+        <div class="col is-4">
+          <p>
+            Legend: <object data="/assets/icons/oval_green.svg"></object> Live
+            <object data="/assets/icons/oval_orange.svg"></object> Work in
+            progress
+            <object data="/assets/icons/oval_blue.svg"></object> Planned
+          </p>
+        </div>
+      </div>
+      <!-- Start of cards for each service layer-->
+
+      <div class="card-grid-container sg-tech-stack">
+        <div class="sgds-card grid-item">
+          <div class="sgds-card-header">
+            <p class="sgds-card-header-title">Analytics</p>
+          </div>
+          <div class="sgds-card-content">
+            <ul>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sgds-card grid-item">
+          <div class="sgds-card-header">
+            <p class="sgds-card-header-title">Design</p>
+          </div>
+          <div class="sgds-card-content">
+            <ul>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sgds-card grid-item">
+          <div class="sgds-card-header">
+            <p class="sgds-card-header-title">Digital Identity</p>
+          </div>
+          <div class="sgds-card-content">
+            <ul>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sgds-card grid-item">
+          <div class="sgds-card-header">
+            <p class="sgds-card-header-title">IoT</p>
+          </div>
+          <div class="sgds-card-content">
+            <ul>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sgds-card grid-item">
+          <div class="sgds-card-header">
+            <p class="sgds-card-header-title">Data Science</p>
+          </div>
+          <div class="sgds-card-content">
+            <ul>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sgds-card grid-item">
+          <div class="sgds-card-header">
+            <p class="sgds-card-header-title">Data Transfer</p>
+          </div>
+          <div class="sgds-card-content">
+            <ul>
+              <li>Live</li>
+              <li>Work in progress</li>
+              <li>planeed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="padding--top--sm">
+  <!--Base Layer-->
+  <section
+    id="service-layer"
+    class="sgds-section"
+    style="background-color: #E2EFF8; border-style: dashed; border-color: #0161AF;"
+  >
+    <div id="service-layer-header" class="sgds-container is-fluid">
+      <div class="row">
+        <div class="col is-8">
+          <h5>Base Layer</h5>
+        </div>
+        <div class="col is-4">
+          <p>
+            Legend: <object data="/assets/icons/oval_green.svg"></object> Live
+            <object data="/assets/icons/oval_orange.svg"></object> Work in
+            progress
+            <object data="/assets/icons/oval_blue.svg"></object> Planned
+          </p>
+        </div>
+      </div>
+      <!-- Start of cards for each base layer-->
+      <!-- Start of Communtications-->
+      {% for item in site.data.singapore-government-tech-stack %}
+      {% if item.type == "Base Layer" and item.name == "Communications" %}
+          <div class="row">
+            <div class="col">
+              <div class="card-grid-container sg-tech-stack">
+                <div class="sgds-card grid-item">
+                  <div class="sgds-card-header">
+                    <p class="sgds-card-header-title">{{ item.name }}</p>
+                  </div>
+                  <div class="sgds-card-content sgds-card-ul-hz ">
+                    <ul>
+                      {% for services in item.items %}
+                      {% if services != "Overview" %}
+                      <li>{{services}}</li>
+                      {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      {% endif %}
+      {% endfor %}
+      <!-- <div class="row">
+        <div class="col">
+          <div class="card-grid-container sg-tech-stack">
+            <div class="sgds-card grid-item">
+              <div class="sgds-card-header">
+                <p class="sgds-card-header-title">Communications</p>
+              </div>
+              <div class="sgds-card-content sgds-card-ul-hz ">
+                <ul>
+                  <li>APEX on Prem</li>
+                  <li>APEX</li>
+                  <li>APEX Marketplace</li>
+                  <li>ADEX (SDX)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- End of Communtications-->
+      <!-- Start of Between Communications and service managment-->
+      <div class="row">
+      <div class="col">
+      <div class="card-grid-container sg-tech-stack">
+      {% for item in site.data.singapore-government-tech-stack %}
+      {% if item.type == "Base Layer" and item.name != "Communications" and item.name != "Service Management"%}
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">{{item.name}}</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            {% for services in item.items %}
+            {% if services != "Overview" %}
+            <li>{{services}}</li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      </div>
+      </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col">
+          <div class="card-grid-container sg-tech-stack">
+          <div class="sgds-card grid-item">
+            <div class="sgds-card-header">
+              <p class="sgds-card-header-title">Toolchain</p>
+            </div>
+            <div class="sgds-card-content">
+              <ul>
+                <li>Live</li>
+                <li>Work in progress</li>
+                <li>planeed</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sgds-card grid-item">
+            <div class="sgds-card-header">
+              <p class="sgds-card-header-title">Runtime</p>
+            </div>
+            <div class="sgds-card-content">
+              <ul>
+                <li>Live</li>
+                <li>Work in progress</li>
+                <li>planeed</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sgds-card grid-item">
+            <div class="sgds-card-header">
+              <p class="sgds-card-header-title">Monitoring</p>
+            </div>
+            <div class="sgds-card-content">
+              <ul>
+                <li>Live</li>
+                <li>Work in progress</li>
+                <li>planeed</li>
+                <li>Live</li>
+                <li>Work in progress</li>
+                <li>planeed</li>
+                <li>Live</li>
+                <li>Work in progress</li>
+                <li>planeed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div> -->
+      <!-- End of Between Communications and service managment-->
+      <!-- Start of service managment-->
+      <div class="row">
+        <div class="col">
+          <div class="card-grid-container sg-tech-stack">
+          {% for item in site.data.singapore-government-tech-stack %}
+          {% if item.type == "Base Layer" and item.name == "Service Management"%}
+          <div class="sgds-card grid-item">
+            <div class="sgds-card-header">
+              <p class="sgds-card-header-title">{{item.name}}</p>
+            </div>
+            <div class="sgds-card-content sgds-card-ul-hz ">
+              <ul>
+                {% for services in item.items %}
+                {% if services != "Overview" %}
+                <li>{{services}}</li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>      
+      <!-- <div class="row">
+        <div class="col">
+          <div class="card-grid-container sg-tech-stack">
+            <div class="sgds-card grid-item">
+              <div class="sgds-card-header">
+                <p class="sgds-card-header-title">Service Management</p>
+              </div>
+              <div class="sgds-card-content sgds-card-ul-hz ">
+                <ul>
+                  <li>Developer Portal</li>
+                  <li>SEEDD & TechPass</li>
+                  <li>TechBiz</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- End of service managment-->
+
+      <!-- <div class="card-grid-container sg-tech-stack">
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">Analytics</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">Design</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">Digital Identity</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">IoT</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">Data Science</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sgds-card grid-item">
+        <div class="sgds-card-header">
+          <p class="sgds-card-header-title">Data Transfer</p>
+        </div>
+        <div class="sgds-card-content">
+          <ul>
+            <li>Live</li>
+            <li>Work in progress</li>
+            <li>planeed</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    </div>
+  </section>
+</div>
+
+
+
+{%- assign collectionName = page.collection -%} {%- assign url_last = page.id |
+split: "/" | last -%}
+<div class="row sidenav-container">
+  <div class="col is-2 is-hidden-touch sidenav">
+    <aside class="sgds-menu">
+      <ul class="sgds-menu-list">
+        {%- if page.single_level_nav -%} {%- include sidenav-single-level.html
+        -%} {% else %} {%- include sidenav.html -%} {% endif %}
+      </ul>
+    </aside>
+  </div>
+</div>
+
+<div>
+  {% for item in site.data.singapore-government-tech-stack %}
+  {% if item.type == "Base Layer" %}
+      {{ item.name }}
+  {% endif %}
+    <!-- <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+      {{ item.items[1] }}
+    </a> -->
+  {% endfor %}
+</div>
+
+
+<!--Anba End-->
