@@ -11,6 +11,9 @@ redirect_from:
     - /technolgies/analytics/wogaa.html
 sub_collection_render: true
 single_level_nav: true
+sgts_collection_group: [Analytics]
+sgts_layer_group: [Services Layer]
+sgts_title: WOGAA
 description: >
   WOGAA is an analytics & performance platform for public officers to monitor the health of their government websites and optimise the performance of
   their digital services with data.

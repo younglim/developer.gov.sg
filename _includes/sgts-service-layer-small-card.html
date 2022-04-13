@@ -1,0 +1,75 @@
+<div class="sgds-card grid-item">
+    <div class="sgds-card-header">
+      <p class="sgds-card-header-title">{{ include.header }}</p>
+    </div>
+    
+    {% if {{include.cardType}} == "sm" %}
+    <div class="sgds-card-content">     
+    {% elsif {{include.cardType}} == "lg" %}
+    <div class="sgds-card-content sgds-card-ul-hz">
+    {% endif %}
+      <ul>
+        {% for item in site.products  %}
+          {% for categories in item.sgts_collection_group %}
+          {% if categories == \"{{include.header}}\"" %}
+          {% for layer in item.sgts_layer_group %}
+          {% if layer == \"{{include.layer}}\""  %}
+          <a href={{item.redirect_from[0]}}><li class="live">{{item.sgts_title}}</li></a>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+        {% endfor %}
+        <!-- IF SERVICE LAYER-->
+        {% if "Services Layer" == {{include.layer}}  %}
+        <!--Work in Progress-->
+        {% for items in page.sgts_service_layer %}
+        {% for item in items.Work_In_Progress %}
+        {% if item[\"'{{include.header}}\'"] %}
+        {% for list in item[\"'{{include.header}}\'"] %}
+        <li class="wip">{{list}}</li>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        <!--Planned-->
+        {% for items in page.sgts_service_layer %}
+        {% for item in items.Planned %}
+        {% if item[\"'{{include.header}}\'"] %}
+        {% for list in item[\"'{{include.header}}\'"] %}
+        <li class="pending">{{list}}</li>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %} 
+        {% endif %}
+         <!-- END IF SERVICE LAYER--> 
+        
+        <!-- IF SERVICE LAYER-->
+        {% if "Base Layer" == {{include.layer}}  %}
+        <!--Work in Progress-->
+        {% for items in page.sgts_base_layer %}
+        {% for item in items.Work_In_Progress %}
+        {% if item[\"'{{include.header}}\'"] %}
+        {% for list in item[\"'{{include.header}}\'"] %}
+        <li class="wip">{{list}}</li>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        <!--Planned-->
+        {% for items in page.sgts_base_layer %}
+        {% for item in items.Planned %}
+        {% if item[\"'{{include.header}}\'"] %}
+        {% for list in item[\"'{{include.header}}\'"] %}
+        <li class="pending">{{list}}</li>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %} 
+        {% endif %}
+         <!-- END IF SERVICE LAYER--> 
+
+      </ul>
+    </div>
+  </div>

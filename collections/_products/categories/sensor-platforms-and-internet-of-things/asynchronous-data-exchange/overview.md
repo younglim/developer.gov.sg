@@ -11,6 +11,9 @@ redirect_from:
   - /products/categories/sensor-platforms-and-internet-of-things/asynchronous-data-exchange.html
   - /technologies/sensor-platforms-and-internet-of-things/asynchronous-data-exchange/
   - /technologies/sensor-platforms-and-internet-of-things/asynchronous-data-exchange.html
+sgts_collection_group: [Communications]
+sgts_layer_group: [Base Layer]
+sgts_title: ADEX (SDX)
 description: >
   ADEX is a centralised data exchange platform for the whole of government (WOG) that allows for seamless data sharing and event streaming.
 ---

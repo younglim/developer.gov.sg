@@ -10,6 +10,9 @@ redirect_from:
     - /products/categories/digital-identity/singpass.html
     - /technologies/digital-identity/singpass/
     - /technologies/digital-identity/singpass.html
+sgts_collection_group: [Digital Identity]
+sgts_layer_group: [Services Layer]
+sgts_title: Singpass Login
 description: >
   Singpass is the trusted national digital identity platform for users to access and perform transactions with public and private sectors conveniently and securely.
 ---

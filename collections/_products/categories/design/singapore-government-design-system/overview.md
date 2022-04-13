@@ -10,6 +10,9 @@ redirect_from:
     - /products/categories/design/singapore-government-design-system.html
 sub_collection_render: true
 single_level_nav: true
+sgts_collection_group: [Design]
+sgts_layer_group: [Services Layer]
+sgts_title: SG Design System
 description: The Singapore Government Design System (SGDS) aims to  empower agencies to create fast, accessible, and mobile-friendly digital services.
 ---
 

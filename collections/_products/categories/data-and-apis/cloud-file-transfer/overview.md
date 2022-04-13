@@ -12,6 +12,9 @@ redirect_from:
 sub_collection_render: true
 single_level_nav: true
 collection_group: [Singapore Government Tech Stack]
+sgts_collection_group: [Data Transfer]
+sgts_layer_group: [Services Layer]
+sgts_title: Cloud File Transfer
 description: CFT is an API-driven Managed File Transfer service that enables agencies to conduct secure and compliant cross-zone file transfer
 ---
 

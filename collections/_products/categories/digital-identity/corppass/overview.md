@@ -10,6 +10,9 @@ redirect_from:
     - /products/categories/digital-identity/corppass.html
     - /technologies/digital-identity/corppass/
     - /technologies/digital-identity/corppass.html
+sgts_collection_group: [Digital Identity]
+sgts_layer_group: [Services Layer]
+sgts_title: Corppass   
 description: >
   Corppass is a corporate digital identity for businesses and other entities to conduct online transactions with Government agencies.
 ---

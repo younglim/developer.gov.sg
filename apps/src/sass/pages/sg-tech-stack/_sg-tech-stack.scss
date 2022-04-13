@@ -2,7 +2,8 @@ $section-highlights-space: 10%;
 .card-grid-container {
     padding: 0%;
     &.sg-tech-stack {
-        grid-template-columns: repeat(auto-fit, minmax(313px, 1fr));
+        //grid-template-columns: repeat(auto-fit, minmax(313px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-auto-rows: 1fr; //grid-auto-rows: 1fr;
 
         @media screen and (max-width: 1215px) {
@@ -23,24 +24,129 @@ $section-highlights-space: 10%;
         }
         .sgds-card-content{
             ul {
-                margin:auto;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-rows: repeat(4, min-content);
+                grid-auto-flow: column;
+                @include until($tablet) {
+                    display:list-item;
+                    
+                }
             }
             li {
-            margin: 5px 0;
+                padding-left: 35px;
+                margin-bottom: 24px;
+                margin-top: 0;
+                font-size: 16px;
+                line-height: 24px;
+                list-style-type: none;
+                position: relative;
             }
+            li::before {
+                display: inline-flex;
+                width: 4px;
+                height: 4px;
+                margin-right: 15px;
+                margin-left: -29px;
+                border-radius: 375px;
+                content: "";
+                position: absolute;
+                top: 9px;
+              }  
+            // Live svg status for SGTS Legend
+            li.live {
+                display: block;
+                background-image: url(/assets/icons/oval_green.svg);
+                background-repeat: no-repeat; 
+                background-position: left bottom;
+                height: 20px;
+                padding-left: 20px;
+                padding-top: 0px;
+              }
+            //WIP = Work in progress status for SGTS Legend
+            li.wip {
+                display: block;
+                background-image: url(/assets/icons/oval_orange.svg);
+                background-repeat: no-repeat; 
+                background-position: left bottom;
+                height: 20px;
+                padding-left: 20px;
+                padding-top: 0px;
+              }
+            // pending svg status for SGTS Legend
+            li.pending {
+                display: block;
+                background-image: url(/assets/icons/oval_blue.svg);
+                background-repeat: no-repeat; 
+                background-position: left bottom;
+                height: 20px;
+                padding-left: 20px;
+                padding-top: 0px;
+            }  
+            // ul.pending > li:hover:before{
+            //     background-size:100%;
+            // }  
         }
         .sgds-card-ul-hz {
-            ul {
-                list-style-type: none; /*to remove bullets*/
-                text-align: center;
-                //padding: 0px;
-                zoom:1;
-                overflow: hidden;
+            a li {
+                text-decoration:underline;  
             }
+            ul {
+                // list-style-type: none; /*to remove bullets*/
+                // text-align: center;
+                // //padding: 0px;
+                // zoom:1;
+                // overflow: hidden;
+                text-align: justify;
+                list-style-type:none;
+                padding:0;
+                display: block !important;;
+                grid-template-rows: none!important;
+                //background:yellow;
+            }
+            ul:after {
+                content:'';
+                display: inline-block;
+                width: 100%;
+            }
+            
             li {
-                padding: 2px;
-                width: 150px;
-                display:inline-block;
+                // padding: 2px !important;
+                // width: 150px !important;
+                // display:inline-block !important;
+                display: inline-block!important;
+                //padding:0 30px!important;
+                text-align:center!important;
+            }
+            li.live {
+                background-image: url(/assets/icons/oval_green.svg);
+                background-repeat: no-repeat; 
+                background-position: left bottom;
+                height: 20px;
+                padding-left: 20px;
+                padding-top: 0px;
+              }
+            //WIP = Work in progress status for SGTS Legend
+            li.wip {
+                display: block;
+                background-image: url(/assets/icons/oval_orange.svg);
+                background-repeat: no-repeat; 
+                background-position: left bottom;
+                height: 20px;
+                padding-left: 20px;
+                padding-top: 0px;
+              }
+            // pending svg status for SGTS Legend
+            li.pending {
+                display: block;
+                background-image: url(/assets/icons/oval_blue.svg);
+                background-repeat: no-repeat; 
+                background-position: left bottom;
+                height: 20px;
+                padding-left: 20px;
+                padding-top: 0px;
             }
         //    li {
         //         display: inline-block !important;
@@ -52,7 +158,7 @@ $section-highlights-space: 10%;
             border-top: none;
         }
         .sgds-card {
-            margin-top: calc(#{$section-highlights-space} / 2);
+            //margin-top: calc(#{$section-highlights-space} / 2);
             height: calc(100% - (#{$section-highlights-space} / 2));
     
             @include until($tablet) {
@@ -161,4 +267,21 @@ article {
     img {
         margin: 0;
     }
+}
+
+.service-layer {
+    background-color: #E2EFF8; 
+    border: 3px dashed #0161AF;
+    border-radius: 4px;
+}
+.base-layer {
+    background-color: #E2EFF8; 
+    border: 3px dashed #0161AF;
+    border-radius: 4px; 
+    border-bottom: none;
+}
+.hosting-layer {
+    background-color: #E4E7EC; 
+    border: 3px dashed #98A2B3;
+    border-radius: 4px;
 }

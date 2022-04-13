@@ -6,6 +6,9 @@ sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
 collection_group: [Singapore Government Tech Stack]
+sgts_collection_group: [Toolchain]
+sgts_layer_group: [Base Layer]
+sgts_title: SHIP-HATS
 redirect_from:
     - /singapore-government-tech-stack/toolchain/ship-hats/
     - /products/categories/devops/ship/
