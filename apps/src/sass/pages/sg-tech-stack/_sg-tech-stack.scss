@@ -20,7 +20,10 @@ $section-highlights-space: 10%;
         }
         .sgds-card-header-title{
             justify-content: space-around;
-            color: black;            
+            color: black;   
+            @include until($tablet) {
+                justify-content: left;
+            }         
         }
         .sgds-card-content{
             ul {
