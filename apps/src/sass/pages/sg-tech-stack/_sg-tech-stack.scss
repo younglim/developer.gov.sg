@@ -160,12 +160,27 @@ $section-highlights-space: 10%;
   }
 }
 
+// Legend styling
+@mixin sgts-legend {
+  .legend{
+  display: flex !important;
+  justify-content: space-around;
+
+  @include until($tablet) {
+  display: flex !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+  }
+  
+}
+
 @mixin sgts-layer-mixin($borderColor, $background-color) {
   @include until($tablet) {
     .sgds-container.is-fluid {
       padding-left: 0 !important;
       padding-right: 0 !important;
-    }
+    } 
   }
   background-color: $background-color;
   border: 3px dashed $borderColor;
@@ -173,10 +188,12 @@ $section-highlights-space: 10%;
 }
 
 .service-layer {
+  @include sgts-legend(); 
   @include sgts-layer-mixin(#0161af, #e2eff8);
 }
 
 .base-layer {
+  @include sgts-legend(); 
   @include sgts-layer-mixin(#0161af, #e2eff8);
   border-bottom: none;
 }
