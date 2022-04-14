@@ -3,6 +3,7 @@ title: The UX Journey of CPF Digital Service
 layout: layout-page-sidenav
 category: STACK 2020
 description: Leading the growth of CPFB with digitalisation.
+date: 2020-12-01
 ---
 
 ### Overview

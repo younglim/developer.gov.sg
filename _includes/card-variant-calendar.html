@@ -1,0 +1,62 @@
+<div>
+    <div class="sgds-card sgds-card-variant-video-info">
+        <div class="is-hidden-desktop">
+            <div class="has-text-centered"
+                style="background-color: {{include.colorTheme}}; padding-top: .5rem; padding-bottom: .5rem;">
+                <p class="has-text-weight-bold has-text-white">{{include.status}}</p>
+            </div>
+        </div>
+        <div class="sgds-card-content">
+            <div class="content-grid">
+                <!-- Left hand side -->
+                <div class="sgds-card-image is-hidden-mobile is-hidden-tablet-only">
+                    <div style="border-radius: 0.75rem; margin-right: 1rem; ">
+                        <div class="has-text-centered" style="width: 6.65rem;">
+                            <!-- header -->
+                            <div
+                                style="background-color: {{include.colorTheme}}; border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;">
+                                <p class="has-text-weight-bold has-text-white">{{include.status}}</p>
+                            </div>
+                            <!-- body -->
+                            <div
+                                style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                                <div>
+                                    <p class="has-text-centered is-size-3 has-text-weight-bold">
+                                        {{include.dayDate}}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        {{include.dayMonth}}' {{include.dayYear}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right hand side -->
+                <div>
+                    {% include card-header-info.html disableItemCount=include.disableItemCount name=include.name item_count=include.item_count url_str=include.url_str%}
+                    <div>
+                        <div class="is-hidden-desktop is-flex">
+                            <img src="../assets/icons/sgds-icon-calendar.svg" alt="calendar icon" />
+                            <p style="margin-left: .5rem; color: #767676;">
+                                {{include.dayDate}} {{include.dayMonth}} {{include.dayYear}}
+                            </p>
+                        </div>
+                        {% if include.eventCategory %}
+                        <div class="is-flex" style="align-items: center;">
+                            <img src="../assets/icons/{{include.eventCategory}}.svg"
+                                alt="{{include.eventCategory}} icon" />
+                            <p style="margin-left: .5rem; color: #767676;">
+                                {{include.eventCategory}}
+                            </p>
+                        </div>
+                        {% endif %}
+                        <p>{{ include.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

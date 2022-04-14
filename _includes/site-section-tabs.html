@@ -1,0 +1,75 @@
+<div>
+    <!-- Notes for tmr meeting: not sure if I have to make this into a reusable component-->
+    {% assign newsletterIncrementer = 0 %}
+    {% assign description_image = include.description_image %}
+    {% if description_image != blank %}
+    {% assign description_image = "/assets/icons/" | append: description_image%}
+    {% endif %}
+
+    <div class="sgds-tabs">
+        <ul class="no-margin" role="tablist">
+            <li class="is-active">
+                <a data-tab="#tab1" role="tab" aria-selected="true" aria-controls="tab1">
+                    Newsletter
+                </a>
+            </li>
+            <li>
+                <a data-tab="#tab2" role="tab" aria-selected="false" aria-controls="tab2">
+                    Developer Blogs
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="row" id="tab1">
+        {% if site.posts %}
+        <div class="card-grid-container is-fullwidth">
+            <p>Want to receive our newsletter via email? Subscribe <a>here</a>.</p>
+            {% for post in site.posts %}
+            {% assign contentDescription = post.date | date_to_string %}
+            {% assign url_str = post.url %}
+
+            {% if 3 > newsletterIncrementer %}
+            <div id="newsletter-visible-content">
+                {% include card-variant-basic.html disableItemCount=include.disableItemCount parentCardStyle=parentCardStyle img_src=img_src name=post.title description=contentDescription item_count=item_count url_str=url_str description_image=description_image%}
+            </div>
+            {% else %}
+            <div id="newsletter-hidden-content">
+                {% include card-variant-basic.html disableItemCount=include.disableItemCount parentCardStyle=parentCardStyle img_src=img_src name=post.title description=contentDescription item_count=item_count url_str=url_str description_image=description_image %}
+            </div>
+            {% endif %}
+            {% assign newsletterIncrementer = newsletterIncrementer | plus: 1 %}
+            {% endfor %}
+
+            <button class="sgds-button is-outlined is-primary" id="newsletter-display-more"
+                onclick="viewMoreNewsLetters()">
+                View all newsletters
+            </button>
+        </div>
+        {% else %}
+        <h5>No newsletters yet.</h5>
+        {% endif %}
+    </div>
+    <div class="row" id="tab2">
+        <h5>This is the news Section</h5>
+    </div>
+</div>
+
+
+<script>
+    // Hides the content at the start initially during the creation phase using IIFEs
+    (() => {
+        const nodes = document.querySelectorAll('*[id^="newsletter-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "none";
+        }
+    })();
+
+    function viewMoreNewsLetters() {
+        const nodes = document.querySelectorAll('*[id^="newsletter-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "block";
+        }
+
+        document.getElementById("newsletter-display-more").innerHTML = "Show less";
+    }
+</script>

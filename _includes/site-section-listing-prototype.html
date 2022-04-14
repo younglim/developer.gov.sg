@@ -1,0 +1,112 @@
+<div class="card-grid-container is-fullwidth">
+    {% assign eventIncrementer = 0 %}
+    {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/events' or item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
+
+    {% for sub_section in collectionDumps %}
+        {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
+            {% assign name = sub_section.title %}
+            {% assign sub_section_slug = sub_section.name | slugify %}
+            {% assign item_count = sub_section.items | size | minus: 1 %}
+            {% assign url_str = sub_section.url | append : sub_section_slug  %}
+
+            {% if sub_section.date == blank %}
+                {% assign dayDate = sub_section.last_modified_at | date: "%d" %}
+                {% assign dayYear = sub_section.last_modified_at | date: "%y" %}
+                {% assign dayMonth = sub_section.last_modified_at | date: "%b" %}
+            {% else %}
+                {% assign dayDate = sub_section.date | date: "%d" %}
+                {% assign dayYear = sub_section.date | date: "%y" %}
+                {% assign dayMonth = sub_section.date | date: "%b" %}
+            {% endif%}
+
+            {% if sub_section.url contains '/events'%}
+                {% assign categoryTagging = "Conference" %}
+            {% else %}
+                {% assign categoryTagging = "STACK-X Meetup" %}
+            {% endif %}
+
+            {%- comment-%}
+            Variables to check the status of an event
+            {%- endcomment -%}
+            {% assign currentTime = 'now'| date: '%s' %}
+            {% assign eventTime = sub_section.date | date: '%s' %}
+            {% assign temporaryCurrentTime = 'now'| date: '%B %d, %Y' %}
+            {% assign temporaryEventTime = sub_section.date | date: '%B %d, %Y' %}
+
+            {% if temporaryCurrentTime == temporaryEventTime %}
+                {% assign status = 'NOW' %}
+                {% assign colorTheme = "#D0021B" %}
+            {% elsif currentTime | date: '%s' > sub_section.date | date: '%s' %}
+                {% assign status = 'PAST' %}
+                {% assign colorTheme = "#323232" %}
+            {% else %}
+                {% assign status = 'UPCOMING' %}
+                {% assign colorTheme = "#0161AF" %}
+            {% endif %}
+
+            {%- comment-%}
+            checks for the type of events
+            {%- endcomment -%}
+            {% if 2 > eventIncrementer %}
+            <div id="event-visible-content">
+                {% include card-variant-calendar.html 
+                        disableItemCount=include.disableItemCount
+                        name=name
+                        description=sub_section.description
+                        item_count=item_count
+                        url_str=url_str
+                        dayDate=dayDate
+                        dayYear=dayYear
+                        dayMonth=dayMonth
+                        status=status
+                        colorTheme=colorTheme
+                        eventCategory=categoryTagging
+                    %}
+            </div>
+            {% else %}
+            <div id="event-hidden-content">
+                {% include card-variant-calendar.html 
+                    id="event-hidden-content" 
+                    disableItemCount=include.disableItemCount 
+                    name=name 
+                    description=sub_section.description
+                    item_count=item_count 
+                    url_str=url_str 
+                    dayDate=dayDate 
+                    dayYear=dayYear 
+                    dayMonth=dayMonth 
+                    status=status 
+                    colorTheme=colorTheme 
+                    eventCategory=categoryTagging
+                    %}
+            </div>
+            {% endif %}
+            {% assign eventIncrementer = eventIncrementer | plus: 1 %}
+        {% endunless %}
+    {% endfor %}
+    <button id="show-more-events" class="sgds-button sgds-button--primary" onclick="showMoreInformation()">
+        View all events
+    </button>
+</div>
+
+<script>
+    // Hides the content at the start initially during the creation phase using IIFEs
+    (() => {
+        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = 'none';
+        }
+    })();
+
+    function showMoreInformation() {
+        // changes the visibility of the content
+        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = 'block';
+        }
+
+        // changes the visibility of the button to none
+        document.getElementById('show-more-events').style.display = 'none';
+        // Otherwise change the text of the button to show less
+    }
+</script>
