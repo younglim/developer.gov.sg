@@ -7,6 +7,15 @@ description: Explore multiple events organised by GovTech for individuals involv
   other and share their experiences as well as opportunities for collaboration.
 redirect_from:
   - /communities/events/
+event_types:
+  - name: Conferences
+    description: Explore upcoming conferences for developers and technologists to learn from each other and share their experiences as well as opportunities for collaboration.
+
+  - name: STACK-X Meetups
+    description: The STACK-X Meetups community warmly welcomes anyone who is passionate about using technology to improve the lives of Singaporeans.
+
+  - name: Hackathons
+    description: Competitions that aim to engage the tech community and is open to everyone, except for employees of GovTech or officers that are seconded to GovTech.
 ---
 
 <h2>Events</h2>
@@ -18,64 +27,23 @@ redirect_from:
 
 <hr />
 
-<div class="row is-multiline">
-  <div class="col is-6 is-flex">
-    <div class="sgds-card">
-      <div class="sgds-card-content">
-        <h3>STACK-X Cloud 2021</h3>
-        <p>
-          Join this virtual conference to learn how the Singapore Government is accelerating digital transformation by
-          unlocking the power of Government on Commercial Cloud (GCC).
-        </p>
-      </div>
-      <div class="sgds-card-footer">
-        <a href="stack-x-cloud-2021" class="sgds-card-footer-item">Read more</a>
-      </div>
-    </div>
-  </div>
+<div>
+  <div class="card-grid-container grid-25rem">
+    {% for sub_section in page.event_types %}
 
-  <div class="col is-6 is-flex">
-    <div class="sgds-card">
-      <div class="sgds-card-content">
-        <h3>STACK-X CI/CD 2021 with SHIP-HATS</h3>
-        <p>
-          Join us on a virtual conference to learn about the Singapore Government's vision, approach and programmes to
-          help Government agencies to accelerate their modernisation plans with CI/CD.
-        </p>
-      </div>
-      <div class="sgds-card-footer">
-        <a href="stack-x-ci-cd-2021" class="sgds-card-footer-item">Read more</a>
-      </div>
-    </div>
-  </div>
+    {% assign name = sub_section.name%}
+    {% assign description = sub_section.description%}
+    {% assign img_src = '/assets/icons/' | append: sub_section.name | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
 
-  <div class="col is-6 is-flex">
-    <div class="sgds-card">
+    <div class="sgds-card {{include.parentCardStyle}}">
       <div class="sgds-card-content">
-        <h3>STACK 2020</h3>
-        <p>
-          STACK is GovTech’s flagship conference and the largest Government-led
-          developers event in Singapore that connects the Government, industry and
-          the tech community.
-        </p>
-      </div>
-      <div class="sgds-card-footer">
-        <a href="stack-2020" class="sgds-card-footer-item">Read more</a>
+        <img src="{{img_src}}" alt="" style="margin: 0;"/>
+        {% include card-header-info.html disableItemCount=disableItemCount name=name item_count=item_count url_str=url_str%}
+        <div>
+          <p>{{ description }}</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col is-6 is-flex">
-    <div class="sgds-card">
-      <div class="sgds-card-content">
-        <h3>STACK the Flags 2020</h3>
-        <p>
-          STACK the Flags is a Cybersecurity Capture-the-Flag (CTF) competition
-          organised by GovTech's Cyber Security Group.
-        </p>
-      </div>
-      <div class="sgds-card-footer">
-        <a href="stack-the-flags-2020" class="sgds-card-footer-item">Read more</a>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>

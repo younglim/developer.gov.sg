@@ -5,25 +5,24 @@
     {% for sub_section in collectionDumps %}
         {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
             {% assign name = sub_section.title %}
+            {% assign description = sub_section.description%}
             {% assign sub_section_slug = sub_section.name | slugify %}
             {% assign item_count = sub_section.items | size | minus: 1 %}
             {% assign url_str = sub_section.url | append : sub_section_slug  %}
 
             {% if sub_section.date == blank %}
-                {% assign dayDate = sub_section.last_modified_at | date: "%d" %}
-                {% assign dayYear = sub_section.last_modified_at | date: "%y" %}
-                {% assign dayMonth = sub_section.last_modified_at | date: "%b" %}
+                {% assign eventDateAndTiming = sub_section.last_modified_at %}
             {% else %}
-                {% assign dayDate = sub_section.date | date: "%d" %}
-                {% assign dayYear = sub_section.date | date: "%y" %}
-                {% assign dayMonth = sub_section.date | date: "%b" %}
+                {% assign eventDateAndTiming = sub_section.date %}
             {% endif%}
 
             {% if sub_section.url contains '/events'%}
-                {% assign categoryTagging = "Conference" %}
+                {% assign categoryTagging = "Conferences" %}
             {% else %}
-                {% assign categoryTagging = "STACK-X Meetup" %}
+                {% assign categoryTagging = "STACK-X Meetups" %}
             {% endif %}
+
+            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
 
             {%- comment-%}
             Variables to check the status of an event
@@ -50,35 +49,34 @@
             {% if 2 > eventIncrementer %}
             <div id="event-visible-content">
                 {% include card-variant-calendar.html 
-                        disableItemCount=include.disableItemCount
-                        name=name
-                        description=sub_section.description
-                        item_count=item_count
-                        url_str=url_str
-                        dayDate=dayDate
-                        dayYear=dayYear
-                        dayMonth=dayMonth
-                        status=status
-                        colorTheme=colorTheme
-                        eventCategory=categoryTagging
-                    %}
+                    id="event-visible-content"
+                    name=name
+                    item_count=item_count
+                    description=description
+                    status=status
+                    img_src=img_src
+                    url_str=url_str
+                    colorTheme=colorTheme
+                    eventCategory=categoryTagging
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
             </div>
             {% else %}
             <div id="event-hidden-content">
-                {% include card-variant-calendar.html 
-                    id="event-hidden-content" 
-                    disableItemCount=include.disableItemCount 
-                    name=name 
-                    description=sub_section.description
-                    item_count=item_count 
-                    url_str=url_str 
-                    dayDate=dayDate 
-                    dayYear=dayYear 
-                    dayMonth=dayMonth 
-                    status=status 
-                    colorTheme=colorTheme 
+                {% include card-variant-calendar.html
+                    id="event-hidden-content"
+                    name=name
+                    item_count=item_count
+                    description=description
+                    status=status
+                    img_src=img_src
+                    url_str=url_str
+                    colorTheme=colorTheme
                     eventCategory=categoryTagging
-                    %}
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
             </div>
             {% endif %}
             {% assign eventIncrementer = eventIncrementer | plus: 1 %}

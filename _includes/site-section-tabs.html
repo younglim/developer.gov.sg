@@ -23,18 +23,34 @@
     <div class="row" id="tab1">
         {% if site.posts %}
         <div class="card-grid-container is-fullwidth">
-            <p>Want to receive our newsletter via email? Subscribe <a>here</a>.</p>
+            <p>Want to receive our newsletter via email? Subscribe <a href="">here</a>.</p>
             {% for post in site.posts %}
             {% assign contentDescription = post.date | date_to_string %}
             {% assign url_str = post.url %}
 
             {% if 3 > newsletterIncrementer %}
             <div id="newsletter-visible-content">
-                {% include card-variant-basic.html disableItemCount=include.disableItemCount parentCardStyle=parentCardStyle img_src=img_src name=post.title description=contentDescription item_count=item_count url_str=url_str description_image=description_image%}
+                {% include card-variant-basic.html 
+                    name=post.title
+                    url_str=url_str
+                    description=contentDescription
+                    description_image=description_image
+                    item_count=item_count
+                    parentCardStyle=parentCardStyle
+                    disableItemCount=include.disableItemCount
+                %}
             </div>
             {% else %}
             <div id="newsletter-hidden-content">
-                {% include card-variant-basic.html disableItemCount=include.disableItemCount parentCardStyle=parentCardStyle img_src=img_src name=post.title description=contentDescription item_count=item_count url_str=url_str description_image=description_image %}
+                {% include card-variant-basic.html 
+                    name=post.title
+                    url_str=url_str
+                    description=contentDescription
+                    description_image=description_image
+                    item_count=item_count
+                    parentCardStyle=parentCardStyle
+                    disableItemCount=include.disableItemCount
+                %}
             </div>
             {% endif %}
             {% assign newsletterIncrementer = newsletterIncrementer | plus: 1 %}
