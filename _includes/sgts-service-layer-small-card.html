@@ -1,6 +1,6 @@
 <div class="sgds-card grid-item">
     <div class="sgds-card-header">
-      <p class="sgds-card-header-title">{{ include.header }}</p>
+     <h4 class="sgds-card-header-title">{{include.header}}</h4>
     </div>
     
     {% if {{include.cardType}} == "sm" %}
@@ -14,7 +14,7 @@
           {% if categories == \"{{include.header}}\"" %}
           {% for layer in item.sgts_layer_group %}
           {% if layer == \"{{include.layer}}\""  %}
-          <a href={{item.redirect_from[0]}}><li class="live">{{item.sgts_title}}</li></a>
+          <a href={{item.redirect_from[0]}} target="_blank"><li class="live">{{item.sgts_title}}</li></a>
           {% endif %}
           {% endfor %}
           {% endif %}
