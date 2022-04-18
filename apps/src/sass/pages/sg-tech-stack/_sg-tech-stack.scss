@@ -55,10 +55,6 @@ $section-highlights-space: 10%;
         @include until($tablet) {
           display: list-item;
         }
-
-        a {
-          height: 36px;
-        }
       }
 
       li {
