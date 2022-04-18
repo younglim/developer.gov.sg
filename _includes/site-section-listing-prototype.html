@@ -2,7 +2,7 @@
     {% assign eventIncrementer = 0 %}
     {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/events' or item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
 
-    {% for sub_section in collectionDumps %}
+    {% for sub_section in collectionDumps%}
         {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
             {% assign name = sub_section.title %}
             {% assign description = sub_section.description%}
@@ -35,7 +35,7 @@
             {% if temporaryCurrentTime == temporaryEventTime %}
                 {% assign status = 'NOW' %}
                 {% assign colorTheme = "#D0021B" %}
-            {% elsif currentTime | date: '%s' > sub_section.date | date: '%s' %}
+            {% elsif currentTime > eventTime %}
                 {% assign status = 'PAST' %}
                 {% assign colorTheme = "#323232" %}
             {% else %}
@@ -76,33 +76,27 @@
                     eventCategory=categoryTagging
                     eventDateAndTiming=eventDateAndTiming
                     disableItemCount=include.disableItemCount
-                %}
+                    %}
             </div>
             {% endif %}
             {% assign eventIncrementer = eventIncrementer | plus: 1 %}
         {% endunless %}
     {% endfor %}
-    <button id="show-more-events" class="sgds-button sgds-button--primary" onclick="showMoreInformation()">
+    <a id="show-more-events" class="sgds-button sgds-button--primary" href="/communities/all-communities/overview">
         View all events
-    </button>
+    </a>
 </div>
 
 <script>
+    (()=>{
+        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "none";
+        }
+    })()
+
     // Hides the content at the start initially during the creation phase using IIFEs
-    (() => {
-        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = 'none';
-        }
-    })();
-
-    function showMoreInformation() {
-        // changes the visibility of the content
-        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = 'block';
-        }
-
+    function redirectUser() {
         // changes the visibility of the button to none
         document.getElementById('show-more-events').style.display = 'none';
         // Otherwise change the text of the button to show less

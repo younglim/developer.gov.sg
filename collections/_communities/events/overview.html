@@ -25,6 +25,11 @@ event_types:
   suited for individuals of all ages!
 </p>
 
+<a href="/communities/events/all-events/" class="sgds-link-icon" style="text-decoration: none;">
+  <i class="sgds-icon sgds-icon-list" aria-hidden="true"></i>
+  View all events
+</a>
+
 <hr />
 
 <div>
@@ -33,14 +38,21 @@ event_types:
 
     {% assign name = sub_section.name%}
     {% assign description = sub_section.description%}
+    {% assign sub_section_slug = sub_section.name | slugify %}
+    {% assign url_str = sub_section.url | append : sub_section_slug  %}
     {% assign img_src = '/assets/icons/' | append: sub_section.name | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
 
     <div class="sgds-card {{include.parentCardStyle}}">
       <div class="sgds-card-content">
-        <img src="{{img_src}}" alt="" style="margin: 0;"/>
-        {% include card-header-info.html disableItemCount=disableItemCount name=name item_count=item_count url_str=url_str%}
+        <img src="{{img_src}}" alt="" style="margin: 0;" />
+        {% include card-header-info.html 
+          name=name 
+          url_str=url_str
+          item_count=item_count 
+          disableItemCount=disableItemCount 
+        %}
         <div>
-          <p>{{ description }}</p>
+          <p>{{description}}</p>
         </div>
       </div>
     </div>

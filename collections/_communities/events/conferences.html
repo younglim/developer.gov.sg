@@ -1,0 +1,212 @@
+---
+title: Conferences
+layout: layout-page-sidenav
+description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF) competition that is open to everyone.
+    Find out more here.
+---
+
+<div class="spacing-container-vertical">
+    <!-- Header -->
+    <div>
+        <h2>Overview for Conferences</h2>
+        <p>
+            Join the tech community in a variety of events aimed at building stronger community connections,
+            peer-to-peer
+            learning, sharing of thought leadership from industry experts and the provision of industry updates. Our
+            events
+            are
+            suited for individuals of all ages!
+        </p>
+        <hr />
+    </div>
+
+    <!-- Upcoming Conferences -->
+    <div>
+        <h3>All Upcoming Conferences</h3>
+        <div class="card-grid-container is-fullwidth">
+            {% assign eventIncrementer = 0 %}
+            {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/events'" | sort: 'date' | reverse %}
+
+            {% for sub_section in collectionDumps%}
+                {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars' or sub_section.title contains 'All Events'%}
+                    {% assign currentTimeInSeconds = 'now'| date: '%s' %}
+                    {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
+                    {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
+                    {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
+
+                    {% if eventTimeInSeconds > currentTimeInSeconds or eventTimeFormatted == currentTimeFormatted %}
+                        {% if currentTimeFormatted == eventTimeFormatted %}
+                            {% assign status = 'NOW' %}
+                            {% assign colorTheme = "#D0021B" %}
+                        {% else %}
+                            {% assign status = 'UPCOMING' %}
+                            {% assign colorTheme = "#0161AF" %}
+                        {% endif %}
+
+                        {% assign name = sub_section.title %}
+                        {% assign categoryTagging = "Conferences" %}
+                        {% assign description = sub_section.description%}
+                        {% assign sub_section_slug = sub_section.name | slugify %}
+                        {% assign item_count = sub_section.items | size | minus: 1 %}
+                        {% assign url_str = sub_section.url | append : sub_section_slug %}
+                        {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+
+                        {% if sub_section.date == blank %}
+                            {% assign eventDateAndTiming = sub_section.last_modified_at %}
+                        {% else %}
+                            {% assign eventDateAndTiming = sub_section.date %}
+                        {% endif%}
+
+                        {% if 2 > eventIncrementer %}
+                            <div id="upcoming-conferences-visible-content">
+                                {% include card-variant-calendar.html 
+                                    name=name
+                                    item_count=item_count
+                                    description=description
+                                    status=status
+                                    img_src=img_src
+                                    url_str=url_str
+                                    colorTheme=colorTheme
+                                    eventCategory=categoryTagging
+                                    eventDateAndTiming=eventDateAndTiming
+                                    disableItemCount=include.disableItemCount
+                                %}
+                            </div>
+                        {% else %}
+                            <div id="upcoming-conferences-hidden-content">
+                                {% include card-variant-calendar.html
+                                    name=name
+                                    item_count=item_count
+                                    description=description
+                                    status=status
+                                    img_src=img_src
+                                    url_str=url_str
+                                    colorTheme=colorTheme
+                                    eventCategory=categoryTagging
+                                    eventDateAndTiming=eventDateAndTiming
+                                    disableItemCount=include.disableItemCount
+                                %}
+                            </div>
+                        {% endif %}
+
+                        {% assign eventIncrementer = eventIncrementer | plus: 1 %}
+                    {% endif %}
+                {% endunless %}
+            {% endfor %}
+            <button id="upcoming-conferences-button" class="sgds-button sgds-button--primary" onclick="toggleUpcomingConferencesVisibility()">
+                View all events
+            </button>
+        </div>
+    </div>
+
+    <!-- Past Conferences -->
+    <div>
+        <h3>Recent Past Conferences</h3>
+        <div class="card-grid-container is-fullwidth">
+            <!-- Subcollection gatherer -->
+            {% assign eventIncrementer = 0 %}
+            {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/events'" | sort: 'date' | reverse %}
+
+            {% for sub_section in collectionDumps%}
+                {%- comment-%}
+                filter to remove unnecessary pages etc, feel free to add 
+                {%- endcomment -%}
+                {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
+                    {% assign currentTimeInSeconds = 'now'| date: '%s' %}
+                    {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
+                    {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
+                    {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
+
+                    {% if currentTimeInSeconds > eventTimeInSeconds and currentTimeFormatted != eventTimeFormatted %}
+                        {% assign status = 'PAST' %}
+                        {% assign colorTheme = "#323232" %}
+
+                        {% assign name = sub_section.title %}
+                        {% assign categoryTagging = "Conferences" %}
+                        {% assign description = sub_section.description%}
+                        {% assign sub_section_slug = sub_section.name | slugify %}
+                        {% assign item_count = sub_section.items | size | minus: 1 %}
+                        {% assign url_str = sub_section.url | append : sub_section_slug %}
+                        {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+
+                        {% if sub_section.date == blank %}
+                            {% assign eventDateAndTiming = sub_section.last_modified_at %}
+                        {% else %}
+                            {% assign eventDateAndTiming = sub_section.date %}
+                        {% endif%}
+
+                        {% if 2 > eventIncrementer %}
+                            <div id="past-conferences-visible-content">
+                                {% include card-variant-calendar.html 
+                                    name=name
+                                    item_count=item_count
+                                    description=description
+                                    status=status
+                                    img_src=img_src
+                                    url_str=url_str
+                                    colorTheme=colorTheme
+                                    eventCategory=categoryTagging
+                                    eventDateAndTiming=eventDateAndTiming
+                                    disableItemCount=include.disableItemCount
+                                %}
+                            </div>
+                        {% else %}
+                            <div id="past-conferences-hidden-content">
+                                {% include card-variant-calendar.html
+                                    name=name
+                                    item_count=item_count
+                                    description=description
+                                    status=status
+                                    img_src=img_src
+                                    url_str=url_str
+                                    colorTheme=colorTheme
+                                    eventCategory=categoryTagging
+                                    eventDateAndTiming=eventDateAndTiming
+                                    disableItemCount=include.disableItemCount
+                                %}
+                            </div>
+                        {% endif %}
+
+                        {% assign eventIncrementer = eventIncrementer | plus: 1 %}
+                    {% endif %}
+                {% endunless %}
+            {% endfor %}
+            <button id="past-conferences-button" class="sgds-button sgds-button--primary" onclick="togglePastConferencesVisibility()">
+                View all events
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    (() => {
+        // Selects the hidden upcoming and past events
+        const nodes = document.querySelectorAll('*[id*="conferences-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "none";
+        }
+    })()
+
+    // Hides the content at the start initially during the creation phase using IIFEs
+    function toggleUpcomingConferencesVisibility() {
+        // changes the visibility of the button to none
+        const nodes = document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "block";
+        }
+
+        // Changes the visibility of the button 
+        const button = document.getElementById('upcoming-conferences-button')
+        button.style.display = "none";
+    }
+
+    function togglePastConferencesVisibility(){
+        const nodes = document.querySelectorAll('*[id^="past-conferences-hidden-content"]')
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "block";
+        }
+
+        // Changes the visibility of the button 
+        const button = document.getElementById('past-conferences-button')
+        button.style.display = "none";
+    }
+</script>

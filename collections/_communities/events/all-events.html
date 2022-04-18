@@ -1,0 +1,28 @@
+---
+title: All Events
+layout: layout-page-sidenav
+description: >
+    STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF) competition that is open to everyone. Find out more
+    here.
+---
+
+<div class="spacing-container-vertical spacing-32">
+    <div>
+        <a href="/communities" class="sgds-link-icon" style="text-decoration: none;">
+            <i class="sgds-icon sgds-icon-arrow-left" aria-hidden="true"></i>
+            Back to Overview
+        </a>
+    </div>
+    
+    <div class="spacing-container-horizontal spacing-16">
+        <strong class="label-text-to-hide">Filter: </strong>
+        <form class="search-box-defined-width" action="/communities/events/all-events/" method="get">
+            {% include search-box.html id='query-all-products' placeholder='Search event titles' %}
+        </form>
+    </div>
+
+    <div id="search-app-all-events" style="display: flex; justify-content: center">
+    </div>
+</div>
+
+<script async src="/apps/src/search/SearchAllEvents.vue"></script>
