@@ -17,6 +17,7 @@ module.exports = (env, argv) => {
       "vue-search-app-all-products":
         "./apps/src/search/vue-search-app-all-products.js",
       "vue-blogs-app": "./apps/src/blogs/vue-blogs-app.js",
+      "vue-search-app-all-events": "./apps/src/search/vue-search-app-all-events.js",
       main: "./apps/src/main.js",
     },
     output: {

@@ -4,11 +4,19 @@
 
     {% for sub_section in collectionDumps%}
         {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
+        
+        {% if sub_section.url contains '/events'%}
+            {% assign categoryTagging = "Conferences" %}
+        {% else %}
+            {% assign categoryTagging = "STACK-X Meetups" %}
+        {% endif %}
+
             {% assign name = sub_section.title %}
             {% assign description = sub_section.description%}
             {% assign sub_section_slug = sub_section.name | slugify %}
             {% assign item_count = sub_section.items | size | minus: 1 %}
             {% assign url_str = sub_section.url | append : sub_section_slug  %}
+            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
 
             {% if sub_section.date == blank %}
                 {% assign eventDateAndTiming = sub_section.last_modified_at %}
@@ -16,26 +24,15 @@
                 {% assign eventDateAndTiming = sub_section.date %}
             {% endif%}
 
-            {% if sub_section.url contains '/events'%}
-                {% assign categoryTagging = "Conferences" %}
-            {% else %}
-                {% assign categoryTagging = "STACK-X Meetups" %}
-            {% endif %}
+            {% assign currentTimeInSeconds = 'now'| date: '%s' %}
+            {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
+            {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
+            {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
 
-            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
-
-            {%- comment-%}
-            Variables to check the status of an event
-            {%- endcomment -%}
-            {% assign currentTime = 'now'| date: '%s' %}
-            {% assign eventTime = sub_section.date | date: '%s' %}
-            {% assign temporaryCurrentTime = 'now'| date: '%B %d, %Y' %}
-            {% assign temporaryEventTime = sub_section.date | date: '%B %d, %Y' %}
-
-            {% if temporaryCurrentTime == temporaryEventTime %}
+            {% if currentTimeFormatted == eventTimeFormatted %}
                 {% assign status = 'NOW' %}
                 {% assign colorTheme = "#D0021B" %}
-            {% elsif currentTime > eventTime %}
+            {% elsif currentTimeInSeconds > eventTimeInSeconds %}
                 {% assign status = 'PAST' %}
                 {% assign colorTheme = "#323232" %}
             {% else %}
@@ -43,9 +40,6 @@
                 {% assign colorTheme = "#0161AF" %}
             {% endif %}
 
-            {%- comment-%}
-            checks for the type of events
-            {%- endcomment -%}
             {% if 2 > eventIncrementer %}
             <div id="event-visible-content">
                 {% include card-variant-calendar.html 
@@ -94,11 +88,4 @@
             nodes[i].style.display = "none";
         }
     })()
-
-    // Hides the content at the start initially during the creation phase using IIFEs
-    function redirectUser() {
-        // changes the visibility of the button to none
-        document.getElementById('show-more-events').style.display = 'none';
-        // Otherwise change the text of the button to show less
-    }
 </script>
