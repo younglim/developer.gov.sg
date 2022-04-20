@@ -1,49 +1,232 @@
 ---
 title: STACK-X Meetups
 layout: layout-page-sidenav
-description: >
-  STACK-X’s Meetup community is open to anyone passionate about using technology for public good. Join us now!
-redirect_from:
-  - /communities/stack-x-meetups/
+description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF) competition that is open to everyone.
+    Find out more here.
 ---
 
-<picture>
-  <img src="/assets/img/stack-x-meetups-banner.svg" alt="stack-x meetup banner" />
-</picture>
+<div class="spacing-container-vertical">
+    <!-- Header -->
+    <div>
+        <h2 style="padding-top: 1rem; padding-bottom: 1rem;">Overview for STACK-X Meetups</h2>
+        <picture>
+            <img src="/assets/img/stack-x-meetups-banner.svg" alt="stack-x meetup banner" />
+        </picture>
+        <p>
+            The STACK-X Meetup community is a platform for everyone who is passionate about using technology for public
+            good. It is hosted on Meetup and provides an avenue for everyone to share their views and feedback, learn
+            from experts and fellow techies and join fruitful discussions on the use of technology for public good.
 
-<h2>Overview</h2>
-<p>
-  Conceived in 2019, <a href="http://www.tech.gov.sg/" target="_blank">GovTech's</a> STACK-X Community brings together
-  like-minded individuals who share a passion for exploring innovative ways of using Tech for Public Good.
-</p>
-<p>
-  Community members are encouraged to share knowledge, cross-learn, and network with peers and subject matter experts
-  through events such as our flagship tech and largest government-led <a
-    href="https://www.developer.tech.gov.sg/communities/events/stack-2020/" target="_blank">STACK Conferences</a>
-  (upcoming in Oct 2022), bi-annual <a href="https://www.developer.tech.gov.sg/communities/events/overview.html"
-    target="_blank"> STACK-X Conferences </a> focused on exploring the depth and breadth of a single topic across
-  multiple tracks, and our monthly <a
-    href="https://www.developer.tech.gov.sg/communities/stack-x-meetups/past-webinars/" target="_blank">STACK-X
-    Meetups</a> on trending tech topics of interest.
-</p>
-<p>
-  Learn about the STACK-X Community journey <a
-    href="https://www.developer.tech.gov.sg/communities/building-a-community/our-journey" target="_blank">here</a> and
-  make use of our <a href="https://www.developer.tech.gov.sg/communities/building-a-community/resources/"
-    target="_blank">resources</a> to kickstart tech communities.
-</p>
-<p>
-  Join the our <a href="https://www.meetup.com/STACK-X-by-GovTech-Singapore/" target="_blank">STACK-X Meetup
-    Community</a> and <a href="https://go.gov.sg/stackxtelegram" target="_blank">Telegram group</a> to learn more about
-  GovTech’s Tech for Public Good and hear from our line-up of both public sector as well as industry speakers on the
-  latest technological advancements.
-</p>
+            You can also join our STACK-X Meetup community through this link to receive notifications about our upcoming
+            Meetups.
 
-<h2>About GovTech</h2>
-<p>
-  GovTech spearheads Singapore’s digital government transformation and is a key contributor to the Smart Nation vision.
-  We currently boost a headcount of over 3,000 and consistently recruit the best talent to contribute to the development
-  of Singapore’s digital government services. Our work can be categorised into three main areas: products, services and
-  cybersecurity & governance. Find out more about us <a href="https://www.tech.gov.sg/who-we-are/our-role/"
-    target="_blank">here.</a>
-</p>
+            Email tmo@tech.gov.sg if you have any enquiries or have something to share with the STACK-X community!
+        </p>
+        <p>
+            You can also join our STACK-X Meetup community through this <a href="#TOBEREPLACED">link</a> to receive notifications about our upcoming Meetups.
+        </p>
+        <p>
+            Email <a href="#TOBEREPLACED">tmo@tech.gov.sg</a> if you have any enquiries or have something to share with the STACK-X community!
+        </p>
+        <hr />
+    </div>
+
+    <!-- Upcoming Conferences -->
+    <div>
+        <h3>All Upcoming STACK-X Meetups</h3>
+        <div class="card-grid-container is-fullwidth">
+            {% assign eventIncrementer = 0 %}
+            {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
+
+            {% for sub_section in collectionDumps%}
+            {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars' or sub_section.title contains 'All Events'%}
+            {% assign currentTimeInSeconds = 'now'| date: '%s' %}
+            {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
+            {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
+            {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
+
+            {% if eventTimeInSeconds > currentTimeInSeconds or eventTimeFormatted == currentTimeFormatted %}
+            {% if currentTimeFormatted == eventTimeFormatted %}
+            {% assign status = 'NOW' %}
+            {% assign colorTheme = "#D0021B" %}
+            {% else %}
+            {% assign status = 'UPCOMING' %}
+            {% assign colorTheme = "#0161AF" %}
+            {% endif %}
+
+            {% assign name = sub_section.title %}
+            {% assign categoryTagging = "STACK-X Meetups" %}
+            {% assign description = sub_section.description%}
+            {% assign sub_section_slug = sub_section.name | slugify %}
+            {% assign item_count = sub_section.items | size | minus: 1 %}
+            {% assign url_str = sub_section.url | append : sub_section_slug %}
+            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+
+            {% if sub_section.date == blank %}
+            {% assign eventDateAndTiming = sub_section.last_modified_at %}
+            {% else %}
+            {% assign eventDateAndTiming = sub_section.date %}
+            {% endif%}
+
+            {% if 2 > eventIncrementer %}
+            <div id="upcoming-stack-x-meetups-visible-content">
+                {% include card-variant-calendar.html 
+                    name=name
+                    item_count=item_count
+                    description=description
+                    status=status
+                    img_src=img_src
+                    url_str=url_str
+                    colorTheme=colorTheme
+                    eventCategory=categoryTagging
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
+            </div>
+            {% else %}
+            <div id="upcoming-stack-x-meetups-hidden-content">
+                {% include card-variant-calendar.html
+                    name=name
+                    item_count=item_count
+                    description=description
+                    status=status
+                    img_src=img_src
+                    url_str=url_str
+                    colorTheme=colorTheme
+                    eventCategory=categoryTagging
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
+            </div>
+            {% endif %}
+
+            {% assign eventIncrementer = eventIncrementer | plus: 1 %}
+            {% endif %}
+            {% endunless %}
+            {% endfor %}
+
+            {% if eventIncrementer == 0 %}
+            <div class="has-text-centered" style="padding: 3rem;">
+                <p>
+                    Sorry, there are currently no available events!
+                </p>
+            </div>
+            {% else %}
+            <button id="upcoming-stack-x-button" class="sgds-button sgds-button--primary" onclick="toggleUpcomingStackXMeetupsVisibility()">
+                View all events
+            </button>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Past Conferences -->
+    <div>
+        <h3>Recent Past STACK-X Meetups</h3>
+        <div class="card-grid-container is-fullwidth">
+            <!-- Subcollection gatherer -->
+            {% assign eventIncrementer = 0 %}
+            {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
+
+            {% for sub_section in collectionDumps%}
+            {%- comment-%}
+            filter to remove unnecessary pages etc, feel free to add
+            {%- endcomment -%}
+            {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
+            {% assign currentTimeInSeconds = 'now'| date: '%s' %}
+            {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
+            {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
+            {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
+
+            {% if currentTimeInSeconds > eventTimeInSeconds and currentTimeFormatted != eventTimeFormatted %}
+            {% assign status = 'PAST' %}
+            {% assign colorTheme = "#323232" %}
+
+            {% assign name = sub_section.title %}
+            {% assign categoryTagging = "STACK-X Meetups" %}
+            {% assign description = sub_section.description%}
+            {% assign sub_section_slug = sub_section.name | slugify %}
+            {% assign item_count = sub_section.items | size | minus: 1 %}
+            {% assign url_str = sub_section.url | append : sub_section_slug %}
+            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+
+            {% if sub_section.date == blank %}
+            {% assign eventDateAndTiming = sub_section.last_modified_at %}
+            {% else %}
+            {% assign eventDateAndTiming = sub_section.date %}
+            {% endif%}
+
+            {% if 2 > eventIncrementer %}
+            <div id="upcoming-stack-x-meetups-visible-content">
+                {% include card-variant-calendar.html 
+                    name=name
+                    item_count=item_count
+                    description=description
+                    status=status
+                    img_src=img_src
+                    url_str=url_str
+                    colorTheme=colorTheme
+                    eventCategory=categoryTagging
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
+            </div>
+            {% else %}
+            <div id="past-stack-x-meetups-hidden-content">
+                {% include card-variant-calendar.html
+                    name=name
+                    item_count=item_count
+                    description=description
+                    status=status
+                    img_src=img_src
+                    url_str=url_str
+                    colorTheme=colorTheme
+                    eventCategory=categoryTagging
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
+            </div>
+            {% endif %}
+
+            {% assign eventIncrementer = eventIncrementer | plus: 1 %}
+            {% endif %}
+            {% endunless %}
+            {% endfor %}
+            <button id="past-events-stack-x-button" class="sgds-button sgds-button--primary" onclick="togglePastStackXMeetupsVisibility()">
+                View all events
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    (() => {
+        // Selects the hidden upcoming and past events
+        const nodes = document.querySelectorAll('*[id*="stack-x-meetups-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "none";
+        }
+    })()
+
+    // Hides the content at the start initially during the creation phase using IIFEs
+    function toggleUpcomingStackXMeetupsVisibility() {
+        // changes the visibility of the button to none
+        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "block";
+        }
+
+        // Changes the visibility of the button 
+        const button = document.getElementById('upcoming-stack-x-button')
+        button.style.display = "none";
+    }
+
+    function togglePastStackXMeetupsVisibility(){
+        const nodes2 = document.querySelectorAll('*[id^="past-stack-x-meetups-hidden-content"]')
+        for (var i = 0; i < nodes2.length; i++) {
+            nodes2[i].style.display = "block";
+        }
+
+        // Changes the visibility of the button 
+        const button = document.getElementById('past-events-stack-x-button')
+        button.style.display = "none";
+    }
+</script>

@@ -1,6 +1,7 @@
 ---
 layout: layout-page
 ---
+
 {%- assign collectionName = page.collection -%}
 {%- assign url_last = page.id | split: "/" | last -%}
 <div class="row sidenav-container">
@@ -9,6 +10,8 @@ layout: layout-page
       <ul class="sgds-menu-list">
         {%- if page.single_level_nav -%}
           {%- include sidenav-single-level.html -%}
+        {%- elsif page.multi_level_nav -%}
+          {%- include sidenav-second-level.html -%}
         {% else %}
           {%- include sidenav.html -%}
         {% endif %}

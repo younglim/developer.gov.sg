@@ -1,88 +1,95 @@
 <div class="card-grid-container is-fullwidth">
     {% assign eventIncrementer = 0 %}
-    {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/events' or item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
+    {% assign collectionDumps = 
+        site.communities 
+        | where_exp: "item", "item.path contains 'index.html' or item.path contains 'overview.html'" 
+        | sort: 'date' 
+        | reverse %}
+    {% assign filteredCollectionDumps = 
+        collectionDumps
+        | where_exp: "item", "item.path contains '/conferences' or item.path contains '/stack-x-meetups'"
+        %}
 
-    {% for sub_section in collectionDumps%}
-        {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
-        
-        {% if sub_section.url contains '/events'%}
+    {% for sub_section in filteredCollectionDumps%}
+        {% unless sub_section.title contains 'Past Webinars' %}
+        <!-- Finding what category the event belongs to -->
+        {% if sub_section.url contains '/events' %}
             {% assign categoryTagging = "Conferences" %}
         {% else %}
             {% assign categoryTagging = "STACK-X Meetups" %}
         {% endif %}
 
-            {% assign name = sub_section.title %}
-            {% assign description = sub_section.description%}
-            {% assign sub_section_slug = sub_section.name | slugify %}
-            {% assign item_count = sub_section.items | size | minus: 1 %}
-            {% assign url_str = sub_section.url | append : sub_section_slug  %}
-            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+        {% assign name = sub_section.title %}
+        {% assign description = sub_section.description %}
+        {% assign sub_section_slug = sub_section.name | slugify %}
+        {% assign item_count = sub_section.items | size | minus: 1 %}
+        {% assign url_str = sub_section.url | append : sub_section_slug  %}
+        {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
 
-            {% if sub_section.date == blank %}
-                {% assign eventDateAndTiming = sub_section.last_modified_at %}
-            {% else %}
-                {% assign eventDateAndTiming = sub_section.date %}
-            {% endif%}
+        {% if sub_section.date == blank %}
+            {% assign eventDateAndTiming = sub_section.last_modified_at %}
+        {% else %}
+            {% assign eventDateAndTiming = sub_section.date %}
+        {% endif%}
 
-            {% assign currentTimeInSeconds = 'now'| date: '%s' %}
-            {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
-            {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
-            {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
+        {% assign currentTimeInSeconds = 'now'| date: '%s' %}
+        {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
+        {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
+        {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
 
-            {% if currentTimeFormatted == eventTimeFormatted %}
-                {% assign status = 'NOW' %}
-                {% assign colorTheme = "#D0021B" %}
-            {% elsif currentTimeInSeconds > eventTimeInSeconds %}
-                {% assign status = 'PAST' %}
-                {% assign colorTheme = "#323232" %}
-            {% else %}
-                {% assign status = 'UPCOMING' %}
-                {% assign colorTheme = "#0161AF" %}
-            {% endif %}
+        {% if currentTimeFormatted == eventTimeFormatted %}
+            {% assign status = 'NOW' %}
+            {% assign colorTheme = "#D0021B" %}
+        {% elsif currentTimeInSeconds > eventTimeInSeconds %}
+            {% assign status = 'PAST' %}
+            {% assign colorTheme = "#323232" %}
+        {% else %}
+            {% assign status = 'UPCOMING' %}
+            {% assign colorTheme = "#0161AF" %}
+        {% endif %}
 
-            {% if 2 > eventIncrementer %}
-            <div id="event-visible-content">
-                {% include card-variant-calendar.html 
-                    id="event-visible-content"
-                    name=name
-                    item_count=item_count
-                    description=description
-                    status=status
-                    img_src=img_src
-                    url_str=url_str
-                    colorTheme=colorTheme
-                    eventCategory=categoryTagging
-                    eventDateAndTiming=eventDateAndTiming
-                    disableItemCount=include.disableItemCount
-                %}
-            </div>
-            {% else %}
-            <div id="event-hidden-content">
-                {% include card-variant-calendar.html
-                    id="event-hidden-content"
-                    name=name
-                    item_count=item_count
-                    description=description
-                    status=status
-                    img_src=img_src
-                    url_str=url_str
-                    colorTheme=colorTheme
-                    eventCategory=categoryTagging
-                    eventDateAndTiming=eventDateAndTiming
-                    disableItemCount=include.disableItemCount
-                    %}
-            </div>
-            {% endif %}
-            {% assign eventIncrementer = eventIncrementer | plus: 1 %}
-        {% endunless %}
+        {% if 2 > eventIncrementer %}
+        <div id="event-visible-content">
+            {% include card-variant-calendar.html 
+                name=name
+                item_count=item_count
+                description=description
+                status=status
+                img_src=img_src
+                url_str=url_str
+                colorTheme=colorTheme
+                eventCategory=categoryTagging
+                eventDateAndTiming=eventDateAndTiming
+                disableItemCount=include.disableItemCount
+            %}
+        </div>
+        {% else %}
+        <div id="event-hidden-content">
+            {% include card-variant-calendar.html
+                name=name
+                item_count=item_count
+                description=description
+                status=status
+                img_src=img_src
+                url_str=url_str
+                colorTheme=colorTheme
+                eventCategory=categoryTagging
+                eventDateAndTiming=eventDateAndTiming
+                disableItemCount=include.disableItemCount
+            %}
+        </div>
+        {% endif %}
+        {% assign eventIncrementer = eventIncrementer | plus: 1 %}
+    {% endunless %}
+
     {% endfor %}
-    <a id="show-more-events" class="sgds-button sgds-button--primary" href="/communities/all-communities/overview">
+    <a id="show-more-events" class="sgds-button sgds-button--primary" href="/communities/events/all-events/index.html">
         View all events
     </a>
 </div>
 
 <script>
-    (()=>{
+    (() => {
         const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
         for (var i = 0; i < nodes.length; i++) {
             nodes[i].style.display = "none";

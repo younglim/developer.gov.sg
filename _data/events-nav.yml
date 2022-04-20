@@ -1,0 +1,25 @@
+- name: STACK-X Cloud 2021
+  label: Testing Alpha
+  items:
+  - sub_item_name: Overview
+    sub_item_label: Overview
+    sub_item_item: Overview
+    dropdown: false
+
+  - sub_item_name: Agenda
+    sub_item_label: Agenda
+    sub_item_item:
+    - All Agenda
+    - Keynotes
+    - Leadership
+    - Cloud Onboarding
+    - Cloud Platform & Tools
+    dropdown: true
+
+  - sub_item_name: Recordings
+    sub_item_label: Recordings
+    sub_item_item:
+    - Recordings
+    dropdown: false
+
+- name: Test

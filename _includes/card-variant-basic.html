@@ -3,10 +3,11 @@
     <img src="{{include.img_src}}" alt="" />
     {% include card-header-info.html disableItemCount=include.disableItemCount name=include.name item_count=include.item_count url_str=include.url_str%}
     <div style="display: flex; align-items: center; justify-content: start;">
-      {% if include.description_image %}
-      <img src="{{include.description_image}}" style="margin: unset; margin-right: .5rem;" />
-      {% endif %}
-      <p>{{ include.description }}</p>
+      <p class="is-flex search-result-status sgds-card-iconography">
+        {% if include.description_image %}
+          <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"></span>
+        {% endif %}
+      {{ include.description }}</p>
     </div>
   </div>
 </div>
