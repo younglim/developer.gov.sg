@@ -4,48 +4,38 @@ redirect_from:
 - /singapore-government-tech-stack/
 - /sgts/
 layout: layout-page-soicalmedia-right
+
 sgts_service_layer:
-- Planned:
-  - Analytics:
-  - Design:
-  - Digital Identity:
-  - IoT:
-  - Data Science:
-  - Data Transfer:
-- Work_In_Progress:
-  - Analytics:
-  - Design:
-  - Digital Identity:
+- analytics:
+- digital_identity:
+  - work_in_progress:
     - Authorise
     - Notify
     - Sign
-  - IoT:
-  - Data Science:
+- data_science:
+  - work_in_progress:
     - Transcrible
     - GovText
     - Fraud Detect
-  - Data Transfer:
+- data_transfer:
+  - work_in_progress:
     - Video Exchange
 sgts_base_layer:
-- Planned:
-  - Communications:
-  - Toolchain:
-  - Runtime:
-  - Monitoring:
+- monitoring:
+  - planned:
     - Gov Cyber Sec Ops Centre
     - Cloudscape
-  - Service Management:
-- Work_In_Progress:
-  - Communications:
+  - work_in_progress:
+    - Endpoint Det & Res
+- communications:
+  - work_in_progress:
     - APEX Cloud
     - APEX Marketplace
-  - Toolchain:
-  - Runtime:
+- runtime:
+  - work_in_progress:
     - IaC
-  - Monitoring:
-    - Endpoint Det & Res
-  - Service Management:
-    - Developer Portal
+- service_management:
+  - work_in_progress:
     - SEED & TechPass
     - TechBiz
 ---
@@ -95,12 +85,11 @@ sgts_base_layer:
 </div>
 <h3>What is SGTS?</h3>
 <p>SGTS is a set of platform tools that streamlines and simplifies the development process and enables code reuse across
-  WOG to build secure, high quality applications. SGTS has a 2-layer architecture where the **Base Layer** focuses on
+  WOG to build secure, high quality applications. SGTS has a 2-layer architecture where the **base** focuses on
   standardising development tools and environment and at the top, the **Services Layer** drives code reusability within
   WOG.</p>
 <img src="/assets/img/sgts/whatissgts_sgts.svg " class="margin--top--xl" />
 
-<!--Anba Start-->
 <h3>Singapore Government Tech Stack (SGTS)</h3>
 <div class="padding--bottom--sm">
   <section id="service-layer" class="sgds-section service-layer">
@@ -120,19 +109,20 @@ sgts_base_layer:
       </div>
       <!-- Start of cards for each service layer-->
       <div class="card-grid-container sg-tech-stack">
-        {% include sgts-service-layer-small-card.html header="Analytics" layer="Services Layer" cardType="sm" %}
-        {% include sgts-service-layer-small-card.html header="Design" layer="Services Layer" cardType="sm" %}
-        {% include sgts-service-layer-small-card.html header="Digital Identity" layer="Services Layer" cardType="sm" %}
-        {% include sgts-service-layer-small-card.html header="IoT" layer="Services Layer" cardType="sm" %}
-        {% include sgts-service-layer-small-card.html header="Data Science" layer="Services Layer" cardType="sm" %}
-        {% include sgts-service-layer-small-card.html header="Data Transfer" layer="Services Layer" cardType="sm" %}
+        <!-- TODOs: An array of object to iterate through -->
+        {% include sgts-service-layer-small-card.html category="analytics" header="Analytics" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-small-card.html category="design" header="Design" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-small-card.html category="digital_identity" header="Digital Identity" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-small-card.html category="iot" header="IoT" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-small-card.html cateogry="data_science" header="Data Science" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-small-card.html category="data_transfer" header="Data Transfer" layer="services" card_type="sm" %}
       </div>
     </div>
   </section>
 </div>
 
 <div class="padding--top--sm">
-  <!--Base Layer-->
+  <!--base-->
   <section id="base-layer" class="sgds-section base-layer">
     <div id="base-layer-header" class="sgds-container is-fluid">
       <div class="row">
@@ -148,12 +138,12 @@ sgts_base_layer:
             </ul>
         </div>
       </div>
-      <!-- Start of cards for each base layer-->
+      <!-- Start of cards for each base-->
       <!-- Start of Communtications-->
       <div class="row">
         <div class="col">
           <div class="card-grid-container sg-tech-stack">
-            {% include sgts-service-layer-small-card.html header="Communications" layer="Base Layer" cardType="lg" %}
+            {% include sgts-service-layer-small-card.html category="communications" header="Communications" layer="base" card_type="lg" %}
           </div>
         </div>
       </div>
@@ -162,9 +152,9 @@ sgts_base_layer:
       <div class="row">
         <div class="col">
           <div class="card-grid-container sg-tech-stack">
-            {% include sgts-service-layer-small-card.html header="Toolchain" layer="Base Layer" cardType="sm" %}
-            {% include sgts-service-layer-small-card.html header="Runtime" layer="Base Layer" cardType="sm" %}
-            {% include sgts-service-layer-small-card.html header="Monitoring" layer="Base Layer" cardType="sm" %}
+            {% include sgts-service-layer-small-card.html category="toolchain" header="Toolchain" layer="base" card_type="sm" %}
+            {% include sgts-service-layer-small-card.html category="runtime" header="Runtime" layer="base" card_type="sm" %}
+            {% include sgts-service-layer-small-card.html category="monitoring" header="Monitoring" layer="base" card_type="sm" %}
           </div>
         </div>
       </div>
@@ -173,7 +163,7 @@ sgts_base_layer:
       <div class="row">
         <div class="col">
           <div class="card-grid-container sg-tech-stack">
-            {% include sgts-service-layer-small-card.html header="Service Management" layer="Base Layer" cardType="lg"
+            {% include sgts-service-layer-small-card.html category="service_management" header="Service Management" layer="base" card_type="lg"
             %}
           </div>
         </div>
@@ -200,4 +190,3 @@ sgts_base_layer:
 </p>
 <div>
 </div>
-<!--Anba End-->

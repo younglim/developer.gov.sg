@@ -7,8 +7,8 @@ sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
 collection_group: [Singapore Government Tech Stack]
-sgts_collection_group: [Monitoring]
-sgts_layer_group: [Base Layer]
+sgts_collection_group: [monitoring]
+sgts_layer_group: [base]
 sgts_title: StackOps
 redirect_from:
     - /singapore-government-tech-stack/monitoring/stackops
@@ -34,7 +34,7 @@ StackOps consists of two main parts:
 
     <figure style="text-align: center">
       <img
-        src="/assets/img/stackops-fig1.png" width="75%" height="75%" 
+        src="/assets/img/stackops-fig1.png" width="75%" height="75%"
         alt="Fig 1: StackOps Monitoring Applications (Prometheus, Thanos, and Grafana)"
       />
       <figcaption>Fig 1: StackOps Monitoring Applications (Prometheus, Thanos, and Grafana)</figcaption>
@@ -43,7 +43,7 @@ StackOps consists of two main parts:
 2. **StackOps Logging** is a suite of centrally managed logging applications (Elastic, Logstash, and Kibana) that transforms and visualises your data from multiple sources.
 <figure style="text-align: center">
     <img
-      src="/assets/img/stackops-fig2.png" width="50%" height="50%" 
+      src="/assets/img/stackops-fig2.png" width="50%" height="50%"
       alt="Fig 2: StackOps Logging Applications (Elastic, Logstash, and Kibana)"
     />
     <figcaption>Fig 2: StackOps Logging Applications (Elastic, Logstash, and Kibana)</figcaption>
@@ -61,7 +61,7 @@ Adopting StackOps can benefit users in the following ways:
 
 ### How Do You Use StackOps?
 
-Contact StackOp’s product manager at <StackOps_SRE@tech.gov.sg> for onboarding details. 
+Contact StackOp’s product manager at <StackOps_SRE@tech.gov.sg> for onboarding details.
 
 Onboarding can typically be completed within one business day.
 
@@ -75,7 +75,7 @@ The StackOps team is developing the StackOps Dashboard that enables a single-pan
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/stackops-fig3.png" width="80%" height="80%" 
+    src="/assets/img/stackops-fig3.png" width="80%" height="80%"
     alt="Fig 3: StackOps Dashboard"
   />
   <figcaption>Fig 3: StackOps Dashboard</figcaption>

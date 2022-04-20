@@ -1,76 +1,58 @@
-<div class="sgds-card grid-item">
+<!-- rename this file to sgts-service-layer-small-card -->
+<!-- For SGTS products which are live, there will be these headers in the frontmatter
+sgts_collection_group: [analytics]
+sgts_layer_group: [services]
+sgts_title: Personalise
+-->
+
+<div class="sgdz-card grid-item">
   <div class="sgds-card-header">
     <h4 class="sgds-card-header-title">{{include.header}}</h4>
   </div>
-
-  {% if {{include.cardType}} == "sm" %}
+  {% if {{include.card_type}} == "sm" %}
   <div class="sgds-card-content">
-    {% elsif {{include.cardType}} == "lg" %}
-    <div class="sgds-card-content sgds-card-ul-hz">
-      {% endif %}
+  {% elsif {{include.card_type}} == "lg" %}
+  <div class="sgds-card-content sgds-card-ul-hz">
+  {% endif %}
       <ul>
         {% for item in site.products  %}
-          {% for categories in item.sgts_collection_group %}
-            {% if categories == {{include.header}} %}
-              {% for layer in item.sgts_layer_group %}
-                {% if layer == {{include.layer}}  %}
-                  <a href={{item.redirect_from[0]}} target="_blank">
-                  <li class="live">{{item.sgts_title}}</li>
-                  </a>
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
+          {% if item.sgts_collection_group contains include.category and item.sgts_layer_group contains include.layer %}
+            <a href={{item.redirect_from[0]}} target="_blank">
+              <li class="live">{{item.sgts_title}}</li>
+            </a>
+          {% endif %}
         {% endfor %}
-        <!-- IF SERVICE LAYER-->
-        {% if "Services Layer" == {{include.layer}}  %}
-          <!--Work in Progress-->
-          {% for items in page.sgts_service_layer %}
-            {% for item in items.Work_In_Progress %}
-              {% if item[\"'{{include.header}}\'"] %}
-                {% for list in item[\"'{{include.header}}\'"] %}
-                  <li class="wip">{{list}}</li>
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-          <!--Planned-->
-          {% for items in page.sgts_service_layer %}
-            {% for item in items.Planned %}
-              {% if item[\"'{{include.header}}\'"] %}
-                {% for list in item[\"'{{include.header}}\'"] %}
-                  <li class="pending">{{list}}</li>
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        {% endif %}
-        <!-- END IF SERVICE LAYER-->
+          <!-- Render WIP and Planned products using SGTS index.html frontmatter -->
 
-        <!-- IF SERVICE LAYER-->
-        {% if "Base Layer" == {{include.layer}}  %}
-          <!--Work in Progress-->
-          {% for items in page.sgts_base_layer %}
-            {% for item in items.Work_In_Progress %}
-              {% if item[\"'{{include.header}}\'"] %}
-                {% for list in item[\"'{{include.header}}\'"] %}
-                  <li class="wip">{{list}}</li>
-                {% endfor %}
-              {% endif %}
+          <!-- Render Services Layer -->
+          {% if include.layer == "services" %}
+            {% assign sgts_service_layer_planned_products = page.sgts_service_layer | map: include.category | map: "planned" %}
+            <!-- map is returning the product array in an array which is why need [0] to access the array which is wrapped around by map -->
+            {% for plannedProduct in sgts_service_layer_planned_products[0] %}
+              <li class="pending">{{ plannedProduct }}</li>
             {% endfor %}
-          {% endfor %}
-          <!--Planned-->
-          {% for items in page.sgts_base_layer %}
-            {% for item in items.Planned %}
-              {% if item[\"'{{include.header}}\'"] %}
-                {% for list in item[\"'{{include.header}}\'"] %}
-                  <li class="pending">{{list}}</li>
-                {% endfor %}
-              {% endif %}
+
+            <!-- {% assign sgts_service_layer_wip_products = page.sgts_service_layer | map: include.category | map: "work_in_progress" %} -->
+            {% assign sgts_service_layer_wip_products = page.sgts_service_layer | map: include.category %}
+            <!-- map is returning the product array in an array which is why need [0] to access the array which is wrapped around by map -->
+            {{ sgts_service_layer_wip_products }}
+            {% for wipProduct in sgts_service_layer_wip_products[0] %}
+              <li class="wip">{{ wipProduct }}</li>
             {% endfor %}
-          {% endfor %}
-        {% endif %}
-        <!-- END IF SERVICE LAYER-->
+          <!-- Render Base Layer -->
+          {% elsif include.layer == "base" %}
+            {% assign sgts_base_layer_planned_products = page.sgts_base_layer | map: include.category | map: "planned" %}
+            <!-- map is returning the product array in an array which is why need [0] to access the array which is wrapped around by map -->
+            {% for plannedProduct in sgts_base_layer_planned_products[0] %}
+              <li class="pending">{{ plannedProduct }}</li>
+            {% endfor %}
+            {% assign sgts_base_layer_wip_products = page.sgts_base_layer | map: include.category  %}
+            <!-- {{  sgts_base_layer_wip_products }} -->
+            <!-- map is returning the product array in an array which is why need [0] to access the array which is wrapped around by map -->
+            {% for wipProduct in sgts_base_layer_wip_products[0] %}
+              <li class="wip">{{ wipProduct }}</li>
+            {% endfor %}
+          {% endif %}
       </ul>
-    </div>
   </div>
+</div>

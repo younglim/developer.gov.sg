@@ -11,8 +11,8 @@ sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
 collection_group: [Singapore Government Tech Stack]
-sgts_collection_group: [Runtime]
-sgts_layer_group: [Base Layer]
+sgts_collection_group: [runtime]
+sgts_layer_group: [base]
 sgts_title: Container Stack
 ---
 

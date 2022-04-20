@@ -10,8 +10,8 @@ redirect_from:
     - /products/categories/digital-identity/verify.html
     - /technologies/digital-identity/verify/
     - /technologies/digital-identity/verify.html
-sgts_collection_group: [Digital Identity]
-sgts_layer_group: [Services Layer]
+sgts_collection_group: [digital_identity]
+sgts_layer_group: [services]
 sgts_title: Verify
 description: >
   Verify enables users to securely perform in-person identity verification and data sharing, through scanning of QR codes with their Singpass app.
