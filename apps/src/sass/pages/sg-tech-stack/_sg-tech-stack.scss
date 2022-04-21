@@ -9,6 +9,27 @@ $section-highlights-space: 10%;
   padding-top: 0px;
 }
 
+@mixin sgts-layer-mixin($borderColor, $background-color) {
+  @include until($tablet) {
+    .sgds-container.is-fluid {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    ul {
+      @include until($tablet) {
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: auto;
+      }
+    }
+
+  }
+  background-color: $background-color;
+  border: 3px dashed $borderColor;
+  border-radius: 4px;
+}
+
 .live {
   @include sgts-li-icon("/assets/icons/oval_green.svg");
 }
@@ -19,6 +40,19 @@ $section-highlights-space: 10%;
 
 .planned {
   @include sgts-li-icon("/assets/icons/oval_blue.svg");
+}
+
+.service-layer {
+  @include sgts-layer-mixin(#0161af, #e2eff8);
+}
+
+.base-layer {
+  @include sgts-layer-mixin(#0161af, #e2eff8);
+  border-bottom: none;
+}
+
+.hosting-layer {
+  @include sgts-layer-mixin(#98a2b3, #e4e7ec);
 }
 
 .card-grid-container {
@@ -59,7 +93,7 @@ $section-highlights-space: 10%;
         display: grid;
         grid-template-rows: repeat(4, min-content);
         grid-auto-flow: column;
-        
+
 
         @media screen and (max-width: 768px) {
           display: list-item;
@@ -103,38 +137,4 @@ $section-highlights-space: 10%;
     }
 
   }
-}
-
-@mixin sgts-layer-mixin($borderColor, $background-color) {
-  @include until($tablet) {
-    .sgds-container.is-fluid {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-    
-    ul {
-      @include until($tablet) {
-        align-items: flex-start;
-        justify-content: space-around;
-        margin: auto;
-      }
-    }
-
-  }
-  background-color: $background-color;
-  border: 3px dashed $borderColor;
-  border-radius: 4px;
-}
-
-.service-layer {
-  @include sgts-layer-mixin(#0161af, #e2eff8);
-}
-
-.base-layer {
-  @include sgts-layer-mixin(#0161af, #e2eff8);
-  border-bottom: none;
-}
-
-.hosting-layer {
-  @include sgts-layer-mixin(#98a2b3, #e4e7ec);
 }
