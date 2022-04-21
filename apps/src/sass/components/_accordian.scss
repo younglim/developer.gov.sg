@@ -1,0 +1,23 @@
+.sgds-accordion-header {
+    /* Flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Styles */
+    border: 0px;
+    padding: 0px;
+    color: #323232;
+
+    .sgds-accordian-speaker-content{
+        align-items: center;
+        justify-content: start;
+
+        .sgds-accordian-speaker-image {
+            height: 2.25em;
+            margin-left: 0em;
+            margin-right: 1em;
+            margin-bottom: 0em;
+        }
+    }
+
+}

@@ -14,58 +14,15 @@ date: 2021-11-17
 <div>
   <!-- Header -->
   <div>
-    <p>
-        <h1>Recordings</h1>
-    </p>
-    <p class="is-light">
-        Thank you for joining us at STACK X Cloud 2021. Missed any sessions? You can watch the video replays below.
-    </p>
+    <h1>Recordings</h1>
+    <p> Thank you for joining us at STACK X Cloud 2021. Missed any sessions? You can watch the video replays below.</p>
   </div>
 
+  <hr />
+
   <!-- Content -->
-  <div>
-    <div class="sgds-tabs">
-      <ul class="no-margin" role="tablist">
-        <li class="is-active">
-          <a data-tab="#tab1" role="tab" aria-selected="true" aria-controls="tab1">
-            Leadership
-          </a>
-        </li>
-        <li>
-          <a data-tab="#tab2" role="tab" aria-selected="false" aria-controls="tab2">
-            Cloud Onboarding
-          </a>
-        </li>
-        <li>
-          <a data-tab="#tab3" role="tab" aria-selected="false" aria-controls="tab3">
-            Cloud Platform & Tools Track
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="row" id="tab1">
-    {% include videos-display.html 
-        type="Keynote - VOD" 
-        _data=video_data_file 
-        title="About the track"
-        description="This virtual track is for Tech Leads, Project Managers, Business Analysts and Developers especially those looking to learn practical experience to onboard to cloud, including preparation for migration and day 2 operation. There is a live Q&A at the end of each session!"
-    %}
-    </div>
-    <div class="row" id="tab2">
-    {% include videos-display.html 
-        type="CloudOnboarding - VOD" 
-        _data=video_data_file 
-        title="About the track"
-        description="This virtual track is for Tech Leads, Project Managers, Business Analysts and Developers especially those looking to learn practical experience to onboard to cloud, including preparation for migration and day 2 operation. There is a live Q&A at the end of each session!"
-    %}
-    </div>
-    <div class="row" id="tab3">
-    {% include videos-display.html 
-        type="CloudPlatform - VOD" 
-        _data=video_data_file 
-        title="About the track"
-        description="This virtual track is for Tech Leads, Project Managers, Business Analysts and Developers especially those looking to learn practical experience to onboard to cloud, including preparation for migration and day 2 operation. There is a live Q&A at the end of each session!"
-    %}
-    </div>
-  </div>
+  {% include videos-display-basic.html 
+    type="Keynote - VOD" 
+    _data=video_data_file 
+%}
 </div>

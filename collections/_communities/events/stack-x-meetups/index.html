@@ -23,10 +23,12 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
             Email tmo@tech.gov.sg if you have any enquiries or have something to share with the STACK-X community!
         </p>
         <p>
-            You can also join our STACK-X Meetup community through this <a href="#TOBEREPLACED">link</a> to receive notifications about our upcoming Meetups.
+            You can also join our STACK-X Meetup community through this <a href="#TOBEREPLACED">link</a> to receive
+            notifications about our upcoming Meetups.
         </p>
         <p>
-            Email <a href="#TOBEREPLACED">tmo@tech.gov.sg</a> if you have any enquiries or have something to share with the STACK-X community!
+            Email <a href="#TOBEREPLACED">tmo@tech.gov.sg</a> if you have any enquiries or have something to share with
+            the STACK-X community!
         </p>
         <hr />
     </div>
@@ -34,199 +36,26 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
     <!-- Upcoming Conferences -->
     <div>
         <h3>All Upcoming STACK-X Meetups</h3>
-        <div class="card-grid-container is-fullwidth">
-            {% assign eventIncrementer = 0 %}
-            {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
-
-            {% for sub_section in collectionDumps%}
-            {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars' or sub_section.title contains 'All Events'%}
-            {% assign currentTimeInSeconds = 'now'| date: '%s' %}
-            {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
-            {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
-            {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
-
-            {% if eventTimeInSeconds > currentTimeInSeconds or eventTimeFormatted == currentTimeFormatted %}
-            {% if currentTimeFormatted == eventTimeFormatted %}
-            {% assign status = 'NOW' %}
-            {% assign colorTheme = "#D0021B" %}
-            {% else %}
-            {% assign status = 'UPCOMING' %}
-            {% assign colorTheme = "#0161AF" %}
-            {% endif %}
-
-            {% assign name = sub_section.title %}
-            {% assign categoryTagging = "STACK-X Meetups" %}
-            {% assign description = sub_section.description%}
-            {% assign sub_section_slug = sub_section.name | slugify %}
-            {% assign item_count = sub_section.items | size | minus: 1 %}
-            {% assign url_str = sub_section.url | append : sub_section_slug %}
-            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
-
-            {% if sub_section.date == blank %}
-            {% assign eventDateAndTiming = sub_section.last_modified_at %}
-            {% else %}
-            {% assign eventDateAndTiming = sub_section.date %}
-            {% endif%}
-
-            {% if 2 > eventIncrementer %}
-            <div id="upcoming-stack-x-meetups-visible-content">
-                {% include card-variant-calendar.html 
-                    name=name
-                    item_count=item_count
-                    description=description
-                    status=status
-                    img_src=img_src
-                    url_str=url_str
-                    colorTheme=colorTheme
-                    eventCategory=categoryTagging
-                    eventDateAndTiming=eventDateAndTiming
-                    disableItemCount=include.disableItemCount
-                %}
-            </div>
-            {% else %}
-            <div id="upcoming-stack-x-meetups-hidden-content">
-                {% include card-variant-calendar.html
-                    name=name
-                    item_count=item_count
-                    description=description
-                    status=status
-                    img_src=img_src
-                    url_str=url_str
-                    colorTheme=colorTheme
-                    eventCategory=categoryTagging
-                    eventDateAndTiming=eventDateAndTiming
-                    disableItemCount=include.disableItemCount
-                %}
-            </div>
-            {% endif %}
-
-            {% assign eventIncrementer = eventIncrementer | plus: 1 %}
-            {% endif %}
-            {% endunless %}
-            {% endfor %}
-
-            {% if eventIncrementer == 0 %}
-            <div class="has-text-centered" style="padding: 3rem;">
-                <p>
-                    Sorry, there are currently no available events!
-                </p>
-            </div>
-            {% else %}
-            <button id="upcoming-stack-x-button" class="sgds-button sgds-button--primary" onclick="toggleUpcomingStackXMeetupsVisibility()">
-                View all events
-            </button>
-            {% endif %}
-        </div>
+        {% include site-section-event-listing.html 
+            is_reversed=false
+            show_upcoming=true
+            show_recent_past=false
+            limit_number_of_content=2
+            specified_category_tag="stack-x-meetups"
+        %}
     </div>
+
+    <hr />
 
     <!-- Past Conferences -->
     <div>
         <h3>Recent Past STACK-X Meetups</h3>
-        <div class="card-grid-container is-fullwidth">
-            <!-- Subcollection gatherer -->
-            {% assign eventIncrementer = 0 %}
-            {% assign collectionDumps = site.communities | where_exp: "item", "item.path contains '/stack-x-meetups'" | sort: 'date' | reverse %}
-
-            {% for sub_section in collectionDumps%}
-            {%- comment-%}
-            filter to remove unnecessary pages etc, feel free to add
-            {%- endcomment -%}
-            {% unless sub_section.url contains '/overview' or sub_section.title contains 'Past Webinars'%}
-            {% assign currentTimeInSeconds = 'now'| date: '%s' %}
-            {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
-            {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
-            {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
-
-            {% if currentTimeInSeconds > eventTimeInSeconds and currentTimeFormatted != eventTimeFormatted %}
-            {% assign status = 'PAST' %}
-            {% assign colorTheme = "#323232" %}
-
-            {% assign name = sub_section.title %}
-            {% assign categoryTagging = "STACK-X Meetups" %}
-            {% assign description = sub_section.description%}
-            {% assign sub_section_slug = sub_section.name | slugify %}
-            {% assign item_count = sub_section.items | size | minus: 1 %}
-            {% assign url_str = sub_section.url | append : sub_section_slug %}
-            {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
-
-            {% if sub_section.date == blank %}
-            {% assign eventDateAndTiming = sub_section.last_modified_at %}
-            {% else %}
-            {% assign eventDateAndTiming = sub_section.date %}
-            {% endif%}
-
-            {% if 2 > eventIncrementer %}
-            <div id="upcoming-stack-x-meetups-visible-content">
-                {% include card-variant-calendar.html 
-                    name=name
-                    item_count=item_count
-                    description=description
-                    status=status
-                    img_src=img_src
-                    url_str=url_str
-                    colorTheme=colorTheme
-                    eventCategory=categoryTagging
-                    eventDateAndTiming=eventDateAndTiming
-                    disableItemCount=include.disableItemCount
-                %}
-            </div>
-            {% else %}
-            <div id="past-stack-x-meetups-hidden-content">
-                {% include card-variant-calendar.html
-                    name=name
-                    item_count=item_count
-                    description=description
-                    status=status
-                    img_src=img_src
-                    url_str=url_str
-                    colorTheme=colorTheme
-                    eventCategory=categoryTagging
-                    eventDateAndTiming=eventDateAndTiming
-                    disableItemCount=include.disableItemCount
-                %}
-            </div>
-            {% endif %}
-
-            {% assign eventIncrementer = eventIncrementer | plus: 1 %}
-            {% endif %}
-            {% endunless %}
-            {% endfor %}
-            <button id="past-events-stack-x-button" class="sgds-button sgds-button--primary" onclick="togglePastStackXMeetupsVisibility()">
-                View all events
-            </button>
-        </div>
+        {% include site-section-event-listing.html 
+            is_reversed=false
+            show_upcoming=false
+            show_recent_past=true
+            limit_number_of_content=2
+            specified_category_tag="stack-x-meetups"
+        %}
     </div>
 </div>
-<script>
-    (() => {
-        // Selects the hidden upcoming and past events
-        const nodes = document.querySelectorAll('*[id*="stack-x-meetups-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "none";
-        }
-    })()
-
-    // Hides the content at the start initially during the creation phase using IIFEs
-    function toggleUpcomingStackXMeetupsVisibility() {
-        // changes the visibility of the button to none
-        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
-
-        // Changes the visibility of the button 
-        const button = document.getElementById('upcoming-stack-x-button')
-        button.style.display = "none";
-    }
-
-    function togglePastStackXMeetupsVisibility(){
-        const nodes2 = document.querySelectorAll('*[id^="past-stack-x-meetups-hidden-content"]')
-        for (var i = 0; i < nodes2.length; i++) {
-            nodes2[i].style.display = "block";
-        }
-
-        // Changes the visibility of the button 
-        const button = document.getElementById('past-events-stack-x-button')
-        button.style.display = "none";
-    }
-</script>

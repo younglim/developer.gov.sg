@@ -35,6 +35,7 @@
     {% assign label= first_level_item.sub_item_name %}
     {% assign hide_nav_section = 'is-hidden' %}
     {%- assign first_lvl_nav_item_slug = first_level_item.name | slugify -%}
+
     {% if page.url contains first_lvl_nav_item_slug  %}
       {% assign hide_nav_section = nil %}
       {% assign icon_class = "sgds-icon-chevron-up" %}
@@ -52,8 +53,9 @@
       {%- if (page_id_last == second_lvl_nav_item_slug and page.url contains first_lvl_nav_item_slug) -%}
         {%- assign class = 'is-active' -%}
       {%- endif -%}
-      {%- assign sidenav_item_url = '/' | append: item_url | append: '/' | append: first_lvl_nav_item_slug | append: '/' | append: second_lvl_nav_item_slug -%}
-      {% include sidenav-second-lvl-nav-item.html label=second_lvl_nav_item href=sidenav_item_url class=class %}
+
+      {%- assign sidenav_item_url = item_url | append : '/'| append: second_lvl_nav_item_slug -%}
+      {% include sidenav-second-lvl-nav-item.html label=second_lvl_nav_item href=second_lvl_nav_item_slug class=class %}
     {%- endfor -%}
   </ul>
   {%- else -%}

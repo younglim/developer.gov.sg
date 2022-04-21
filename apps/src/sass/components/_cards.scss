@@ -81,7 +81,7 @@
   }
 }
 
-//dev portal variants - use for products and services
+// dev portal variants - used for products and services
 .sgds-card {
   &.sgds-card-variant-sub-section-info {
     height: 100%;
@@ -210,6 +210,18 @@
 
 .sgds-card-list {
   height: 100%;
+}
+
+// dev portal variants - used for community
+.sgds-calendar-card {
+  .sgds-calendar-card-left {
+    .sgds-calendar-card-left-inner {
+      border-radius: 0.75rem;
+      
+    }
+  }
+
+  .sgds-calendar-card-right {}
 }
 
 .sgds-card-iconography {

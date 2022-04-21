@@ -4,7 +4,6 @@
   - sub_item_name: Overview
     sub_item_label: Overview
     sub_item_item: Overview
-    dropdown: false
 
   - sub_item_name: Agenda
     sub_item_label: Agenda
@@ -20,6 +19,4 @@
     sub_item_label: Recordings
     sub_item_item:
     - Recordings
-    dropdown: false
 
-- name: Test

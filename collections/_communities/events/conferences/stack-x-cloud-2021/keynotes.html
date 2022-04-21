@@ -29,33 +29,8 @@ date: 2021-11-17
   </div>
 
   <div>
-    <div class="sgds-tabs">
-      <ul class="no-margin" role="tablist">
-        <li class="is-active">
-          <a data-tab="#tab1" role="tab" aria-selected="true" aria-controls="tab1">
-            Leadership
-          </a>
-        </li>
-        <li>
-          <a data-tab="#tab2" role="tab" aria-selected="false" aria-controls="tab2">
-            Cloud Onboarding
-          </a>
-        </li>
-        <li>
-          <a data-tab="#tab3" role="tab" aria-selected="false" aria-controls="tab3">
-            Cloud Platform & Tools Track
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="row" id="tab1">
-      {% include videos-display.html type="Keynote - VOD" _data=video_data_file %}
-    </div>
-    <div class="row" id="tab2">
-      {% include videos-display.html type="CloudOnboarding - VOD" _data=video_data_file %}
-    </div>
-    <div class="row" id="tab3">
-      {% include videos-display.html type="CloudPlatform - VOD" _data=video_data_file %}
-    </div>
+    {% include accordian-display.html 
+      _data='stackx2021cloud'
+    %}
   </div>
 </div>

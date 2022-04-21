@@ -1,33 +1,35 @@
 <div>
     <div class="sgds-card sgds-card-variant-video-info">
+        <!-- Only available on Mobile View -->
         <div class="is-hidden-desktop">
-            <div class="has-text-centered"
-                style="background-color: {{include.colorTheme | default: black }}; padding-top: .5rem; padding-bottom: .5rem;">
+            <div class="has-text-centered padding--bottom--sm padding--top--sm"
+                style="background-color: {{include.colorTheme | default: black }};">
                 <p class="has-text-weight-bold has-text-white">{{include.status | default: "PAST"}}</p>
             </div>
         </div>
         <div class="sgds-card-content">
-            <div class="content-grid">
-                <!-- Left hand side -->
-                <div class="sgds-card-image is-hidden-mobile is-hidden-tablet-only">
-                    <div style="border-radius: 0.75rem; margin-right: 1rem; ">
+            <div class="sgds-calendar-card content-grid">
+                <!-- Left hand side (Calendar) -->
+                <div class="sgds-calendar-card-left sgds-card-image is-hidden-touch">
+                    <div class="margin--right sgds-calendar-card-left-inner">
                         <div class="has-text-centered" style="width: 6.65rem;">
-                            <!-- header -->
-                            <div
-                                style="background-color: {{include.colorTheme}}; border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;">
-                                <p class="has-text-weight-bold has-text-white">{{include.status | default: 'PAST'}}</p>
+                            <div style="
+                                background-color: {{include.colorTheme}};
+                                border-top-right-radius: 0.5rem;
+                                border-top-left-radius: 0.5rem;">
+                                <p class="has-text-weight-bold has-text-white">{{- include.status -}}</p>
                             </div>
-                            <!-- body -->
-                            <div
-                                style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                            <div class="padding--top padding--bottom"
+                                style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
                                 <div>
                                     <p class="has-text-centered is-size-3 has-text-weight-bold">
-                                        {{include.eventDateAndTiming | date: "%d" }}
+                                        {{- include.eventDateAndTiming | date: "%d" -}}
                                     </p>
                                 </div>
                                 <div>
                                     <p>
-                                        {{include.eventDateAndTiming |  date: "%b" }}' {{include.eventDateAndTiming | date: "%y"}}
+                                        {{- include.eventDateAndTiming |  date: "%b" -}}'
+                                        {{- include.eventDateAndTiming | date: "%y" -}}
                                     </p>
                                 </div>
                             </div>
@@ -38,19 +40,27 @@
                 <div>
                     {% include card-header-info.html disableItemCount=include.disableItemCount name=include.name item_count=include.item_count url_str=include.url_str%}
                     <div>
-                        <div class="is-hidden-desktop is-flex" style="display: flex; align-items: center; justify-content: start;">
+                        <!-- Mobile View -->
+                        <div class="is-hidden-desktop is-flex" style="align-items: center; justify-content: start;">
                             <p>
                                 <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"></span>
-                                
-                                    {{include.eventDateAndTiming | date: "%d"}} {{include.eventDateAndTiming | date: "%b"}} {{include.eventDateAndTiming | date: "%y"}}
+                                {{include.eventDateAndTiming | date: "%d"}} {{include.eventDateAndTiming | date: "%b"}}
+                                {{include.eventDateAndTiming | date: "%y"}}
                             </p>
                         </div>
+                        <!-- Desktop View -->
+                        {%- if include.recordings_uploaded -%}
+                        <div class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm margin--bottom margin--top is-size-8"
+                            style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; padding: 0.40rem; border-radius: .25rem;">
+                            Recordings available
+                        </div>
+                        {%- endif -%}
+                        <!-- both view -->
                         {% if include.eventCategory %}
                         <div class="is-flex" style="align-items: center;">
-                            <img src="{{include.img_src}}"
-                                alt="{{include.img_src}} icon" 
-                                style="height: 1.5em; width: 1.5em;"/>
-                            <p style="margin-left: .5rem; color: #767676;">
+                            <img src="{{include.img_src}}" alt="{{include.img_src}} icon"
+                                style="height: 1.5em; width: 1.5em;" />
+                            <p class="margin--left--sm" style="color: #767676;">
                                 {{include.eventCategory}}
                             </p>
                         </div>

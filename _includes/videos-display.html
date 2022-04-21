@@ -8,18 +8,6 @@
 {% assign title_description = include.description %}
 
 <div>
-  {% if title_header %}
-    <h4>
-      {{ title_header }}
-    </h4>
-  {% endif %}
-  
-  {% if title_description %}
-    <p>
-      {{ title_description }}
-    </p>
-  {% endif %}
-
   <div class="card-grid-container is-fullwidth">
     {% for video in videos %}
     {% assign video_id = video.video_id %}

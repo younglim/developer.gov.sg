@@ -1,0 +1,47 @@
+{%- assign data_file = include._data -%}
+{% comment %}
+The default is to select all the category
+{% endcomment %}
+{%- assign specified_category = include.category | default: 'Product' -%}
+{%- assign event_details = site.data[data_file]| where_exp: "events", "events.type contains specified_category" -%}
+
+<div class="is-fullwidth">
+    {% for event in event_details %}
+    <div class="sgds-card sgds-card-variant-video-info">
+        <div class="sgds-card-content">
+            <div>
+                {{ event.timeslot }}
+                <h5>{{ event.title }}</h5>
+                <div class="margin--bottom--sm">
+                    <span class="has-dark has-text-weight-semibold">Speaker(s):</span>
+                </div>
+            </div>
+            <div class="sgds-accordion-set">
+                {% for speaker in event.speakers %}
+                <div class="sgds-accordion">
+                    <a href="#!" class="sgds-accordion-header is-dark" role="button" aria-expanded="false">
+                        <!-- Speakers -->
+                        <div>
+                            <div class="is-flex sgds-accordian-speaker-content">
+                                <img class="sgds-accordian-speaker-image" src="{{ speaker.image }}"
+                                    alt="Speaker Image" />
+                                {{speaker.name}}, {{speaker.title}}
+                            </div>
+                        </div>
+                        <!-- Arrow -->
+                        <i class="sgds-icon sgds-icon-chevron-down"></i>
+                    </a>
+                    <div class="sgds-accordion-body">
+                        <p>{{speaker.desc}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="margin--top--lg">
+        * Please note that the programme may be subject to change without prior notice
+    </div>
+</div>
