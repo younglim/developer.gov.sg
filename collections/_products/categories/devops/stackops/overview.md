@@ -24,10 +24,11 @@ StackOps is part of the Monitoring component of the [Singapore Government Tech S
 
 ### What is StackOps?
 
-StackOps is a Monitoring toolchain that focuses on the most important and critical user actions of your service.
+StackOps is a Monitoring toolchain that focuses on the most important and critical user actions of your service. It features automated reactions based on the golden monitoring and logging metrics such as latency, load, limit, and errors.
 
-StackOps focuses on the most important and critical user actions of a service. It features automated reactions based on the golden monitoring and logging metrics (latency, load, limit, and errors).
+StackOps consists of **StackOps Logging**, a suite of centrally managed logging applications such as Elastic, Logstash, and Kibana that transforms and visualises your data from multiple sources.
 
+<<<<<<< HEAD
 StackOps consists of two main parts:
 
 1. **StackOps Monitoring** is a package of monitoring applications (Prometheus, Thanos, and Grafana) that are centrally managed, automated, open-sourced, and easy to use.
@@ -41,12 +42,14 @@ StackOps consists of two main parts:
     </figure>
 
 2. **StackOps Logging** is a suite of centrally managed logging applications (Elastic, Logstash, and Kibana) that transforms and visualises your data from multiple sources.
+=======
+>>>>>>> 06abb8cab7ee2e8bcda2b76e830652c153123865
 <figure style="text-align: center">
     <img
       src="/assets/img/stackops-fig2.png" width="50%" height="50%"
       alt="Fig 2: StackOps Logging Applications (Elastic, Logstash, and Kibana)"
     />
-    <figcaption>Fig 2: StackOps Logging Applications (Elastic, Logstash, and Kibana)</figcaption>
+    <figcaption>Fig 1: StackOps Logging Applications (Elastic, Logstash, and Kibana)</figcaption>
 </figure>
 
 ### Why Should StackOps be Adopted?
@@ -57,7 +60,7 @@ Adopting StackOps can benefit users in the following ways:
 -	Fills current lack of monitoring and logging solutions that are quick and easy to set up.
 -	Resolves problem of inability to track System Level Objectives (SLOs) of Whole-of Government (WOG) products and services.
 -	Offers a one-stop-shop for monitoring the health of government services.
--	StackOps services will be whitelisted by General Availability (GA) by the end of 2021.
+
 
 ### How Do You Use StackOps?
 
@@ -69,10 +72,18 @@ Onboarding can typically be completed within one business day.
 
 StackOps’ customer base grew from two to fifteen within five months. It is now used by SGTS products and the [Government on Commercial Cloud (GCC)](/products/categories/infrastructure-and-hosting/government-on-commercial-cloud){:target="_blank"} platform.
 
+<!--
 ### What's Next?
 
-The StackOps team is developing the StackOps Dashboard that enables a single-pane view of all services. It allows users to manage alerts, take remedial action against detected events, and easily publish their services’ availabilities to their target audiences.
+| Upcoming feature  | Timeline |
+| ------------- |:-------------:|
+| Automated onboarding portal| 2022 Q2    |
+| Engineering suite integration      | 2022 Q3    |
+| Auto remediation - phase 1      | 2022 Q4     |
 
+-->
+
+<<<<<<< HEAD
 <figure style="text-align: center">
   <img
     src="/assets/img/stackops-fig3.png" width="80%" height="80%"
@@ -80,6 +91,8 @@ The StackOps team is developing the StackOps Dashboard that enables a single-pan
   />
   <figcaption>Fig 3: StackOps Dashboard</figcaption>
 </figure>
+=======
+>>>>>>> 06abb8cab7ee2e8bcda2b76e830652c153123865
 
 ### Contact Information
 
