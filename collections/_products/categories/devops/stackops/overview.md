@@ -28,22 +28,6 @@ StackOps is a Monitoring toolchain that focuses on the most important and critic
 
 StackOps consists of **StackOps Logging**, a suite of centrally managed logging applications such as Elastic, Logstash, and Kibana that transforms and visualises your data from multiple sources.
 
-<<<<<<< HEAD
-StackOps consists of two main parts:
-
-1. **StackOps Monitoring** is a package of monitoring applications (Prometheus, Thanos, and Grafana) that are centrally managed, automated, open-sourced, and easy to use.
-
-    <figure style="text-align: center">
-      <img
-        src="/assets/img/stackops-fig1.png" width="75%" height="75%"
-        alt="Fig 1: StackOps Monitoring Applications (Prometheus, Thanos, and Grafana)"
-      />
-      <figcaption>Fig 1: StackOps Monitoring Applications (Prometheus, Thanos, and Grafana)</figcaption>
-    </figure>
-
-2. **StackOps Logging** is a suite of centrally managed logging applications (Elastic, Logstash, and Kibana) that transforms and visualises your data from multiple sources.
-=======
->>>>>>> 06abb8cab7ee2e8bcda2b76e830652c153123865
 <figure style="text-align: center">
     <img
       src="/assets/img/stackops-fig2.png" width="50%" height="50%"
@@ -83,16 +67,6 @@ StackOps’ customer base grew from two to fifteen within five months. It is now
 
 -->
 
-<<<<<<< HEAD
-<figure style="text-align: center">
-  <img
-    src="/assets/img/stackops-fig3.png" width="80%" height="80%"
-    alt="Fig 3: StackOps Dashboard"
-  />
-  <figcaption>Fig 3: StackOps Dashboard</figcaption>
-</figure>
-=======
->>>>>>> 06abb8cab7ee2e8bcda2b76e830652c153123865
 
 ### Contact Information
 
