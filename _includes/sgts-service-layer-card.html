@@ -1,9 +1,9 @@
-<!-- rename this file to sgts-service-layer-small-card -->
-<!-- For SGTS products which are live, there will be these headers in the frontmatter
+{% comment %}
+For Planned/WIP SGTS products, the date resides in _singapore-government-tech-stack/overview/index.html
 sgts_collection_group: [analytics]
 sgts_layer_group: [services]
 sgts_title: Personalise
--->
+{% endcomment %}
 
 <div class="sgds-card grid-item">
   <div class="sgds-card-header is-shadowless">
@@ -16,7 +16,7 @@ sgts_title: Personalise
   <div class="sgds-card-content sgds-card-ul-hz">
     <ul class="is-paddingless is-marginless is-flex is-flex-justify-sb">
   {% endif %}
-      
+
         {% for item in site.products  %}
           {% if item.sgts_collection_group contains include.category and item.sgts_layer_group contains include.layer %}
             <a href={{item.redirect_from[0]}} target="_blank">
