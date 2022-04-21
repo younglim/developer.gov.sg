@@ -9,9 +9,19 @@ $section-highlights-space: 10%;
   padding-top: 0px;
 }
 
-.card-grid-container {
-  padding: 0%;
+.live {
+  @include sgts-li-icon("/assets/icons/oval_green.svg");
+}
 
+.work_in_progress {
+  @include sgts-li-icon("/assets/icons/oval_orange.svg");
+}
+
+.planned {
+  @include sgts-li-icon("/assets/icons/oval_blue.svg");
+}
+
+.card-grid-container {
   &.sg-tech-stack {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-auto-rows: 1fr;
@@ -30,12 +40,12 @@ $section-highlights-space: 10%;
 
     .sgds-card-header {
       background: none;
-      box-shadow: none;
     }
+
     // card header to be center in desktop view and left of mobile view
     .sgds-card-header-title {
-      justify-content: center;
       color: black;
+
       @include until($tablet) {
         justify-content: left;
       }
@@ -46,155 +56,53 @@ $section-highlights-space: 10%;
 
       ul {
         list-style-type: none;
-        padding: 0;
-        margin: 0;
         display: grid;
         grid-template-rows: repeat(4, min-content);
         grid-auto-flow: column;
-        justify-content: space-between;
-        @include until($tablet) {
+        
+
+        @media screen and (max-width: 768px) {
           display: list-item;
         }
       }
 
       li {
-        padding-left: 35px;
-        margin-bottom: 24px;
-        margin-top: 0;
-        font-size: 18px !important;
         font-weight: bold !important;
         list-style-type: none;
         position: relative;
-      }
-
-      li::before {
-        display: inline-flex;
-        width: 4px;
-        height: 4px;
-        margin-right: 15px;
-        margin-left: -29px;
-        border-radius: 375px;
-        content: "";
-        position: absolute;
-        top: 9px;
-      }
-      // live svg status for SGTS Legend
-      li.live {
-        @include sgts-li-icon("/assets/icons/oval_green.svg");
-      }
-      // WIP = Work in progress status for SGTS Legend
-      li.wip {
-        @include sgts-li-icon("/assets/icons/oval_orange.svg");
-      }
-      // pending svg status for SGTS Legend
-      li.pending {
-        @include sgts-li-icon("/assets/icons/oval_blue.svg");
+        margin-bottom: 24px !important
       }
     }
+
     //sgds-card-ul-hz, to provide horizontal UI/LI
     .sgds-card-ul-hz {
       a li {
         text-decoration: underline;
       }
       ul {
-        text-align: justify;
-        list-style-type: none;
-        padding: 0;
-        grid-template-rows: none !important;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        justify-content: space-evenly !important;
         flex-wrap: wrap;
         @include until($tablet) {
-          display: flex;
           flex-direction: column;
           align-items: flex-start;
         }
-      }
-      ul:after {
-        content: "";
-        display: inline-block;
-        width: 100%;
-      }
-      li {
-        display: inline-block !important;
-        text-align: center !important;
-      }
-      // live svg status for SGTS Legend
-      li.live {
-        @include sgts-li-icon("/assets/icons/oval_green.svg");
-      }
-      // WIP = Work in progress status for SGTS Legend
-      li.wip {
-        @include sgts-li-icon("/assets/icons/oval_orange.svg");
-      }
-      // pending svg status for SGTS Legend
-      li.pending {
-        @include sgts-li-icon("/assets/icons/oval_blue.svg");
       }
     }
 
     .sgds-card .sgds-card-content:last-child {
       border-top: none;
     }
-    // To make the height to grow as the card have more items.
+
+    //To make the height to grow as the card have more items.
     .sgds-card {
       height: calc(100% - (#{$section-highlights-space} / 2));
 
       @include until($tablet) {
         height: auto;
       }
-
-      .sgds-card-content {
-        flex-grow: 1;
-
-        h3 {
-          margin-bottom: 0;
-        }
-      }
     }
+
   }
-}
-
-// Legend styling
-@mixin sgts-legend {
-  .legend{
-    ul {
-      text-align: justify;
-      list-style-type: none;
-      padding: 0;
-      grid-template-rows: none !important;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-left: 0;
-      margin-top: 0;
-      justify-content: space-evenly;
-      @include until($tablet) {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-    }
-    li {
-      display: inline-block !important;
-      text-align: center !important;
-      margin-top: 0;
-    }
-        li.live {
-          @include sgts-li-icon("/assets/icons/oval_green.svg");
-
-        }
-        li.wip {
-          @include sgts-li-icon("/assets/icons/oval_orange.svg");
-        }
-        li.pending {
-          @include sgts-li-icon("/assets/icons/oval_blue.svg");
-        }
-  }
-  
 }
 
 @mixin sgts-layer-mixin($borderColor, $background-color) {
@@ -202,7 +110,16 @@ $section-highlights-space: 10%;
     .sgds-container.is-fluid {
       padding-left: 0 !important;
       padding-right: 0 !important;
-    } 
+    }
+    
+    ul {
+      @include until($tablet) {
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: auto;
+      }
+    }
+
   }
   background-color: $background-color;
   border: 3px dashed $borderColor;
@@ -210,12 +127,10 @@ $section-highlights-space: 10%;
 }
 
 .service-layer {
-  @include sgts-legend(); 
   @include sgts-layer-mixin(#0161af, #e2eff8);
 }
 
 .base-layer {
-  @include sgts-legend(); 
   @include sgts-layer-mixin(#0161af, #e2eff8);
   border-bottom: none;
 }

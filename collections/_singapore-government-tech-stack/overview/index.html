@@ -6,38 +6,38 @@ redirect_from:
 layout: layout-page-soicalmedia-right
 
 sgts_service_layer:
-- analytics:
-- digital_identity:
-  - work_in_progress:
-    - Authorise
-    - Notify
-    - Sign
-- data_science:
-  - work_in_progress:
-    - Transcrible
-    - GovText
-    - Fraud Detect
-- data_transfer:
-  - work_in_progress:
-    - Video Exchange
+  analytics: null
+  digital_identity:
+    work_in_progress:
+      - Authorise
+      - Notify
+      - Sign
+  data_science:
+    work_in_progress:
+      - Transcrible
+      - GovText
+      - Fraud Detect
+  data_transfer:
+    work_in_progress:
+      - Video Exchange
 sgts_base_layer:
-- monitoring:
-  - planned:
-    - Gov Cyber Sec Ops Centre
-    - Cloudscape
-  - work_in_progress:
-    - Endpoint Det & Res
-- communications:
-  - work_in_progress:
-    - APEX Cloud
-    - APEX Marketplace
-- runtime:
-  - work_in_progress:
-    - IaC
-- service_management:
-  - work_in_progress:
-    - SEED & TechPass
-    - TechBiz
+  monitoring:
+    planned:
+      - Gov Cyber Sec Ops Centre
+      - Cloudscape
+    work_in_progress:
+      - Endpoint Det & Res
+  communications:
+    work_in_progress:
+      - APEX Cloud
+      - APEX Marketplace
+  runtime:
+    work_in_progress:
+      - IaC
+  service_management:
+    work_in_progress:
+      - SEED & TechPass
+      - TechBiz
 ---
 
 <h2>Overview</h2>
@@ -98,23 +98,23 @@ sgts_base_layer:
           <h3>Service Layer</h3>
         </div>
         <div id="legend" class="col is-6 legend">
-            <ul>
-              <li>Legend: </li>
-              <li class="live">Live</li>
-              <li class="pending">Planned</li>
-              <li class="wip">Work in progress</li>
+            <ul class="margin--top--none">
+              <li class="margin--top--none is-inline-block">Legend: </li>
+              <li class="live margin--top--none is-inline-block">Live</li>
+              <li class="planned margin--top--none is-inline-block">Planned</li>
+              <li class="work_in_progress margin--top--none is-inline-block">Work in progress</li>
             </ul>
         </div>
       </div>
       <!-- Start of cards for each service layer-->
       <div class="card-grid-container sg-tech-stack">
         <!-- TODOs: An array of object to iterate through -->
-        {% include sgts-service-layer-small-card.html category="analytics" header="Analytics" layer="services" card_type="sm" %}
-        {% include sgts-service-layer-small-card.html category="design" header="Design" layer="services" card_type="sm" %}
-        {% include sgts-service-layer-small-card.html category="digital_identity" header="Digital Identity" layer="services" card_type="sm" %}
-        {% include sgts-service-layer-small-card.html category="iot" header="IoT" layer="services" card_type="sm" %}
-        {% include sgts-service-layer-small-card.html cateogry="data_science" header="Data Science" layer="services" card_type="sm" %}
-        {% include sgts-service-layer-small-card.html category="data_transfer" header="Data Transfer" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-card.html category="analytics" header="Analytics" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-card.html category="design" header="Design" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-card.html category="digital_identity" header="Digital Identity" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-card.html category="iot" header="IoT" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-card.html category="data_science" header="Data Science" layer="services" card_type="sm" %}
+        {% include sgts-service-layer-card.html category="data_transfer" header="Data Transfer" layer="services" card_type="sm" %}
       </div>
     </div>
   </section>
@@ -128,21 +128,21 @@ sgts_base_layer:
         <div class="col is-6">
           <h3>Base Layer</h3>
         </div>
-        <div id="legend" class="col is-6 legend">
-            <ul>
-              <li>Legend: </li>
-              <li class="live">Live</li>
-              <li class="pending">Planned</li>
-              <li class="wip">Work in progress</li>
-            </ul>
+        <div id="legend" class="col is-6">
+          <ul class="margin--top--none">
+            <li class="margin--top--none is-inline-block">Legend: </li>
+            <li class="live margin--top--none is-inline-block">Live</li>
+            <li class="planned margin--top--none is-inline-block">Planned</li>
+            <li class="work_in_progress margin--top--none is-inline-block">Work in progress</li>
+          </ul>
         </div>
       </div>
       <!-- Start of cards for each base-->
       <!-- Start of Communtications-->
       <div class="row">
         <div class="col">
-          <div class="card-grid-container sg-tech-stack">
-            {% include sgts-service-layer-small-card.html category="communications" header="Communications" layer="base" card_type="lg" %}
+          <div class="card-grid-container sg-tech-stack is-paddingless">
+            {% include sgts-service-layer-card.html category="communications" header="Communications" layer="base" card_type="lg" %}
           </div>
         </div>
       </div>
@@ -151,9 +151,9 @@ sgts_base_layer:
       <div class="row">
         <div class="col">
           <div class="card-grid-container sg-tech-stack">
-            {% include sgts-service-layer-small-card.html category="toolchain" header="Toolchain" layer="base" card_type="sm" %}
-            {% include sgts-service-layer-small-card.html category="runtime" header="Runtime" layer="base" card_type="sm" %}
-            {% include sgts-service-layer-small-card.html category="monitoring" header="Monitoring" layer="base" card_type="sm" %}
+            {% include sgts-service-layer-card.html category="toolchain" header="Toolchain" layer="base" card_type="sm" %}
+            {% include sgts-service-layer-card.html category="runtime" header="Runtime" layer="base" card_type="sm" %}
+            {% include sgts-service-layer-card.html category="monitoring" header="Monitoring" layer="base" card_type="sm" %}
           </div>
         </div>
       </div>
@@ -161,8 +161,8 @@ sgts_base_layer:
       <!-- Start of service managment-->
       <div class="row">
         <div class="col">
-          <div class="card-grid-container sg-tech-stack">
-            {% include sgts-service-layer-small-card.html category="service_management" header="Service Management" layer="base" card_type="lg"
+          <div class="card-grid-container sg-tech-stack is-paddingless">
+            {% include sgts-service-layer-card.html category="service_management" header="Service Management" layer="base" card_type="lg"
             %}
           </div>
         </div>
