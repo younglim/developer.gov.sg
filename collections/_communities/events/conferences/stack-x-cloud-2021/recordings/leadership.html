@@ -9,16 +9,12 @@ sub_collection_render: true
 recordings_uploaded: true
 date: 2021-11-17
 ---
-{% assign video_data_file = 'stack-x-cloud-2021-videos' %}
+{% assign video_data_file = 'stackx2021conference-videos' %}
 
 <div>
     <div>
         <!-- Header -->
-        <h1>Cloud Onboarding</h1>
-        <p class="is-light">
-            <span class="sgds-icon sgds-icon-camera" role="img" aria-label="iconName"></span>
-            Online (via Zoom)
-        </p>
+        <h1>Leadership</h1>
         <!-- Content -->
         <p>
             This virtual track is for Tech Leads, Project Managers, Business Analysts and Developers especially those
@@ -30,8 +26,6 @@ date: 2021-11-17
     <hr />
 
     <div>
-        {% include accordian-display.html 
-            _data='stackx2021cloud'
-    %}
+        {% include videos-display-basic.html type="Opening" _data=video_data_file %}
     </div>
 </div>

@@ -1,11 +1,11 @@
 {% comment %}
 {% assign videos = site.data.stack-x-cloud-2021-videos | where: include.type %}
 {% endcomment %}
-{% assign data_file = include._data %}
-{% assign video_types = include.type | split: ", " %}
-{% assign videos = site.data[data_file]| where_exp: "video", "video_types contains video.type" %}
-{% assign title_header = include.title %}
-{% assign title_description = include.description %}
+{%- assign data_file = include._data -%}
+{%- assign video_types = include.type | split: ", " -%}
+{%- assign videos = site.data[data_file] | where_exp: "video", "video_types contains video.type" -%}
+{%- assign title_header = include.title -%}
+{%- assign title_description = include.description -%}
 
 <div>
     <div class="card-grid-container is-fullwidth">
@@ -21,7 +21,7 @@
 
         <div class="sgds-card sgds-card-variant-video-info">
             <div class="sgds-card-content">
-                
+
                 <div class="content-grid">
                     {% if video_id != nil %}
                     <div class="sgds-card-image">
@@ -42,6 +42,22 @@
                         {% else %}
                         <h4>{{ video_title }}</h4>
                         {% endif %}
+
+                        {%- if video.category-%}
+                        <div class="is-flex">
+                            {%- for category in video.category -%}
+                            <div class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm is-size-8 margin--top margin--bottom margin--right--sm"
+                                style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; padding: 0.40rem; border-radius: .25rem;">
+                                {{ category }}
+                            </div>
+                            {%- endfor -%}
+                        </div>
+                        {%- endif-%}
+
+                        <p>
+                            {{video.description}}
+                        </p>
+
                         <p>
                             <strong>Speaker(s):</strong> <br>
                             {% for speaker in speakers %}
@@ -49,8 +65,8 @@
                             <strong>{{ speaker }}</strong>, {{speakers_title[speaker_index]}}<br><br>
                             {% endfor %}
                         </p>
-                        {% if article_link != nil %}
 
+                        {% if article_link != nil %}
                         You can read the article <a href="{{ video.article_link}}" target="_blank">here</a>.
                         {% endif %}
 

@@ -4,11 +4,10 @@
     justify-content: space-between;
     align-items: center;
     /* Styles */
-    border: 0px;
     padding: 0px;
     color: #323232;
 
-    .sgds-accordian-speaker-content{
+    .sgds-accordian-speaker-content {
         align-items: center;
         justify-content: start;
 
@@ -20,4 +19,15 @@
         }
     }
 
+    .is-active {
+        background-color: white;
+    }
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+.sgds-accordion.is-white .sgds-accordion-header.is-active {
+    background-color: white;
 }

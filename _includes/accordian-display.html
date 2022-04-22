@@ -2,7 +2,7 @@
 {% comment %}
 The default is to select all the category
 {% endcomment %}
-{%- assign specified_category = include.category | default: 'Product' -%}
+{%- assign specified_category = include.category | default: '' -%}
 {%- assign event_details = site.data[data_file]| where_exp: "events", "events.type contains specified_category" -%}
 
 <div class="is-fullwidth">
@@ -18,8 +18,8 @@ The default is to select all the category
             </div>
             <div class="sgds-accordion-set">
                 {% for speaker in event.speakers %}
-                <div class="sgds-accordion">
-                    <a href="#!" class="sgds-accordion-header is-dark" role="button" aria-expanded="false">
+                <div class="sgds-accordion is-borderless is-white">
+                    <a href="#!" class="sgds-accordion-header is-white" role="button" aria-expanded="false">
                         <!-- Speakers -->
                         <div>
                             <div class="is-flex sgds-accordian-speaker-content">

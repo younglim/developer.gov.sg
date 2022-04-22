@@ -1,22 +1,28 @@
 - name: STACK-X Cloud 2021
   label: Testing Alpha
   items:
-  - sub_item_name: Overview
-    sub_item_label: Overview
-    sub_item_item: Overview
+    # NOTE: SUB_ITEM_NAME IS USED FOR LINKS WHEREAS SUB_ITEM_LABEL IS USED AS THE TITLE
+    - item_name: Overview
+      item_label: Overview
 
-  - sub_item_name: Agenda
-    sub_item_label: Agenda
-    sub_item_item:
-    - All Agenda
-    - Keynotes
-    - Leadership
-    - Cloud Onboarding
-    - Cloud Platform & Tools
-    dropdown: true
+    - item_name: Agenda
+      item_label: Agenda
+      item_sub_item:
+        # For any page with index, please assign a diff label from the name.
+        # The normal configuration will just take sub_item_name unless specified.
+        - sub_item_name: All Agenda
+        - sub_item_name: Keynotes
+        - sub_item_name: Leadership
+        - sub_item_name: Cloud Onboarding
+        - sub_item_name: Cloud Platform & Tools
 
-  - sub_item_name: Recordings
-    sub_item_label: Recordings
-    sub_item_item:
-    - Recordings
-
+    - item_name: Recordings
+      item_label: Recordings
+      item_sub_item:
+        # For any page with index, please assign a diff label from the name.
+        # The normal configuration will just take sub_item_name unless specified.
+        - sub_item_name: All Recordings
+        - sub_item_name: Keynotes
+        - sub_item_name: Leadership
+        - sub_item_name: Cloud Onboarding
+        - sub_item_name: Cloud Platform & Tools
