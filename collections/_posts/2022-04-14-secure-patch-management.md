@@ -13,7 +13,8 @@ tags:
 ---
 
 No software developed is totally secure. As such, organisations must implement security patches to continually address security vulnerabilities and bugs. They should also implement feature updates to improve the usability or performance of the software. 
-If those patches are not implemented in a timely or effective manner, it may result in security incidents where a malicious actor exploits the underlying software vulnerabilities. Such vulnerabilities in the operating systems and applications can allow attackers to gain unauthorised access or disrupt business delivery. These may incur extra costs to remediate the damages done.
+
+If those patches are not implemented in a timely or effective manner, it may result in security incidents where a malicious actor exploits the underlying software vulnerabilities. Such vulnerabilities in the operating systems and applications can allow attackers to gain unauthorised access or disrupt business delivery. Extra costs may be incurred to remediate the damages done.
 
 ### IMPLEMENTING AN EFFECTIVE PATCH MANAGEMENT REGIME
 
