@@ -76,6 +76,45 @@ $section-highlights-space: 10%;
 
 .hosting-layer {
   @include sgts-layer-mixin(#98a2b3, #e4e7ec);
+  padding-top: 22px;
+  padding-bottom: 31px;
+  .row {
+    justify-content: space-between;
+  }
+  .host-rows {
+    @include until($tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 42px;
+    }
+    .sub-host-rows {
+      @include until($tablet) {
+        display: flex;
+        flex-direction: column;
+        width: 226px;
+      }
+    }
+  }
+  .title-col {
+    padding-left: 24px !important;
+   
+  }
+  .title-col-mobile {
+    margin-bottom: -35px !important;
+  }
+  .width {
+    width: auto !important;
+  }
+  .host-box {
+    border: 1px solid #667085;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color:#667085;
+  }
+  p{
+    color:#667085;
+  }
 }
 
 .card-grid-container {
