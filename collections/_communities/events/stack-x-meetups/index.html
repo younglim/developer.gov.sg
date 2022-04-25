@@ -33,29 +33,164 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
         <hr />
     </div>
 
-    <!-- Upcoming Conferences -->
     <div>
         <h3>All Upcoming STACK-X Meetups</h3>
-        {% include site-section-event-listing.html 
-            is_reversed=false
-            show_upcoming=true
-            show_recent_past=false
-            limit_number_of_content=2
-            specified_category_tag="stack-x-meetups"
-        %}
-    </div>
+        <div id="upcoming-events-container" class="card-grid-container is-fullwidth">
+        </div>
+        <button id="upcoming-conferences-button" class="sgds-button sgds-button--primary is-fullwidth"
+            onclick="toggleUpcomingConferencesVisibility()">
+            View all events
+        </button>
+        <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
+            Sorry, there is currently no upcoming available events
+        </div>
 
-    <hr />
+        <hr />
 
-    <!-- Past Conferences -->
-    <div>
         <h3>Recent Past STACK-X Meetups</h3>
+        <div id="past-events-container" class="card-grid-container is-fullwidth">
+        </div>
+        <button id="past-conferences-button" class="sgds-button sgds-button--primary is-fullwidth"
+            onclick="togglePastConferencesVisibility()">
+            View all events
+        </button>
+        <div id="no-past-events-message" class="margin--top margin--bottom has-text-centered">
+            Sorry, there are currently no past events
+        </div>
+
         {% include site-section-event-listing.html 
             is_reversed=true
-            show_upcoming=false
-            show_recent_past=true
             limit_number_of_content=2
             specified_category_tag="stack-x-meetups"
         %}
     </div>
 </div>
+
+<script type="text/javascript">
+    // Pre-defining variables
+    var status, backgroundTheme;
+    const limit_number_of_content = 2
+
+    // To dd/mm/yy format
+    function getCompareDate() {
+        // gets local time, sg / kl timing
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        return [year, month, day].join('');
+    }
+
+    // Dom maniuplation - 
+    // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
+    document.querySelectorAll('[future-date]').forEach((node) => {
+        if (node.getAttribute('future-date') < getCompareDate()) {
+            status = 'PAST';
+            backgroundTheme = "#323232";
+            node.setAttribute('id', 'past-event');
+        } else if (node.getAttribute('future-date') == getCompareDate()) {
+            status = 'NOW';
+            backgroundTheme = "#D0021B";
+            node.setAttribute('id', 'upcoming-event');
+        } else {
+            status = 'UPCOMING';
+            backgroundTheme = "#0161AF";
+            node.setAttribute('id', 'upcoming-event');
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
+            node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
+            node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
+        }
+    });
+
+    // Filter events by past and upcoming events into two separate arrays
+    var pastEvents = document.querySelectorAll('[id=past-event]');
+    var upcomingEvents = document.querySelectorAll('[id=upcoming-event]');
+
+    /**
+     * 
+     * FOR UPCOMING EVENTS
+     * 
+     **/
+    // Appending the upcoming events to the upcoming-events-container
+    for (var i = 0; i < upcomingEvents.length; i++) {
+        if (limit_number_of_content > i) {
+            document.getElementById('upcoming-events-container').appendChild(upcomingEvents[i]);
+        } else {
+            document.getElementById('upcoming-events-container').appendChild(upcomingEvents[i]).setAttribute('id',
+                'upcoming-conferences-hidden-content')
+        }
+    }
+
+    if (upcomingEvents.length > 0) {
+        document.getElementById('no-upcoming-events-message').remove();
+    }
+
+    if (upcomingEvents.length < limit_number_of_content) {
+        document.getElementById('upcoming-conferences-button').remove()
+    }
+
+    /**
+     * 
+     * FOR PAST EVENTS
+     * 
+     **/
+    // Appending the past events to the past-events-container
+    for (var i = 0; i < pastEvents.length; i++) {
+        if (limit_number_of_content > i) {
+            document.getElementById('past-events-container').appendChild(pastEvents[i])
+        } else {
+            document.getElementById('past-events-container').appendChild(pastEvents[i]).setAttribute('id',
+                'past-conferences-hidden-content');
+        }
+    }
+
+    if (pastEvents.length > 0) {
+        document.getElementById('no-past-events-message').remove();
+    }
+
+    if (pastEvents.length < limit_number_of_content) {
+        document.getElementById('past-conferences-button').remove()
+    }
+
+    /**
+     * 
+     * OVERALL DOM CONTROL
+     * 
+     **/
+    document.querySelectorAll('*[id*="conferences-hidden-content"]').forEach((item) => {
+        item.style.display = 'none';
+    });
+</script>
+<!-- Script to hide content -->
+<script type="text/javascript">
+    // Hides the content at the start initially during the creation phase using IIFEs
+    function toggleUpcomingConferencesVisibility() {
+        // changes the visibility of the button to none
+        const nodes = document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "block";
+        }
+
+        // Changes the visibility of the button 
+        const button = document.getElementById('upcoming-conferences-button')
+        button.style.display = "none";
+    }
+
+    function togglePastConferencesVisibility() {
+        const nodes = document.querySelectorAll('*[id^="past-conferences-hidden-content"]')
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = "block";
+        }
+
+        // Changes the visibility of the button 
+        const button = document.getElementById('past-conferences-button')
+        button.style.display = "none";
+    }
+</script>

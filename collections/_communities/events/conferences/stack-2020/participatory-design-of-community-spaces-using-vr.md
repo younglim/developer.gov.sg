@@ -3,7 +3,7 @@ title: Participatory Design of Community Spaces using Virtual Reality
 layout: layout-page-sidenav
 category: STACK 2020
 description: Enhancing residents' experience and satisfaction in co-designing community spaces with Virtual Reality.
-date: 2020-12-01
+event_date: 2020-12-01
 ---
 
 ### Overview

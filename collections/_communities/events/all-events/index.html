@@ -13,11 +13,41 @@ description: >
             Back to Events Overview
         </a>
     </div>
-    
+
     <div class="spacing-container-horizontal spacing-16">
-        <strong class="label-text-to-hide">Filter: </strong>
-        <form class="search-box-defined-width" action="/communities/events/all-events/" method="get">
-            {% include search-box.html id='query-all-events' placeholder='Search event titles' %}
+        <strong class="label-text-to-hide">Filter lists: </strong>
+        <form style="flex: auto;" class="search-box-defined-width row" action="/communities/events/all-events/"
+            method="get">
+            <div class="col">
+                {% include search-box.html id='query-all-events' placeholder='Search event titles' %}
+            </div>
+            <div class="field col">
+                <div class="control has-icons-right is-expanded is-fullwidth">
+                    <select class="input" id='query-all-category' name="year-query" autocomplete="off"
+                        onchange="window.location = '?category_filter=' + this.options[this.selectedIndex].value;">
+                        <option value="All Types">All Types</option>
+                        <option value="2022">Stack-x Meetup</option>
+                        <option value="2021">Conference</option>
+                    </select>
+                    <span class="icon is-right">
+                        <i class="search-bar-icon sgds-icon sgds-icon-chevron-down is-size-7"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field col">
+                <div class="control has-icons-right is-expanded is-fullwidth">
+                    <select class="input" id='query-all-year' name="year-query" autocomplete="off"
+                        onchange="window.location = '?year_filter=' + this.options[this.selectedIndex].value;">
+                        <option value="All Time">All Time</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                    <span class="icon is-right">
+                        <i class="search-bar-icon sgds-icon sgds-icon-chevron-down is-size-7"></i>
+                    </span>
+                </div>
+            </div>
         </form>
     </div>
 
@@ -25,4 +55,5 @@ description: >
     </div>
 </div>
 
-<script async src="/assets/bundles/vue-search-app-all-events.bundle.js"></script>
+<script async src="/assets/bundles/vue-search-app-all-events.bundle.js" data-file="stackx2021conference-videos.yml">
+</script>

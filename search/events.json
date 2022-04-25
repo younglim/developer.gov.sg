@@ -3,7 +3,7 @@
 
 {
     "pages": [
-        {%- for document in site["communities"] -%}
+        {%- for document in site["communities"] | sort: 'date' reversed -%}
             {%- assign target_group_joined = document.target_group | join: ", " -%}
             {%- if document.url contains '/conferences/' or document.url contains '/stack-x-meetups/' -%}
                 {%- if document.url contains 'overview.html' or document.url contains 'index.html' -%}
@@ -14,6 +14,7 @@
                     "category": "{{ document.category }}",
                     "content": {{ document.content | strip_html | strip_newlines | strip | jsonify }},
                     "url": "{{ document.url }}",
+                    "date": "{{ document.date }}",
                     "meta": "document"
                 },
                 {%- endif -%}

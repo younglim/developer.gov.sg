@@ -3,7 +3,7 @@ title: 'Digital Solutions in the COVID-19 Response: Singapore'
 layout: layout-page-sidenav
 category: STACK 2020
 description: Containing the spread of COVID-19 with digital solutions.
-date: 2020-12-01
+event_date: 2020-12-01
 ---
 
 ### Overview

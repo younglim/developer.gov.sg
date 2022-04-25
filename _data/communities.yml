@@ -1,3 +1,7 @@
+- name: Overview
+  description: >
+    The overview of the community.
+
 - name: Events
   description: >
     Explore upcoming events for developers and technologists to learn from each

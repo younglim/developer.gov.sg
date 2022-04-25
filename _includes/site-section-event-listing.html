@@ -1,121 +1,60 @@
-{% assign eventIncrementer = 0 %}
-{% assign limit_number_of_content = included.limit_number_of_content | default: 2%}
-
+{%- assign eventIncrementer = 0 -%}
+{%- assign limit_number_of_content = include.limit_number_of_content | default: 2 -%}
+{% comment %}
+Get all category if no specification is listed
+{% endcomment %}
 {%- assign specified_category = include.specified_category_tag | default: '' -%}
-{%- assign specified_category_collection = "events/" | append: include.specified_category_tag | default: '' -%}
-{%- assign collectionDumps = site.communities | where_exp: "item", "item.path contains specified_category_collection" -%}
-{%- assign filteredCollectionDumps = collectionDumps | where_exp: "item", "item.path contains 'overview.html' or item.path contains 'index.html'" | sort: 'date' -%}
-{%- assign showOnlyRecentPastConferences = included.show_recent_past -%}
+{%- assign specified_category_collection = 
+    "/events/" 
+    | append: include.specified_category 
+    | default: '' -%}
+{% comment %}
+Filter for events that only belongs to the events sub collection.
+{% endcomment %}
+{%- assign collectionDumps = 
+    site.communities 
+    | where_exp: "item", "item.path contains specified_category_collection" -%}
+{%- assign filteredCollectionDumps = 
+    collectionDumps 
+    | where_exp: "item", "item.path contains 'overview.html' or item.path contains 'index.html'" -%}
+{% comment %}
+Removes items that does not have any date. Helps filter events that have past, present and upcoming dates.
+{% endcomment %}
+{% assign sortedCollectionDumps = 
+    filteredCollectionDumps 
+    | where_exp: "item", "item.event_date" 
+    | sort: 'event_date'  %}
+{%- assign showOnlyRecentPastConferences = include.show_recent_past -%}
 
 <div class="card-grid-container is-fullwidth">
-    {%- for sub_section in filteredCollectionDumps reversed:included.is_reversed -%}
+    {%- for sub_section in sortedCollectionDumps reversed:include.is_reversed -%}
         {%- assign name = sub_section.title -%}
         {%- assign description = sub_section.description -%}
         {%- assign sub_section_slug = sub_section.name | slugify -%}
         {%- assign item_count = sub_section.items | size | minus: 1 -%}
         {%- assign url_str = sub_section.url | append : sub_section_slug -%}
-        {%- assign eventDateAndTiming = sub_section.last_modified_at | default: sub_section.date -%}
+        {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
         {%- assign img_src = '/assets/icons/' | append: specified_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
 
-        {%- assign currentTimeInSeconds = 'now'| date: '%s' -%}
-        {%- assign currentTimeFormatted = 'now'| date: '%B %d, %Y' -%}
-        {%- assign eventTimeInSeconds = sub_section.date | date: '%s' -%}
-        {%- assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' -%}
-        {%- assign recordings_uploaded = sub_section.recordings_uploaded | default: false -%}
-        
-        <!-- Helps to categorise the different events into their respective tags -->
-        {%- if currentTimeFormatted == eventTimeFormatted -%}
-            {%- assign status = 'NOW' -%}
-            {%- assign colorTheme = "#D0021B" -%}
-        {%- elsif currentTimeInSeconds > eventTimeInSeconds -%}
-            {%- assign status = 'PAST' -%}
-            {%- assign colorTheme = "#323232" -%}
-        {%- else -%}
-            {%- assign status = 'UPCOMING' -%}
-            {%- assign colorTheme = "#0161AF" -%}
-        {%- endif %}
-            
-
-        <!-- Guard case for Upcoming Conferences -->
-        {% if eventTimeInSeconds > currentTimeInSeconds or eventTimeFormatted == currentTimeFormatted %}
-            {% if include.show_upcoming %}
-                {% if 2 > eventIncrementer %}
-                    <div id="upcoming-conferences-visible-content">
-                        {% include card-variant-calendar.html 
-                            name=name
-                            item_count=item_count
-                            description=description
-                            status=status
-                            img_src=img_src
-                            url_str=url_str
-                            colorTheme=colorTheme
-                            eventCategory=specified_category
-                            eventDateAndTiming=eventDateAndTiming
-                            disableItemCount=include.disableItemCount
-                            recordings_uploaded=recordings_uploaded
-                        %}
-                    </div>
-                {% else %}
-                    <div id="upcoming-conferences-hidden-content">
-                        {% include card-variant-calendar.html
-                            name=name
-                            item_count=item_count
-                            description=description
-                            status=status
-                            img_src=img_src
-                            url_str=url_str
-                            colorTheme=colorTheme
-                            eventCategory=specified_category
-                            eventDateAndTiming=eventDateAndTiming
-                            disableItemCount=include.disableItemCount
-                            recordings_uploaded=recordings_uploaded
-                        %}
-                    </div>
-                {% endif %}
-                {% assign eventIncrementer = eventIncrementer | plus: 1 %}
-            {% endif %}
-        {% else %}
-            {% if include.show_recent_past %}
-                {% if 2 > eventIncrementer %}
-                    <div id="past-conferences-visible-content">
-                        {% include card-variant-calendar.html 
-                            name=name
-                            item_count=item_count
-                            description=description
-                            status=status
-                            img_src=img_src
-                            url_str=url_str
-                            colorTheme=colorTheme
-                            eventCategory=specified_category
-                            eventDateAndTiming=eventDateAndTiming
-                            disableItemCount=include.disableItemCount
-                            recordings_uploaded=recordings_uploaded
-                        %}
-                    </div>
-                {% else %}
-                    <div id="past-conferences-hidden-content">
-                        {% include card-variant-calendar.html
-                            name=name
-                            item_count=item_count
-                            description=description
-                            status=status
-                            img_src=img_src
-                            url_str=url_str
-                            colorTheme=colorTheme
-                            eventCategory=specified_category
-                            eventDateAndTiming=eventDateAndTiming
-                            disableItemCount=include.disableItemCount
-                            recordings_uploaded=recordings_uploaded
-                        %}
-                    </div>
-                {% endif %}
-                {% assign eventIncrementer = eventIncrementer | plus: 1 %}
-            {% endif %}
-        {%- endif -%}
+        <div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
+            {% include card-variant-calendar.html 
+                name=name
+                item_count=item_count
+                description=description
+                status=status
+                img_src=img_src
+                url_str=url_str
+                colorTheme=colorTheme
+                eventCategory=specified_category
+                eventDateAndTiming=eventDateAndTiming
+                disableItemCount=include.disableItemCount
+                recordings_uploaded=recordings_uploaded
+            %}
+        </div>
     {%- endfor -%}
 
     {%- if eventIncrementer > limit_number_of_content -%}
-        {% if include.show_upcoming %}
+        {%- if include.show_upcoming -%}
             <button id="upcoming-conferences-button" class="sgds-button sgds-button--primary"
                 onclick="toggleUpcomingConferencesVisibility()">
                 View all events
@@ -127,50 +66,4 @@
             </button>
         {%- endif -%}
     {%- endif -%}
-
-    {% if eventIncrementer == 0 %}
-        {% if include.show_upcoming %}
-            <div class="margin--top margin--bottom">
-                Sorry, there is currently no upcoming available events
-            </div>
-        {%- else -%}
-            <div class="margin--top margin--bottom">
-                Sorry, there are currently no past events
-            </div>
-        {%- endif -%}
-    {% endif %}
 </div>
-
-<script>
-    (() => {
-        // Selects the hidden upcoming and past events
-        const nodes = document.querySelectorAll('*[id*="conferences-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "none";
-        }
-    })()
-
-    // Hides the content at the start initially during the creation phase using IIFEs
-    function toggleUpcomingConferencesVisibility() {
-        // changes the visibility of the button to none
-        const nodes = document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
-
-        // Changes the visibility of the button 
-        const button = document.getElementById('upcoming-conferences-button')
-        button.style.display = "none";
-    }
-
-    function togglePastConferencesVisibility(){
-        const nodes = document.querySelectorAll('*[id^="past-conferences-hidden-content"]')
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
-
-        // Changes the visibility of the button 
-        const button = document.getElementById('past-conferences-button')
-        button.style.display = "none";
-    }
-</script>

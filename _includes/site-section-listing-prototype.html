@@ -1,98 +1,120 @@
+{% assign eventIncrementer = 0 %}
+{% assign collectionDumps = 
+    site.communities 
+    | where_exp: "item", "item.path contains 'index.html' or item.path contains 'overview.html'" %}
+{% comment %}
+Filter for events that only belongs to the events sub collection.
+{% endcomment %}
+{% assign filteredCollectionDumps = 
+    collectionDumps
+    | where_exp: "item", "item.path contains '/events/conferences' or item.path contains '/events/stack-x-meetups'"
+    %}
+{% comment %}
+Removes items that does not have any date. Helps filter events that have past, present and upcoming dates.
+{% endcomment %}
+{% assign sortedCollectionDumps = 
+    filteredCollectionDumps 
+    | where_exp: "item", "item.event_date" 
+    | sort: 'event_date'  %}
+
 <div class="card-grid-container is-fullwidth">
-    {% assign eventIncrementer = 0 %}
-    {% assign collectionDumps = 
-        site.communities 
-        | where_exp: "item", "item.path contains 'index.html' or item.path contains 'overview.html'" 
-        | sort: 'date' 
-        | reverse %}
-    {% assign filteredCollectionDumps = 
-        collectionDumps
-        | where_exp: "item", "item.path contains '/conferences' or item.path contains '/stack-x-meetups'"
-        %}
-
-    {% for sub_section in filteredCollectionDumps%}
+    {% for sub_section in sortedCollectionDumps reversed%}
         {% unless sub_section.title contains 'Past Webinars' %}
-        <!-- Finding what category the event belongs to -->
-        {% if sub_section.url contains '/events' %}
-            {% assign categoryTagging = "Conferences" %}
-        {% else %}
-            {% assign categoryTagging = "STACK-X Meetups" %}
-        {% endif %}
+            <!-- Finding what category the event belongs to -->
+            {% if sub_section.url contains '/events' %}
+                {% assign specified_category = "Conferences" %}
+            {% else %}
+                {% assign specified_category = "STACK-X Meetups" %}
+            {% endif %}
 
-        {% assign name = sub_section.title %}
-        {% assign description = sub_section.description %}
-        {% assign sub_section_slug = sub_section.name | slugify %}
-        {% assign item_count = sub_section.items | size | minus: 1 %}
-        {% assign url_str = sub_section.url | append : sub_section_slug  %}
-        {% assign img_src = '/assets/icons/' | append: categoryTagging | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+            {%- assign name = sub_section.title -%}
+            {%- assign description = sub_section.description -%}
+            {%- assign sub_section_slug = sub_section.name | slugify -%}
+            {%- assign item_count = sub_section.items | size | minus: 1 -%}
+            {%- assign url_str = sub_section.url | append : sub_section_slug  -%}
+            {%- assign recordings_uploaded = sub_section.recordings_uploaded | default: false -%}
+            {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
+            {%- assign img_src = '/assets/icons/' | append: specified_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
 
-        {% if sub_section.date == blank %}
-            {% assign eventDateAndTiming = sub_section.last_modified_at %}
-        {% else %}
-            {% assign eventDateAndTiming = sub_section.date %}
-        {% endif%}
-
-        {% assign currentTimeInSeconds = 'now'| date: '%s' %}
-        {% assign currentTimeFormatted = 'now'| date: '%B %d, %Y' %}
-        {% assign eventTimeInSeconds = sub_section.date | date: '%s' %}
-        {% assign eventTimeFormatted = sub_section.date | date: '%B %d, %Y' %}
-
-        {% if currentTimeFormatted == eventTimeFormatted %}
-            {% assign status = 'NOW' %}
-            {% assign colorTheme = "#D0021B" %}
-        {% elsif currentTimeInSeconds > eventTimeInSeconds %}
-            {% assign status = 'PAST' %}
-            {% assign colorTheme = "#323232" %}
-        {% else %}
-            {% assign status = 'UPCOMING' %}
-            {% assign colorTheme = "#0161AF" %}
-        {% endif %}
-
-        {% if 2 > eventIncrementer %}
-        <div id="event-visible-content">
-            {% include card-variant-calendar.html 
-                name=name
-                item_count=item_count
-                description=description
-                status=status
-                img_src=img_src
-                url_str=url_str
-                colorTheme=colorTheme
-                eventCategory=categoryTagging
-                eventDateAndTiming=eventDateAndTiming
-                disableItemCount=include.disableItemCount
-            %}
-        </div>
-        {% else %}
-        <div id="event-hidden-content">
-            {% include card-variant-calendar.html
-                name=name
-                item_count=item_count
-                description=description
-                status=status
-                img_src=img_src
-                url_str=url_str
-                colorTheme=colorTheme
-                eventCategory=categoryTagging
-                eventDateAndTiming=eventDateAndTiming
-                disableItemCount=include.disableItemCount
-            %}
-        </div>
-        {% endif %}
-        {% assign eventIncrementer = eventIncrementer | plus: 1 %}
-    {% endunless %}
-
+            <div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
+                {% include card-variant-calendar.html 
+                    name=name
+                    item_count=item_count
+                    description=description
+                    img_src=img_src
+                    url_str=url_str
+                    eventCategory=specified_category
+                    eventDateAndTiming=eventDateAndTiming
+                    disableItemCount=include.disableItemCount
+                %}
+            </div>
+        {% endunless %}
     {% endfor %}
-    <a id="show-more-events" class="sgds-button sgds-button--primary" href="/communities/events/all-events/index.html">
+
+    <div id="no-upcoming-event" class="margin--top margin--bottom has-text-centered">
+        Sorry, there is currently no upcoming available events. Stay tune for more!
+    </div>
+
+    <a class="sgds-button sgds-button--primary" href="/communities/events/all-events/index.html">
         View all events
     </a>
 </div>
 
-<script>
-    (() => {
-        const nodes = document.querySelectorAll('*[id^="event-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "none";
+<script type="text/javascript">
+    // Pre-defining variables
+    var status, backgroundTheme;
+
+    // To dd/mm/yy format
+    function getCompareDate() {
+        // gets local time, sg / kl timing
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        return [year, month, day].join('');
+    }
+
+    // Dom maniuplation - to be called after the page is loaded
+    // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
+    document.querySelectorAll('[future-date]').forEach((node) => {
+        if (node.getAttribute('future-date') < getCompareDate()) {
+            node.remove();
+        } else if (node.getAttribute('future-date') == getCompareDate()) {
+            status = 'NOW';
+            backgroundTheme = "#D0021B";
+            node.setAttribute('id', 'upcoming-event');
+        } else {
+            status = 'UPCOMING';
+            backgroundTheme = "#0161AF";
+            node.setAttribute('id', 'upcoming-event');
         }
-    })()
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
+            node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
+            node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
+        }
+    });
+
+    // Filter past events and upcoming events into two different arrays
+    var pastEvents = document.querySelectorAll('[id=past-event]');
+    var upcomingEvents = document.querySelectorAll('[id=upcoming-event]');
+
+    // After changing the color of the content, based on the number of 'present / upcoming' events, remove the no-upcoming-event element if there is any upcoming event
+    if (document.querySelectorAll('[id=upcoming-event]').length > 0) {
+        document.querySelector('#no-upcoming-event').remove();
+    }
+
+    // Given the number of upcoming events, limit the number of upcoming events to be displayed to only 2 dynamically
+    if (document.querySelectorAll('[id=upcoming-event]').length > 2) {
+        const lim = document.querySelectorAll('[id=upcoming-event]');
+        for (var i = 1; i < lim.length; i++) {
+            lim[i].remove();
+        }
+    }
+
 </script>
