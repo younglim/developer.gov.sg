@@ -96,18 +96,20 @@
     <main>
       {%- include top-nav.html -%}
       {% if page.layout == "layout-page-sidenav" or page.layout == "layout-category-listing" %}
-        {%- unless page.single_level_nav or page.multi_level_nav -%}
-          <div class="mobile-sidenav is-hidden-desktop">
-              <button class="sgds-button is-small mobile-sidenav-toggle" type="button">
-                  {%- assign collectionName = page.collection -%}
-                  <span>{{ collectionName | split: "-" | join: " " | capitalizewords }}</span>
-                  <span class="sgds-icon sgds-icon-chevron-down"></span>
-              </button>
-              <ul class="mobile-sidenav-menu is-hidden">
-                  {% include sidenav.html %}
-              </ul>
-          </div>
-        {% endunless %}    
+      {%- unless page.single_level_nav or page.multi_level_nav -%}
+      {% if page.hide_side_nav == nil %}
+      <div class="mobile-sidenav is-hidden-desktop">
+          <button class="sgds-button is-small mobile-sidenav-toggle" type="button">
+              {%- assign collectionName = page.collection -%}
+              <span>{{ collectionName | split: "-" | join: " " | capitalizewords }}</span>
+              <span class="sgds-icon sgds-icon-chevron-down"></span>
+          </button>
+          <ul class="mobile-sidenav-menu is-hidden">
+              {% include sidenav.html %}
+          </ul>
+      </div>
+      {% endif %}
+      {% endunless %}    
       {% endif %}
       {%- include feedback-banner.html -%}
       <!-- Enable the line below for annoucement banner at home page -->

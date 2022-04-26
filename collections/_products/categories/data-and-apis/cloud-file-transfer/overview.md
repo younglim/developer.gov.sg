@@ -4,14 +4,17 @@ layout: layout-page-sidenav
 category: Data and APIs
 _data: single-level-nav
 redirect_from:
-    - /singapore-government-tech-stack/communications/cloud-file-transfer
     - /products/categories/data-and-apis/cloud-file-transfer/
     - /products/categories/data-and-apis/cloud-file-transfer.html
+    - /singapore-government-tech-stack/communications/cloud-file-transfer
     - /technologies/data-and-apis/cloud-file-transfer/
     - /technologies/data-and-apis/cloud-file-transfer.html
 sub_collection_render: true
 single_level_nav: true
-collection_group: [Singapore Government Tech Stack]
+collection_group: [Singapore Government Tech Stack, What's New]
+sgts_collection_group: [data_transfer]
+sgts_layer_group: [services]
+sgts_title: Cloud File Transfer
 description: CFT is an API-driven Managed File Transfer service that enables agencies to conduct secure and compliant cross-zone file transfer
 ---
 
@@ -27,7 +30,7 @@ File transfers in CFT can be understood using the airport luggage screening proc
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/cft-airport-animation.gif" width="70%" height="70%" 
+    src="/assets/img/cft-airport-animation.gif" width="70%" height="70%"
 	alt="Fig 1: Understanding CFT's file transfer workflow via the airport luggage screening analogy"
   />
   <figcaption>Fig 1: Understanding CFT's file transfer workflow via the airport luggage screening analogy</figcaption>
@@ -35,7 +38,7 @@ File transfers in CFT can be understood using the airport luggage screening proc
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/cft-luggage-analogy.png" 
+    src="/assets/img/cft-luggage-analogy.png"
   />
 </figure>
 
@@ -56,4 +59,4 @@ Early adopters of CFT can enjoy the service for free till end FY22. An indicativ
 
 ### Contact Us
 
-Reach out to the product team with your queries or feedback through this [form](https://form.gov.sg/#!/62280856ba91100012050933){:target="\_blank"} 
+Reach out to the product team with your queries or feedback through this [form](https://form.gov.sg/#!/62280856ba91100012050933){:target="\_blank"}
