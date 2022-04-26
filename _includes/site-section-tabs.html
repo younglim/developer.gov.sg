@@ -23,7 +23,7 @@
     <div class="row" id="tab1">
         {% if site.posts %}
         <div class="card-grid-container is-fullwidth">
-            <p>Want to receive our newsletter via email? Subscribe <a href="">here</a>.</p>
+            <div>Want to receive our newsletter via email? Subscribe <a href="">here</a>.</div>
             {% for post in site.posts %}
             {% assign contentDescription = post.date | date_to_string %}
             {% assign url_str = post.url %}

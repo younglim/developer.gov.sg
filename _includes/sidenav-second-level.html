@@ -9,10 +9,10 @@
 {%- assign active_page = page.id | split: "/" | last -%}
 
 {%- for sub_collection in site.data[page._data] -%}
-  {% assign collection_name = sub_collection.name | slugify %}
-  {%- if collection_name == folder_name -%}
-    {%- assign current_collection = sub_collection-%}
-  {% endif %}
+{% assign collection_name = sub_collection.name | slugify %}
+{%- if collection_name == folder_name -%}
+{%- assign current_collection = sub_collection-%}
+{% endif %}
 {% endfor %}
 
 {%- assign nav_items = current_collection.items -%}
@@ -20,52 +20,63 @@
 {%- assign page_id_terms = page.id | split: "/" -%}
 {% assign page_id_last = page_id_terms | last %}
 {% if page_id_last == "index" %}
-  {%- assign page_id_terms = page_id_terms | pop -%}
-  {% assign page_id_last = page_id_terms | last %}
+{%- assign page_id_terms = page_id_terms | pop -%}
+{% assign page_id_last = page_id_terms | last %}
 {% endif %}
 
+{%- if page.event_date -%}
+{%- assign eventDateAndTiming = page.event_date | default: page.date -%}
+{%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
+
+<div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}" class="margin--bottom--xl is-hidden-touch">
+    {% include card-variant-event-information.html 
+        eventDateAndTiming=eventDateAndTiming 
+    %}
+</div>
+{%- endif -%}
+
 {% for first_lvl_nav_item in nav_items %}
-  {%- assign class = nil -%}
-  {%- assign first_lvl_nav_item_slug = first_lvl_nav_item.item_name | slugify -%}
-  {%- assign second_level_nav_item_list = first_lvl_nav_item.item_sub_item -%}
-  {%- assign href = '/' |append: page.collection | append: '/' | append: sub_collection | append: '/' | append: current_category | append: '/' | append: folder_name | append: '/' | append: first_lvl_nav_item_slug -%}
+{%- assign class = nil -%}
+{%- assign first_lvl_nav_item_slug = first_lvl_nav_item.item_name | slugify -%}
+{%- assign second_level_nav_item_list = first_lvl_nav_item.item_sub_item -%}
+{%- assign href = '/' |append: page.collection | append: '/' | append: sub_collection | append: '/' | append: current_category | append: '/' | append: folder_name | append: '/' | append: first_lvl_nav_item_slug -%}
 
-  {%- if page.url contains first_lvl_nav_item_slug -%}
+{%- if page.url contains first_lvl_nav_item_slug -%}
+{%- assign class = 'is-active' -%}
+{%- endif -%}
+
+{%- if second_level_nav_item_list -%}
+{%- assign href = '/' |append: page.collection | append: '/' | append: sub_collection | append: '/' | append: current_category | append: '/' | append: folder_name | append: '/' | append: first_lvl_nav_item_slug -%}
+{%- assign icon_class = "sgds-icon-chevron-down" -%}
+{%- assign label = first_lvl_nav_item.item_label -%}
+{%- assign hide_nav_section = 'is-hidden' -%}
+{%- assign first_lvl_nav_item_slug = first_lvl_nav_item.item_name | slugify -%}
+
+{% if page.url contains first_lvl_nav_item_slug  %}
+{% assign hide_nav_section = nil %}
+{% assign icon_class = "sgds-icon-chevron-up" %}
+{% endif %}
+
+{% include sidenav-first-lvl-nav-item.html label=label href="#!" icon_class=icon_class class=class %}
+<ul class="second-level-nav-div {{ hide_nav_section }}">
+    {%- for second_lvl_nav_item in second_level_nav_item_list -%}
+
+    {%- assign label = second_lvl_nav_item.sub_item_label | default: second_lvl_nav_item.sub_item_name -%}
+    {%- assign second_lvl_nav_item_slug = second_lvl_nav_item.sub_item_name | slugify -%}
+
+    {%- assign class = nil -%}
+    {%- if (page_id_last == second_lvl_nav_item_slug and page.url contains first_lvl_nav_item_slug) -%}
     {%- assign class = 'is-active' -%}
-  {%- endif -%}
+    {%- endif -%}
 
-  {%- if second_level_nav_item_list -%}
-    {%- assign href = '/' |append: page.collection | append: '/' | append: sub_collection | append: '/' | append: current_category | append: '/' | append: folder_name | append: '/' | append: first_lvl_nav_item_slug -%}
-    {%- assign icon_class = "sgds-icon-chevron-down" -%}
-    {%- assign label = first_lvl_nav_item.item_label -%}
-    {%- assign hide_nav_section = 'is-hidden' -%}
-    {%- assign first_lvl_nav_item_slug = first_lvl_nav_item.item_name | slugify -%}
-
-    {% if page.url contains first_lvl_nav_item_slug  %}
-      {% assign hide_nav_section = nil %}
-      {% assign icon_class = "sgds-icon-chevron-up" %}
-    {% endif %}
-
-    {% include sidenav-first-lvl-nav-item.html label=label href="#!" icon_class=icon_class class=class %}
-    <ul class="second-level-nav-div {{ hide_nav_section }}">
-      {%- for second_lvl_nav_item in second_level_nav_item_list -%}
-
-      {%- assign label = second_lvl_nav_item.sub_item_label | default: second_lvl_nav_item.sub_item_name -%}
-      {%- assign second_lvl_nav_item_slug = second_lvl_nav_item.sub_item_name | slugify -%}
-
-      {%- assign class = nil -%}
-      {%- if (page_id_last == second_lvl_nav_item_slug and page.url contains first_lvl_nav_item_slug) -%}
-        {%- assign class = 'is-active' -%}
-      {%- endif -%}
-
-      {%- assign sidenav_item_url = href | append: '/' | append: second_lvl_nav_item_slug -%}
-      {% include sidenav-second-lvl-nav-item.html label=label href=sidenav_item_url class=class %}
+    {%- assign sidenav_item_url = href | append: '/' | append: second_lvl_nav_item_slug -%}
+    {% include sidenav-second-lvl-nav-item.html label=label href=sidenav_item_url class=class %}
     {%- endfor -%}
-  </ul>
-  {%- else -%}
-    {% assign label = first_lvl_nav_item.item_label %}
-    {% assign icon_class = first_lvl_nav_item.icon_class %}
+</ul>
+{%- else -%}
+{% assign label = first_lvl_nav_item.item_label %}
+{% assign icon_class = first_lvl_nav_item.icon_class %}
 
-    {% include sidenav-first-lvl-nav-item.html label=label href=href icon_class=icon_class class=class %}
-  {%- endif -%}
+{% include sidenav-first-lvl-nav-item.html label=label href=href icon_class=icon_class class=class %}
+{%- endif -%}
 {% endfor %}

@@ -9,12 +9,15 @@ redirect_from:
   - /communities/events/
 event_types:
   - name: Conferences
+    icon_name: conference
     description: Explore upcoming conferences for developers and technologists to learn from each other and share their experiences as well as opportunities for collaboration.
 
   - name: STACK-X Meetups
+    icon_name: stack_x_meetup
     description: The STACK-X Meetups community warmly welcomes anyone who is passionate about using technology to improve the lives of Singaporeans.
 
   - name: Hackathons
+    icon_name: hackthon
     description: Competitions that aim to engage the tech community and is open to everyone, except for employees of GovTech or officers that are seconded to GovTech.
 ---
 
@@ -38,11 +41,11 @@ event_types:
   <div class="card-grid-container grid-25rem">
     {% for sub_section in page.event_types %}
 
-    {% assign name = sub_section.name%}
-    {% assign description = sub_section.description%}
-    {% assign sub_section_slug = sub_section.name | slugify %}
-    {% assign url_str = sub_section.url | append : sub_section_slug  %}
-    {% assign img_src = '/assets/icons/' | append: sub_section.name | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase %}
+    {%- assign name = sub_section.name %}
+    {%- assign description = sub_section.description -%}
+    {%- assign sub_section_slug = sub_section.name | slugify -%}
+    {%- assign url_str = sub_section.url | append : sub_section_slug  -%}
+    {%- assign img_src = '/assets/icons/' | append: sub_section.icon_name | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
 
     <div class="sgds-card {{include.parentCardStyle}}">
       <div class="sgds-card-content">

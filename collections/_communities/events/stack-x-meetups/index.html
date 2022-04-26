@@ -6,7 +6,7 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
 ---
 
 <div class="spacing-container-vertical">
-    <!-- Header -->
+    <!-- Introduction -->
     <div>
         <h2 style="padding-top: 1rem; padding-bottom: 1rem;">Overview for STACK-X Meetups</h2>
         <picture>
@@ -33,39 +33,47 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
         <hr />
     </div>
 
+    <!-- Content -->
     <div>
-        <h3>All Upcoming STACK-X Meetups</h3>
-        <div id="upcoming-events-container" class="card-grid-container is-fullwidth">
-        </div>
-        <button id="upcoming-conferences-button" class="sgds-button sgds-button--primary is-fullwidth"
-            onclick="toggleUpcomingConferencesVisibility()">
-            View all events
-        </button>
-        <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
-            Sorry, there is currently no upcoming available events
+        <div>
+            <h3>All Upcoming STACK-X Meetups</h3>
+            <div id="upcoming-events-container" class="card-grid-container is-fullwidth">
+            </div>
+            <div class="is-fullwidth is-flex" style="justify-content: center;" id="upcoming-conferences-button">
+                <button class="sgds-button sgds-button--primary" onclick="toggleUpcomingConferencesVisibility()">
+                    View all events
+                </button>
+            </div>
+            <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
+                Sorry, there is currently no upcoming available events
+            </div>
         </div>
 
         <hr />
 
-        <h3>Recent Past STACK-X Meetups</h3>
-        <div id="past-events-container" class="card-grid-container is-fullwidth">
-        </div>
-        <button id="past-conferences-button" class="sgds-button sgds-button--primary is-fullwidth"
-            onclick="togglePastConferencesVisibility()">
-            View all events
-        </button>
-        <div id="no-past-events-message" class="margin--top margin--bottom has-text-centered">
-            Sorry, there are currently no past events
+        <div>
+            <h3>Recent Past STACK-X Meetups</h3>
+            <div id="past-events-container" class="card-grid-container is-fullwidth">
+            </div>
+            <div class="is-fullwidth is-flex" style="justify-content: center;" id="past-conferences-button">
+                <button class="sgds-button sgds-button--primary" onclick="togglePastConferencesVisibility()">
+                    View all events
+                </button>
+            </div>
+            <div id="no-past-events-message" class="margin--top margin--bottom has-text-centered">
+                Sorry, there are currently no past events
+            </div>
         </div>
 
         {% include site-section-event-listing.html 
             is_reversed=true
             limit_number_of_content=2
-            specified_category_tag="stack-x-meetups"
+            specified_category_tag="stack-x-meetup"
         %}
     </div>
 </div>
 
+<!-- Sorting and theming script -->
 <script type="text/javascript">
     // Pre-defining variables
     var status, backgroundTheme;
@@ -110,8 +118,8 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
     });
 
     // Filter events by past and upcoming events into two separate arrays
-    var pastEvents = document.querySelectorAll('[id=past-event]');
-    var upcomingEvents = document.querySelectorAll('[id=upcoming-event]');
+    var pastEvents = Array.from(document.querySelectorAll('[id=past-event]'))
+    var upcomingEvents = Array.from(document.querySelectorAll('[id=upcoming-event]')).reverse();
 
     /**
      * 
@@ -180,7 +188,7 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
 
         // Changes the visibility of the button 
         const button = document.getElementById('upcoming-conferences-button')
-        button.style.display = "none";
+        button.remove();
     }
 
     function togglePastConferencesVisibility() {
@@ -191,6 +199,6 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
 
         // Changes the visibility of the button 
         const button = document.getElementById('past-conferences-button')
-        button.style.display = "none";
+        button.remove();
     }
 </script>

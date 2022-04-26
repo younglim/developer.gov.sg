@@ -9,6 +9,8 @@ layout: layout-page
       <ul class="sgds-menu-list">
         {%- if page.single_level_nav -%}
           {%- include sidenav-single-level.html -%}
+        {%- elsif page.multi_level_nav -%}
+          {%- include sidenav-second-level.html -%}
         {% else %}
           {%- include sidenav-overview.html -%}
         {% endif %}

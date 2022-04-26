@@ -20,11 +20,10 @@ Removes items that does not have any date. Helps filter events that have past, p
 <div class="card-grid-container is-fullwidth">
     {% for sub_section in sortedCollectionDumps reversed%}
         {% unless sub_section.title contains 'Past Webinars' %}
-            <!-- Finding what category the event belongs to -->
             {% if sub_section.url contains '/events' %}
-                {% assign specified_category = "Conferences" %}
+                {% assign specified_category = "Conference" %}
             {% else %}
-                {% assign specified_category = "STACK-X Meetups" %}
+                {% assign specified_category = "STACK-X Meetup" %}
             {% endif %}
 
             {%- assign name = sub_section.title -%}
@@ -55,9 +54,11 @@ Removes items that does not have any date. Helps filter events that have past, p
         Sorry, there is currently no upcoming available events. Stay tune for more!
     </div>
 
-    <a class="sgds-button sgds-button--primary" href="/communities/events/all-events/index.html">
-        View all events
-    </a>
+    <div class="is-fullwidth is-flex" style="justify-content: center;">
+        <a class="sgds-button sgds-button--primary" href="/communities/events/all-events/index.html">
+            View all events
+        </a>
+    </div>
 </div>
 
 <script type="text/javascript">

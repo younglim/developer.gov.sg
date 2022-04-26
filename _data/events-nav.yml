@@ -26,3 +26,8 @@
         - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
+  event_timing: 2022-11-17
+  event_registration_link: https://www.google.com/
+  # Conference, Stack-X Meetups, Hackathons <- pls only use the first 3 examples.
+  event_category: Conference
+  event_type: Online (via Zoom)

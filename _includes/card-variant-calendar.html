@@ -37,11 +37,12 @@
                 {% include card-header-info.html disableItemCount=include.disableItemCount name=include.name item_count=include.item_count url_str=include.url_str%}
                 <div>
                     <!-- Mobile View -->
-                    <div class="is-hidden-desktop is-flex" style="align-items: center; justify-content: start;">
-                        <p>
-                            <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"></span>
+                    <div class="is-hidden-desktop is-flex is-centered" style="justify-content: start;">
+                        <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"
+                            style="font-size: 1.5em; color: #767676;"></span>
+                        <p class="margin--left--sm">
                             {{include.eventDateAndTiming | date: "%d"}} {{include.eventDateAndTiming | date: "%b"}}
-                            {{include.eventDateAndTiming | date: "%y"}}
+                            {{include.eventDateAndTiming | date: "%Y"}}
                         </p>
                     </div>
                     <!-- Desktop View -->
@@ -53,15 +54,14 @@
                     {%- endif -%}
                     <!-- both view -->
                     {% if include.eventCategory %}
-                    <div class="is-flex" style="align-items: center;">
+                    <p class="is-flex is-left">
                         <img src="{{include.img_src}}" alt="{{include.img_src}} icon"
-                            style="height: 1.5em; width: 1.5em;" />
-                        <p class="margin--left--sm" style="color: #767676;">
-                            {{include.eventCategory}}
-                        </p>
-                    </div>
+                            style="height: 1.5em; width: 1.5em;" class="margin--right--sm" />
+
+                        {{- include.eventCategory | capitalize-}}
+                    </p>
                     {% endif %}
-                    <p>{{ include.description }}</p>
+                    <p>{{ include.description | capitalize}}</p>
                 </div>
             </div>
         </div>

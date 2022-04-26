@@ -1,0 +1,116 @@
+{%- assign sub_collection = page.id | split: "/" | shift | shift | first -%}
+{%- assign folder_name = page.id | split: "/" | shift | shift | shift | shift | first -%}
+
+{%- for sub_collection in site.data[page._data] -%}
+{% assign collection_name = sub_collection.name | slugify %}
+{%- if collection_name == folder_name -%}
+{%- assign current_collection = sub_collection-%}
+{% endif %}
+{% endfor %}
+
+{%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
+
+<div class="sgds-card sgds-card-variant-video-info">
+    <div class="has-text-centered" id="event-status-container">
+        <p class="has-text-weight-bold has-text-white" id="event-status">PAST</p>
+    </div>
+    <div class="sgds-card-content padding--top padding--bottom">
+        <div class="row margin--bottom--none is-flex-touch" style="justify-content: start; align-items: center;">
+            <div class="col is-2 padding--right--none padding--left--none" style="font-size: 1.5em; color: #767676;">
+                <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"></span>
+            </div>
+            <div class="col is-10">
+                {{- include.eventDateAndTiming | date: "%d %b %Y" -}}
+            </div>
+        </div>
+        <div class="row margin--bottom--none is-flex-touch" style="justify-content: start; align-items: center;">
+            <div class="col is-2 padding--right--none padding--left--none">
+                <img src="{{ img_src}}" alt="{{ img_src}} icon" style="width: 1.5em;"
+                    class="margin--bottom--none margin--right--none margin--left--none" />
+            </div>
+            <div class="col">
+                {{- current_collection.event_category -}}
+            </div>
+        </div>
+        <div class="row margin--bottom--none is-flex-touch" style="justify-content: start; align-items: center;">
+            <div class="col is-2 padding--right--none padding--left--none" style="font-size: 1.5em; color: #767676;">
+                <span class="sgds-icon sgds-icon-camera" role="img" aria-label="iconName"></span>
+            </div>
+            <div class="col">
+                {{- current_collection.event_type -}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col padding--right--none padding--left--none has-text-white">
+                <button id="dynamic-event-button" class="sgds-button">Register now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // Pre-defining variables
+    var should_run_entire_script = '{{page.event_date}}';
+    var status, backgroundTheme, buttonText, buttonState = false;
+
+    // Part of sidenav-second-level reusability that doesnt run on every page
+    if (should_run_entire_script) {
+        // To dd/mm/yy format
+        function getCompareDate() {
+            // gets local time, sg / kl timing
+            var d = new Date(),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+            return [year, month, day].join('');
+        }
+
+        // Dom maniuplation - to be called after the page is loaded
+        // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
+        document.querySelectorAll('[future-date]').forEach((node) => {
+            var dynamicEventButton = document.getElementById('dynamic-event-button');
+
+            if (node.getAttribute('future-date') < getCompareDate()) {
+                status = 'PAST';
+                backgroundTheme = "#323232";
+                node.setAttribute('id', 'past-event');
+                buttonText = "View recordings";
+                dynamicEventButton.disabled = true;
+            } else if (node.getAttribute('future-date') == getCompareDate()) {
+                status = 'NOW';
+                backgroundTheme = "#0161AF";
+                node.setAttribute('id', 'upcoming-event');
+                buttonText = "Register Now";
+                dynamicEventButton.disabled = true;
+                buttonState = true;
+            } else {
+                status = 'UPCOMING';
+                backgroundTheme = "#0161AF";
+                node.setAttribute('id', 'upcoming-event');
+                buttonText = "Register Now"
+
+            }
+
+            for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
+                node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
+            }
+
+            for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
+                node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
+            }
+
+            for (var j = 0; j < node.querySelectorAll('[id=dynamic-event-button]').length; j++) {
+                node.querySelectorAll('[id=dynamic-event-button]')[j].innerHTML = buttonText;
+                node.querySelectorAll('[id=dynamic-event-button]')[j].disabled = buttonState;
+                node.querySelectorAll('[id=dynamic-event-button]')[j].style.color = 'white';
+                node.querySelectorAll('[id=dynamic-event-button]')[j].style.backgroundColor = backgroundTheme;
+
+                if(buttonText == "View recordings") {
+                    node.querySelectorAll('[id=dynamic-event-button]')[j].href = ""
+                }
+            }
+        });
+    }
+</script>

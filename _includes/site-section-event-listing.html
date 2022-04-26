@@ -32,6 +32,7 @@ Removes items that does not have any date. Helps filter events that have past, p
         {%- assign description = sub_section.description -%}
         {%- assign sub_section_slug = sub_section.name | slugify -%}
         {%- assign item_count = sub_section.items | size | minus: 1 -%}
+        {%- assign recordings_uploaded = sub_section.recordings_uploaded-%}
         {%- assign url_str = sub_section.url | append : sub_section_slug -%}
         {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
         {%- assign img_src = '/assets/icons/' | append: specified_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
