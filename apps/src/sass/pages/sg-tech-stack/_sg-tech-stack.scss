@@ -121,8 +121,14 @@ $section-highlights-space: 10%;
   }
 
   .title-col {
-    padding-left: 24px !important;
+    padding-left: 674px !important; 
 
+    @media screen and (min-width: 1024px) and (max-width: 1215px) {
+      padding-left: 346px !important; 
+    }
+    @media screen and (min-width: 1216px) and (max-width: 1407px) {
+      padding-left: 500px !important; 
+    }
     @include until($desktop) {
       padding-left: 0px !important;
       margin-bottom: -35px !important;
