@@ -2,17 +2,30 @@
 title: STACK-X Cloud 2021
 layout: layout-page-sidenav
 description: >
-  Stack-X Cloud is a one-day conference for developers and IT leaders to learn about the lates enhancements for GCC with practical lessons on cloud adoption
+    Stack-X Cloud is a one-day conference for developers and IT leaders to learn about the lates enhancements for GCC with
+    practical lessons on cloud adoption
 _data: events-nav
 multi_level_nav: true
 sub_collection_render: true
 recordings_uploaded: true
 event_date: 2021-11-17
 redirect_from:
-    - /communities/events/conferences/stack-x-cloud-2021/recordings/
-    - /communities/events/conferences/stack-x-cloud-2021/recordings.html
+- /communities/events/conferences/stack-x-cloud-2021/recordings/
+- /communities/events/conferences/stack-x-cloud-2021/recordings.html
 ---
 {% assign video_data_file = 'stackx2021conference-videos' %}
+
+<!-- Getting all the options -->
+{%- assign data_file = data -%}
+{%- assign options = '' | split: ',' %}
+{%- for video in site.data[video_data_file] -%}
+{%- if video.category-%}
+{% assign video_category = video.category %}
+{%- assign options = options | push: video_category -%}
+{%- endif-%}
+{%- endfor -%}
+<!-- Removing duplicate option values so it's all dynamic-->
+{%- assign options = options | uniq | sort -%}
 
 <div>
     <div>
@@ -26,7 +39,94 @@ redirect_from:
 
     <hr />
 
-    <div>
-        {% include videos-display-basic.html type="Opening, Keynote - VOD, Keynote - Live Chat" _data=video_data_file %}
+    <div class="spacing-container-horizontal spacing-16">
+        <strong class="label-text-to-hide">Filter lists: </strong>
+        <form style="flex: auto;" class="search-box-defined-width row" action="" method="get">
+            <div class="col">
+                {% include search-box.html id='query-all-events' placeholder='Search event titles' %}
+            </div>
+            <div class="field col padding--right--none">
+                <div class="control has-icons-right is-expanded is-fullwidth">
+                    <select class="input" id='query-all-category' name="year-query" autocomplete="off"
+                        onchange="window.location = '?tag_filter=' + this.options[this.selectedIndex].value;">
+                        <option value="All tags">All tags</option>
+                        {%- for option in options -%}
+                        <option value="{{option}}">{{option}}</option>
+                        {%- endfor -%}
+                    </select>
+                    <span class="icon is-right">
+                        <i class="search-bar-icon sgds-icon sgds-icon-chevron-down is-size-7"></i>
+                    </span>
+                </div>
+            </div>
+        </form>
     </div>
+
+    <div>
+        <p class="has-text-dark margin--top margin--bottom">
+            Showing <span id="number-of-filtered-events"></span> out of <span id="number-of-total-events"></span> recordings
+        </p>
+    </div>
+
+    <div class="card-grid-container is-fullwidth" id="event-recording-container">
+    </div>
+    {% include videos-display-advance.html type="Opening, Keynote - VOD, Keynote - Live Chat" _data=video_data_file %}
 </div>
+
+<script async type="text/javascript">
+    try {
+        /**
+         * 
+         * SEARCH BOX
+         * 
+         **/
+
+        // Getting search param 
+        const queryParam = new URL(window.location.href).searchParams.get("query") 
+        ? new URL(window.location.href).searchParams.get("query")
+        : '';
+        // Setting the search box value to the prev value
+        document.getElementById("query-all-events").value = queryParam;
+
+        /**
+         * 
+         * OPTION BOX
+         * 
+         **/
+        // Getting options param 
+        var categoryParam = new URL(window.location.href).searchParams.get("tag_filter") ?
+            new URL(window.location.href).searchParams.get("tag_filter") :
+            "All tags";
+
+        document.getElementById("query-all-category").value = categoryParam;
+        document.getElementById('number-of-total-events').innerHTML = document.querySelectorAll(`[data-category]`).length
+
+        // Filtering 
+        var searchResults = Array.from(document.querySelectorAll(`[data-category]`))
+            .filter((node) => {
+                if(node.querySelector(`#sgds-card-content-event-title`).innerHTML.trim().toLowerCase().includes(queryParam.toLowerCase())){
+                    return true
+                }
+                node.remove();
+            })
+            .filter((node) => {
+                if (categoryParam === "All tags") {
+                    return true;
+                }
+
+                if (node.getAttribute('data-category').split("|").includes(categoryParam)) {
+                    return true;
+                }
+
+                node.remove();
+            });
+
+        for (var i = 0; i < searchResults.length; i++) {
+            document.getElementById('event-recording-container').appendChild(searchResults[i]);
+        }
+
+        document.getElementById('number-of-filtered-events').innerHTML = searchResults.length
+    } catch (e) {
+        console.log(e);
+    }
+</script>

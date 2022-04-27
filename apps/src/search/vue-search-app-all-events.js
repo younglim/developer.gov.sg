@@ -4,6 +4,10 @@ import VueCompositionAPI from "@vue/composition-api";
 Vue.use(VueCompositionAPI);
 
 new Vue({
-  el: "#search-app-all-events",
-  render: (h) => h(SearchAllEvents),
-});
+  // el: "#search-app-all-events",
+  render: (h) => h(SearchAllEvents, {
+    props: {
+      specific_data_file: document.getElementById('all-events-script-id').getAttribute('data-file')
+    }
+  }),
+}).$mount(document.querySelector("#search-app-all-events"));

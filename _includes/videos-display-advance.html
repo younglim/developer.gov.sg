@@ -18,10 +18,17 @@
         {% assign article_link = video.article_link %}
         {% assign slide_link = video.slide_link %}
         {% assign video_image = "https://img.youtube.com/vi/$video_id/hqdefault.jpg" | replace: "$video_id", video_id %}
+        {%- assign video_categories = "" |  split: ','-%}
 
-        <div class="sgds-card sgds-card-variant-video-info">
+        {%- if video.category-%}
+            {%- for category in video.category -%}
+                {%- assign video_category = video.category -%}
+                {%- assign video_categories = video_categories | push: video_category -%}
+            {%- endfor -%}
+        {%- endif -%}
+        {% assign video_categories = video_categories | uniq | join: "|" %}
+        <div class="sgds-card sgds-card-variant-video-info" data-category="{{video_categories}}">
             <div class="sgds-card-content">
-
                 <div class="content-grid">
                     {% if video_id != nil %}
                     <div class="sgds-card-image">
@@ -35,12 +42,12 @@
                     <div class="info">
                         {% if video_id != nil %}
                         <h4>
-                            <a href="{{ video_url }}" target="_blank" rel="noopener noreferrer">
+                            <a href="{{ video_url }}" target="_blank" rel="noopener noreferrer" id="sgds-card-content-event-title">
                                 {{ video_title }}
                             </a>
                         </h4>
                         {% else %}
-                        <h4>{{ video_title }}</h4>
+                        <h4 id="sgds-card-content-event-title">{{ video_title }}</h4>
                         {% endif %}
 
                         {%- if video.category-%}
@@ -54,7 +61,7 @@
                         </div>
                         {%- endif-%}
 
-                        <p>
+                        <p id="sgds-card-content-event-description">
                             {{video.description}}
                         </p>
 
