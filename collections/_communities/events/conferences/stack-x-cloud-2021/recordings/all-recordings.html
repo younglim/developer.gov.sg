@@ -47,11 +47,11 @@ redirect_from:
             </div>
             <div class="field col padding--right--none">
                 <div class="control has-icons-right is-expanded is-fullwidth">
-                    <select class="input" id='query-all-category' name="year-query" autocomplete="off"
+                    <select class="input" id='query-all-category' name="tag_filter" autocomplete="off"
                         onchange="window.location = '?tag_filter=' + this.options[this.selectedIndex].value;">
                         <option value="All tags">All tags</option>
                         {%- for option in options -%}
-                        <option value="{{option}}">{{option}}</option>
+                            <option value="{{option}}">{{option}}</option>
                         {%- endfor -%}
                     </select>
                     <span class="icon is-right">
@@ -75,29 +75,18 @@ redirect_from:
 
 <script async type="text/javascript">
     try {
-        /**
-         * 
-         * SEARCH BOX
-         * 
-         **/
-
         // Getting search param 
         const queryParam = new URL(window.location.href).searchParams.get("query") 
         ? new URL(window.location.href).searchParams.get("query")
         : '';
-        // Setting the search box value to the prev value
-        document.getElementById("query-all-events").value = queryParam;
 
-        /**
-         * 
-         * OPTION BOX
-         * 
-         **/
         // Getting options param 
-        var categoryParam = new URL(window.location.href).searchParams.get("tag_filter") ?
+        const categoryParam = new URL(window.location.href).searchParams.get("tag_filter") ?
             new URL(window.location.href).searchParams.get("tag_filter") :
             "All tags";
 
+        // Setting the search box value to the prev value
+        document.getElementById("query-all-events").value = queryParam;
         document.getElementById("query-all-category").value = categoryParam;
         document.getElementById('number-of-total-events').innerHTML = document.querySelectorAll(`[data-category]`).length
 
@@ -127,6 +116,6 @@ redirect_from:
 
         document.getElementById('number-of-filtered-events').innerHTML = searchResults.length
     } catch (e) {
-        console.log(e);
+        
     }
 </script>
