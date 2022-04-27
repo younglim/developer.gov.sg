@@ -15,10 +15,10 @@ recordings_uploaded: true
 {%- assign data_file = data -%}
 {%- assign options = '' | split: ',' %}
 {%- for video in site.data[video_data_file] -%}
-{%- if video.category-%}
-{% assign video_category = video.category %}
-{%- assign options = options | push: video_category -%}
-{%- endif-%}
+    {%- if video.category-%}
+        {% assign video_category = video.category %}
+        {%- assign options = options | push: video_category -%}
+    {%- endif-%}
 {%- endfor -%}
 <!-- Removing duplicate option values so it's all dynamic-->
 {%- assign options = options | uniq | sort -%}
@@ -26,7 +26,7 @@ recordings_uploaded: true
 <div>
     <div>
         <!-- Header -->
-        <h1>All Recordings</h1>
+        <h2>All Recordings</h2>
         <!-- Content -->
         <p>
             Thank you for joining us at STACK X Cloud 2021. Missed any sessions? You can watch the video replays below.
@@ -104,11 +104,10 @@ recordings_uploaded: true
                 }
 
                 node.remove();
+            })
+            .forEach((node) => {
+                document.getElementById('event-recording-container').appendChild(node);
             });
-
-        for (var i = 0; i < searchResults.length; i++) {
-            document.getElementById('event-recording-container').appendChild(searchResults[i]);
-        }
 
         document.getElementById('number-of-filtered-events').innerHTML = searchResults.length
     } catch (e) {

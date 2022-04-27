@@ -2,7 +2,8 @@
 title: Conferences
 layout: layout-page-sidenav
 description: >
-    Explore our various community engagement channels here, from STACK-X Meetups to newsletters to open source technologies to COVID-19 volunteering opportunities!
+    Explore our various community engagement channels here, from STACK-X Meetups to newsletters to open source technologies
+    to COVID-19 volunteering opportunities!
 ---
 
 <div class="spacing-container-vertical">
@@ -11,37 +12,27 @@ description: >
         <h2>Overview for Conferences</h2>
         <p>
             Join the tech community in a variety of events aimed at building stronger community connections,
-            peer-to-peer
-            learning, sharing of thought leadership from industry experts and the provision of industry updates. Our
-            events
-            are
-            suited for individuals of all ages!
+            peer-to-peer learning, sharing of thought leadership from industry experts and the provision of industry
+            updates. Our events are suited for individuals of all ages!
         </p>
         <hr />
     </div>
-
     <!-- Content -->
     <div>
-        <div>
-            <h3>All Upcoming Conferences</h3>
-            <div id="upcoming-events-container" class="card-grid-container is-fullwidth">
-            </div>
-            <div class="is-fullwidth is-flex" style="justify-content: center;" id="upcoming-conferences-button">
-                <button class="sgds-button sgds-button--primary" onclick="toggleUpcomingConferencesVisibility()">
-                    View all events
-                </button>
-            </div>
-            <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
-                Sorry, there is currently no upcoming available events.
-            </div>
+        <h3>All Upcoming Conferences</h3>
+        <div id="upcoming-events-container" class="card-grid-container is-fullwidth"></div>
+        <div class="is-fullwidth is-flex" style="justify-content: center;" id="upcoming-conferences-button">
+            <button class="sgds-button sgds-button--primary" onclick="toggleUpcomingConferencesVisibility()">
+                View all events
+            </button>
         </div>
-
+        <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
+            Sorry, there is currently no upcoming available events.
+        </div>
         <hr />
-
         <div>
             <h3>Past Conferences</h3>
-            <div id="past-events-container" class="card-grid-container is-fullwidth">
-            </div>
+            <div id="past-events-container" class="card-grid-container is-fullwidth"></div>
             <div class="is-fullwidth is-flex" style="justify-content: center;" id="past-conferences-button">
                 <button class="sgds-button sgds-button--primary" onclick="togglePastConferencesVisibility()">
                     View all events
@@ -51,7 +42,6 @@ description: >
                 Sorry, there are currently no past events.
             </div>
         </div>
-
         {% include site-section-event-listing.html 
             is_reversed=true
             limit_number_of_content=2
@@ -59,10 +49,11 @@ description: >
         %}
     </div>
 </div>
+
 <!-- Sorting and theming script -->
 <script type="text/javascript">
     // Pre-defining variables
-    var status, backgroundTheme;
+    let status, backgroundTheme;
     const limit_number_of_content = 2
 
     // To dd/mm/yy format
@@ -167,24 +158,21 @@ description: >
     // Hides the content at the start initially during the creation phase using IIFEs
     function toggleUpcomingConferencesVisibility() {
         // changes the visibility of the button to none
-        const nodes = document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
+        document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]')
+            .forEach((node) => {
+                node.style.display = 'block';
+            });
 
-        // Changes the visibility of the button 
-        const button = document.getElementById('upcoming-conferences-button')
-        button.remove();
+        // Removes the button from the dom once clicked
+        document.getElementById('upcoming-conferences-button').remove();
     }
 
     function togglePastConferencesVisibility() {
-        const nodes = document.querySelectorAll('*[id^="past-conferences-hidden-content"]')
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
+        document.querySelectorAll('*[id^="past-conferences-hidden-content"]').forEach((node)=>{
+            node.style.display = "block";
+        })
 
-        // Changes the visibility of the button 
-        const button = document.getElementById('past-conferences-button')
-        button.remove();
+        // Removes the button from the dom once clicked
+        document.getElementById('past-conferences-button').remove();
     }
 </script>

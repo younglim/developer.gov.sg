@@ -35,48 +35,44 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
 
     <!-- Content -->
     <div>
-        <div>
-            <h3>All Upcoming STACK-X Meetups</h3>
-            <div id="upcoming-events-container" class="card-grid-container is-fullwidth">
-            </div>
-            <div class="is-fullwidth is-flex" style="justify-content: center;" id="upcoming-conferences-button">
-                <button class="sgds-button sgds-button--primary" onclick="toggleUpcomingConferencesVisibility()">
-                    View all events
-                </button>
-            </div>
-            <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
-                Sorry, there is currently no upcoming available events
-            </div>
+        <h3>All Upcoming STACK-X Meetups</h3>
+        <div id="upcoming-events-container" class="card-grid-container is-fullwidth"></div>
+        <div class="is-fullwidth is-flex" style="justify-content: center;" id="upcoming-conferences-button">
+            <button class="sgds-button sgds-button--primary" onclick="toggleUpcomingConferencesVisibility()">
+                View all events
+            </button>
         </div>
-
-        <hr />
-
-        <div>
-            <h3>Recent Past STACK-X Meetups</h3>
-            <div id="past-events-container" class="card-grid-container is-fullwidth">
-            </div>
-            <div class="is-fullwidth is-flex" style="justify-content: center;" id="past-conferences-button">
-                <button class="sgds-button sgds-button--primary" onclick="togglePastConferencesVisibility()">
-                    View all events
-                </button>
-            </div>
-            <div id="no-past-events-message" class="margin--top margin--bottom has-text-centered">
-                Sorry, there are currently no past events
-            </div>
+        <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
+            Sorry, there is currently no upcoming available events
         </div>
-
-        {% include site-section-event-listing.html 
-            is_reversed=true
-            limit_number_of_content=2
-            specified_category_tag="stack-x-meetup"
-        %}
     </div>
+
+    <hr />
+
+    <div>
+        <h3>Recent Past STACK-X Meetups</h3>
+        <div id="past-events-container" class="card-grid-container is-fullwidth"></div>
+        <div class="is-fullwidth is-flex" style="justify-content: center;" id="past-conferences-button">
+            <button class="sgds-button sgds-button--primary" onclick="togglePastConferencesVisibility()">
+                View all events
+            </button>
+        </div>
+        <div id="no-past-events-message" class="margin--top margin--bottom has-text-centered">
+            Sorry, there are currently no past events
+        </div>
+    </div>
+
+    {% include site-section-event-listing.html 
+        is_reversed=true
+        limit_number_of_content=2
+        specified_category_tag="stack-x-meetup"
+    %}
 </div>
 
 <!-- Sorting and theming script -->
 <script type="text/javascript">
     // Pre-defining variables
-    var status, backgroundTheme;
+    let status, backgroundTheme;
     const limit_number_of_content = 2
 
     // To dd/mm/yy format
@@ -181,24 +177,20 @@ description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF
     // Hides the content at the start initially during the creation phase using IIFEs
     function toggleUpcomingConferencesVisibility() {
         // changes the visibility of the button to none
-        const nodes = document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
+        document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]').forEach((node) => {
+            node.style.display = 'block';
+        });
 
-        // Changes the visibility of the button 
-        const button = document.getElementById('upcoming-conferences-button')
-        button.remove();
+        // Removes the button from the dom once clicked
+        document.getElementById('upcoming-conferences-button').remove();
     }
 
     function togglePastConferencesVisibility() {
-        const nodes = document.querySelectorAll('*[id^="past-conferences-hidden-content"]')
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
+        document.querySelectorAll('*[id^="past-conferences-hidden-content"]').forEach((node)=>{
+            node.style.display = "block";
+        })
 
-        // Changes the visibility of the button 
-        const button = document.getElementById('past-conferences-button')
-        button.remove();
+        // Removes the button from the dom once clicked
+        document.getElementById('past-conferences-button').remove();
     }
 </script>

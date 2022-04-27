@@ -22,8 +22,10 @@ Removes items that does not have any date. Helps filter events that have past, p
         {% unless sub_section.title contains 'Past Webinars' %}
             {% if sub_section.url contains '/events' %}
                 {% assign specified_category = "Conference" %}
-            {% else %}
+            {% elsif sub_section.url contains '/stack-x-meetups' %}
                 {% assign specified_category = "STACK-X Meetup" %}
+            {% else %}
+                {% assign specified_category = "Hackathons" %}
             {% endif %}
 
             {%- assign name = sub_section.title -%}
@@ -50,7 +52,7 @@ Removes items that does not have any date. Helps filter events that have past, p
         {% endunless %}
     {% endfor %}
 
-    <div id="no-upcoming-event" class="margin--top margin--bottom has-text-centered">
+    <div id="no-upcoming-events-message" class="margin--top margin--bottom has-text-centered">
         Sorry, there is currently no upcoming available events. Stay tune for more!
     </div>
 
@@ -63,7 +65,7 @@ Removes items that does not have any date. Helps filter events that have past, p
 
 <script type="text/javascript">
     // Pre-defining variables
-    var status, backgroundTheme;
+    let status, backgroundTheme;
 
     // To dd/mm/yy format
     function getCompareDate() {
@@ -101,20 +103,16 @@ Removes items that does not have any date. Helps filter events that have past, p
         }
     });
 
-    // Filter past events and upcoming events into two different arrays
-    var pastEvents = document.querySelectorAll('[id=past-event]');
-    var upcomingEvents = document.querySelectorAll('[id=upcoming-event]');
-
     // After changing the color of the content, based on the number of 'present / upcoming' events, remove the no-upcoming-event element if there is any upcoming event
     if (document.querySelectorAll('[id=upcoming-event]').length > 0) {
-        document.querySelector('#no-upcoming-event').remove();
+        document.querySelector('#no-upcoming-events-message').remove();
     }
 
     // Given the number of upcoming events, limit the number of upcoming events to be displayed to only 2 dynamically
     if (document.querySelectorAll('[id=upcoming-event]').length > 2) {
-        const lim = document.querySelectorAll('[id=upcoming-event]');
+        const removeDomArray = document.querySelectorAll('[id=upcoming-event]');
         for (var i = 1; i < lim.length; i++) {
-            lim[i].remove();
+            removeDomArray[i].remove();
         }
     }
 

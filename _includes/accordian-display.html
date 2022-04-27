@@ -1,7 +1,4 @@
 {%- assign data_file = include._data -%}
-{% comment %}
-The default is to select all the category
-{% endcomment %}
 {%- assign specified_category = include.category | default: '' -%}
 {%- assign event_details = site.data[data_file]| where_exp: "events", "events.type contains specified_category" -%}
 
@@ -19,20 +16,21 @@ The default is to select all the category
             <div class="sgds-accordion-set">
                 {% for speaker in event.speakers %}
                 <div class="sgds-accordion is-borderless is-white">
-                    <a href="#!" class="sgds-accordion-header is-white" role="button" aria-expanded="false">
+                    <a href="#!" class="sgds-accordion-header" role="button" aria-expanded="false">
                         <!-- Speakers -->
                         <div>
                             <div class="is-flex sgds-accordian-speaker-content">
                                 <img class="sgds-accordian-speaker-image" src="{{ speaker.image }}"
                                     alt="Speaker Image" />
-                                {{speaker.name}}, {{speaker.title}}
+                                {{- speaker.name -}}, {{- speaker.title -}}
                             </div>
                         </div>
-                        <!-- Arrow -->
+                        <!-- Arrows -->
                         <i class="sgds-icon sgds-icon-chevron-down"></i>
                     </a>
+                    <!-- Content -->
                     <div class="sgds-accordion-body">
-                        <p>{{speaker.desc}}</p>
+                        <p>{{- speaker.desc -}}</p>
                     </div>
                 </div>
                 {% endfor %}

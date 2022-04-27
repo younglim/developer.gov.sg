@@ -2,10 +2,10 @@
 {%- assign folder_name = page.id | split: "/" | shift | shift | shift | shift | first -%}
 
 {%- for sub_collection in site.data[page._data] -%}
-{% assign collection_name = sub_collection.name | slugify %}
-{%- if collection_name == folder_name -%}
-{%- assign current_collection = sub_collection-%}
-{% endif %}
+    {% assign collection_name = sub_collection.name | slugify %}
+    {%- if collection_name == folder_name -%}
+        {%- assign current_collection = sub_collection-%}
+    {% endif %}
 {% endfor %}
 
 {%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}

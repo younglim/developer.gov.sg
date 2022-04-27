@@ -1,13 +1,11 @@
-{%- assign eventIncrementer = 0 -%}
-{%- assign limit_number_of_content = include.limit_number_of_content | default: 2 -%}
 {% comment %}
 Get all category if no specification is listed
 {% endcomment %}
 {%- assign specified_category = include.specified_category_tag | default: '' -%}
 {%- assign specified_category_collection = 
     "/events/" 
-    | append: include.specified_category 
-    | default: '' -%}
+    | append: specified_category
+-%}
 {% comment %}
 Filter for events that only belongs to the events sub collection.
 {% endcomment %}
@@ -16,7 +14,7 @@ Filter for events that only belongs to the events sub collection.
     | where_exp: "item", "item.path contains specified_category_collection" -%}
 {%- assign filteredCollectionDumps = 
     collectionDumps 
-    | where_exp: "item", "item.path contains 'overview.html' or item.path contains 'index.html'" -%}
+    | where_exp: "item", "item.path contains 'overview' or item.path contains 'index'" -%}
 {% comment %}
 Removes items that does not have any date. Helps filter events that have past, present and upcoming dates.
 {% endcomment %}
@@ -24,7 +22,6 @@ Removes items that does not have any date. Helps filter events that have past, p
     filteredCollectionDumps 
     | where_exp: "item", "item.event_date" 
     | sort: 'event_date'  %}
-{%- assign showOnlyRecentPastConferences = include.show_recent_past -%}
 
 <div class="card-grid-container is-fullwidth">
     {%- for sub_section in sortedCollectionDumps reversed:include.is_reversed -%}
@@ -53,18 +50,4 @@ Removes items that does not have any date. Helps filter events that have past, p
             %}
         </div>
     {%- endfor -%}
-
-    {%- if eventIncrementer > limit_number_of_content -%}
-        {%- if include.show_upcoming -%}
-            <button id="upcoming-conferences-button" class="sgds-button sgds-button--primary"
-                onclick="toggleUpcomingConferencesVisibility()">
-                View all events
-            </button>
-        {%- else -%}
-            <button id="past-conferences-button" class="sgds-button sgds-button--primary"
-                onclick="togglePastConferencesVisibility()">
-                View all events
-            </button>
-        {%- endif -%}
-    {%- endif -%}
 </div>
