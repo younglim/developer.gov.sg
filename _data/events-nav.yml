@@ -4,7 +4,6 @@
     # NOTE: SUB_ITEM_NAME IS USED FOR LINKS WHEREAS SUB_ITEM_LABEL IS USED AS THE TITLE
     - item_name: Overview
       item_label: Overview
-
     - item_name: Agenda
       item_label: Agenda
       item_sub_item:
@@ -15,7 +14,6 @@
         - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
-
     - item_name: Recordings
       item_label: Recordings
       item_sub_item:
@@ -26,10 +24,11 @@
         - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
-  event_timing: 2021-11-17T08:00:00.000Z
-  # For flexibility sake, default would just be event_timing.
-  event_registration_due_date: 2021-11-17T08:00:00.000Z
-  event_registration_link: https://www.google.com/
+  event_type: Online (via Zoom)
   # Conference, Stack-X Meetups, Hackathons <- pls only use the first 3 examples.
   event_category: Conference
-  event_type: Online (via Zoom)
+  event_registration_link: https://www.google.com/
+  event_date: 2022-04-29
+  # For flexibility sake, default would just be event_timing.
+  event_registration_end_date: 2022-11-17
+  event_recording_availability: true

@@ -16,12 +16,53 @@
           v-for="result of filterSearchResults"
           :key="result.url"
         >
-          <card>
+          <div
+            id="event-status-container"
+            class="is-hidden-desktop has-text-centered has-text-white has-text-weight-semibold padding--bottom--sm padding--top--sm"
+            :style="{ backgroundColor: result.backgroundColor }"
+          >
+            {{ result.status }}
+          </div>
+          <CardCalendar>
+            <template v-slot:calendar>
+              <div class="margin--right--xl is-hidden-touch">
+                <div class="sgds-calendar-card-left-inner">
+                  <div class="has-text-centered" style="width: 6.65rem;">
+                    <div
+                      style="border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;"
+                      id="event-status-container"
+                      :style="{ backgroundColor: result.backgroundColor }"
+                    >
+                      <p
+                        class="has-text-weight-bold has-text-white"
+                        id="event-status"
+                      >
+                        {{ result.status }}
+                      </p>
+                    </div>
+                    <div
+                      class="padding--top padding--bottom"
+                      style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;"
+                    >
+                      <div>
+                        <p
+                          class="has-text-centered is-size-3 has-text-weight-bold"
+                        >
+                          {{ result.dayFormat }}
+                        </p>
+                      </div>
+                      <div>
+                        <p>{{ result.monthFormat }}' {{ result.yearFormat }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
             <template v-slot:main-content>
               <h4>
                 <a :href="result.url" v-html="result.title"></a>
               </h4>
-              <p v-html="result.description"></p>
             </template>
             <template v-slot:front-matter-attributes>
               <div class="spacing-container-vertical spacing-16">
@@ -32,13 +73,24 @@
                   <strong>Target Group</strong>
                   <p v-html="result.targetGroup"></p>
                 </div>
-                <div class="spacing-container-vertical spacing-8">
-                  <strong>Category</strong>
+                <!-- Display event's category -->
+                <div class="is-flex">
+                  <!-- Add event image -->
+                  <img
+                    src="/assets/icons/conference.svg"
+                    alt="Event Image"
+                    class="margin--right--sm margin--left--none margin--bottom--none margin--top--none"
+                    style="width: 1.5em; height: 1.5em;"
+                  />
                   <p v-html="result.category"></p>
+                </div>
+                <!-- Display event's description -->
+                <div class="">
+                  <p v-html="result.description"></p>
                 </div>
               </div>
             </template>
-          </card>
+          </CardCalendar>
         </div>
       </div>
     </div>
@@ -47,12 +99,12 @@
 
 <script>
 import Loader from "../lib/Loader.vue";
-import Card from "../lib/Card.vue";
+import CardCalendar from "../lib/CardCalendar.vue";
 import useLunrSearch from "../composables/useLunrSearch";
 import { computed } from "@vue/composition-api";
 
 export default {
-  components: { Loader, Card },
+  components: { Loader, CardCalendar },
   setup() {
     let queryParam = new URL(window.location.href).searchParams.get("query");
     const {
@@ -63,7 +115,6 @@ export default {
       generateSearchResults,
       errorMsg,
     } = useLunrSearch();
-
     generateSearchResults({
       queryParam: queryParam,
       jsonPath: "/search/events.json",
@@ -88,13 +139,22 @@ export default {
     };
   },
   computed: {
+    getCompareDate: function() {
+      // gets local time, sg / kl timing
+      var d = new Date(),
+        month = "" + (d.getMonth() + 1),
+        day = "" + d.getDate(),
+        year = d.getFullYear();
+      if (month.length < 2) month = "0" + month;
+      if (day.length < 2) day = "0" + day;
+      return [year, month, day].join("");
+    },
     filterSearchResults: function() {
       const dateParam = new URL(window.location.href).searchParams.get(
         "year_filter"
       )
         ? new URL(window.location.href).searchParams.get("year_filter")
         : "All Time";
-
       const categoryParam = new URL(window.location.href).searchParams.get(
         "category_filter"
       )
@@ -104,10 +164,60 @@ export default {
       document.getElementById("query-all-year").value = dateParam;
       document.getElementById("query-all-category").value = categoryParam;
 
+      for (var i = 0; i < this.searchResults.length; i++) {
+        // Changes the status and color of the text by comparing the event_date in JSON and today's date
+        if (this.searchResults[i].event_date === this.getCompareDate) {
+          const dt = new Date(this.searchResults[i].event_date);
+
+          this.searchResults[i].status = "NOW";
+          this.searchResults[i].backgroundColor = "#D0021B";
+          this.searchResults[i].yearFormat = dt
+            .getFullYear()
+            .toString()
+            .substr(-2);
+          this.searchResults[i].dayFormat = dt.getDate();
+          this.searchResults[i].monthFormat = dt
+            .toLocaleString("en-US", {
+              month: "short",
+            })
+            .toUpperCase();
+        } else if (this.searchResults[i].event_date < this.getCompareDate) {
+          const dt = new Date(this.searchResults[i].event_date);
+
+          this.searchResults[i].status = "PAST";
+          this.searchResults[i].backgroundColor = "#323232";
+          this.searchResults[i].yearFormat = dt
+            .getFullYear()
+            .toString()
+            .substr(-2);
+          this.searchResults[i].dayFormat = dt.getDate();
+          this.searchResults[i].monthFormat = dt
+            .toLocaleString("en-US", {
+              month: "short",
+            })
+            .toUpperCase();
+        } else {
+          const dt = new Date(this.searchResults[i].event_date);
+
+          this.searchResults[i].status = "UPCOMING";
+          this.searchResults[i].backgroundColor = "#0161AF";
+          this.searchResults[i].yearFormat = dt
+            .getFullYear()
+            .toString()
+            .substr(-2);
+          this.searchResults[i].dayFormat = dt.getDate();
+          this.searchResults[i].monthFormat = dt
+            .toLocaleString("en-US", {
+              month: "short",
+            })
+            .toUpperCase();
+        }
+      }
+
       return this.searchResults
-        .filter((item) => {
+        .filter((node) => {
           // Converts the date in the page's front matter to a date object then to full years
-          const eventDateInYears = new Date(item.date).getFullYear();
+          const eventDateInYears = new Date(node.event_date).getFullYear();
           // If no specified date (by param), just return ignore and return everything as it is
           if (dateParam === "All Time") {
             return true;
@@ -117,12 +227,15 @@ export default {
             return true;
           }
         })
-        .filter((item2) => {
+        .filter((node) => {
           if (categoryParam === "All Types") {
             return true;
           }
 
-          if (item2 == categoryParam) {
+          if (
+            node.category.trim().toLowerCase() ===
+            categoryParam.trim().toLowerCase()
+          ) {
             return true;
           }
         });

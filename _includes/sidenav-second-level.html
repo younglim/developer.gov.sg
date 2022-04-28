@@ -25,14 +25,9 @@
 {% endif %}
 
 {%- if page.event_date -%}
-{%- assign eventDateAndTiming = page.event_date | default: page.date -%}
 {%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
 
-<div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}" class="margin--bottom--xl is-hidden-touch">
-    {% include card-variant-event-information.html 
-        eventDateAndTiming=eventDateAndTiming 
-    %}
-</div>
+{% include card-variant-event-information.html %}
 {%- endif -%}
 
 {% for first_lvl_nav_item in nav_items %}

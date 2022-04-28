@@ -37,14 +37,14 @@ recordings_uploaded: true
 
     <div class="spacing-container-horizontal spacing-16">
         <strong class="label-text-to-hide">Filter lists: </strong>
-        <form style="flex: auto;" class="search-box-defined-width row" action="" method="get">
+        <form name="form" style="flex: auto;" class="search-box-defined-width row" action="" method="get">
             <div class="col">
                 {% include search-box.html id='query-all-events' placeholder='Search event titles' %}
             </div>
             <div class="field col padding--right--none">
                 <div class="control has-icons-right is-expanded is-fullwidth">
                     <select class="input" id='query-all-category' name="tag_filter" autocomplete="off"
-                        onchange="window.location = '?tag_filter=' + this.options[this.selectedIndex].value;">
+                        onchange="redirect();">
                         <option value="All tags">All tags</option>
                         {%- for option in options -%}
                             <option value="{{option}}">{{option}}</option>
@@ -59,7 +59,7 @@ recordings_uploaded: true
     </div>
 
     <div>
-        <p class="has-text-dark margin--top margin--bottom">
+        <p class="has-text-dark margin--top margin--bottom search-result-status">
             Showing <span id="number-of-filtered-events"></span> out of <span id="number-of-total-events"></span> recordings
         </p>
     </div>
@@ -71,6 +71,18 @@ recordings_uploaded: true
 
 <script async type="text/javascript">
     try {
+        function redirect() {
+            var params = {};
+            for (var i = 0; i < document.form.elements.length; i++) {
+                var fieldName = document.form.elements[i].name;
+                var fieldValue = document.form.elements[i].value;
+                params[fieldName] = fieldValue;
+            }
+
+            window.location.href =  '?query=' + params['query'] + '&' + 'tag_filter=' + params['tag_filter'];
+            return false;
+        }
+
         // Getting search param 
         const queryParam = new URL(window.location.href).searchParams.get("query") 
         ? new URL(window.location.href).searchParams.get("query")
@@ -87,11 +99,13 @@ recordings_uploaded: true
         document.getElementById('number-of-total-events').innerHTML = document.querySelectorAll(`[data-category]`).length
 
         // Filtering 
+        var incrementalVal = 0;
         var searchResults = Array.from(document.querySelectorAll(`[data-category]`))
             .filter((node) => {
                 if(node.querySelector(`#sgds-card-content-event-title`).innerHTML.trim().toLowerCase().includes(queryParam.toLowerCase())){
                     return true
                 }
+
                 node.remove();
             })
             .filter((node) => {
@@ -106,10 +120,11 @@ recordings_uploaded: true
                 node.remove();
             })
             .forEach((node) => {
+                incrementalVal++
                 document.getElementById('event-recording-container').appendChild(node);
             });
 
-        document.getElementById('number-of-filtered-events').innerHTML = searchResults.length
+        document.getElementById('number-of-filtered-events').innerHTML = incrementalVal;
     } catch (e) {
         
     }

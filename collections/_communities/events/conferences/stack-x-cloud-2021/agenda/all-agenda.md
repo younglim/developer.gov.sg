@@ -10,7 +10,6 @@ recordings_uploaded: true
 event_date: 2021-11-17
 ---
 
-
 <!-- Header -->
 ## All Agenda
 <span class="sgds-icon sgds-icon-camera has-text-dark" role="img" aria-label="iconName"></span> Online (via Zoom)

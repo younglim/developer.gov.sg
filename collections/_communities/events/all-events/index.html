@@ -1,9 +1,6 @@
 ---
 title: All Events
 layout: layout-page
-description: >
-    STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF) competition that is open to everyone. Find out more
-    here.
 ---
 
 <div class="spacing-container-vertical spacing-32">
@@ -16,18 +13,18 @@ description: >
 
     <div class="spacing-container-horizontal spacing-16">
         <strong class="label-text-to-hide">Filter lists: </strong>
-        <form style="flex: auto;" class="search-box-defined-width row" action="/communities/events/all-events/"
-            method="get">
+        <form name="form" style="flex: auto;" class="search-box-defined-width row"
+            action="/communities/events/all-events/" method="get">
             <div class="col">
                 {% include search-box.html id='query-all-events' placeholder='Search event titles' %}
             </div>
             <div class="field col">
                 <div class="control has-icons-right is-expanded is-fullwidth">
-                    <select class="input" id='query-all-category' name="year-query" autocomplete="off"
-                        onchange="window.location = '?category_filter=' + this.options[this.selectedIndex].value;">
+                    <select class="input" id='query-all-category' name="category_filter" autocomplete="off"
+                    onchange="redirect()">
                         <option value="All Types">All Types</option>
-                        <option value="2022">Stack-x Meetup</option>
-                        <option value="2021">Conference</option>
+                        <option value="Stack-x Meetup">Stack-x Meetup</option>
+                        <option value="Conference">Conference</option>
                     </select>
                     <span class="icon is-right">
                         <i class="search-bar-icon sgds-icon sgds-icon-chevron-down is-size-7"></i>
@@ -36,8 +33,8 @@ description: >
             </div>
             <div class="field col">
                 <div class="control has-icons-right is-expanded is-fullwidth">
-                    <select class="input" id='query-all-year' name="year-query" autocomplete="off"
-                        onchange="window.location = '?year_filter=' + this.options[this.selectedIndex].value;">
+                    <select class="input" id='query-all-year' name="year_filter" autocomplete="off"
+                        onchange="redirect()">
                         <option value="All Time">All Time</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
@@ -54,6 +51,19 @@ description: >
     <div id="search-app-all-events">
     </div>
 </div>
+<script>
+    function redirect() {
+        var params = {};
+        for (var i = 0; i < document.form.elements.length; i++) {
+            var fieldName = document.form.elements[i].name;
+            var fieldValue = document.form.elements[i].value;
+            params[fieldName] = fieldValue;
+        }
 
-<script async id="all-events-script-tag" src="/assets/bundles/vue-search-app-all-events.bundle.js" data-file="stackx2021conference-videos.yml">
+        window.location.href =  '?query=' + params['query'] + '&' + 'category_filter=' + params['category_filter'] + '&' + 'year_filter=' + params['year_filter'];
+        return false;
+    }
+</script>
+<script async id="all-events-script-tag" src="/assets/bundles/vue-search-app-all-events.bundle.js"
+    data-file="stackx2021conference-videos.yml">
 </script>

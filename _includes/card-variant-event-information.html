@@ -8,9 +8,12 @@
     {% endif %}
 {% endfor %}
 
+{%- assign event_registration_link = current_collection.event_registration_link -%}
+{%- assign eventDateAndTiming = current_collection.event_date | default: page.date -%}
+{%- assign eventRegistrationEndDate = current_collection.event_registration_end_date -%}
 {%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
 
-<div class="sgds-card sgds-card-variant-video-info">
+<div class="sgds-card sgds-card-variant-video-info margin--bottom--lg" future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
     <div class="has-text-centered" id="event-status-container">
         <p class="has-text-weight-bold has-text-white" id="event-status">PAST</p>
     </div>
@@ -20,7 +23,7 @@
                 <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"></span>
             </div>
             <div class="col is-10">
-                {{- include.eventDateAndTiming | date: "%d %b %Y" -}}
+                {{- eventDateAndTiming | date: "%d %b %Y" -}}
             </div>
         </div>
         <div class="row margin--bottom--none is-flex-touch" style="justify-content: start; align-items: center;">
@@ -41,8 +44,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col padding--right--none padding--left--none has-text-white">
-                <button id="dynamic-event-button" class="sgds-button">Register now</button>
+            <div class="col padding--right--none padding--left--none">
+                <button onclick="buttonEventHandler()" id="dynamic-event-button" class="sgds-button has-text-white">Register
+                    now</button>
             </div>
         </div>
     </div>
@@ -50,7 +54,8 @@
 
 <script type="text/javascript">
     // Pre-defining variables
-    var should_run_entire_script = '{{page.event_date}}';
+    var should_run_entire_script = '{{ eventDateAndTiming }}';
+    var registrationEndDate = '{{ eventRegistrationEndDate }}';
     var status, backgroundTheme, buttonText, buttonState = false;
 
     // Part of sidenav-second-level reusability that doesnt run on every page
@@ -70,27 +75,38 @@
         // Dom maniuplation - to be called after the page is loaded
         // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
         document.querySelectorAll('[future-date]').forEach((node) => {
-            var dynamicEventButton = document.getElementById('dynamic-event-button');
+            const eventButton = node.querySelector('#dynamic-event-button');
 
             if (node.getAttribute('future-date') < getCompareDate()) {
+                // CALENDAR 
                 status = 'PAST';
                 backgroundTheme = "#323232";
                 node.setAttribute('id', 'past-event');
-                buttonText = "View recordings";
-                dynamicEventButton.disabled = true;
+
+                // BUTTON
+                eventButton.innerHTML = "View recordings";
+                eventButton.style.backgroundColor = "#0161AF";
             } else if (node.getAttribute('future-date') == getCompareDate()) {
+                // CALENDAR 
                 status = 'NOW';
-                backgroundTheme = "#0161AF";
+                backgroundTheme = "#D0021B";
                 node.setAttribute('id', 'upcoming-event');
-                buttonText = "Register Now";
-                dynamicEventButton.disabled = true;
-                buttonState = true;
+
+                // BUTTON
+                eventButton.disabled = true;
+                eventButton.style.color = "white"
+                eventButton.innerHTML = "Register Now";
+                eventButton.style.backgroundColor = "#C6C6C6";
             } else {
+                // CALENDAR 
                 status = 'UPCOMING';
                 backgroundTheme = "#0161AF";
                 node.setAttribute('id', 'upcoming-event');
-                buttonText = "Register Now"
 
+                // BUTTON
+                eventButton.disabled = false;
+                eventButton.innerHTML = "Register Now";
+                eventButton.style.backgroundColor = "#0161AF";
             }
 
             for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
@@ -100,17 +116,21 @@
             for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
                 node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
             }
-
-            for (var j = 0; j < node.querySelectorAll('[id=dynamic-event-button]').length; j++) {
-                node.querySelectorAll('[id=dynamic-event-button]')[j].innerHTML = buttonText;
-                node.querySelectorAll('[id=dynamic-event-button]')[j].disabled = buttonState;
-                node.querySelectorAll('[id=dynamic-event-button]')[j].style.color = 'white';
-                node.querySelectorAll('[id=dynamic-event-button]')[j].style.backgroundColor = backgroundTheme;
-
-                if(buttonText == "View recordings") {
-                    node.querySelectorAll('[id=dynamic-event-button]')[j].href = ""
-                }
-            }
         });
+    }
+
+    // Overriding the default behaviour of the button
+    function buttonEventHandler() {
+        if (document.querySelector('[future-date]').getAttribute('future-date') > getCompareDate()) {
+            // If today's date < event date, then enable the button and redirect to the event pageÎ
+            if('{{event_registration_link}}'){
+                location.href = '{{ event_registration_link }}';
+            }
+        } 
+
+        // If today's date > event date, then disable the button
+        if (document.querySelector('[future-date]').getAttribute('future-date') < getCompareDate()) {
+            location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        }
     }
 </script>
