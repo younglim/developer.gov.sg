@@ -77,10 +77,10 @@
                 <div class="is-flex">
                   <!-- Add event image -->
                   <img
-                    src="/assets/icons/conference.svg"
                     alt="Event Image"
                     class="margin--right--sm margin--left--none margin--bottom--none margin--top--none"
                     style="width: 1.5em; height: 1.5em;"
+                    :src="result.icon_path"
                   />
                   <p v-html="result.category"></p>
                 </div>

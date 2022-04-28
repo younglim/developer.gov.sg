@@ -17,6 +17,7 @@
                 "category": "Conference",
                 "content": {{ document.content | strip_html | strip_newlines | strip | jsonify }},
                 "url": "{{ document.url }}",
+                "icon_path": "/assets/icons/conference.svg",
                 "event_date": "{{ document.event_date | default: document.date }}",
                 "meta": "document"
                 },
@@ -28,6 +29,7 @@
                 "category": "Stack-x Meetup",
                 "content": {{ document.content | strip_html | strip_newlines | strip | jsonify }},
                 "url": "{{ document.url }}",
+                "icon_path": "/assets/icons/stack_x_meetup.svg",
                 "event_date": "{{ document.event_date | default: document.date }}",
                 "meta": "document"
                 },
