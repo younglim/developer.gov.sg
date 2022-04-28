@@ -25,7 +25,7 @@
           </div>
           <CardCalendar>
             <template v-slot:calendar>
-              <div class="margin--right--xl is-hidden-touch">
+              <div class="margin--right--lg is-hidden-touch">
                 <div class="sgds-calendar-card-left-inner">
                   <div class="has-text-centered" style="width: 6.65rem;">
                     <div
@@ -165,53 +165,31 @@ export default {
       document.getElementById("query-all-category").value = categoryParam;
 
       for (var i = 0; i < this.searchResults.length; i++) {
+        const dt = new Date(this.searchResults[i].event_date);
+
         // Changes the status and color of the text by comparing the event_date in JSON and today's date
         if (this.searchResults[i].event_date === this.getCompareDate) {
-          const dt = new Date(this.searchResults[i].event_date);
-
           this.searchResults[i].status = "NOW";
           this.searchResults[i].backgroundColor = "#D0021B";
-          this.searchResults[i].yearFormat = dt
-            .getFullYear()
-            .toString()
-            .substr(-2);
-          this.searchResults[i].dayFormat = dt.getDate();
-          this.searchResults[i].monthFormat = dt
-            .toLocaleString("en-US", {
-              month: "short",
-            })
-            .toUpperCase();
         } else if (this.searchResults[i].event_date < this.getCompareDate) {
-          const dt = new Date(this.searchResults[i].event_date);
-
           this.searchResults[i].status = "PAST";
           this.searchResults[i].backgroundColor = "#323232";
-          this.searchResults[i].yearFormat = dt
-            .getFullYear()
-            .toString()
-            .substr(-2);
-          this.searchResults[i].dayFormat = dt.getDate();
-          this.searchResults[i].monthFormat = dt
-            .toLocaleString("en-US", {
-              month: "short",
-            })
-            .toUpperCase();
         } else {
-          const dt = new Date(this.searchResults[i].event_date);
-
           this.searchResults[i].status = "UPCOMING";
           this.searchResults[i].backgroundColor = "#0161AF";
-          this.searchResults[i].yearFormat = dt
-            .getFullYear()
-            .toString()
-            .substr(-2);
-          this.searchResults[i].dayFormat = dt.getDate();
-          this.searchResults[i].monthFormat = dt
-            .toLocaleString("en-US", {
-              month: "short",
-            })
-            .toUpperCase();
         }
+
+        this.searchResults[i].dayFormat =
+          dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate();
+        this.searchResults[i].monthFormat = dt
+          .toLocaleString("en-SG", {
+            month: "short",
+          })
+          .toUpperCase();
+        this.searchResults[i].yearFormat = dt
+          .getFullYear()
+          .toString()
+          .substr(-2);
       }
 
       return this.searchResults
