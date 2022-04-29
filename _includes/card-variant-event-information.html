@@ -2,18 +2,22 @@
 {%- assign folder_name = page.id | split: "/" | shift | shift | shift | shift | first -%}
 
 {%- for sub_collection in site.data[page._data] -%}
-    {% assign collection_name = sub_collection.name | slugify %}
-    {%- if collection_name == folder_name -%}
-        {%- assign current_collection = sub_collection-%}
-    {% endif %}
+{% assign collection_name = sub_collection.name | slugify %}
+{%- if collection_name == folder_name -%}
+{%- assign current_collection = sub_collection-%}
+{% endif %}
 {% endfor %}
 
-{%- assign event_registration_link = current_collection.event_registration_link -%}
+{%- assign eventRecordingLink = current_collection.event_recording_link -%}
+{%- assign eventRegistrationLink = current_collection.event_registration_link -%}
 {%- assign eventDateAndTiming = current_collection.event_date | default: page.date -%}
-{%- assign eventRegistrationEndDate = current_collection.event_registration_end_date -%}
+{%- assign eventDateAndTimingParsed = eventDateAndTiming | date: '%Y%m%d'-%}
+{%- assign eventRegistrationEndDate = current_collection.event_registration_end_date | default: eventDateAndTiming -%}
+{%- assign eventRegistrationEndDateParsed = eventRegistrationEndDate | date: '%Y%m%d'-%}
 {%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
 
-<div class="sgds-card sgds-card-variant-video-info margin--bottom--lg" future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
+<div class="sgds-card sgds-card-variant-video-info margin--bottom--lg"
+    future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
     <div class="has-text-centered" id="event-status-container">
         <p class="has-text-weight-bold has-text-white" id="event-status">PAST</p>
     </div>
@@ -45,7 +49,8 @@
         </div>
         <div class="row">
             <div class="col padding--right--none padding--left--none">
-                <button onclick="buttonEventHandler()" id="dynamic-event-button" class="sgds-button has-text-white">Register
+                <button onclick="buttonEventHandler()" id="dynamic-event-button"
+                    class="sgds-button has-text-white">Register
                     now</button>
             </div>
         </div>
@@ -81,16 +86,19 @@
                 // CALENDAR 
                 status = 'PAST';
                 backgroundTheme = "#323232";
-                node.setAttribute('id', 'past-event');
 
                 // BUTTON
-                eventButton.innerHTML = "View recordings";
-                eventButton.style.backgroundColor = "#0161AF";
+                if ('{{eventRecordingLink}}'.length > 0) {
+                    eventButton.innerHTML = "View recordings";
+                    eventButton.style.backgroundColor = "#0161AF";
+                } else {
+                    eventButton.innerHTML = "Pending upload";
+                    eventButton.style.backgroundColor = "#C6C6C6";
+                }
             } else if (node.getAttribute('future-date') == getCompareDate()) {
                 // CALENDAR 
                 status = 'NOW';
                 backgroundTheme = "#D0021B";
-                node.setAttribute('id', 'upcoming-event');
 
                 // BUTTON
                 eventButton.disabled = true;
@@ -101,12 +109,17 @@
                 // CALENDAR 
                 status = 'UPCOMING';
                 backgroundTheme = "#0161AF";
-                node.setAttribute('id', 'upcoming-event');
 
                 // BUTTON
-                eventButton.disabled = false;
-                eventButton.innerHTML = "Register Now";
-                eventButton.style.backgroundColor = "#0161AF";
+                if ('{{eventRegistrationEndDateParsed}}' < getCompareDate()) {
+                    eventButton.disabled = true;
+                    eventButton.innerHTML = "Registration ended";
+                    eventButton.style.backgroundColor = "#c6c6c6";
+                } else {
+                    eventButton.disabled = false;
+                    eventButton.innerHTML = "Register Now";
+                    eventButton.style.backgroundColor = "#0161AF";
+                }
             }
 
             for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
@@ -121,16 +134,17 @@
 
     // Overriding the default behaviour of the button
     function buttonEventHandler() {
+        var recordingLink = '{{eventRecordingLink}}'
         if (document.querySelector('[future-date]').getAttribute('future-date') > getCompareDate()) {
             // If today's date < event date, then enable the button and redirect to the event pageÎ
-            if('{{event_registration_link}}'){
-                location.href = '{{ event_registration_link }}';
+            if ('{{eventRegistrationLink}}') {
+                location.href = '{{ eventRegistrationLink }}';
             }
-        } 
+        }
 
         // If today's date > event date, then disable the button
         if (document.querySelector('[future-date]').getAttribute('future-date') < getCompareDate()) {
-            location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            location.href = '{{eventRecordingLink}}'
         }
     }
 </script>

@@ -5,9 +5,9 @@
     "pages": [
         {%- assign specificCollection = site.communities | where_exp: "item", "item.path contains '/events/conferences' or item.path contains '/events/stack-x-meetups'"-%}
         {%- assign filteredCollection = specificCollection | where_exp: "item", "item.path contains 'overview' or item.path contains 'index'"-%}
-        {%- assign sortedCollection = filteredCollection | where_exp: "item", "item.event_date" | sort : "event_date" -%}
+        {%- assign sortedCollection = filteredCollection | where_exp: "item", "item.event_date" | sort: 'event_date'-%}
         
-        {%- for document in sortedCollection -%}
+        {%- for document in sortedCollection reversed-%}
             {%- assign target_group_joined = document.target_group | join: ", " -%}
             {%- if document.url contains '/events/conference' -%}
                 {

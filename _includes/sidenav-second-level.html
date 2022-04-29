@@ -26,8 +26,9 @@
 
 {%- if page.event_date -%}
 {%- assign img_src = '/assets/icons/' | append: current_collection.event_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
-
-{% include card-variant-event-information.html %}
+<div class="is-hidden-touch">
+    {% include card-variant-event-information.html %}
+</div>
 {%- endif -%}
 
 {% for first_lvl_nav_item in nav_items %}

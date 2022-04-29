@@ -1,7 +1,6 @@
 - name: STACK-X Cloud 2021
   label: Testing Alpha
   items:
-    # NOTE: SUB_ITEM_NAME IS USED FOR LINKS WHEREAS SUB_ITEM_LABEL IS USED AS THE TITLE
     - item_name: Overview
       item_label: Overview
     - item_name: Agenda
@@ -25,10 +24,11 @@
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
   event_type: Online (via Zoom)
-  # Conference, Stack-X Meetups, Hackathons <- pls only use the first 3 examples.
+  # Conference, Stack-X Meetups, Hackathons
   event_category: Conference
+  # REGISTRATION
   event_registration_link: https://www.google.com/
-  event_date: 2022-04-29
-  # For flexibility sake, default would just be event_timing.
-  event_registration_end_date: 2022-11-17
-  event_recording_availability: true
+  event_registration_end_date: 2021-11-17
+  event_date: 2021-04-29
+  # RECORDINGS - include event_recording_link for users to nav
+  event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html

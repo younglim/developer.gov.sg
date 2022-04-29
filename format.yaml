@@ -1,4 +1,3 @@
----
 title: Past Webinars
 layout: layout-page-sidenav
 description: >
@@ -7,19 +6,19 @@ webinars:
   - name: >
       STACK-X: Meetup - Agile Coaching Methods to Create Great Products as a Team
     description: |
-        In this Meetup with the GovTech Services Agile Coach Team, our speakers discuss their Signature Agile Coaching approach which combines the agile way of working and team coaching to help teams solve complex challenges effectively. This results in high-creation teams that can successfully create and support impactful products and services.
+      In this Meetup with the GovTech Services Agile Coach Team, our speakers discuss their Signature Agile Coaching approach which combines the agile way of working and team coaching to help teams solve complex challenges effectively. This results in high-creation teams that can successfully create and support impactful products and services.
     video_id: 11XsPbWNJvA
     date: 2022-03-23
   - name: >
       STACK-X: Meetup - Data Sharing in today’s Digital Economy for Customer Delivery
     description: |
-       In this Meetup with GovTech’s [Asynchronous Data Exchange (ADEX)](/products/categories/sensor-platforms-and-internet-of-things/asynchronous-data-exchange){:target="_blank"} team and Confluent, our speakers discussed the various data-sharing solutions used by the public sector and industry to overcome challenges in sharing data efficiently and securely, leading to robust, cost-effective practices.
+      In this Meetup with GovTech’s [Asynchronous Data Exchange (ADEX)](/products/categories/sensor-platforms-and-internet-of-things/asynchronous-data-exchange){:target="_blank"} team and Confluent, our speakers discussed the various data-sharing solutions used by the public sector and industry to overcome challenges in sharing data efficiently and securely, leading to robust, cost-effective practices.
     video_id: 1RvSLnLRQQk
     date: 2022-01-27
   - name: >
       STACK-X: Meetup - UI/UX Design by the International Community
     description: |
-       In STACK-X’s first international event with the tech community in US, we proudly present STACK-X Meetup: UI/UX Design by the International Community. This        Meetup welcomes overseas Singaporeans and the local UX/UI community to gather and discuss the fast-evolving role of design, UX research for diversity and          inclusivity, and more!
+      In STACK-X’s first international event with the tech community in US, we proudly present STACK-X Meetup: UI/UX Design by the International Community. This        Meetup welcomes overseas Singaporeans and the local UX/UI community to gather and discuss the fast-evolving role of design, UX research for diversity and          inclusivity, and more!
     video_id: d044VlD22Tk
     date: 2021-10-15
   - name: >
@@ -97,7 +96,7 @@ webinars:
       GovTech's National Digital Identity (NDI) team spoke about leveraging
       a cloud-native tech stack and adopting Infrastructure-as-Code to build,
       reuse and rapidly assemble infrastructure for quick and secure service rollouts. **You can also read
-      our article on this webinar [here](https://medium.com/ndi-sg/stack-x-webinar-national-digital-identity-stack-introduction-to-ndi-34b5dbed9565).** 
+      our article on this webinar [here](https://medium.com/ndi-sg/stack-x-webinar-national-digital-identity-stack-introduction-to-ndi-34b5dbed9565).**
     video_id: -IXqbuMOwYg
     date: 2020-10-08
   - name: >
@@ -187,31 +186,3 @@ webinars:
       are pivoting and innovating to meet the COVID-19 challenges head-on
     video_id: ltsAlBM6Gvs
     date: 2020-04-16
----
-
-<p>View past STACK-X webinars here.</p>
-<p>For upcoming STACK-X webinars and a full list of our past events, please visit our <a href="https://go.gov.sg/meetup"  rel="noopener noreferrer nofollow">Meetup page</a>.</p>
-
-<div class="card-grid-container webinar">
-  {% for webinar in page.webinars %}
-  {% assign video_url = "https://www.youtube.com/watch?v=" | append: webinar.video_id %}
-    <div class="sgds-card sgds-card-variant-video-info">
-      <div class="sgds-card-content">
-        <div class="content-grid">
-          <a href="{{ video_url }}">
-            <img src="https://img.youtube.com/vi/{{ webinar.video_id }}/hqdefault.jpg" alt="webinar thumbnail">
-          </a>
-          <div class="info">
-            <header>
-              <h4><a href="{{ video_url }}">{{ webinar.name }}</a></h4>
-            </header>
-            <p class="date">
-              {{ webinar.date | date_to_string }}
-            </p>
-            <p>{{ webinar.description | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-    </div>  
-  {% endfor %}
-</div>
