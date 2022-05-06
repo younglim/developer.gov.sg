@@ -3,6 +3,9 @@ title: Homer – Stay Home, Stay Safe
 layout: layout-page-sidenav
 short_description: >
   Homer is a location reporting system for individuals serving Stay Home Notices (SHNs) or home quarantines. Find out more here. 
+  redirect_to:
+    - /
+published: false
 ---
 
 ### Overview 
