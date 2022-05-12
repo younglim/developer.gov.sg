@@ -1,34 +1,65 @@
+### Conferences
+# > THIS IS THE IDEAL SAMPLE
 - name: STACK-X Cloud 2021
-  label: Testing Alpha
+  # Categories limited to Conference, Stack-X Meetup and Hackathon
+  event_category: Conference
+  event_description: Stack-X Cloud is a one-day conference for developers and IT leaders to learn about the lates enhancements for GCC with practical lessons on cloud adoption
+  # Event location
+  event_type: Hive Center
+  event_date: 2022-05-15T00:00:00.000Z
+  event_registration_end_date: 2022-05-11T00:00:00.000Z
+  # If no registration_link is provided, events recording pill will not be shown
+  event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html
+  event_registration_link: https://www.google.com/
   items:
-    - item_name: Overview
-      item_label: Overview
-    - item_name: Agenda
-      item_label: Agenda
+    - item_label: Overview
+      item_name: Overview
+    - item_label: Agenda
+      item_name: Agenda
       item_sub_item:
-        # For any page with index, please assign a diff label from the name.
-        # The normal configuration will just take sub_item_name unless specified.
         - sub_item_name: All Agenda
         - sub_item_name: Keynotes
         - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
-    - item_name: Recordings
-      item_label: Recordings
+    - item_label: Recordings
+      item_name: Recordings
       item_sub_item:
-        # For any page with index, please assign a diff label from the name.
-        # The normal configuration will just take sub_item_name unless specified.
         - sub_item_name: All Recordings
         - sub_item_name: Keynotes
         - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
-  event_type: Online (via Zoom)
-  # Conference, Stack-X Meetups, Hackathons
+
+- name: STACK 2020
   event_category: Conference
-  # REGISTRATION
+  event_description: STACK is GovTech’s flagship conference and the largest government-led developers event in Singapore that connects government, industry and the tech community.
+  event_type: Online (via Zoom)
+  event_date: 2020-12-01T00:00:00.000Z
+  event_registration_end_date: 2020-12-01T00:00:00.000Z
+  event_recording_link: /communities/events/conferences/stack-2020
   event_registration_link: https://www.google.com/
-  event_registration_end_date: 2021-11-17
-  event_date: 2021-04-29
-  # RECORDINGS - include event_recording_link for users to nav
-  event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html
+
+- name: Stack the Flags 2020
+  event_category: Conference
+  event_description: STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF) competition that is open to everyone. Find out more here.
+  event_type: Online (via Zoom)
+  event_date: 2020-12-04T00:00:00.000Z
+  event_registration_end_date: 2020-12-04T00:00:00.000Z
+  event_recording_link: /communities/events/conferences/stack-the-flags-2020
+  event_registration_link: https://www.google.com/
+
+- name: STACK-X CI/CD 2021
+  event_category: Conference
+  event_description: CI/CD with SHIP-HATS is a two-day conference for developers and IT leaders to modernise securely, learn from peers and steps to get started
+  event_type: Online (via Zoom)
+  event_date: 2021-05-11T00:00:00.000Z
+  event_registration_end_date: 2021-05-11T00:00:00.000Z
+
+### Stack X Events
+- name: Agile Coaching Methods to Create Great Products as a Team
+  event_category: Stack-X Meetup
+  event_description: In developing products, growing and enabling great teams is essential. Team coaching enables high value-creation teams to deliver effective solutions. This STACK-X Meetup will equip you with the essential key solution conceptualisation mindset and development skillsets to succeed at creating and supporting impactful products and services.
+  event_type: Online (via Zoom)
+  event_date: 2021-11-17T00:00:00.000Z
+  event_registration_end_date: 2021-11-17T00:00:00.000Z

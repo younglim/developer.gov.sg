@@ -1,4 +1,4 @@
-<div class="sgds-card sgds-card-variant-video-info">
+<div class="sgds-card">
     <!-- Only available on Mobile View -->
     <div class="is-hidden-desktop">
         <div class="has-text-centered padding--bottom--sm padding--top--sm" id="event-status-container">
@@ -6,10 +6,10 @@
         </div>
     </div>
     <div class="sgds-card-content">
-        <div class="sgds-calendar-card content-grid">
-            <!-- Left hand side (Calendar) -->
-            <div class="sgds-calendar-card-left sgds-card-image is-hidden-touch">
-                <div class="margin--right sgds-calendar-card-left-inner">
+        <div class="content-grid is-flex">
+            <!-- Desktop Calendar Slot -->
+            <div class="sgds-card-image is-hidden-touch">
+                <div class="margin--right--lg">
                     <div class="has-text-centered" style="width: 6.65rem;">
                         <div style="border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;"
                             id="event-status-container">
@@ -32,36 +32,36 @@
                     </div>
                 </div>
             </div>
-            <!-- Right hand side -->
+            <!-- Content Slot -->
             <div>
                 {% include card-header-info.html disableItemCount=include.disableItemCount name=include.name item_count=include.item_count url_str=include.url_str%}
                 <div>
-                    <!-- Mobile View -->
-                    <div class="is-hidden-desktop is-flex is-centered" style="justify-content: start;">
-                        <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"
-                            style="font-size: 1.5em; color: #767676;"></span>
-                        <p class="margin--left--sm">
-                            {{include.eventDateAndTiming | date: "%d"}} {{include.eventDateAndTiming | date: "%b"}}
-                            {{include.eventDateAndTiming | date: "%Y"}}
+                    <!-- Mobile Calendar Slot -->
+                    <div class="is-hidden-desktop is-flex is-centered">
+                        <p class="is-flex margin--bottom--sm" style="align-items: center;">
+                            <span class="sgds-icon sgds-icon-calendar is-size-4 margin--right--sm" role="img"
+                                aria-label="iconName" style="-webkit-text-stroke: .5px white;"></span>
+                            {{- include.eventDateAndTiming | date: "%d" -}}&nbsp;
+                            {{- include.eventDateAndTiming | date: "%b" -}}&nbsp;
+                            {{- include.eventDateAndTiming | date: "%Y" -}}
                         </p>
                     </div>
-                    <!-- Desktop View -->
+                    <!-- Recording Slot -->
                     {%- if include.recordings_uploaded -%}
-                    <div class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm margin--bottom margin--top is-size-8"
-                        style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; padding: 0.40rem; border-radius: .25rem;">
+                    <div class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm margin--bottom margin--top padding--top--sm padding--bottom--sm is-size-8"
+                        style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; border-radius: .25rem;">
                         Recordings available
                     </div>
                     {%- endif -%}
-                    <!-- both view -->
-                    {% if include.eventCategory %}
-                    <p class="is-flex is-left">
-                        <img src="{{include.img_src}}" alt="{{include.img_src}} icon"
-                            style="height: 1.5em; width: 1.5em;" class="margin--right--sm" />
-
-                        {{- include.eventCategory | capitalize-}}
+                    <!-- Category Slot -->
+                    {%- if include.eventCategory -%}
+                    <p class="is-flex margin--bottom--none">
+                        <img src="{{include.img_src}}" class="margin--left--none margin--right--sm" alt="Event Icon"
+                            style="height: 1.5em; width: 1.5em;" />
+                        {{- include.eventCategory | capitalize -}}
                     </p>
-                    {% endif %}
-                    <p>{{ include.description | capitalize}}</p>
+                    {%- endif -%}
+                    <p>{{- include.description | capitalize -}}</p>
                 </div>
             </div>
         </div>

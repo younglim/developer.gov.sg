@@ -3,8 +3,6 @@ title: STACK-X Cloud 2021
 layout: layout-page-sidenav
 _data: events-nav
 multi_level_nav: true
-recordings_uploaded: true
-event_date: 2021-11-17
 ---
 
 
@@ -17,7 +15,7 @@ This virtual track is for Tech Leads, Project Managers, Business Analysts and De
 
 <hr />
 
-{% include accordian-display.html 
+{% include agenda-app.html
     _data='stackx2021cloud'
     category="Government"
 %}

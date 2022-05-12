@@ -1,4 +1,3 @@
-{% assign eventIncrementer = 0 %}
 {% assign collectionDumps = 
     site.communities 
     | where_exp: "item", "item.path contains 'index.html' or item.path contains 'overview.html'" %}

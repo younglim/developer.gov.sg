@@ -1,52 +1,32 @@
-{% comment %}
-Get all category if no specification is listed
-{% endcomment %}
-{%- assign specified_category = include.specified_category_tag | default: '' -%}
-{%- assign specified_category_collection = 
-    "/events/" 
-    | append: specified_category
+{%- assign category = include.specified_category_tag | default: '' -%}
+{%- assign events = site.data['events-nav'] -%}
+{%- assign filteredEvents = events 
+    | where_exp: "item", "item.event_category contains category" 
+    | sort: "event_date"
 -%}
-{% comment %}
-Filter for events that only belongs to the events sub collection.
-{% endcomment %}
-{%- assign collectionDumps = 
-    site.communities 
-    | where_exp: "item", "item.path contains specified_category_collection" -%}
-{%- assign filteredCollectionDumps = 
-    collectionDumps 
-    | where_exp: "item", "item.path contains 'overview' or item.path contains 'index'" -%}
-{% comment %}
-Removes items that does not have any date. Helps filter events that have past, present and upcoming dates.
-{% endcomment %}
-{% assign sortedCollectionDumps = 
-    filteredCollectionDumps 
-    | where_exp: "item", "item.event_date" 
-    | sort: 'event_date'  %}
 
 <div class="card-grid-container is-fullwidth">
-    {%- for sub_section in sortedCollectionDumps reversed:include.is_reversed -%}
-        {%- assign name = sub_section.title -%}
-        {%- assign description = sub_section.description -%}
-        {%- assign sub_section_slug = sub_section.name | slugify -%}
-        {%- assign item_count = sub_section.items | size | minus: 1 -%}
-        {%- assign recordings_uploaded = sub_section.recordings_uploaded-%}
-        {%- assign url_str = sub_section.url | append : sub_section_slug -%}
-        {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
-        {%- assign img_src = '/assets/icons/' | append: specified_category | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
+    {%- for sub_section in filteredEvents reversed:true -%}
 
+        {%- assign sub_section_slug = sub_section.name | slugify -%}
+        {%- assign url_str = page.url | remove: 'index.html' | append: sub_section_slug -%}
+        {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
+        {%- assign recordings_uploaded = sub_section.event_recording_link | default: false -%}
+
+        {%- assign imageCategory = sub_section.event_category | append : "s"| downcase | slugify-%}
+        {%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
+
+        <!-- Remove the index.html then append sub_section_slug -->
         <div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
             {% include card-variant-calendar.html 
-                name=name
-                item_count=item_count
-                description=description
-                status=status
+                name=sub_section.name
+                description=sub_section.event_description
                 img_src=img_src
                 url_str=url_str
-                colorTheme=colorTheme
-                eventCategory=specified_category
+                eventCategory=sub_section.event_category
+                recordings_uploaded=recordings_uploaded
                 eventDateAndTiming=eventDateAndTiming
                 disableItemCount=include.disableItemCount
-                recordings_uploaded=recordings_uploaded
             %}
         </div>
     {%- endfor -%}

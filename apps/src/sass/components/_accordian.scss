@@ -1,10 +1,8 @@
-.sgds-accordion-header {
+.sgds-custom-accordion-header {
     /* Flex */
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     /* Styles */
-    padding: 0px;
     color: #323232;
 
     .sgds-accordian-speaker-content {
@@ -12,10 +10,7 @@
         justify-content: start;
 
         .sgds-accordian-speaker-image {
-            height: 2.25em;
-            margin-left: 0em;
-            margin-right: 1em;
-            margin-bottom: 0em;
+            height: 2.75em;
         }
     }
 
@@ -24,7 +19,7 @@
     }
 
     &:hover {
-        background-color: white;
+        background-color: white !important;
     }
 }
 

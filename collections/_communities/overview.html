@@ -2,25 +2,103 @@
 title: Communities
 layout: layout-page-sidenav
 description: >
-  Explore our various community engagement channels here, from STACK-X Meetups to newsletters to open source technologies to COVID-19 volunteering opportunities!
+    Explore our various community engagement channels here, from STACK-X Meetups to newsletters to open source technologies
+    to COVID-19 volunteering opportunities!
 redirect_from:
-- /communities
-- /communities.html
+    - /communities
+    - /communities.html
 ---
 
 <h2>GovTech’s Community Development Efforts</h2>
-<div class="row">
-    <div class="col is-12">
-        <p>
-            We are excited to engage with the wider developer ecosystem as we continue to build and refine digital
-            products. We believe that our goal – to build better products for the public good – can be achieved only
-            through meaningful collaboration with the developer community.
-        </p>
-        <hr />
-        <h3>Upcoming Events</h3>
-        {% include site-section-listing-prototype.html disableItemCount=true %}
-        <hr />
-        <h3>What's New</h3>
-        {% include site-section-tabs.html description_image='sgds-icon-calendar.svg' disableItemCount=true %}
+<p>
+    We are excited to engage with the wider developer ecosystem as we continue to build and refine digital
+    products. We believe that our goal – to build better products for the public good – can be achieved only
+    through meaningful collaboration with the developer community.
+</p>
+
+<!-- Upcoming Events -->
+<div>
+    <h3>Upcoming Events</h3>
+    <div id="upcoming-events-container" class="card-grid-container is-fullwidth"></div>
+    <div class="is-fullwidth is-flex" style="justify-content: center;" id="upcoming-conferences-button">
+        <a class="sgds-button sgds-button--primary" href="/communities/events/all-events/index.html">
+            View all events
+        </a>
     </div>
+    <div id="no-upcoming-events-message" class="margin--top margin--bottom--xl has-text-centered">
+        Sorry, there is currently no upcoming available events.
+    </div>
+    {%- include site-section-event-listing.html 
+        specified_category_tag=""    
+    -%}
 </div>
+
+<hr />
+
+<!-- Site Section Tabs -->
+<div>
+    <h3 class="margin--bottom--none">What's New</h3>
+    {%- include site-section-tabs.html -%}
+</div>
+
+<!-- Sorting and theming script -->
+<script type="text/javascript">
+    const limit_number_of_content = 2
+
+    // To dd/mm/yy format
+    function getCompareDate() {
+        // gets local time, sg / kl timing
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        return [year, month, day].join('');
+    }
+
+    // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
+    document.querySelectorAll('[future-date]').forEach((node) => {
+        let status, backgroundTheme;
+
+        if (node.getAttribute('future-date') < getCompareDate()) {
+            status = 'PAST';
+            backgroundTheme = "#323232";
+            node.setAttribute('id', 'past-event');
+        } else if (node.getAttribute('future-date') == getCompareDate()) {
+            status = 'NOW';
+            backgroundTheme = "#D0021B";
+            node.setAttribute('id', 'upcoming-event');
+        } else {
+            status = 'UPCOMING';
+            backgroundTheme = "#0161AF";
+            node.setAttribute('id', 'upcoming-event');
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
+            node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
+            node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
+        }
+    });
+
+    // Filter events by past and upcoming events into two separate arrays
+    const pastEvents = Array.from(document.querySelectorAll('[id=past-event]')).map((item, index) => {
+        item.remove();
+    })
+    const upcomingEvents = Array.from(document.querySelectorAll('[id=upcoming-event]')).reverse().map((item, index) => {
+        if (limit_number_of_content > index) {
+            document.getElementById('upcoming-events-container').appendChild(item)
+        } else {
+            document.getElementById('upcoming-events-container').appendChild(item).setAttribute('id',
+                'upcoming-conferences-hidden-content')
+        }
+    })
+
+    if (upcomingEvents.length > 0) document.getElementById("no-upcoming-events-message").remove();
+    document.querySelectorAll('*[id*="conferences-hidden-content"]').forEach((item) => {
+        item.style.display = "none";
+    });
+</script>

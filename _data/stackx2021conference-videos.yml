@@ -1,4 +1,4 @@
-# - type: Video Types
+- type: Video Types
 #   speakers: Speakers in the video. Split by ", "
 #     📢 Please make sure that the speakers name is in the same sequence as speakers title 📢
 #   speakers_title: Speakers' title in the video. Split by "| "
@@ -11,105 +11,54 @@
   speakers_title: "Chief Executive, GovTech"
   title: "Welcome Remarks"
   video_id: "to6xbAPjzEk"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-    - Cybersecurity
-
 - type: Keynote - VOD
   speakers: "Chan Cheow Hoe"
   speakers_title: "Government Chief Digital Technology Officer"
   title: "CI/CD Shaping modernisation in Singapore Government"
   video_id: "RlZCyexsJBc"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-
 - type: Keynote - VOD
   speakers: "Sriram Narayanan"
   speakers_title: "Technology Principal, ThoughtWorks"
   title: "The Journey to Continuous Delivery"
   video_id: "BLvLs5Fbn7g"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-
 - type: Keynote - VOD
   speakers: "Kevin Ng"
   speakers_title: "Director, Government Digital Services (GDS), GovTech"
   title: "SHIP-HATS Roadmap"
   video_id: "zlQEtPlTZmw"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-
 - type: Keynote - VOD
   speakers: "Chia Hsiao Ming"
   speakers_title: "Director, Government Digital Services (GDS), GovTech"
   title: "SHIP-HATS – Architecture Approach"
   video_id: "yiD4--KSdTI"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-
 - type: Keynote - Live Chat
   speakers: "Kevin Ng"
   speakers_title: "Director, Government Digital Services (GDS), GovTech"
   title: "Fireside Chat With Agencies"
   video_id: "cPw6l7-CAjw"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
 
 - type: Product - VOD
   speakers: "Linda Chang"
   speakers_title: "Assistant Director, GovTech"
   title: "SHIP-HATS Overview For Newbies"
   video_id: "oqqM1Q25b-0"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-
 - type: Product - VOD
   speakers: "Goh Chun Teck"
   speakers_title: "Software Engineer, GovTech"
   title: "Security Testing With SHIP-HATS"
   video_id: "SVomPCqKGM4"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-
 - type: Product - VOD
   speakers: "Hudson Lee"
   speakers_title: "Lead DevOps Engineer, GovTech"
   title: "Continuous Delivery With SHIP-HATS"
   video_id: "DMMhqLKHLx0"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
 - type: Product - VOD
   speakers: "Chew Pei Yi"
   speakers_title: "Associate Delivery Manager, GovTech"
   title: "Understanding SHIP-HATS Subscription"
   video_id: "ksUEnR78m4w"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT
-  
 - type: Product - VOD
   speakers: "Abhijeet Menon, Sathappan Subramaniam"
   speakers_title: "Senior Solution Architect, GovTech| Lead Project Manager, NCS"
   title: "CI/CD Strategy to Modernisation for PA"
   video_id: "-eRz5zdtElE"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - Cloud
-    - IOT

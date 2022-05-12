@@ -1,45 +1,30 @@
-{%- assign data_file = include._data -%}
-{%- assign specified_category = include.category | default: '' -%}
-{%- assign event_details = site.data[data_file]| where_exp: "events", "events.type contains specified_category" -%}
+{%- assign content = include.content -%}
 
-<div class="is-fullwidth">
-    {% for event in event_details %}
-    <div class="sgds-card sgds-card-variant-video-info">
-        <div class="sgds-card-content">
-            <div>
-                {{ event.timeslot }}
-                <h5>{{ event.title }}</h5>
-                <div class="margin--bottom--sm">
-                    <span class="has-dark has-text-weight-semibold">Speaker(s):</span>
-                </div>
-            </div>
-            <div class="sgds-accordion-set">
-                {% for speaker in event.speakers %}
-                <div class="sgds-accordion is-borderless is-white">
-                    <a href="#!" class="sgds-accordion-header" role="button" aria-expanded="false">
-                        <!-- Speakers -->
-                        <div>
-                            <div class="is-flex sgds-accordian-speaker-content">
-                                <img class="sgds-accordian-speaker-image" src="{{ speaker.image }}"
-                                    alt="Speaker Image" />
-                                {{- speaker.name -}}, {{- speaker.title -}}
-                            </div>
-                        </div>
-                        <!-- Arrows -->
-                        <i class="sgds-icon sgds-icon-chevron-down"></i>
-                    </a>
-                    <!-- Content -->
-                    <div class="sgds-accordion-body padding--none padding--top padding--bottom">
-                        <p>{{- speaker.desc -}}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+<div class="sgds-accordion is-borderless is-white">
+    <a href="#!" role="button" aria-expanded="false"
+        class="sgds-accordion-header sgds-custom-accordion-header padding--left--none padding--top--none padding--bottom--none d-flex">
+        <div class="is-flex sgds-accordian-speaker-content">
+            {% if content.image %}
+            <img class="sgds-accordian-speaker-image margin--top--none margin--bottom--none margin--right"
+                src="{{ content.image }}" alt="Speakr Avatar Image" />
+            {% endif%}
+            {{- content.name -}}, {{- content.title -}}
         </div>
-    </div>
-    {% endfor %}
-
-    <div class="margin--top--lg">
-        * Please note that the programme may be subject to change without prior notice
+        <i class="sgds-icon sgds-icon-chevron-down"></i>
+    </a>
+    <div class="sgds-accordion-body padding--none padding--top padding--bottom">
+        <div>
+            <p class="has-text-weight-light margin--top--sm">{{- content.desc -}}</p>
+            {% if content.subdesc %}
+                <p class="has-text-weight-light margin--bottom--none">{{- content.subdesc -}}</p>
+            {% endif%}
+            {%- if content.email -%}
+            <div class="is-flex" style="align-items: center;">
+                <span class="sgds-icon sgds-icon-mail is-size-3 margin--right--xs" role="img"
+                    aria-label="sgds-icon-mail" style="-webkit-text-stroke: 1px white;"></span>
+                <a href="mailto:{{ content.email }}">{{ content.email }}</a>
+            </div>
+            {%- endif -%}
+        </div>
     </div>
 </div>

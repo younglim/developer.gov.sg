@@ -1,7 +1,6 @@
 ---
 layout: layout-page
 ---
-
 {%- assign collectionName = page.collection -%}
 {%- assign url_last = page.id | split: "/" | last -%}
 
@@ -11,51 +10,139 @@ layout: layout-page
     <aside class="sgds-menu">
       <ul class="sgds-menu-list">
         {%- if page.single_level_nav -%}
-          {%- include sidenav-single-level.html -%}
+        {%- include sidenav-single-level.html -%}
         {%- elsif page.multi_level_nav -%}
-          {%- include sidenav-second-level.html -%}
+        {%- include sidenav-second-level.html -%}
         {% else %}
-          {%- include sidenav.html -%}
+        {%- include sidenav.html -%}
         {% endif %}
       </ul>
     </aside>
   </div>
   {% endif %}
   {% if page.sharable == true or page.sharable == nil %}
-    {% if page.hide_side_nav == nil %}
-    <div class="col is-8 is-offset-1 is-12-mobile">
+  {% if page.hide_side_nav == nil %}
+  <div class="col is-8 is-offset-1 is-12-mobile">
     {% else %}
     <div class="col is-11 is-12-mobile">
-    {% endif %}
-    {% if collectionName == "products" and url_last != "overview" and page.single_level_nav == nil %}
+      {% endif %}
+      {% if collectionName == "products" and url_last != "overview" and page.single_level_nav == nil %}
       <h2>{{page.title}}</h2>
       <p id="collections">{{page.sub-title}}</p>
-      <hr/>
-    {% endif %}
-    {{ content }}
-    <p class="text-last-updated">
-      <em>
-        Last updated {{ page.last_modified_at | date: '%d %B %Y' }}
-      </em>
-    </p>
-    <div class="small-viewport-social-media-buttons">
-      {% include social-media.html display="mobile" %}
+      <hr />
+      {% endif %}
+      {{ content }}
+      <p class="text-last-updated">
+        <em>
+          Last updated {{ page.last_modified_at | date: '%d %B %Y' }}
+        </em>
+      </p>
+      <div class="small-viewport-social-media-buttons">
+        {% include social-media.html display="mobile" %}
+      </div>
+      {%- include feedback.html -%}
     </div>
-    {%- include feedback.html -%}
-  </div>
-  {% else %}
-  <div class="col is-9 is-offset-1 is-12-mobile">
-    {{ content }}
-    <p class="text-last-updated">
-      <em>
-        Last updated {{ page.last_modified_at | date: '%d %B %Y' }}
-      </em>
-    </p>
-    {%- include feedback.html -%}
-  </div>
-  {% endif %}
+    {% else %}
+    <div class="col is-9 is-offset-1 is-12-mobile">
+      {{ content }}
+      <p class="text-last-updated">
+        <em>
+          Last updated {{ page.last_modified_at | date: '%d %B %Y' }}
+        </em>
+      </p>
+      {%- include feedback.html -%}
+    </div>
+    {% endif %}
 
-  {% if page.sharable == true or page.sharable == nil %}
-  {% include social-media.html display="wide" %}
-  {% endif %}
-</div>
+    {% if page.sharable == true or page.sharable == nil %}
+    {% include social-media.html display="wide" %}
+    {% endif %}
+  </div>
+  <script type="text/javascript">
+    const should_run_entire_script = '{{ page.multi_level_nav }}';
+
+    // To dd/mm/yy format
+    function getCompareDate() {
+      var d = new Date(),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+      if (month.length < 2) month = '0' + month;
+      if (day.length < 2) day = '0' + day;
+      return [year, month, day].join('');
+    }
+
+    if (should_run_entire_script) {
+      var registrationEndDate = '{{ eventRegistrationEndDate }}';
+      var status, backgroundTheme, buttonText, buttonState = false;
+
+      // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
+      document.querySelectorAll('[future-date]').forEach((node) => {
+        const eventButton = node.querySelector('#dynamic-event-button');
+
+        if (node.getAttribute('future-date') < getCompareDate()) {
+          // CALENDAR 
+          status = 'PAST';
+          backgroundTheme = "#323232";
+
+          // BUTTON
+          if ('{{eventRecordingLink}}'.length > 0) {
+            eventButton.innerHTML = "View recordings";
+            eventButton.style.backgroundColor = "#0161AF";
+          } else {
+            eventButton.innerHTML = "Pending upload";
+            eventButton.style.backgroundColor = "#C6C6C6";
+          }
+        } else if (node.getAttribute('future-date') == getCompareDate()) {
+          // CALENDAR 
+          status = 'NOW';
+          backgroundTheme = "#D0021B";
+
+          // BUTTON
+          eventButton.disabled = true;
+          eventButton.style.color = "white"
+          eventButton.innerHTML = "Register Now";
+          eventButton.style.backgroundColor = "#C6C6C6";
+        } else {
+          // CALENDAR 
+          status = 'UPCOMING';
+          backgroundTheme = "#0161AF";
+
+          // BUTTON
+          if ('{{eventRegistrationEndDateParsed}}' < getCompareDate()) {
+            eventButton.disabled = true;
+            eventButton.innerHTML = "Registration closed";
+            eventButton.style.backgroundColor = "#c6c6c6";
+          } else {
+            eventButton.disabled = false;
+            eventButton.innerHTML = "Register Now";
+            eventButton.style.backgroundColor = "#0161AF";
+          }
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
+          node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
+        }
+
+        for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
+          node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
+        }
+      });
+    }
+
+    // Overriding the default behaviour of the button
+    function buttonEventHandler() {
+      var recordingLink = '{{eventRecordingLink}}'
+      if (document.querySelector('[future-date]').getAttribute('future-date') > getCompareDate()) {
+        // If today's date < event date, then enable the button and redirect to the event pageÎ
+        if ('{{eventRegistrationLink}}') {
+          location.href = '{{ eventRegistrationLink }}';
+        }
+      }
+
+      // If today's date > event date, then disable the button
+      if (document.querySelector('[future-date]').getAttribute('future-date') < getCompareDate()) {
+        location.href = '{{eventRecordingLink}}'
+      }
+    }
+  </script>
