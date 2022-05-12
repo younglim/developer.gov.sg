@@ -14,7 +14,8 @@
 {%- assign eventDateAndTimingParsed = eventDateAndTiming | date: '%Y%m%d'-%}
 {%- assign eventRegistrationEndDate = current_collection.event_registration_end_date | default: eventDateAndTiming -%}
 {%- assign eventRegistrationEndDateParsed = eventRegistrationEndDate | date: '%Y%m%d'-%}
-{%- assign img_src = '/assets/img/communities/' | append: current_collection.event_category | append:"s" | append: '.svg' | downcase -%}
+{%- assign imageCategory = current_collection.event_category | append : "s"| downcase | slugify-%}
+{%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
 
 <div class="sgds-card sgds-card-variant-video-info margin--bottom--lg"
     future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
