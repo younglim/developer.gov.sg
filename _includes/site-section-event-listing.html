@@ -9,12 +9,21 @@
     {%- for sub_section in filteredEvents reversed:true -%}
 
         {%- assign sub_section_slug = sub_section.name | slugify -%}
-        {%- assign url_str = page.url | remove: 'index.html' | append: sub_section_slug -%}
         {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
         {%- assign recordings_uploaded = sub_section.event_recording_link | default: false -%}
-
+        {%- assign url_str = page.url | remove: 'index.html' | append: sub_section_slug -%}
         {%- assign imageCategory = sub_section.event_category | append : "s"| downcase | slugify-%}
         {%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
+
+        {% if page.title == "Communities"%}
+            {% if sub_section.event_category contains "Conference" %}
+                {%- assign url_str = "/communities/events/conferences/" | append: sub_section_slug-%}
+            {% elsif sub_section.event_category contains "Stack-X Meetup"%}
+                {%- assign url_str = "/communities/events/stack-x-meetups/" | append: sub_section_slug-%}
+            {% else %}
+                {%- assign url_str = "/communities/events/hackathons/" | append: sub_section_slug-%}
+            {% endif %}
+        {% endif %}
 
         <!-- Remove the index.html then append sub_section_slug -->
         <div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
