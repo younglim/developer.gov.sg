@@ -12,7 +12,7 @@
         {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
         {%- assign recordings_uploaded = sub_section.event_recording_link | default: false -%}
         {%- assign url_str = page.url | remove: 'index.html' | append: sub_section_slug -%}
-        {%- assign imageCategory = sub_section.event_category | append : "s"| downcase | slugify-%}
+        {%- assign imageCategory = sub_section.event_category | append : "s"| downcase | slugify -%}
         {%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
 
         {% if page.title == "Communities"%}

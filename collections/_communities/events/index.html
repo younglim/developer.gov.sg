@@ -36,7 +36,8 @@ event_types:
   {%- assign description = sub_section.description -%}
   {%- assign sub_section_slug = sub_section.name | slugify -%}
   {%- assign url_str = sub_section.url | append : sub_section_slug  -%}
-  {%- assign img_src = '/assets/icons/' | append: sub_section.icon_name | replace: '-', '_' | replace: ' ', '_' | append: '.svg' | downcase -%}
+  {%- assign imageCategory = sub_section.icon_name | append : "s"| downcase | slugify -%}
+  {%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
 
   <div class="sgds-card {{include.parentCardStyle}}">
     <div class="sgds-card-content">

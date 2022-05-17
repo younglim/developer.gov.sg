@@ -16,26 +16,27 @@
           v-for="result of filterSearchResults"
           :key="result.url"
         >
-          <div
-            id="event-status-container"
-            class="is-hidden-desktop has-text-centered has-text-white has-text-weight-semibold padding--bottom--sm padding--top--sm"
-            :style="{ backgroundColor: result.backgroundColor }"
-          >
-            {{ result.status }}
-          </div>
           <CardCalendar>
+            <!-- Event Status -->
+            <template v-slot:event-status>
+              <div
+                :style="{ backgroundColor: result.backgroundColor }"
+                class="is-hidden-desktop has-text-centered has-text-white has-text-weight-semibold padding--bottom--sm padding--top--sm"
+              >
+                {{ result.status }}
+              </div>
+            </template>
+            <!-- Calendar -->
             <template v-slot:calendar>
-              <div class="margin--right--lg is-hidden-touch">
+              <div class="sgds-card-image is-hidden-touch margin--right--lg">
                 <div class="sgds-calendar-card-left-inner">
                   <div class="has-text-centered" style="width: 6.65rem;">
                     <div
                       style="border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;"
-                      id="event-status-container"
                       :style="{ backgroundColor: result.backgroundColor }"
                     >
                       <p
-                        class="has-text-weight-bold has-text-white"
-                        id="event-status"
+                        class="has-text-weight-bold has-text-white margin--bottom--none"
                       >
                         {{ result.status }}
                       </p>
@@ -46,24 +47,57 @@
                     >
                       <div>
                         <p
-                          class="has-text-centered is-size-3 has-text-weight-bold"
+                          class="has-text-centered is-size-3 has-text-weight-bold margin--bottom--sm"
                         >
                           {{ result.dayFormat }}
                         </p>
                       </div>
                       <div>
-                        <p>{{ result.monthFormat }}' {{ result.yearFormat }}</p>
+                        <p class="margin--bottom--none">
+                          {{ result.monthFormat }}' {{ result.yearFormat }}
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </template>
-            <template v-slot:main-content>
+            <!-- Header -->
+            <template v-slot:header>
               <h4>
                 <a :href="result.url" v-html="result.title"></a>
               </h4>
             </template>
+            <!-- Mobile Calendar Slot -->
+            <template v-slot:mobile-calender>
+              <div class="is-hidden-desktop is-flex is-centered">
+                <p
+                  class="is-flex margin--bottom--sm"
+                  style="align-items: center;"
+                >
+                  <span
+                    class="sgds-icon sgds-icon-calendar is-size-4 margin--right--sm"
+                    role="img"
+                    aria-label="iconName"
+                    style="-webkit-text-stroke: .5px white;"
+                  ></span>
+                  TO BE REPLACED here
+                </p>
+              </div>
+            </template>
+            <!-- Recording Slot -->
+            <template v-slot:recording>
+              <div class="is-flex">
+                <img
+                  alt="Event Image"
+                  class="margin--right--sm margin--left--none margin--bottom--none margin--top--none"
+                  style="width: 1.5em; height: 1.5em;"
+                  :src="result.icon_path"
+                />
+                <p v-html="result.category"></p>
+              </div>
+            </template>
+            <!-- Front matter attributes -->
             <template v-slot:front-matter-attributes>
               <div class="spacing-container-vertical spacing-16">
                 <div
@@ -72,17 +106,6 @@
                 >
                   <strong>Target Group</strong>
                   <p v-html="result.targetGroup"></p>
-                </div>
-                <!-- Display event's category -->
-                <div class="is-flex">
-                  <!-- Add event image -->
-                  <img
-                    alt="Event Image"
-                    class="margin--right--sm margin--left--none margin--bottom--none margin--top--none"
-                    style="width: 1.5em; height: 1.5em;"
-                    :src="result.icon_path"
-                  />
-                  <p v-html="result.category"></p>
                 </div>
                 <!-- Display event's description -->
                 <div class="">

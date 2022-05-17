@@ -6,8 +6,8 @@ redirect_from:
   - /communities/events/stack-x-meetups/agile-coaching-methods-to-create-great-products-as-a-team/
   - /communities/events/stack-x-meetups/agile-coaching-methods-to-create-great-products-as-a-team.html
 multi_level_nav: true
-recordings_uploaded: true
 sub_collection_render: true
+event_rundown_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 event_rundown:
   - title: "10:30am – Welcome by STACK team"
   - title: "10:35am – About the GovTech Services Agile Coach Team"
@@ -60,30 +60,10 @@ speakers:
 
 <!-- If event rundown is applicable, add data accordingly-->
 <h3>Event Rundown</h3>
-<div class="is-fullwidth">
-  <div class="sgds-accordion is-borderless is-white">
-    <a href="#!"
-      class="sgds-accordion-header sgds-custom-accordion-header padding--left--none padding--top--none padding--bottom--none d-flex"
-      role="button" aria-expanded="false">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat
-      </p>
-      <i class="sgds-icon sgds-icon-chevron-down"></i>
-    </a>
-    <div class="sgds-accordion-body padding--none">
-      {%- for event in page.event_rundown -%}
-      <div class="margin--bottom">
-        <p class="has-text-weight-light margin--bottom--none">{{- event.title -}}</p>
-        {% if event.team %}
-        <p class="has-text-weight-light">{{- event.team -}}</p>
-        {% endif %}
-      </div>
-      {%- endfor -%}
-    </div>
-  </div>
-</div>
+{%- include event-rundown.html 
+  _data=page.event_rundown 
+  description=page.event_rundown_description
+-%}
 
 <!-- If speaker data is applicable, add data accordingly -->
 <h3>About the speakers</h3>

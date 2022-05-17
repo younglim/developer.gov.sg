@@ -1,21 +1,23 @@
 <template>
-  <div class="sgds-card typography-no-margin">
+  <div class="sgds-card">
+    <!-- Only available on Mobile View -->
+    <slot name="event-status"></slot>
     <div class="sgds-card-content">
       <div class="content-grid is-flex">
-        <!--Calendar -->
+        <!--Desktop Calendar Slot -->
         <slot name="calendar"></slot>
-        <!--Content -->
+        <!--Content Slot -->
         <div>
           <slot name="header"></slot>
           <slot name="content">
-            <div
-              class="sgds-card-content-space-between spacing-container-vertical spacing-16"
-            >
-              <div class="spacing-container-vertical spacing-16">
-                <slot name="main-content"></slot>
-              </div>
-              <slot name="front-matter-attributes"></slot>
+            <div>
+              <slot name="main-content">
+                <slot name="mobile-calender"></slot>
+                <slot name="recording"></slot>
+                <slot name="category"></slot>
+              </slot>
             </div>
+            <slot name="front-matter-attributes"></slot>
           </slot>
           <slot name="footer"></slot>
         </div>

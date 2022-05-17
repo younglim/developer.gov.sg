@@ -1,0 +1,25 @@
+{%- assign _data = include._data-%}
+{%- assign description = include.description-%}
+
+<div class="is-fullwidth">
+    <div class="sgds-accordion is-borderless is-white">
+        <a href="#!"
+            class="sgds-accordion-header sgds-custom-accordion-header padding--left--none padding--top--none padding--bottom--none d-flex"
+            role="button" aria-expanded="false">
+            <p>
+                {{ description }}
+            </p>
+            <i class="sgds-icon sgds-icon-chevron-down"></i>
+        </a>
+        <div class="sgds-accordion-body padding--none">
+            {%- for event in _data -%}
+            <div class="margin--bottom">
+                <p class="has-text-weight-light margin--bottom--none">{{- event.title -}}</p>
+                {% if event.team %}
+                <p class="has-text-weight-light">{{- event.team -}}</p>
+                {% endif %}
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
