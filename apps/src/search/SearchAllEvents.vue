@@ -49,12 +49,13 @@
                         <p
                           class="has-text-centered is-size-3 has-text-weight-bold margin--bottom--sm"
                         >
-                          {{ result.dayFormat }}
+                          {{ result.desktopDateFormat.dayFormat }}
                         </p>
                       </div>
                       <div>
                         <p class="margin--bottom--none">
-                          {{ result.monthFormat }}' {{ result.yearFormat }}
+                          {{ result.desktopDateFormat.monthFormat }}'
+                          {{ result.desktopDateFormat.yearFormat }}
                         </p>
                       </div>
                     </div>
@@ -76,17 +77,32 @@
                   style="align-items: center;"
                 >
                   <span
-                    class="sgds-icon sgds-icon-calendar is-size-4 margin--right--sm"
+                    class="sgds-icon sgds-icon-calendar is-size-5 margin--right--sm"
                     role="img"
                     aria-label="iconName"
                     style="-webkit-text-stroke: .5px white;"
                   ></span>
-                  TO BE REPLACED here
+                  {{
+                    result.mobileDateFormat.dayFormat +
+                      " " +
+                      result.mobileDateFormat.monthFormat +
+                      " " +
+                      result.mobileDateFormat.yearFormat
+                  }}
                 </p>
               </div>
             </template>
             <!-- Recording Slot -->
-            <template v-slot:recording>
+            <template v-slot:recording v-if="result.event_recording_link">
+              <div
+                class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm margin--bottom margin--top padding--top--sm padding--bottom--sm is-size-8"
+                style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; border-radius: .25rem;"
+              >
+                Recordings available
+              </div>
+            </template>
+            <!-- Category Slot-->
+            <template v-slot:category>
               <div class="is-flex">
                 <img
                   alt="Event Image"
@@ -202,17 +218,24 @@ export default {
           this.searchResults[i].backgroundColor = "#0161AF";
         }
 
-        this.searchResults[i].dayFormat =
-          dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate();
-        this.searchResults[i].monthFormat = dt
-          .toLocaleString("en-SG", {
-            month: "short",
-          })
-          .toUpperCase();
-        this.searchResults[i].yearFormat = dt
-          .getFullYear()
-          .toString()
-          .substr(-2);
+        this.searchResults[i].desktopDateFormat = {
+          dayFormat: dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate(),
+          monthFormat: dt
+            .toLocaleString("en-SG", {
+              month: "short",
+            })
+            .toUpperCase(),
+          yearFormat: dt
+            .getFullYear()
+            .toString()
+            .substr(-2),
+        };
+
+        this.searchResults[i].mobileDateFormat = {
+          dayFormat: dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate(),
+          monthFormat: dt.toLocaleString("en-SG", { month: "long" }),
+          yearFormat: dt.getFullYear().toString(),
+        };
       }
 
       return this.searchResults
@@ -232,7 +255,6 @@ export default {
           if (categoryParam === "All Types") {
             return true;
           }
-
           if (
             node.category.trim().toLowerCase() ===
             categoryParam.trim().toLowerCase()
