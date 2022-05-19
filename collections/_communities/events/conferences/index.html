@@ -47,90 +47,99 @@ description: >
         Sorry, there are currently no past events.
     </div>
 </div>
+
 {% include site-section-event-listing.html 
     specified_category_tag="Conference"
 %}
 
 <!-- Sorting and theming script -->
 <script type="text/javascript">
-    const limit_number_of_content = 2
+    (() => {
+        const limit_number_of_content = 2
 
-    // To dd/mm/yy format
-    function getCompareDate() {
-        // gets local time, sg / kl timing
-        var d = new Date(),
-            month = '' + (d.getMonth() + 1),
-            day = '' + d.getDate(),
-            year = d.getFullYear();
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
-        return [year, month, day].join('');
-    }
-
-    // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
-    document.querySelectorAll('[future-date]').forEach((node) => {
-        let status, backgroundTheme;
-
-        if (node.getAttribute('future-date') < getCompareDate()) {
-            status = 'PAST';
-            backgroundTheme = "#323232";
-            node.setAttribute('id', 'past-event');
-        } else if (node.getAttribute('future-date') == getCompareDate()) {
-            status = 'NOW';
-            backgroundTheme = "#D0021B";
-            node.setAttribute('id', 'upcoming-event');
-        } else {
-            status = 'UPCOMING';
-            backgroundTheme = "#0161AF";
-            node.setAttribute('id', 'upcoming-event');
+        // To dd/mm/yy format
+        function getCompareDate() {
+            // gets local time, sg / kl timing
+            var d = new Date(),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+            return [year, month, day].join('');
         }
 
-        for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
-            node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
-        }
+        // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
+        document.querySelectorAll('[future-date]').forEach((node) => {
+            let status, backgroundTheme;
 
-        for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
-            node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
-        }
-    });
+            switch (true) {
+                case node.getAttribute('future-date') < getCompareDate():
+                    status = 'PAST';
+                    backgroundTheme = "#323232";
+                    node.setAttribute('js-event-status', 'past-event');
+                    break;
+                case node.getAttribute('future-date') == getCompareDate():
+                    status = 'NOW';
+                    backgroundTheme = "#D0021B";
+                    node.setAttribute('js-event-status', 'upcoming-event');
+                    break;
+                default:
+                    status = 'UPCOMING';
+                    backgroundTheme = "#0161AF";
+                    node.setAttribute('js-event-status', 'upcoming-event');
+                    break;
+            }
 
-    // Filter events by past and upcoming events into two separate arrays
-    const pastEvents = Array.from(document.querySelectorAll('[id=past-event]')).map((item, index) => {
-        if (limit_number_of_content > index) {
-            document.getElementById('past-events-container').appendChild(item)
-        } else {
-            document.getElementById('past-events-container').appendChild(item).setAttribute('id',
-                'past-conferences-hidden-content');
-        }
-    })
-    const upcomingEvents = Array.from(document.querySelectorAll('[id=upcoming-event]')).reverse().map((item, index) => {
-        if (limit_number_of_content > index) {
-            document.getElementById('upcoming-events-container').appendChild(item)
-        } else {
-            document.getElementById('upcoming-events-container').appendChild(item).setAttribute('id',
-                'upcoming-conferences-hidden-content')
-        }
-    })
+            // Gets the mobile and desktop view
+            for (var j = 0; j < node.querySelectorAll('.event-status').length; j++) {
+                node.querySelectorAll('.event-status')[j].innerHTML = status;
+                node.querySelectorAll('.event-status-container')[j].style.backgroundColor = backgroundTheme;
+            }
+        });
 
-    if (pastEvents.length > 0) document.getElementById("no-past-events-message").remove();
-    if (upcomingEvents.length > 0) document.getElementById("no-upcoming-events-message").remove();
-    if (limit_number_of_content > pastEvents.length) document.getElementById("past-conferences-button").remove();
-    if (limit_number_of_content > upcomingEvents.length) document.getElementById("upcoming-conferences-button")
-        .remove();
-    document.querySelectorAll('*[id*="conferences-hidden-content"]').forEach((item) => {
-        item.style.display = "none";
-    });
+        // Filter events by past and upcoming events into two separate arrays
+        const pastEvents = Array.from(document.querySelectorAll("div[js-event-status='past-event']")).map((item,
+            index) => {
+            if (limit_number_of_content > index) {
+                document.getElementById('past-events-container').appendChild(item)
+            } else {
+                document.getElementById('past-events-container').appendChild(item).setAttribute('content-visibility-toggle',
+                            'past-conferences')
+            }
+        })
+        const upcomingEvents = Array.from(document.querySelectorAll("div[js-event-status='upcoming-event']"))
+            .reverse().map(
+                (item, index) => {
+                    if (limit_number_of_content > index) {
+                        document.getElementById('upcoming-events-container').appendChild(item)
+                    } else {
+                        document.getElementById('upcoming-events-container').appendChild(item).setAttribute('content-visibility-toggle',
+                            'upcoming-conferences')
+                    }
+                })
+
+        if (pastEvents.length > 0) document.getElementById("no-past-events-message").remove();
+        if (upcomingEvents.length > 0) document.getElementById("no-upcoming-events-message").remove();
+        if (limit_number_of_content > pastEvents.length) document.getElementById("past-conferences-button")
+            .remove();
+        if (limit_number_of_content > upcomingEvents.length) document.getElementById("upcoming-conferences-button")
+            .remove();
+        document.querySelectorAll('*[content-visibility-toggle*="conferences"]').forEach((item) => {
+            item.style.display = "none";
+        });
+    })()
 </script>
 <!-- Script to hide content -->
 <script type="text/javascript">
-    function toggleEventsVisibility(toggleUpComingEvent) {
-        if (toggleUpComingEvent) {
-            document.querySelectorAll('*[id^="upcoming-conferences-hidden-content"]').forEach((node) => {
+    function toggleEventsVisibility(isTogglingUpcomingEvent) {
+        if (isTogglingUpcomingEvent) {
+            document.querySelectorAll('*[content-visibility-toggle="upcoming-conferences"]').forEach((node) => {
                 node.style.display = 'block';
             });
             document.getElementById('upcoming-conferences-button').remove();
         } else {
-            document.querySelectorAll('*[id^="past-conferences-hidden-content"]').forEach((node) => {
+            document.querySelectorAll('*[content-visibility-toggle="past-conferences"]').forEach((node) => {
                 node.style.display = "block";
             })
             document.getElementById('past-conferences-button').remove();

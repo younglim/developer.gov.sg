@@ -6,7 +6,7 @@
   event_description: Stack-X Cloud is a one-day conference for developers and IT leaders to learn about the lates enhancements for GCC with practical lessons on cloud adoption
   # Event location
   event_type: Hive Center
-  event_date: 2022-05-15T00:00:00.000Z
+  event_date: 2022-10-15T00:00:00.000Z
   event_registration_end_date: 2022-05-11T00:00:00.000Z
   # If no registration_link is provided, events recording pill will not be shown
   event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html

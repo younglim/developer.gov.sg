@@ -24,7 +24,7 @@
         {% assign url_str = post.url %}
         {% assign contentDescription = post.date | date_to_string %}
         {% if 3 > newsletterIncrementer %}
-        <div id="newsletter-visible-content">
+        <div>
             {% include card-variant-basic.html 
                 name=post.title
                 url_str=url_str
@@ -35,7 +35,7 @@
             %}
         </div>
         {% else %}
-        <div id="newsletter-hidden-content">
+        <div content-visibility-toggle="newsletter">
             {% include card-variant-basic.html 
                 name=post.title
                 url_str=url_str
@@ -63,18 +63,18 @@
 <script>
     // Hides the content at the start initially during the creation phase using IIFEs
     (() => {
-        const nodes = document.querySelectorAll('*[id^="newsletter-hidden-content"]');
+        const nodes = document.querySelectorAll('*[content-visibility-toggle^="newsletter"]');
         for (var i = 0; i < nodes.length; i++) {
             nodes[i].style.display = "none";
         }
     })();
 
     function viewMoreNewsLetters() {
-        const nodes = document.querySelectorAll('*[id^="newsletter-hidden-content"]');
+        const nodes = document.querySelectorAll('*[content-visibility-toggle^="newsletter"]');
         for (var i = 0; i < nodes.length; i++) {
             nodes[i].style.display = "block";
         }
 
-        document.getElementById("newsletter-display-more").innerHTML = "Show less";
+        document.getElementById("newsletter-display-more").remove();
     }
 </script>

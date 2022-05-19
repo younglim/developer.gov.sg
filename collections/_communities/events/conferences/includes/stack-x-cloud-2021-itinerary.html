@@ -13,15 +13,15 @@
     <div class="sgds-accordion is-borderless">
       <a class="sgds-accordion-header" role="button" aria-expanded="true">
         <div style="color:black; display:flex;align-items: center">
-            <img src="{{speaker.image}}" alt="Wei Junyu" style="width:56px;margin: 0 10px 0 0"/>
+          <img src="{{speaker.image}}" alt="{{speaker.name}}" style="width:56px;margin: 0 10px 0 0" />
           <p>{{speaker.name}}<b></b>, {{speaker.title}}</p>
         </div>
         <i class="sgds-icon sgds-icon-chevron-down"></i>
       </a>
-      <div class="sgds-accordion-body" >
+      <div class="sgds-accordion-body">
         <p>
           {{speaker.desc}}
-        </p>    
+        </p>
       </div>
     </div>
     {% endfor%}
