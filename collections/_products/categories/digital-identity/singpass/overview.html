@@ -24,7 +24,28 @@ description: >
 
 <h3>Singpass' suite of services</h3>
 
-{% include sub-collection-cards.html %}
+<div class="card-grid-container grid-25rem">
+  {% for project in site.communities %}
+    {% assign id = project.id | split: "/" | last %}
+    {% if id != "overview" and id != "features" and id != "resources" and project.path contains "singpass" %}
+    <div class="grid-item">
+      <div class="sgds-card">
+        <div class="sgds-card-content">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.short_description | markdownify }}</p>
+        </div>
+        <div class="sgds-card-footer">
+          {% unless project.details_link == false %}
+          <a href="{{ project.url }}" class="sgds-card-footer-item"
+            >Find out more</a
+          >
+          {% endunless %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
 
 <h2>Features</h2>
 
