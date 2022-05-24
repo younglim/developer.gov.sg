@@ -1,7 +1,7 @@
 ---
-title: OurSG Features
+title: Singpass Features
 layout: layout-page-sidenav
-description: OurSG product features
+description: Singpass product features
 single_level_nav: true
 _data: single-level-nav
 ---
