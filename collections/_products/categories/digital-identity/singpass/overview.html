@@ -25,7 +25,7 @@ description: >
 <h3>Singpass' suite of services</h3>
 
 <div class="card-grid-container grid-25rem">
-  {% for project in site.products %}
+  {% for project in site.products.digital-identity %}
     {% assign id = project.id | split: "/" | last %}
     {% if id != "overview" or id != "features" or id != "resources" and project.path contains "singpass" %}
     <div class="grid-item">
