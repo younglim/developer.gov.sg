@@ -31,8 +31,8 @@ description: >
     <div class="grid-item">
       <div class="sgds-card">
         <div class="sgds-card-content">
-          <h3><a href="{{ project.url }}" target="_blank">{{ project.title }}</a></h3>
-          <p>{{ project.short_description | markdownify }}</p>
+          <h4><a href="{{ project.url }}" target="_blank">{{ project.title }}</a></h4>
+          <p>{{ project.description | markdownify }}</p>
         </div>
 <!--        <div class="sgds-card-footer">
           {% unless project.details_link == false %}
