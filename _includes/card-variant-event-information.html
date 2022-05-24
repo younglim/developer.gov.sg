@@ -8,12 +8,15 @@
 {% endif %}
 {% endfor %}
 
-{%- assign eventRecordingLink = current_collection.event_recording_link -%}
-{%- assign eventRegistrationLink = current_collection.event_registration_link -%}
+{%- comment -%} Links {%- endcomment -%}
+{%- assign event_recording_link = current_collection.event_recording_link -%}
+{%- assign event_registration_link = current_collection.event_registration_link -%}
+{%- comment -%} Event Timing {%- endcomment -%}
 {%- assign event_date_and_timing = current_collection.event_date | default: page.event_date -%}
-{%- assign eventDateAndTimingParsed = event_date_and_timing | date: '%Y%m%d'-%}
-{%- assign eventRegistrationEndDate = current_collection.event_registration_end_date | default: event_date_and_timing -%}
-{%- assign eventRegistrationEndDateParsed = eventRegistrationEndDate | date: '%Y%m%d'-%}
+{%- assign event_date_and_timing_parsed = event_date_and_timing | date: '%Y%m%d'-%}
+{%- comment -%} Event Registration End Date {%- endcomment -%}
+{%- assign event_registration_end_date = current_collection.event_registration_end_date | default: event_date_and_timing -%}
+{%- assign event_registration_end_date_parsed = event_registration_end_date | date: '%Y%m%d'-%}
 {%- assign image_category = current_collection.event_category | append : "s"| downcase | slugify-%}
 {%- assign img_src = '/assets/img/communities/' | append: image_category | append: '.svg' | downcase -%}
 

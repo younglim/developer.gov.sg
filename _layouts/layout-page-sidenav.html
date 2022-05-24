@@ -60,24 +60,23 @@ layout: layout-page
   </div>
 
   <script defer="defer" type="text/javascript" data-id="layout-page-sidenav-calendar"
-    data-nav-level="{{ page.multi_level_nav }}" data-event-recording-link="{{ eventRecordingLink }}"
-    data-event-registration-end-date="{{ eventRegistrationEndDateParsed }}"
+    data-nav-level="{{- page.multi_level_nav -}}" data-event-recording-link="{{- event_recording_link -}}"
+    data-event-registration-end-date="{{- event_registration_end_date_parsed -}}"
     src="/assets/bundles/layout-page-sidenav-calendar.bundle.js">
   </script>
   <script>
     // Overriding the default behaviour of the button
     function buttonEventHandler() {
-      var recordingLink = '{{- eventRecordingLink -}}'
       if (document.querySelector('[future-date]').getAttribute('future-date') > getCompareDate()) {
         // If today's date < event date, then enable the button and redirect to the event pageÎ
-        if ('{{- eventRegistrationLink -}}') {
-          location.href = '{{- eventRegistrationLink -}}';
+        if ('{{- event_registration_link -}}') {
+          location.href = '{{- event_registration_link -}}';
         }
       }
 
       // If today's date > event date, then disable the button
       if (document.querySelector('[future-date]').getAttribute('future-date') < getCompareDate()) {
-        location.href = '{{- eventRecordingLink -}}'
+        location.href = '{{- event_recording_link -}}'
       }
     }
   </script>
