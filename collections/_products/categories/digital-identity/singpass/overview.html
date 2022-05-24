@@ -27,7 +27,7 @@ description: >
 <div class="card-grid-container grid-25rem">
   {% for project in site.products %}
     {% assign id = project.id | split: "/" | last %}
-    {% if id != "overview" and project.path contains "singpass" %}
+    {% if id != "overview" and id != "features" and id != "resources" and project.path contains "singpass" %}
     <div class="grid-item">
       <div class="sgds-card">
         <div class="sgds-card-content">
