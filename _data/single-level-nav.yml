@@ -125,26 +125,6 @@
   items:
     - Overview
 
-- name: Identiface
-  items:
-    - Overview
-
-- name: Login
-  items:
-    - Overview
-
-- name: Myinfo
-  items:
-    - Overview
-
-- name: Myinfo Business
-  items:
-    - Overview
-
-- name: National Digital Identity
-  items:
-    - Overview
-
 - name: SGFinDex
   items:
     - Overview
@@ -152,15 +132,13 @@
 - name: Singpass
   items:
     - Overview
+    - Features
+    - Resources
 
 - name: TechPass
   items:
     - Overview
     
-- name: Verify
-  items:
-    - Overview
-
 # Digital Solutions to Address Covid19
 - name: Covid 19 Chatbots
   items:

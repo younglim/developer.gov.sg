@@ -74,15 +74,9 @@
   items:
     - Overview
     - Corppass
-    - Identiface
-    - Login
-    - Myinfo
-    - Myinfo business
-    - National Digital Identity
     - SGFinDex
     - Singpass
     - TechPass
-    - Verify
 
 - name: Infrastructure and Hosting
   description: Host applications in secure environments at scale
