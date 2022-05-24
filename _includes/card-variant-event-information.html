@@ -10,17 +10,17 @@
 
 {%- assign eventRecordingLink = current_collection.event_recording_link -%}
 {%- assign eventRegistrationLink = current_collection.event_registration_link -%}
-{%- assign eventDateAndTiming = current_collection.event_date | default: page.event_date -%}
-{%- assign eventDateAndTimingParsed = eventDateAndTiming | date: '%Y%m%d'-%}
-{%- assign eventRegistrationEndDate = current_collection.event_registration_end_date | default: eventDateAndTiming -%}
+{%- assign event_date_and_timing = current_collection.event_date | default: page.event_date -%}
+{%- assign eventDateAndTimingParsed = event_date_and_timing | date: '%Y%m%d'-%}
+{%- assign eventRegistrationEndDate = current_collection.event_registration_end_date | default: event_date_and_timing -%}
 {%- assign eventRegistrationEndDateParsed = eventRegistrationEndDate | date: '%Y%m%d'-%}
-{%- assign imageCategory = current_collection.event_category | append : "s"| downcase | slugify-%}
-{%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
+{%- assign image_category = current_collection.event_category | append : "s"| downcase | slugify-%}
+{%- assign img_src = '/assets/img/communities/' | append: image_category | append: '.svg' | downcase -%}
 
 <div class="sgds-card sgds-card-variant-video-info margin--bottom--lg"
-    future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
-    <div class="has-text-centered" id="event-status-container">
-        <p class="has-text-weight-bold has-text-white" id="event-status">PAST</p>
+    data-future-date="{{ event_date_and_timing | date: '%Y%m%d' }}">
+    <div class="has-text-centered event-status-container">
+        <p class="has-text-weight-bold has-text-white event-status">PAST</p>
     </div>
     <div class="sgds-card-content padding--top padding--bottom">
         <div class="row margin--bottom--none is-flex-touch" style="justify-content: start; align-items: center;">
@@ -28,7 +28,7 @@
                 <span class="sgds-icon sgds-icon-calendar" role="img" aria-label="iconName"></span>
             </div>
             <div class="col is-10">
-                {{- eventDateAndTiming | date: "%d %b %Y" -}}
+                {{- event_date_and_timing | date: "%d %b %Y" -}}
             </div>
         </div>
         <div class="row margin--bottom--none is-flex-touch" style="justify-content: start; align-items: center;">
@@ -50,9 +50,9 @@
         </div>
         <div class="row">
             <div class="col padding--right--none padding--left--none">
-                <button onclick="buttonEventHandler()" id="dynamic-event-button"
-                    class="sgds-button has-text-white">Register
-                    now</button>
+                <button onclick="buttonEventHandler()" id="dynamic-event-button" class="sgds-button has-text-white">
+                    Register now
+                </button>
             </div>
         </div>
     </div>

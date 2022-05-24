@@ -12,18 +12,16 @@
   event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html
   event_registration_link: https://www.google.com/
   items:
-    - item_label: Overview
-      item_name: Overview
-    - item_label: Agenda
-      item_name: Agenda
+    - item_name: Overview
+    - item_name: Agenda
+      # Information in the sidenav will be rendered in the order specified.
       item_sub_item:
         - sub_item_name: All Agenda
         - sub_item_name: Keynotes
         - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
-    - item_label: Recordings
-      item_name: Recordings
+    - item_name: Recordings
       item_sub_item:
         - sub_item_name: All Recordings
         - sub_item_name: Keynotes

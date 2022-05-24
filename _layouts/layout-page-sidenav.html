@@ -58,91 +58,26 @@ layout: layout-page
     {% include social-media.html display="wide" %}
     {% endif %}
   </div>
-  <script type="text/javascript">
-    const should_run_entire_script = '{{ page.multi_level_nav }}';
 
-    // To dd/mm/yy format
-    function getCompareDate() {
-      var d = new Date(),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-      if (month.length < 2) month = '0' + month;
-      if (day.length < 2) day = '0' + day;
-      return [year, month, day].join('');
-    }
-
-    if (should_run_entire_script) {
-      var registrationEndDate = '{{ eventRegistrationEndDate }}';
-      var status, backgroundTheme, buttonText, buttonState = false;
-
-      // Adding attributes to elements and dynamically changing the color of the content based on the date of the event and the current time
-      document.querySelectorAll('[future-date]').forEach((node) => {
-        const eventButton = node.querySelector('#dynamic-event-button');
-
-        if (node.getAttribute('future-date') < getCompareDate()) {
-          // CALENDAR 
-          status = 'PAST';
-          backgroundTheme = "#323232";
-
-          // BUTTON
-          if ('{{eventRecordingLink}}'.length > 0) {
-            eventButton.innerHTML = "View recordings";
-            eventButton.style.backgroundColor = "#0161AF";
-          } else {
-            eventButton.innerHTML = "Pending upload";
-            eventButton.style.backgroundColor = "#C6C6C6";
-          }
-        } else if (node.getAttribute('future-date') == getCompareDate()) {
-          // CALENDAR 
-          status = 'NOW';
-          backgroundTheme = "#D0021B";
-
-          // BUTTON
-          eventButton.disabled = true;
-          eventButton.style.color = "white"
-          eventButton.innerHTML = "Register Now";
-          eventButton.style.backgroundColor = "#C6C6C6";
-        } else {
-          // CALENDAR 
-          status = 'UPCOMING';
-          backgroundTheme = "#0161AF";
-
-          // BUTTON
-          if ('{{eventRegistrationEndDateParsed}}' < getCompareDate()) {
-            eventButton.disabled = true;
-            eventButton.innerHTML = "Registration closed";
-            eventButton.style.backgroundColor = "#c6c6c6";
-          } else {
-            eventButton.disabled = false;
-            eventButton.innerHTML = "Register Now";
-            eventButton.style.backgroundColor = "#0161AF";
-          }
-        }
-
-        for (var j = 0; j < node.querySelectorAll('[id=event-status]').length; j++) {
-          node.querySelectorAll('[id=event-status]')[j].innerHTML = status;
-        }
-
-        for (var j = 0; j < node.querySelectorAll('[id=event-status-container]').length; j++) {
-          node.querySelectorAll('[id=event-status-container]')[j].style.backgroundColor = backgroundTheme;
-        }
-      });
-    }
-
+  <script defer="defer" type="text/javascript" data-id="layout-page-sidenav-calendar"
+    data-nav-level="{{ page.multi_level_nav }}" data-event-recording-link="{{ eventRecordingLink }}"
+    data-event-registration-end-date="{{ eventRegistrationEndDateParsed }}"
+    src="/assets/bundles/layout-page-sidenav-calendar.bundle.js">
+  </script>
+  <script>
     // Overriding the default behaviour of the button
     function buttonEventHandler() {
-      var recordingLink = '{{eventRecordingLink}}'
+      var recordingLink = '{{- eventRecordingLink -}}'
       if (document.querySelector('[future-date]').getAttribute('future-date') > getCompareDate()) {
         // If today's date < event date, then enable the button and redirect to the event pageÎ
-        if ('{{eventRegistrationLink}}') {
-          location.href = '{{ eventRegistrationLink }}';
+        if ('{{- eventRegistrationLink -}}') {
+          location.href = '{{- eventRegistrationLink -}}';
         }
       }
 
       // If today's date > event date, then disable the button
       if (document.querySelector('[future-date]').getAttribute('future-date') < getCompareDate()) {
-        location.href = '{{eventRecordingLink}}'
+        location.href = '{{- eventRecordingLink -}}'
       }
     }
   </script>

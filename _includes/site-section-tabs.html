@@ -1,3 +1,4 @@
+<!-- Change to underscores -->
 {%- assign newsletterIncrementer = 0 -%}
 <div class="sgds-tabs">
     <ul class="no-margin" role="tablist">
@@ -24,7 +25,7 @@
         {% assign url_str = post.url %}
         {% assign contentDescription = post.date | date_to_string %}
         {% if 3 > newsletterIncrementer %}
-        <div>
+        <div class="newsletter-card">
             {% include card-variant-basic.html 
                 name=post.title
                 url_str=url_str
@@ -35,7 +36,7 @@
             %}
         </div>
         {% else %}
-        <div content-visibility-toggle="newsletter">
+        <div class="newsletter-card" content-visibility-toggle="newsletter">
             {% include card-variant-basic.html 
                 name=post.title
                 url_str=url_str
@@ -48,7 +49,7 @@
         {% endif %}
         {% assign newsletterIncrementer = newsletterIncrementer | plus: 1 %}
         {% endfor %}
-        <button class="sgds-button is-outlined is-primary" id="newsletter-display-more" onclick="viewMoreNewsLetters()">
+        <button class="sgds-button is-outlined is-primary" id="newsletter-display-more" onclick="toggleEventsVisibility('newsletter', 'newsletter-display-more')">
             View all newsletters
         </button>
     </div>
@@ -69,12 +70,10 @@
         }
     })();
 
-    function viewMoreNewsLetters() {
-        const nodes = document.querySelectorAll('*[content-visibility-toggle^="newsletter"]');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = "block";
-        }
-
-        document.getElementById("newsletter-display-more").remove();
+    function toggleEventsVisibility(attribute, buttonID) {
+        document.querySelectorAll(`*[content-visibility-toggle="${attribute}"]`).forEach((node) => {
+            node.style.display = 'block';
+        });
+        document.getElementById(`${buttonID}`).remove();
     }
 </script>

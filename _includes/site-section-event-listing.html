@@ -1,19 +1,19 @@
+{%- if jekyll.environment == "testing" -%}
+    {%- assign events = site.data['test-events-nav'] -%}
+{%- else -%}
+    {%- assign events = site.data['events-nav'] -%}
+{%- endif -%}
 {%- assign category = include.specified_category_tag | default: '' -%}
-{%- assign events = site.data['events-nav'] -%}
-{%- assign filteredEvents = events 
-    | where_exp: "item", "item.event_category contains category" 
-    | sort: "event_date"
--%}
+{%- assign filtered_events = events | where_exp: "item", "item.event_category contains category" | sort: "event_date" -%}
 
 <div class="card-grid-container is-fullwidth">
-    {%- for sub_section in filteredEvents reversed:true -%}
-
+    {%- for sub_section in filtered_events reversed -%}
         {%- assign sub_section_slug = sub_section.name | slugify -%}
-        {%- assign eventDateAndTiming = sub_section.event_date | default: sub_section.date -%}
         {%- assign recordings_uploaded = sub_section.event_recording_link | default: false -%}
         {%- assign url_str = page.url | remove: 'index.html' | append: sub_section_slug -%}
-        {%- assign imageCategory = sub_section.event_category | append : "s"| downcase | slugify -%}
-        {%- assign img_src = '/assets/img/communities/' | append: imageCategory | append: '.svg' | downcase -%}
+        {%- assign event_date_and_timing = sub_section.event_date | default: sub_section.date -%}
+        {%- assign image_category = sub_section.event_category | append : "s"| downcase | slugify -%}
+        {%- assign img_src = '/assets/img/communities/' | append: image_category | append: '.svg' | downcase -%}
 
         {% if page.title == "Communities"%}
             {% if sub_section.event_category contains "Conference" %}
@@ -26,15 +26,15 @@
         {% endif %}
 
         <!-- Remove the index.html then append sub_section_slug -->
-        <div future-date="{{ eventDateAndTiming | date: '%Y%m%d' }}">
+        <div data-future-date="{{ event_date_and_timing | date: '%Y%m%d' }}">
             {% include card-variant-calendar.html 
                 name=sub_section.name
+                category=sub_section.event_category
                 description=sub_section.event_description
                 img_src=img_src
                 url_str=url_str
-                eventCategory=sub_section.event_category
                 recordings_uploaded=recordings_uploaded
-                eventDateAndTiming=eventDateAndTiming
+                event_date_and_timing=event_date_and_timing
                 disableItemCount=include.disableItemCount
             %}
         </div>

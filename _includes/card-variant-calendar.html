@@ -19,13 +19,13 @@
                             style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
                             <div>
                                 <p class="has-text-centered is-size-3 has-text-weight-bold">
-                                    {{- include.eventDateAndTiming | date: "%d" -}}
+                                    {{- include.event_date_and_timing | date: "%d" -}}
                                 </p>
                             </div>
                             <div>
                                 <p>
-                                    {{- include.eventDateAndTiming |  date: "%b" -}}'
-                                    {{- include.eventDateAndTiming | date: "%y" -}}
+                                    {{- include.event_date_and_timing |  date: "%b" -}}'
+                                    {{- include.event_date_and_timing | date: "%y" -}}
                                 </p>
                             </div>
                         </div>
@@ -41,9 +41,9 @@
                         <p class="is-flex margin--bottom--sm" style="align-items: center;">
                             <span class="sgds-icon sgds-icon-calendar is-size-4 margin--right--sm" role="img"
                                 aria-label="iconName" style="-webkit-text-stroke: .5px white;"></span>
-                            {{- include.eventDateAndTiming | date: "%d" -}}&nbsp;
-                            {{- include.eventDateAndTiming | date: "%b" -}}&nbsp;
-                            {{- include.eventDateAndTiming | date: "%Y" -}}
+                            {{- include.event_date_and_timing | date: "%d" -}}&nbsp;
+                            {{- include.event_date_and_timing | date: "%b" -}}&nbsp;
+                            {{- include.event_date_and_timing | date: "%Y" -}}
                         </p>
                     </div>
                     <!-- Recording Slot -->
@@ -54,11 +54,11 @@
                     </div>
                     {%- endif -%}
                     <!-- Category Slot -->
-                    {%- if include.eventCategory -%}
+                    {%- if include.category -%}
                     <p class="is-flex margin--bottom--none">
                         <img src="{{include.img_src}}" class="margin--left--none margin--right--sm" alt="Event Icon"
                             style="height: 1.5em; width: 1.5em;" />
-                        {{- include.eventCategory | capitalize -}}
+                        {{- include.category | capitalize -}}
                     </p>
                     {%- endif -%}
                     <p>{{- include.description | capitalize -}}</p>
