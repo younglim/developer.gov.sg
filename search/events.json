@@ -3,9 +3,14 @@
 
 {
     "pages": [
-        {%- assign dumps = site.data['events-nav'] | sort: 'event_date' -%}
+        {%- if jekyll.environment == "testing" -%}
+            {%- assign events = site.data['events-nav'] -%}
+        {%- else -%}
+            {%- assign events = site.data['events-nav'] -%}
+        {%- endif -%}
+        {%- assign sorted_events = events | sort: 'event_date'-%}
         
-        {%- for document in dumps reversed:true -%}
+        {%- for document in sorted_events reversed -%}
             {%- assign sub_section_slug = document.name | slugify -%}
             {%- assign event_recording_link = document.event_recording_link | default: false-%}
             {%- assign target_group_joined = document.target_group | join: ", " -%}
@@ -23,7 +28,8 @@
                 "content": {{ document.event_description | strip_html | strip_newlines | strip | jsonify }},
                 "url": "{{ url_str }}",
                 "icon_path": "/assets/img/communities/{{- document.event_category | append : "s"| downcase | slugify -}}.svg",
-                "event_date": "{{ document.event_date }}",
+                "event_date": "{{ document.event_date | date: '%Y%m%d' }}",
+                "event_date_raw": "{{ document.event_date }}",
                 "event_recording_link": "{{ event_recording_link }}",
                 "meta": "document"
                 },
