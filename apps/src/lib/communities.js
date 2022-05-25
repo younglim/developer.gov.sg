@@ -9,16 +9,16 @@ export function getCompareDate() {
   return [year, month, day].join("");
 }
 
-export function getEventDataByDate(date, element) {
+export function getEventDataByDate(event_date, element) {
   switch (true) {
-    case date < getCompareDate():
-      element.setAttribute("data-event-status", "past-event");
+    case event_date < getCompareDate():
+      if (element) element.setAttribute("data-event-status", "past-event");
       return { status: "past", backgroundColor: "#323232" };
-    case date == getCompareDate():
-      element.setAttribute("data-event-status", "upcoming-event");
+    case event_date == getCompareDate():
+      if (element) element.setAttribute("data-event-status", "upcoming-event");
       return { status: "now", backgroundColor: "#D0021B" };
     default:
-      element.setAttribute("data-event-status", "upcoming-event");
+      if (element) element.setAttribute("data-event-status", "upcoming-event");
       return { status: "upcoming", backgroundColor: "#0161AF" };
   }
 }

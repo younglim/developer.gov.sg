@@ -15,16 +15,16 @@
                             style="border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;">
                             <p class="has-text-weight-bold has-text-white event-status">PAST</p>
                         </div>
-                        <div class="padding--top padding--bottom"
+                        <div class="padding---top--xs"
                             style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
-                            <div>
-                                <p class="has-text-centered is-size-3 has-text-weight-bold">
+                            <div class="padding--top--sm padding--bottom--sm">
+                                <p class="padding--top--xs padding--bottom--none is-size-2 has-text-weight-bold has-text-centered ">
                                     {{- include.event_date_and_timing | date: "%d" -}}
                                 </p>
                             </div>
                             <div>
-                                <p>
-                                    {{- include.event_date_and_timing |  date: "%b" -}}'
+                                <p class="padding--bottom">
+                                    {{- include.event_date_and_timing |  date: "%b" | upcase -}}&nbsp;‘
                                     {{- include.event_date_and_timing | date: "%y" -}}
                                 </p>
                             </div>
@@ -48,7 +48,7 @@
                     </div>
                     <!-- Recording Slot -->
                     {%- if include.recordings_uploaded -%}
-                    <div class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm margin--bottom margin--top padding--top--sm padding--bottom--sm is-size-8"
+                    <div class="is-hidden-touch has-text-weight-semibold padding--left padding--right margin--bottom margin--top padding--top--sm padding--bottom--sm is-size-8"
                         style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; border-radius: .25rem;">
                         Recordings available
                     </div>
