@@ -44,46 +44,16 @@ speakers:
 </p>
 
 <!-- If event rundown is applicable, add data accordingly-->
-<h3>Programme</h3>
+<h3>Event Rundown</h3>
 {%- include event-rundown.html 
   _data=page.event_rundown 
 -%}
 
-<!-- If speaker data is applicable, add data accordingly -->
-<h3>About the speakers</h3>
-<div class="is-fullwidth margin--top--none">
+<h3>Programme</h3>
+<div class="is-fullwidth margin--top--none margin--bottom">
   {%- for speaker in page.speakers -%}
-  {%- include accordian-display.html content=speaker -%}
+  <div class="margin--top">
+    {%- include accordian-display.html content=speaker -%}
+  </div>
   {%- endfor -%}
 </div>
-
-<!--<hr />-->
-
-<!-- Similar Webinars-->
-<!--<h3>Similar Webinars</h3>
-<div class="card-grid-container grid-25rem">
-  <div class="sgds-card">
-    <div class="sgds-card-content">
-      <p class="is-flex margin--bottom--sm" style="align-items: center;">
-        <span class="sgds-icon sgds-icon-calendar is-size-4 margin--right--sm" role="img" aria-label="iconName"></span>
-        27 Aug 2020
-      </p>
-      {% include card-header-info.html 
-        name="STACK-X: Meetup - Tech for Public Group: Supporting the community" 
-        url_str="#"
-      %}
-      <p>In this Tech for Public Good series, discover how GovTech teams digitalised the supply and distribution
-        processes for masks and other essential resources by creating SupplyAlly, and built SupportGoWhere - a website
-        that hosts useful information on Government support schemes and ways for citizens to apply directly. You can
-        also read our two-part article on this webinar here:</p>
-      <ul>
-        <li><a href="#">
-          Part 1 (SupplyAlly)
-        </a></li>
-        <li><a href="#">
-          Part 2 (SupportGoWhere)
-        </a></li>
-        </p>
-    </div>
-  </div>
-</div>-->

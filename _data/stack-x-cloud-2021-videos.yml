@@ -16,12 +16,6 @@
     Ministry of Health, and Minister-in-Charge of GovTech
   title: Welcome Remarks
   video_id: 3Wztk782Sgc
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - A
-    - B
-    - C
-    - D
 - type: Keynote - VOD
   speakers: Tom Soderstrom
   speakers_title: >-
@@ -31,19 +25,11 @@
     Impact and Lessons Learned from NASA/Jet Propulsion Laboratory's Cloud
     Computing Journey
   video_id: Bl2dcc0yEu4
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - B
-    - C
 - type: Keynote - VOD
   speakers: Tan Eng Pheng
   speakers_title: 'Assistant Chief Executive (Services), GovTech'
   title: Accelerating Digital Transformation with Government on Commercial Cloud
   video_id: WSRfq88_JvY
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - A
-    - B
 - type: Keynote - VOD
   speakers: Kevin Ng
   speakers_title: >-
@@ -51,29 +37,16 @@
     GovTech
   title: GCC Road Ahead
   video_id: OKtNwnbWQBQ
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - B
-    - D
 - type: Keynote - VOD
   speakers: 'Hunter Nield, Chia Hsiao Ming'
   speakers_title: 'Distinguished Engineer, GovTech| Director, Government Digital Services (GDS), GovTech'
   title: GCC 2.0 Design Principles and Showcase
   video_id: FriAm2BnqqA
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - A
-    - B
-    - C
-    - D
 - type: CloudOnboarding - VOD
   speakers: Abhijeet Menon
   speakers_title: 'Senior Solution Architect, Solution Architect Office, GovTech'
   title: Building a Successful Cloud Architecture
   video_id: gq1uwDJ8OhM
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - D
 - type: CloudOnboarding - VOD
   speakers: 'Tang Bing Wan, Jessica Tan'
   speakers_title: >-
@@ -81,11 +54,6 @@
     GovTech| Programme Manager, Government Digital Services (GDS), GovTech
   title: GCC 2.0 - New Onboarding Experience
   video_id: cftM662--Cs
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - B
-    - C
-    - D
 - type: CloudOnboarding - VOD
   speakers: 'Kent Lai, Mahesh Rajagopal'
   speakers_title: >-
@@ -95,29 +63,16 @@
     Managing Cloud Cost and Security through Automation and Data-Centric
     Approach
   video_id: MCV0auno9Cs
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - C
-    - D
 - type: CloudOnboarding - VOD
   speakers: Choong Keng Leong
   speakers_title: 'Director, Government Infrastructure Group, GovTech'
   title: Learning Points from Cloud Operations
   video_id: tdZt4ZigpFw
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - A
-    - D
 - type: CloudPlatform - VOD
   speakers: Hunter Nield
   speakers_title: 'Distinguished Engineer, GovTech'
   title: What's New in GCC 2.0
   video_id: KK7dVjQ4LNQ
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - B
-    - C
-    - D
 - type: CloudPlatform - VOD
   speakers: 'Stephanie Quek, Yin Yide'
   speakers_title: >-
@@ -125,12 +80,6 @@
     Cybersecurity Specialist, Cyber Security Group, GovTech
   title: Securing Developers' Engineering Devices
   video_id: 3M9n5eT8u24
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - A
-    - B
-    - C
-    - D
 - type: CloudPlatform - VOD
   speakers: Kyle Marsh
   speakers_title: 'Principal Programme Manager, Microsoft'
@@ -138,25 +87,13 @@
     Enabling Applications to Support Authentication with Azure AD and
     Conditional Access
   video_id: _lQJVeiZmd0
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - B
-    - D
 - type: CloudPlatform - VOD
   speakers: Marco Genovese
   speakers_title: 'Cloud Security Specialist, Google Cloud Security'
   title: 'Zero Trust: The Future of Secure Remote Access'
   video_id: I5dpXijcPgU
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - A
-    - B
-    - D
 - type: CloudPlatform - VOD
   speakers: Samuel Loh
   speakers_title: 'Senior Software Engineer, Government Digital Services (GDS), GovTech'
   title: Securing Access to GCC 2.0 from Engineering Devices
   video_id: PONKfE9q_eo
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  category:
-    - E
