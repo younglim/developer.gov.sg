@@ -9,11 +9,6 @@
   event_registration_link: https://go.gov.sg/stack-x-datascienceconnect
   items:
     - item_name: Overview
-    - item_name: Agenda
-      item_sub_item:
-      - sub_item_name: All Agenda
-      - sub_item_name: Day 1
-      - sub_item_name: Day 2
 
 - name: STACK-X Cloud 2021
   # Categories limited to Conference, Stack-X Meetup and Hackathon
