@@ -10,6 +10,7 @@
     - Overview
     - Getting Started
     - Contact Us
+    - Meet The Team
 
 - name: VAS
   items:
@@ -152,6 +153,10 @@
   items:
     - Overview
 
+- name: TechPass
+  items:
+    - Overview
+    
 - name: Verify
   items:
     - Overview
@@ -228,6 +233,7 @@
     - Overview
     - Features
     - Getting Started
+    - Resources
     - FAQs
 
 - name: Virtual Intelligent Chat Assistant
