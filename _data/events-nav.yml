@@ -1,13 +1,28 @@
 ### Conferences
 # > THIS IS THE IDEAL SAMPLE
+- name: STACK-X Data Science Connect 2022
+  event_category: Conference
+  event_description: Join this virtual conference to learn how the Singapore Government is driving data transformation and delivering public good through the use of Data Science and AI.
+  event_type: Online event
+  event_date: 2022-07-07T00:00:00.000Z
+  event_registration_end_date: 2022-07-07T00:00:00.000Z
+  event_registration_link: https://go.gov.sg/stack-x-datascienceconnect
+  items:
+    - item_name: Overview
+    - item_name: Agenda
+      item_sub_item:
+      - sub_item_name: All Agenda
+      - sub_item_name: Day 1
+      - sub_item_name: Day 2
+
 - name: STACK-X Cloud 2021
   # Categories limited to Conference, Stack-X Meetup and Hackathon
   event_category: Conference
   event_description: Stack-X Cloud is a one-day conference for developers and IT leaders to learn about the lates enhancements for GCC with practical lessons on cloud adoption
   # Event location
   event_type: Hive Center
-  event_date: 2021-12-15T00:00:00.000Z
-  event_registration_end_date: 2021-11-11T00:00:00.000Z
+  event_date: 2021-11-17T00:00:00.000Z
+  event_registration_end_date: 2021-11-17T00:00:00.000Z
   # If no registration_link is provided, events recording pill will not be shown
   event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html
   event_registration_link: https://www.google.com/
@@ -29,6 +44,19 @@
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
 
+- name: Stack the Flags 2020
+  event_category: Conference
+  event_description: >-
+    STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF)
+    competition that is open to everyone. Find out more here.
+  event_type: Online (via Zoom)
+  event_date: 2020-12-04T00:00:00.000Z
+  event_registration_end_date: 2020-12-04T00:00:00.000Z
+  event_recording_link: /communities/events/conferences/stack-the-flags-2020
+  event_registration_link: "https://www.google.com/"
+  items:
+    - item_name: Overview
+
 - name: STACK 2020
   event_category: Conference
   event_description: >-
@@ -39,18 +67,9 @@
   event_date: 2020-12-01T00:00:00.000Z
   event_registration_end_date: 2020-12-01T00:00:00.000Z
   event_recording_link: /communities/events/conferences/stack-2020
-  event_registration_link: 'https://www.google.com/'
-  
-- name: Stack the Flags 2020
-  event_category: Conference
-  event_description: >-
-    STACK the Flags is an online, Jeopardy! style Capture-the-Flag (CTF)
-    competition that is open to everyone. Find out more here.
-  event_type: Online (via Zoom)
-  event_date: 2020-12-04T00:00:00.000Z
-  event_registration_end_date: 2020-12-04T00:00:00.000Z
-  event_recording_link: /communities/events/conferences/stack-the-flags-2020
-  event_registration_link: 'https://www.google.com/'
+  event_registration_link: "https://www.google.com/"
+  items:
+    - item_name: Overview
 
 - name: STACK-X CI/CD 2021
   event_category: Conference
@@ -60,6 +79,9 @@
   event_type: Online (via Zoom)
   event_date: 2021-05-11T00:00:00.000Z
   event_registration_end_date: 2021-05-11T00:00:00.000Z
+  event_recording_link: /communities/events/conferences/stack-x-ci-cd-2021/overview.html
+  items:
+    - item_name: Overview
 
 ### Stack X Events
 - name: (Hybrid) Reimagining Government Payouts with GovWallet

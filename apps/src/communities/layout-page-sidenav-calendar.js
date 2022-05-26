@@ -27,14 +27,14 @@ import { getCompareDate, getEventDataByDate } from "../lib/communities";
             break;
           }
 
+          eventButton.disabled = true;
           eventButton.innerHTML = "Pending upload";
           eventButton.style.backgroundColor = "#C6C6C6";
           break;
         case status === "upcoming":
-          eventButton.disabled = true;
           eventButton.style.color = "white";
           eventButton.innerHTML = "Register Now";
-          eventButton.style.backgroundColor = "#C6C6C6";
+          eventButton.style.backgroundColor = "#0161AF";
           break;
         default:
           // if todays date is greater than the end date of the registration date, then the registration is closed
@@ -42,11 +42,12 @@ import { getCompareDate, getEventDataByDate } from "../lib/communities";
             eventButton.disabled = true;
             eventButton.innerHTML = "Registration closed";
             eventButton.style.backgroundColor = "#c6c6c6";
-          } else {
-            eventButton.disabled = false;
-            eventButton.innerHTML = "Register Now";
-            eventButton.style.backgroundColor = "#0161AF";
+            break;
           }
+
+          eventButton.disabled = false;
+          eventButton.innerHTML = "Register Now";
+          eventButton.style.backgroundColor = "#0161AF";
           break;
       }
 

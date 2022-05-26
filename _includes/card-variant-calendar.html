@@ -18,7 +18,8 @@
                         <div class="padding---top--xs"
                             style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
                             <div class="padding--top--sm padding--bottom--sm">
-                                <p class="padding--top--xs padding--bottom--none is-size-2 has-text-weight-bold has-text-centered ">
+                                <p
+                                    class="padding--top--xs padding--bottom--none is-size-2 has-text-weight-bold has-text-centered ">
                                     {{- include.event_date_and_timing | date: "%d" -}}
                                 </p>
                             </div>
@@ -49,7 +50,8 @@
                     <!-- Recording Slot -->
                     {%- if include.recordings_uploaded -%}
                     <div class="is-hidden-touch has-text-weight-semibold padding--left padding--right margin--bottom margin--top padding--top--sm padding--bottom--sm is-size-8"
-                        style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; border-radius: .25rem;">
+                        style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; border-radius: .25rem;"
+                        data-recording-available="true">
                         Recordings available
                     </div>
                     {%- endif -%}

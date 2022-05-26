@@ -28,10 +28,11 @@
             </template>
             <!-- Calendar -->
             <template v-slot:calendar>
-              <div class="sgds-card-image is-hidden-touch margin--right--lg">
-                <div class="sgds-calendar-card-left-inner">
+              <div class="sgds-card-image is-hidden-touch">
+                <div class="margin--right--lg">
                   <div class="has-text-centered" style="width: 6.65rem;">
                     <div
+                      class="event-status-container"
                       style="border-top-right-radius: 0.5rem; border-top-left-radius: 0.5rem;"
                       :style="{ backgroundColor: result.backgroundColor }"
                     >
@@ -42,19 +43,19 @@
                       </p>
                     </div>
                     <div
-                      class="padding--top padding--bottom"
+                      class="padding---top--xs"
                       style="border: 1px solid #323232; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;"
                     >
-                      <div>
+                      <div class="padding--top--sm padding--bottom--sm">
                         <p
-                          class="has-text-centered is-size-3 has-text-weight-bold margin--bottom--sm"
+                          class="padding--top--sm padding--bottom--xs margin--bottom--none is-size-2 has-text-weight-bold has-text-centered"
                         >
                           {{ result.desktopDateFormat.dayFormat }}
                         </p>
                       </div>
-                      <div>
-                        <p class="margin--bottom--none">
-                          {{ result.desktopDateFormat.monthFormat }}'
+                      <div class="padding--bottom--none">
+                        <p class="padding--bottom--none">
+                          {{ result.desktopDateFormat.monthFormat }}&nbsp;‘
                           {{ result.desktopDateFormat.yearFormat }}
                         </p>
                       </div>
@@ -93,7 +94,7 @@
               </div>
             </template>
             <!-- Recording Slot -->
-            <template v-slot:recording v-if="result.event_recording_link">
+            <template v-if="result.event_recording_link" v-slot:recording>
               <div
                 class="is-hidden-touch has-text-weight-semibold padding--left--sm padding--right--sm margin--bottom margin--top padding--top--sm padding--bottom--sm is-size-8"
                 style="background-color: #CCE4F7; width: fit-content; border-radius: 0.1rem; border-radius: .25rem;"
@@ -141,6 +142,7 @@ import Loader from "../lib/Loader.vue";
 import CardCalendar from "../lib/CardCalendar.vue";
 import useLunrSearch from "../composables/useLunrSearch";
 import { computed } from "@vue/composition-api";
+import { getEventDataByDate } from "../lib/communities";
 
 export default {
   components: { Loader, CardCalendar },
@@ -178,16 +180,6 @@ export default {
     };
   },
   computed: {
-    getCompareDate: function() {
-      // gets local time, sg / kl timing
-      var d = new Date(),
-        month = "" + (d.getMonth() + 1),
-        day = "" + d.getDate(),
-        year = d.getFullYear();
-      if (month.length < 2) month = "0" + month;
-      if (day.length < 2) day = "0" + day;
-      return [year, month, day].join("");
-    },
     filterSearchResults: function() {
       const dateParam = new URL(window.location.href).searchParams.get(
         "year_filter"
@@ -204,20 +196,13 @@ export default {
       document.getElementById("query-all-category").value = categoryParam;
 
       for (var i = 0; i < this.searchResults.length; i++) {
-        const dt = new Date(this.searchResults[i].event_date);
+        const dt = new Date(this.searchResults[i].event_date_raw);
+        const { status, backgroundColor } = getEventDataByDate(
+          this.searchResults[i].event_date
+        );
 
-        // Changes the status and color of the text by comparing the event_date in JSON and today's date
-        if (this.searchResults[i].event_date === this.getCompareDate) {
-          this.searchResults[i].status = "NOW";
-          this.searchResults[i].backgroundColor = "#D0021B";
-        } else if (this.searchResults[i].event_date < this.getCompareDate) {
-          this.searchResults[i].status = "PAST";
-          this.searchResults[i].backgroundColor = "#323232";
-        } else {
-          this.searchResults[i].status = "UPCOMING";
-          this.searchResults[i].backgroundColor = "#0161AF";
-        }
-
+        this.searchResults[i].status = status.toUpperCase();
+        this.searchResults[i].backgroundColor = backgroundColor;
         this.searchResults[i].desktopDateFormat = {
           dayFormat: dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate(),
           monthFormat: dt
@@ -230,7 +215,6 @@ export default {
             .toString()
             .substr(-2),
         };
-
         this.searchResults[i].mobileDateFormat = {
           dayFormat: dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate(),
           monthFormat: dt.toLocaleString("en-SG", { month: "long" }),
@@ -241,7 +225,7 @@ export default {
       return this.searchResults
         .filter((node) => {
           // Converts the date in the page's front matter to a date object then to full years
-          const eventDateInYears = new Date(node.event_date).getFullYear();
+          const eventDateInYears = new Date(node.event_date_raw).getFullYear();
           // If no specified date (by param), just return ignore and return everything as it is
           if (dateParam === "All Time") {
             return true;
