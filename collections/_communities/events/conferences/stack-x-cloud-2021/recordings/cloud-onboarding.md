@@ -13,4 +13,4 @@ operation. There is a live Q&A at the end of each session!
 
 <hr />
 
-{% include videos-display.html type="Keynote - Live Chat" _data=video_data_file %}
+{% include videos-display.html type="CloudOnboarding - VOD" _data=video_data_file %}

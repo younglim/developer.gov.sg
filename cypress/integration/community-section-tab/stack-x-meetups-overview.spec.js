@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Conferences Overview Page Test", function() {
+describe("Stack X Overview Page Test", function() {
   context("Desktop Test Case", () => {
     before(() => {
       // Navigate to the root
@@ -14,7 +14,7 @@ describe("Conferences Overview Page Test", function() {
       cy.viewport("macbook-13");
     });
 
-    it("Should be able to navigate to the conference overview page from the Conferences Overview Page.", async () => {
+    it("Should be able to navigate to the Stack-X Meetups overview page from the community Section Index page.", async () => {
       // COMMUNITIES OVERVIEW SIDENAV
       cy.get(".sgds-menu")
         .find(".sgds-menu-list")
@@ -24,26 +24,27 @@ describe("Conferences Overview Page Test", function() {
           force: true,
         });
 
-      // EVENTS OVERVIEW
-      cy.get(".card-grid-container")
-        .contains("Conferences")
+      cy.wait(3000);
+
+      cy.get(".sgds-card")
+        .get("a[href='stack-x-meetups']")
         .click({ force: true });
 
-      cy.url().should("include", "/communities/events/conferences/");
+      cy.url().should("include", "/communities/events/stack-x-meetups/");
     });
 
-    it("Should only be able to get events that belongs to the conference category", async () => {
-      // RESET
-      cy.visit("/communities/events/conferences/");
+    it("Should only be able to get events that belongs to the Stack-X Meetups category", async () => {
+      cy.visit("/communities/events/stack-x-meetups/");
+      cy.wait(5000);
 
       cy.get("*[data-event-status]")
         .find('img[alt="Event Image"]')
         .each(($el) => {
-          expect($el.next().text()).to.eq("Conference");
+          expect($el.next().text()).to.eq("Stack-x meetup");
         });
     });
 
-    it("Should only display less or equal to 2 content for All Upcoming Conferences", async () => {
+    it("Should only display less or equal to 2 content for All Upcoming Stack-X Meetups", async () => {
       // Get the All upcoming stack-x meetups container that goes by the id, upcoming-events-container
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2
       cy.get("#upcoming-events-container")
@@ -52,7 +53,7 @@ describe("Conferences Overview Page Test", function() {
         .should("be.lte", 2);
     });
 
-    it("Should only display less or equal to 2 content for Recent Past Conferences", () => {
+    it("Should only display less or equal to 2 content for Recent Past STACK-X Meetups", async () => {
       // Get the All past stack-x meetups container that goes by the id, upcoming-events-container
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2
       cy.get("#past-events-container")
@@ -61,7 +62,7 @@ describe("Conferences Overview Page Test", function() {
         .should("be.lte", 2);
     });
 
-    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (upcoming events)", () => {
+    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (upcoming events)", async () => {
       // Get the All upcoming stack-x meetups container that goes by the id, upcoming-events-container.
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2.
       // Next, if its more than 2, click on the View all events button
@@ -88,9 +89,8 @@ describe("Conferences Overview Page Test", function() {
         }
       });
     });
-
-    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (past events)", () => {
-      // Get the All upcoming stack-x meetups container that goes by the id, upcoming-events-container.
+    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (past events)", async () => {
+      // Get the All past stack-x meetups container that goes by the id, upcoming-events-container.
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2.
       // Next, if its more than 2, click on the View all events button
       cy.get("#past-events-container").then(($body) => {
@@ -128,7 +128,6 @@ describe("Conferences Overview Page Test", function() {
     });
 
     beforeEach(() => {
-      cy.clearLocalStorage();
       cy.viewport("iphone-xr");
     });
 
@@ -144,24 +143,24 @@ describe("Conferences Overview Page Test", function() {
       cy.wait(3000);
 
       cy.get(".sgds-card")
-        .get("a[href='conferences']")
+        .get("a[href='stack-x-meetups']")
         .click({ force: true });
 
-      cy.url().should("include", "/communities/events/conferences/");
+      cy.url().should("include", "/communities/events/stack-x-meetups/");
     });
 
-    it("Should only be able to get events that belongs to the conference category", async () => {
-      // RESET
-      cy.visit("/communities/events/conferences/");
+    it("Should only be able to get events that belongs to the Stack-X Meetups category", async () => {
+      cy.visit("/communities/events/stack-x-meetups/");
+      cy.wait(5000);
 
       cy.get("*[data-event-status]")
-        .find('img[alt="Event Image"]')
+        .find('img[alt="Event Icon"]')
         .each(($el) => {
-          expect($el.next().text()).to.eq("Conference");
+          expect($el.next().text()).to.eq("Stack-x meetup");
         });
     });
 
-    it("Should only display less or equal to 2 content for All Upcoming Conferences", async () => {
+    it("Should only display less or equal to 2 content for All Upcoming Stack-X Meetups", async () => {
       // Get the All upcoming stack-x meetups container that goes by the id, upcoming-events-container
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2
       cy.get("#upcoming-events-container")
@@ -170,7 +169,7 @@ describe("Conferences Overview Page Test", function() {
         .should("be.lte", 2);
     });
 
-    it("Should only display less or equal to 2 content for Recent Past Conferences", () => {
+    it("Should only display less or equal to 2 content for Recent Past STACK-X Meetups", async () => {
       // Get the All past stack-x meetups container that goes by the id, upcoming-events-container
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2
       cy.get("#past-events-container")
@@ -179,7 +178,7 @@ describe("Conferences Overview Page Test", function() {
         .should("be.lte", 2);
     });
 
-    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (upcoming events)", () => {
+    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (upcoming events)", async () => {
       // Get the All upcoming stack-x meetups container that goes by the id, upcoming-events-container.
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2.
       // Next, if its more than 2, click on the View all events button
@@ -207,7 +206,7 @@ describe("Conferences Overview Page Test", function() {
       });
     });
 
-    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (past events)", () => {
+    it("Should be able to click on the View all events button that will lead to more content provided if theres more than 2 events (past events)", async () => {
       // Get the All upcoming stack-x meetups container that goes by the id, upcoming-events-container.
       // Afterwards, get all the cards and ensure that number of cards is less than or equal to 2.
       // Next, if its more than 2, click on the View all events button

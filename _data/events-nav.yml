@@ -20,7 +20,7 @@
   event_registration_end_date: 2021-11-17T00:00:00.000Z
   # If no registration_link is provided, events recording pill will not be shown
   event_recording_link: /communities/events/conferences/stack-x-cloud-2021/recordings/all-recordings.html
-  event_registration_link: https://www.google.com/
+  event_registration_link: https://go.gov.sg/stackx-cloud-public
   items:
     - item_name: Overview
     - item_name: Agenda
@@ -28,14 +28,11 @@
       item_sub_item:
         - sub_item_name: All Agenda
         - sub_item_name: Keynotes
-        - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
     - item_name: Recordings
       item_sub_item:
         - sub_item_name: All Recordings
-        - sub_item_name: Keynotes
-        - sub_item_name: Leadership
         - sub_item_name: Cloud Onboarding
         - sub_item_name: Cloud Platform & Tools
 
@@ -75,6 +72,7 @@
   event_date: 2021-05-11T00:00:00.000Z
   event_registration_end_date: 2021-05-11T00:00:00.000Z
   event_recording_link: /communities/events/conferences/stack-x-ci-cd-2021/overview.html
+  event_registration_link: https://go.gov.sg/stackxconferencecicd
   items:
     - item_name: Overview
 
