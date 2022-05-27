@@ -1,8 +1,4 @@
-{%- if jekyll.environment == "testing" -%}
-    {%- assign events = site.data['test-events-nav'] -%}
-{%- else -%}
-    {%- assign events = site.data['events-nav'] -%}
-{%- endif -%}
+{%- assign events = site.data['events-nav'] -%}
 {%- assign category = include.specified_category_tag | default: '' -%}
 {%- assign filtered_events = events | where_exp: "item", "item.event_category contains category" | sort: "event_date" -%}
 

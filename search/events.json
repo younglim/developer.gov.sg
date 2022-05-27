@@ -3,11 +3,7 @@
 
 {
     "pages": [
-        {%- if jekyll.environment == "testing" -%}
-            {%- assign events = site.data['events-nav'] -%}
-        {%- else -%}
-            {%- assign events = site.data['events-nav'] -%}
-        {%- endif -%}
+        {%- assign events = site.data['events-nav'] -%}
         {%- assign sorted_events = events | sort: 'event_date'-%}
         
         {%- for document in sorted_events reversed -%}

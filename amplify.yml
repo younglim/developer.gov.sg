@@ -22,7 +22,6 @@ frontend:
       - '**/*'
   cache:
     paths: []
-
 test:
   artifacts:
     baseDirectory: cypress
