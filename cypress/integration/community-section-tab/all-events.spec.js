@@ -9,15 +9,9 @@ describe("All Events Page Test", function() {
       // Communities overview page
       cy.contains("Communities").click({ force: true });
       cy.url().should("include", "/communities");
-
-      cy.writeFile(
-        "_data/test-events-nav.yml",
-        YAML.stringify({ name: "chai Pin zheng" })
-      );
     });
 
     beforeEach(() => {
-      cy.clearLocalStorage();
       cy.viewport("macbook-13");
     });
 
