@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-const YAML = require("yamljs");
+// const YAML = require("yamljs");
 
 describe("All Events Page Test", function() {
   context("Desktop Test Case", () => {
@@ -48,15 +48,15 @@ describe("All Events Page Test", function() {
       // RESET
       cy.visit("/communities/events/all-events/");
 
-      cy.readFile("_data/events-nav.yml").then((str) => {
-        // parse the string into object literal
-        const content = YAML.parse(str);
-        const lengthOfEntireFile = content.length;
+      // cy.readFile("_data/events-nav.yml").then((str) => {
+      //   // parse the string into object literal
+      //   const content = YAML.parse(str);
+      //   const lengthOfEntireFile = content.length;
 
-        cy.get(".card-grid-container")
-          .find(".sgds-card-list")
-          .should("have.length", lengthOfEntireFile);
-      });
+      //   cy.get(".card-grid-container")
+      //     .find(".sgds-card-list")
+      //     .should("have.length", lengthOfEntireFile);
+      // });
     });
 
     it("Should have the right category of search results after filtering for only the stack-x category", () => {
@@ -171,15 +171,15 @@ describe("All Events Page Test", function() {
       // RESET
       cy.visit("/communities/events/all-events/");
 
-      cy.readFile("_data/events-nav.yml").then((str) => {
-        // parse the string into object literal
-        const content = YAML.parse(str);
-        const lengthOfEntireFile = content.length;
+      // cy.readFile("_data/events-nav.yml").then((str) => {
+      //   // parse the string into object literal
+      //   const content = YAML.parse(str);
+      //   const lengthOfEntireFile = content.length;
 
-        cy.get(".card-grid-container")
-          .find(".sgds-card-list")
-          .should("have.length", lengthOfEntireFile);
-      });
+      //   cy.get(".card-grid-container")
+      //     .find(".sgds-card-list")
+      //     .should("have.length", lengthOfEntireFile);
+      // });
     });
 
     it("Should have the right category of search results after filtering for only the stack-x category", () => {
