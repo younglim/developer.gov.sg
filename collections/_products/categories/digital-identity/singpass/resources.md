@@ -1,5 +1,5 @@
 ---
-title: OurSG Resources
+title: Singpass Resources
 layout: layout-page-sidenav
 description: Singpass' resources, including product videos and product documentation.
 single_level_nav: true
