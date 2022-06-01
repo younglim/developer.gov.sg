@@ -9,7 +9,7 @@ _data: single-level-nav
 ### Singpass Product Videos
 
 - [Empowering uers everyday](https://www.youtube.com/watch?v=rUZf1ZcB0NY){:target="\_blank"}
-- [ESingpass is even better now](https://youtu.be/zacNBxADPH4){:target="\_blank"}
+- [Singpass is even better now](https://youtu.be/zacNBxADPH4){:target="\_blank"}
 
 ### Singpass Documentation
 
