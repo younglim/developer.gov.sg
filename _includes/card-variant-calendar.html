@@ -37,12 +37,12 @@
         {% include card-header-info.html disableItemCount=include.disableItemCount name=include.name item_count=include.item_count url_str=include.url_str%}
         <div>
           <!-- Mobile Calendar Slot -->
-          <div class="is-hidden-desktop is-flex is-centered is-size-8" style="filter:contrast(0.2);">
-            <p class="is-flex margin--bottom--xs" style="align-items: center;">
+          <div class="is-hidden-desktop is-flex is-centered" style="filter:contrast(0.2);">
+            <p class="is-flex margin--bottom--xs is-size-8" style="align-items: center;">
               <span class="sgds-icon sgds-icon-calendar is-size-4 margin--right--sm" role="img" aria-label="iconName"
                 style="-webkit-text-stroke: .1px white;"></span>
               {{- include.event_date_and_timing | date: "%d" -}}&nbsp;
-              {{- include.event_date_and_timing | date: "%b" -}}&nbsp;
+              {{- include.event_date_and_timing | date: "%B" -}}&nbsp;
               {{- include.event_date_and_timing | date: "%Y" -}}
             </p>
           </div>
