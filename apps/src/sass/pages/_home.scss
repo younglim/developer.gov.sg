@@ -32,6 +32,8 @@
     }
     &-stack-2022-gradient{
       background: linear-gradient(253.82deg, #FF7920 11.24%, #B41E8E 88.76%);
+      padding-top: 0px;
+      padding-bottom: 96px;
     }
     height: 28.75rem;
     @include until($tablet){
