@@ -28,13 +28,13 @@
       {% if 3 > newsletterIncrementer %}
       <div class="newsletter-card">
         {% include card-variant-basic.html
-                name=post.title
-                url_str=url_str
-                render_calendar=true
-                item_count=item_count
-                description=contentDescription
-                parentCardStyle=parentCardStyle
-            %}
+          name=post.title
+          url_str=url_str
+          render_calendar=true
+          item_count=item_count
+          description=contentDescription
+          parentCardStyle=parentCardStyle
+      %}
       </div>
       {% endif %}
       {% assign newsletterIncrementer = newsletterIncrementer | plus: 1 %}

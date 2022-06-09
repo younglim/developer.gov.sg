@@ -5,7 +5,9 @@
       <p class="search-result-status">
         {{
           `Showing ${
-            filterSearchResults.preProcessedNumberOfResults > 0 ? filterSearchResults.postProcessedNumberOfResults : 0
+            filterSearchResults.preProcessedNumberOfResults > 0
+              ? filterSearchResults.postProcessedNumberOfResults
+              : 0
           } out of ${filterSearchResults.preProcessedNumberOfResults} results`
         }}
       </p>
@@ -239,8 +241,11 @@ export default {
         result.monthFormat =
           window.innerWidth < 1025
             ? date.toLocaleString("en-SG", { month: "long" })
-            : date.toLocaleString("en-SG", { month: "short" });
-        result.yearFormat = date.getFullYear().toString();
+            : date.toLocaleString("en-SG", { month: "short" }).toUpperCase();
+        result.yearFormat =
+          window.innerWidth < 1025
+            ? date.getFullYear().toString()
+            : date.getFullYear().toString().substr(-2);
       }
 
       const postProcessedNumberOfResults = searchResults.value.length;
