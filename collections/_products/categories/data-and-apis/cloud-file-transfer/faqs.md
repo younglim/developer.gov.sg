@@ -20,6 +20,7 @@ faqs-general:
   - name: What type of encryption does CFT support?
     description: >
       CFT supports industry and ICT&SS compliant standards for:
+	  * Encryption at rest: Data is encrypted at-rest on the commercial cloud hosting environment with AWS S3 SSE-KMS (ICT&SS 8.3/S2).
   - name: When can I start using CFT?
     description: >
       CFT is currently in closed beta and will reach GA in Q4FY22. You can register your interest as a pilot user <a href="https://form.gov.sg/#!/62280856ba91100012050933" target="_blank">here</a>.
