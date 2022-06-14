@@ -41,6 +41,9 @@
         </a>
         <div class="sgds-accordion-body">
             <p>{{faq.description}}</p>
+			{% if faq.description != null %}
+				<p>{{faq.description2}}</p>
+			{% endif %}
             <div class="row is-mobile is-multiline">
                 {% for image in faq.images %}
                 {%- assign img_url = "/assets/img/" | append: image.name -%}
