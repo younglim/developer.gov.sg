@@ -19,7 +19,7 @@ faqs-general:
       Click <a href="getting-started" target="_blank">here</a> to find out more.
   - name: What type of encryption does CFT support?
     description: >
-      CFT supports industry and ICT&SS compliant standards for:
+      'CFT supports industry and ICT&SS compliant standards for:'
 	  '- Encryption at rest: Data is encrypted at-rest on the commercial cloud hosting environment with AWS S3 SSE-KMS (ICT&SS 8.3/S2).'
   - name: When can I start using CFT?
     description: >
