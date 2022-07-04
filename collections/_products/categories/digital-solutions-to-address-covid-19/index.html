@@ -25,7 +25,21 @@ description: Singapore has leveraged its technological capabilities to develop i
   Timely and targeted solutions adhering to these design philosophies have been created for each unique need that has arisen due to the pandemic. Here are some of 
   the tools that we have developed to meet these needs.
 </p>
-<figure style="text-align: center">
+
+<div class="padding--bottom--sm">
+  <section id="broad-themes" class="sgds-section">
+    <div id="service-layer-header" class="sgds-container is-fluid">
+      <!-- Start of cards for each theme-->
+      <div class="card-grid-container">
+        <!-- TODOs: An array of object to iterate through -->
+        {% include covid-19-card.html category="spread" header="Preventing the Spread" layer="themes" card_type="sm" %}
+        {% include covid-19-card.html category="mgmt_distribution" header="Crowd Management and Distribution" layer="themes" card_type="sm" %}
+        {% include covid-19-card.html category="community" header="Support the Community" layer="themes" card_type="sm" %}
+      </div>
+    </div>
+  </section>
+</div>
+<!--<figure style="text-align: center">
   <img
     src="/assets/img/covid19-products-update.png"
     alt="Fig 1: An overview of GovTech’s COVID-19 technologies"
@@ -251,4 +265,4 @@ description: Singapore has leveraged its technological capabilities to develop i
       </div>
     </div>
   </div>
-</section>
+</section>-->

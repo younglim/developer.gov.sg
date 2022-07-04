@@ -1,0 +1,30 @@
+{% comment %}
+For Planned/WIP SGTS products, the date resides in _singapore-government-tech-stack/overview/index.html
+covid_collection_group: [analytics]
+covid_layer_group: [services]
+covid_title: Personalise
+{% endcomment %}
+
+<div class="sgds-card grid-item">
+  <div class="sgds-card-header is-shadowless">
+    <h4 class="sgds-card-header-title is-flex-justify-c ">{{include.header}}</h4>
+  </div>
+  {% if {{include.card_type}} == "sm" %}
+  <div class="sgds-card-content ">
+    <ul class="is-paddingless is-marginless is-flex-justify-sb">
+  {% elsif {{include.card_type}} == "lg" %}
+  <div class="sgds-card-content sgds-card-ul-hz">
+    <ul class="is-paddingless is-marginless is-flex is-flex-justify-sb">
+  {% endif %}
+
+        {% for item in site.products  %}
+          {% if item.covid_collection_group contains include.category and item.covid_layer_group contains include.layer %}
+            <a href={{item.redirect_from[0]}} target="_blank">
+              <li class="live margin--top--none margin--bottom">{{item.covid_title}}</li>
+            </a>
+          {% endif %}
+        {% endfor %}
+
+      </ul>
+  </div>
+</div>
