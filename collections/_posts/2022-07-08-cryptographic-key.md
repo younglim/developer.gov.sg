@@ -3,7 +3,7 @@ title: Encryption Key
 layout: layout-blog
 author: Alan Goh
 description: >
-  Cryptographic key managemnt lifecycle
+  Cryptographic key management lifecycle
 tags:
   - cryptographic key
   - key generation
