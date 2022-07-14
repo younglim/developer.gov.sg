@@ -1,4 +1,4 @@
-----
+---
 title: Encryption Key
 layout: layout-blog
 author: Alan Goh
