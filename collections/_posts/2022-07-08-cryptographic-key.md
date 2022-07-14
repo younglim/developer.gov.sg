@@ -13,3 +13,5 @@ tags:
   - cryptographic key lifecycle
   - key management service
   ---
+
+Protect encryption key used to secure data
