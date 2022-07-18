@@ -59,7 +59,10 @@
                 class="margin--bottom--none margin--left--none margin--right--sm"
               />
               {{ option.category.type }}
-              <span class="pilllist-icon pilllist-icon--checkLight" style="align-items: center">
+              <span
+                class="pilllist-icon pilllist-icon--checkLight"
+                style="align-items: center"
+              >
                 <i
                   class="sgds-icon sgds-icon-check margin--bottom--none is-size-7"
                   role="img"
@@ -92,9 +95,19 @@
         <div class="is-borderless">
           <!-- Header -->
           <div class="sgds-accordion-header is-active" style="border: 0px">
-            <p class="has-text-weight-semibold has-text-black">
-              {{ key }}
-            </p>
+            <div class="is-flex" style="align-items: center">
+              <p
+                class="has-text-weight-semibold has-text-black margin--bottom--none margin--right--sm"
+              >
+                {{ key }}
+              </p>
+              <small
+                v-if="result[0].isActive"
+                class="small-rounded-corner has-background-success has-text-white padding--left--sm padding--right--sm padding--top--xs padding--bottom--xs"
+              >
+                Now
+              </small>
+            </div>
           </div>
           <!-- Content -->
           <div class="margin--sm">
@@ -145,7 +158,6 @@
 <script>
 import Card from "../lib/Card.vue";
 import Loader from "../lib/Loader.vue";
-import { convertDateForIos } from "../lib/communities";
 import useLunrSearch from "../composables/useLunrSearch";
 import { computed, ref, watch, onMounted } from "@vue/composition-api";
 
@@ -159,6 +171,8 @@ export default {
 
     const { jsonPath } = scriptElement.dataset;
 
+    // Inital rerender to true
+    const rerender = ref(true);
     const categorySelectedValues = ref("");
     const categoryOptions = ref([]);
     const pillSelectedValues = ref([]);
@@ -222,12 +236,10 @@ export default {
             return acc;
           }, [])
           .sort((a, b) => {
-            const dateA = convertDateForIos(a.timeslot_metadata.full_date);
-            const dateB = convertDateForIos(b.timeslot_metadata.full_date);
+            const dateA = new Date(a.timeslot_metadata.start_date);
+            const dateB = new Date(b.timeslot_metadata.start_date);
             return dateA - dateB;
           });
-
-        console.log(filteredOptions);
 
         // Spread the filtered options into an array of strings
         const stringFilteredOptions = filteredOptions.map(item => {
@@ -263,10 +275,12 @@ export default {
 
     watch(categorySelectedValues, function (newValue) {
       categorySelectedValues.value = newValue;
+      rerender.value = true;
     });
 
     watch(pillSelectedValues, function (newValue) {
       pillSelectedValues.value = newValue;
+      rerender.value = true;
     });
 
     const filteredResult = computed(() => {
@@ -280,14 +294,36 @@ export default {
         pillSelectedValues.value.includes(item.category.type)
       );
 
+      // Add extra attribute to the filteredSearchResultByCategory, isActive, which is used to display whether the event is currently active or not
+      const filteredSearchResultByCategoryWithActive =
+        filteredSearchResultByCategory.map(item => {
+          if (rerender.value) {
+            if (!isLoading.value) {
+              rerender.value = false;
+            }
+
+            const currentDate = new Date();
+            const startDate = new Date(item.timeslot_metadata.start_date);
+            const endDate = new Date(item.timeslot_metadata.end_date);
+
+            const isActive = currentDate >= startDate && currentDate <= endDate;
+            return {
+              ...item,
+              isActive,
+            };
+          } else {
+            return item;
+          }
+        });
+
       // After filtering the data, next we will sort the data by date
-      const sortedFilteredSearchResult = filteredSearchResultByCategory.sort(
-        (a, b) => {
-          const dateA = convertDateForIos(a.timeslot_metadata.full_date);
-          const dateB = convertDateForIos(b.timeslot_metadata.full_date);
+      const sortedFilteredSearchResult =
+        filteredSearchResultByCategoryWithActive.sort((a, b) => {
+          const dateA = new Date(a.timeslot_metadata.start_date);
+          const dateB = new Date(b.timeslot_metadata.start_date);
+
           return dateA - dateB;
-        }
-      );
+        });
 
       // After sorting the data, aggregrate / group the data by the date
       const groupedFilteredSearchResult = sortedFilteredSearchResult.reduce(
@@ -319,6 +355,13 @@ export default {
       };
     });
 
+    // Every 30 seconds, set rerender to true, which will trigger the computed function to re-render the data
+    // this is because rerendering is expensive and shouldnt always be triggered
+    setInterval(() => {
+      rerender.value = true;
+      console.log("THIS IS BEING CALLED");
+    }, 10 * 1000);
+
     return {
       searchQuery,
       isLoading,
@@ -336,4 +379,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.small-rounded-corner {
+  border-radius: 0.2em;
+}
+</style>
