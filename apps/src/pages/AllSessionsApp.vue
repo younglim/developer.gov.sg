@@ -359,7 +359,6 @@ export default {
     // this is because rerendering is expensive and shouldnt always be triggered
     setInterval(() => {
       rerender.value = true;
-      console.log("THIS IS BEING CALLED");
     }, 10 * 1000);
 
     return {
@@ -382,5 +381,15 @@ export default {
 <style scoped>
 .small-rounded-corner {
   border-radius: 0.2em;
+}
+
+.small-enter-active,
+.small-leave-active {
+  transition: all 0.5s ease;
+}
+.small-enter-from,
+.small-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>

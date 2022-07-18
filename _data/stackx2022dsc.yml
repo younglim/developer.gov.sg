@@ -482,7 +482,7 @@
 # 2022-07-18T16:30:00+08:00
 - type: Industry Sharing
   timeslot: 04:30 PM - 05:00 PM
-  timeslot_metadata: 2022-07-18T16:30:00+08:00 - 2022-07-18T17:18:4Cu0+08:00
+  timeslot_metadata: 2022-07-18T16:30:00+08:00 - 2022-07-18T17:53:00+08:00
   title: Large Language Models and Voice Assistants
   desc: Recent developments in large language models (LLMs) such as GPT-3 are opening new frontiers in how machine learning can be applied to real world problems. In this presentation, I will cover an overview of the technology behind these LLMs and how these developments could positively and negatively impact the future of voice assistants.
   speakers:
