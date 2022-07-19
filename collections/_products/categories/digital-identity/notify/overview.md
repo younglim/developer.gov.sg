@@ -8,7 +8,7 @@ _data: single-level-nav
 sgts_collection_group: [digital_identity]
 sgts_layer_group: [services]
 sgts_title: Notify
-collection_group: [Singapore Government Tech Stack], [What's New]
+collection_group: [Singapore Government Tech Stack] [What's New]
 description: >
   Notify is a messaging service on the Singpass app to disseminate official government messages to users. Use Notify to boost your public campaigns now!
 ---
