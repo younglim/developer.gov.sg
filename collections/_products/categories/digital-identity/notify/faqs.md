@@ -18,4 +18,4 @@ faqs:
       2. SMS message: Less than 459 characters (or the equivalent of 3 SMS messages)
       ---
       
-      {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
+   
