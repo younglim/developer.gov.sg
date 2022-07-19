@@ -144,6 +144,15 @@
   items:
     - Overview
 
+- name: Notify
+  items:
+    - Overview
+    - Features
+    - Pricing
+    - Getting Started
+    - Resources
+    - FAQs
+
 - name: SGFinDex
   items:
     - Overview
