@@ -11,7 +11,7 @@ faqs:
   - name: How do we reach out to people who do not use the Singpass app?
     description: >
       For recipients who do not use the Singpass app, Notify will inform the sending agency that your message cannot be delivered to them. You can then determine whether to send an SMS to the user’s mobile number registered with Singpass. 
- - name: What is the recommended length for Notify messages?
+  - name: What is the recommended length for Notify messages?
     description: >
       The message should be concise, and adhere to the following guidelines.
       1. Singpass Inbox message: Less than1000 characters
