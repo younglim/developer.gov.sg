@@ -16,8 +16,8 @@ faqs:
       The message should be concise, and adhere to the following guidelines.
       1. Singpass Inbox message: Less than1000 characters
       2. SMS message: Less than 459 characters (or the equivalent of 3 SMS messages)
-      ---
-      
-      {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
+---
+
+{% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
       
    
