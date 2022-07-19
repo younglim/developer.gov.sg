@@ -14,8 +14,8 @@ faqs:
  - name: What is the recommended length for Notify messages?
     description: >
       The message should be concise, and adhere to the following guidelines.
-      - Singpass Inbox message: Less than1000 characters
-      - SMS message: Less than 459 characters (or the equivalent of 3 SMS messages)
+      1. Singpass Inbox message: Less than1000 characters
+      2. SMS message: Less than 459 characters (or the equivalent of 3 SMS messages)
       ---
       
       {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
