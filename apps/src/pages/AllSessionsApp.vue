@@ -365,11 +365,11 @@ export default {
       };
     });
 
-    // Every 30 seconds, set rerender to true, which will trigger the computed function to re-render the data
+    // Every 20 seconds, set rerender to true, which will trigger the computed function to re-render the data
     // this is because rerendering is expensive and shouldnt always be triggered
     setInterval(() => {
       rerender.value = true;
-    }, 10 * 1000);
+    }, 20 * 1000);
 
     return {
       searchQuery,
