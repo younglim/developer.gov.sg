@@ -44,9 +44,10 @@
               "timeslot_metadata":{
                 "full_date": "{{- document.timeslot_metadata -}}",
                 "start_date": "{{- document.timeslot_metadata | split: " - " | first -}}",
+                "start_time": "{{ document.timeslot_metadata | split: " - " | first | date: '%I:%M %p' }}",
                 "end_date": "{{- document.timeslot_metadata | split: " - " | last -}}",
-                "date": "{{ document.timeslot_metadata | split: " - " | first | date: "%d/%m/%Y" }}",
-                "time": "{{ document.timeslot_metadata | split: " - " | first | date: '%I:%M %p' }}"
+                "end_time": "{{ document.timeslot_metadata | split: " - " | last | date: '%I:%M %p' }}",
+                "date": "{{ document.timeslot_metadata | split: " - " | first | date: "%d/%m/%Y" }}"
               },
               "speakers" : [
                   {%- for speaker in speakers -%}

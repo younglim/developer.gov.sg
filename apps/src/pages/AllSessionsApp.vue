@@ -78,7 +78,7 @@
     <div>
       <button
         type="button"
-        class="sgds-button"
+        class="sgds-button padding--left--none padding--right--none padding--top--none padding--bottom--none"
         @click="clearAllFilters"
         style="border: none; color: #007aff"
       >
@@ -103,7 +103,7 @@
               </p>
               <small
                 v-if="result[0].isActive"
-                class="small-rounded-corner has-background-success has-text-white padding--left--sm padding--right--sm padding--top--xs padding--bottom--xs"
+                class="blink small-rounded-corner has-background-success has-text-white padding--left--sm padding--right--sm padding--top--xs padding--bottom--xs"
               >
                 Now
               </small>
@@ -130,7 +130,11 @@
                   </div>
                 </div>
                 <!-- Time and category-->
-                <small>{{ item.timeslot }} / {{ item.category.type }} </small>
+                <small
+                  >{{ item.timeslot_metadata.start_time }} -
+                  {{ item.timeslot_metadata.end_time }} /
+                  {{ item.category.type }}
+                </small>
                 <!-- Description-->
                 <div
                   v-if="item.content"
@@ -197,23 +201,28 @@ export default {
 
     const initialiseCategoryValues = () => {
       categoryOptions.value = computed(() => {
-        const unfilteredOptions = searchResults.value.map(item => {
-          return item.timeslot_metadata.date;
-        });
+        // Sort by date
+        const unfilteredSortedSearchResult = searchResults.value.sort(
+          (a, b) => {
+            const dateA = new Date(a.timeslot_metadata.start_date);
+            const dateB = new Date(b.timeslot_metadata.start_date);
+            return dateA - dateB;
+          }
+        );
 
-        // Sort the filtered options by date
-        const sortedFilteredOptions = Array.from(
-          new Set(unfilteredOptions)
-        ).sort((a, b) => {
-          const dateA = new Date(a);
-          const dateB = new Date(b);
-          return dateA - dateB;
-        });
+        // Get unique dates
+        const filteredSortedSearchResult = Array.from(
+          new Set(
+            unfilteredSortedSearchResult.map(item => {
+              return item.timeslot_metadata.date;
+            })
+          )
+        );
 
         // Set the active item to the first item in the sorted filtered options
-        categorySelectedValues.value = sortedFilteredOptions[0];
+        categorySelectedValues.value = filteredSortedSearchResult[0];
 
-        return sortedFilteredOptions;
+        return filteredSortedSearchResult;
       });
     };
 
@@ -295,10 +304,11 @@ export default {
       );
 
       // Add extra attribute to the filteredSearchResultByCategory, isActive, which is used to display whether the event is currently active or not
+      let iterations = filteredSearchResultByCategory.length;
       const filteredSearchResultByCategoryWithActive =
         filteredSearchResultByCategory.map(item => {
           if (rerender.value) {
-            if (!isLoading.value) {
+            if (!isLoading.value && !--iterations) {
               rerender.value = false;
             }
 
@@ -328,7 +338,7 @@ export default {
       // After sorting the data, aggregrate / group the data by the date
       const groupedFilteredSearchResult = sortedFilteredSearchResult.reduce(
         (acc, curr) => {
-          const date = curr.timeslot_metadata.time;
+          const date = curr.timeslot_metadata.start_time;
           if (!acc[date]) {
             acc[date] = [];
           }
@@ -383,13 +393,22 @@ export default {
   border-radius: 0.2em;
 }
 
-.small-enter-active,
-.small-leave-active {
-  transition: all 0.5s ease;
+.blink {
+  animation: opacity 3s ease-in-out infinite;
+  opacity: 1;
 }
-.small-enter-from,
-.small-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>
