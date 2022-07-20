@@ -5,6 +5,9 @@ category: Digital Identity
 sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
+redirect from:
+ - /product/categories/digital-identity/notify/
+ - /product/categories/digital-identity/notify.html
 sgts_collection_group: [digital_identity]
 sgts_layer_group: [services]
 sgts_title: Notify
