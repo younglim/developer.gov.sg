@@ -102,7 +102,7 @@
                 {{ key }}
               </p>
               <small
-                v-if="result[0].isActive"
+                v-if="result.isBannerActive"
                 class="blink small-rounded-corner has-background-success has-text-white padding--left--sm padding--right--sm padding--top--xs padding--bottom--xs"
               >
                 Now
@@ -111,7 +111,7 @@
           </div>
           <!-- Content -->
           <div class="margin--sm">
-            <div v-for="(item, index) in result" :key="index">
+            <div v-for="(item, index) in result.events" :key="index">
               <div
                 class="sgds-card-variant-all-agenda-content margin--top--sm margin--left--xs margin--right--xs padding--sm has-text-dark"
               >
@@ -340,9 +340,14 @@ export default {
         (acc, curr) => {
           const date = curr.timeslot_metadata.start_time;
           if (!acc[date]) {
-            acc[date] = [];
+            acc[date] = { events: [], isBannerActive: false };
           }
-          acc[date].push(curr);
+
+          acc[date].events.push(curr);
+
+          if (curr.isActive) {
+            acc[date].isBannerActive = true;
+          }
           return acc;
         },
         {}

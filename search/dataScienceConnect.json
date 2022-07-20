@@ -40,7 +40,6 @@
                 "type" : "{{ document.type | default : "" }}",
                 "icon" : "{{- "/assets/icons/" | append: icons[category_pointer] | append: ".svg"| default : "/assets/icons/star.svg" -}}"
               },
-              "timeslot": "{{ document.timeslot | default : "" }}",
               "timeslot_metadata":{
                 "full_date": "{{- document.timeslot_metadata -}}",
                 "start_date": "{{- document.timeslot_metadata | split: " - " | first -}}",
