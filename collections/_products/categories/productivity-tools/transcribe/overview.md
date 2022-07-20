@@ -5,7 +5,7 @@ category: Digital Identity
 sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
-redirect from:
+redirect_from:
  - /product/categories/productivity-tools/transcribe/
  - /product/categories/productivity-tools/transcribe.html
 sgts_collection_group: [Data Science]
