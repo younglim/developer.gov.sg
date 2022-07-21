@@ -16,6 +16,8 @@ description: >
   Transcribe provides auto-transcription and localised Speech-to-Text services for Singapore government officers. Find out more here.
 ---
 
+![Transcribe header banner](/assets/img/Transcribe-HeaderBanner-v1.png)
+
 Transcribe is a Speech-to-Text (STT) platform with auto-transcription technologies and localised STT services across various speech models and data classification. Its Application Programming Interfaces (APIs) enable integration with other systems. 
 
 Transcribe can be used to produce transcripts of interviews, speeches and meeting minutes. Given the confidential nature of government documents, the platform is designed to be secure, yet easily accessible. Transcribe aims to improve the productivity of public officers with these unique offerings: 
