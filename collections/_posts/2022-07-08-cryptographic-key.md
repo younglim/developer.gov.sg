@@ -1,5 +1,5 @@
 ---
-title: Encryption Key
+title: Protecting Cryptographic Keys Used to Secure Data
 layout: layout-blog
 author: Alan Goh
 description: >
@@ -15,4 +15,12 @@ tags:
   - key management service
 ---
 
-Protect encryption key used to secure data
+Encryption is an important aspect of protecting data in the cloud using cryptographic keys. Data are encrypted at rest and decrypted for processing. Managing cryptographic keys is thus pivotal to securing the confidentiality and integrity of data in the cloud. 
+
+This article covers the securing of the key management lifecycle for cloud data protection and the risks and mitigations. 
+
+### Risks and Mitigations
+
+
+
+In the next series, we delve into examples of cryptographic technologies that we can leverage in the cloud to protect the cryptographic keys and, ultimately, protect our data encrypted with these keys. 
