@@ -15,7 +15,7 @@ tags:
   - key management service
 ---
 
-Encryption is an important aspect of protecting data in the cloud using cryptographic keys. Data are encrypted at rest and decrypted for processing. Managing cryptographic keys is thus pivotal to securing the confidentiality and integrity of data in the cloud. 
+Encryption is an important aspect of protecting data in the cloud using cryptographic keys. Data is encrypted at rest and decrypted for processing. Managing cryptographic keys is thus pivotal to securing the confidentiality and integrity of data in the cloud. 
 
 This article covers the securing of the key management lifecycle for cloud data protection and the risks and mitigations. 
 
@@ -25,4 +25,4 @@ This article covers the securing of the key management lifecycle for cloud data 
 
 ![cryptographic_key_risks_mitigations](/assets/img/cryptographic_key_risks_mitigations.png)
 
-In the next series, we delve into examples of cryptographic technologies that we can leverage in the cloud to protect the cryptographic keys and, ultimately, protect our data encrypted with these keys.
+In the next series, we delve into examples of cryptographic technologies that we can leverage in the cloud to protect the cryptographic keys and, ultimately, our data encrypted with these keys.
