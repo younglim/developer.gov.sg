@@ -19,11 +19,11 @@ Encryption is an important aspect of protecting data in the cloud using cryptogr
 
 This article covers the securing of the key management lifecycle for cloud data protection and the risks and mitigations. 
 
-### Typical Lifecycle of a Cryptographic Key
+### TYPICAL LIFECYCLE OF A CRYPTOGRAPHIC KEY
 
 ![cryptographic_key_lifecycle](/assets/img/cryptographic_key_lifecycle.png)
 
-### Risks and Mitigations
+### RISKS AND MITIGATIONS
 
 ![cryptographic_key_risks_mitigations](/assets/img/cryptographic_key_risks_mitigations.png)
 
