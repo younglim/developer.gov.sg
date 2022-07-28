@@ -28,6 +28,8 @@ module.exports = (env, argv) => {
       "back-to-the-top": "./apps/src/communities/back-to-the-top.js",
       "toggle-accordion": "./apps/src/communities/toggle-accordion.js",
       "vue-app-all-sessions": "./apps/src/pages/vue-app-all-sessions.js",
+      "vue-app-all-sessions-preview":
+        "./apps/src/pages/vue-app-all-sessions-preview.js",
       "main": "./apps/src/main.js",
     },
     output: {
@@ -84,7 +86,6 @@ module.exports = (env, argv) => {
       }),
     ],
     devtool: "source-map",
-
   };
 
   return config;
