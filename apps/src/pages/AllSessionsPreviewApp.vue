@@ -1,127 +1,110 @@
 <template>
   <div>
-    {{ option }}
-    <!-- Categorical Multi Select -->
-    <div>
-      <div class="margin--top">
-        <template v-for="(option, index) in pillCheckboxOptions.value">
-          <label
-            :key="index"
-            class="pilllist-item"
-            v-if="
-              filteredResult.categorySpecificToDay.includes(
-                option.category.type
-              )
-            "
-          >
-            <input
-              type="checkbox"
-              name="feature"
-              :value="option.category.type"
-              v-model="pillSelectedValues"
-            />
-            <span class="pilllist-label is-flex" style="align-items: center">
-              <img
-                :src="option.category.icon"
-                class="margin--bottom--none margin--left--none margin--right--sm"
-              />
-              {{ option.category.type }}
-              <span
-                class="pilllist-icon pilllist-icon--checkLight"
-                style="align-items: center"
-              >
-                <i
-                  class="sgds-icon sgds-icon-check margin--bottom--none is-size-7"
-                  role="img"
-                  aria-label="iconName"
-                ></i>
+    <table
+      :key="index"
+      class="margin--bottom--lg print-container"
+      v-for="(
+        daySpecifcResult, index
+      ) in filteredResult.groupedByTimingSearchResults"
+    >
+      <!-- Day -->
+      <thead>
+        <tr>
+          <th class="text--center" colspan="2">
+            <h2 class="margin--bottom--lg">Day: {{ daySpecifcResult.day }}</h2>
+          </th>
+        </tr>
+      </thead>
+      <!-- Categories -->
+      <div>
+        <div class="margin--top">
+          <template v-for="(option, index) in daySpecifcResult.categories">
+            <label :key="index" class="pilllist-item">
+              <span class="is-flex" style="align-items: center">
+                <img
+                  :src="option.category.icon"
+                  class="margin--bottom--none margin--left--none margin--right--sm"
+                />
+                <b class="is-size-8 margin--right--sm">
+                  {{ option.category.type }}
+                </b>
               </span>
-            </span>
-          </label>
-        </template>
+            </label>
+          </template>
+        </div>
       </div>
-    </div>
-    <!-- Results -->
-    <div class="margin--top">
-      <div
-        v-for="(result, key) of filteredResult.groupedFilteredSearchResult"
-        class="margin--bottom--sm"
-        :key="key"
-      >
-        <div class="is-borderless print-container">
-          <!-- Header -->
-          <div
-            style="border: 0px"
-            class="print-container-header sgds-accordion-header is-active"
-          >
-            <div class="is-flex" style="align-items: center">
-              <p
-                class="has-text-weight-semibold has-text-black margin--bottom--none margin--right--sm"
-              >
-                {{ key }}
-              </p>
-              <small
-                v-if="result.isBannerActive"
-                class="blink small-rounded-corner has-background-success has-text-white padding--left--sm padding--right--sm padding--top--xs padding--bottom--xs"
-              >
-                Now
-              </small>
-            </div>
-          </div>
-          <!-- Content -->
-          <div class="margin--sm print-container-body">
+      <div class="margin--top">
+        <div
+          :key="key"
+          class="margin--bottom--sm"
+          v-for="(result, key) of daySpecifcResult.events"
+        >
+          <div class="is-borderless">
+            <!-- Header -->
             <div
-              v-for="(item, index) in result.events"
-              :key="index"
-              class="print-container-body-item"
-              :class="{
-                'print-container-header': index == 0,
-              }"
+              class="sgds-accordion-header is-active print-inner-container"
+              style="border: 0px"
             >
+              <div class="is-flex" style="align-items: center">
+                <p
+                  class="has-text-weight-semibold has-text-black margin--bottom--none margin--right--sm"
+                >
+                  {{ result.time }}
+                </p>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="margin--sm">
               <div
-                class="sgds-card-variant-all-agenda-content margin--top--sm margin--left--xs margin--right--xs padding--sm has-text-dark"
+                v-for="(item, index) in result.events"
+                :key="index"
+                class="print-inner-container"
               >
-                <!-- Title and Icon-->
-                <div>
-                  <div class="is-flex" style="align-items: center">
-                    <img
-                      :src="item.category.icon"
-                      class="margin--right--sm margin--left--none margin--bottom--none margin--top--none"
-                    />
-                    <p
-                      class="is-size-5 has-text-weight-bold margin--bottom--xs"
-                    >
-                      {{ item.title }}
+                <div
+                  class="sgds-card-variant-all-agenda-content margin--top--sm margin--left--xs margin--right--xs padding--sm has-text-dark"
+                >
+                  <!-- Title and Icon-->
+                  <div>
+                    <div class="is-flex" style="align-items: center">
+                      <img
+                        :src="item.category.icon"
+                        class="margin--right--sm margin--left--none margin--bottom--none margin--top--none"
+                      />
+                      <p
+                        class="is-size-5 has-text-weight-bold margin--bottom--xs"
+                      >
+                        {{ item.title }}
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Time and category-->
+                  <small
+                    >{{ item.timeslot_metadata.start_time }} -
+                    {{ item.timeslot_metadata.end_time }} /
+                    {{ item.category.type }}
+                  </small>
+                  <!-- Description-->
+                  <div
+                    v-if="item.content"
+                    class="margin--top--sm margin--bottom--sm"
+                  >
+                    <small>{{ item.content }}</small>
+                  </div>
+                  <!-- Speakers -->
+                  <div v-for="(speaker, index) in item.speakers" :key="index">
+                    <p class="muted margin--bottom--none">
+                      <small v-if="Object.keys(speaker).length">
+                        {{ speaker.name }}, {{ speaker.title }}
+                      </small>
                     </p>
                   </div>
-                </div>
-                <!-- Time and category-->
-                <small
-                  >{{ item.timeslot_metadata.start_time }} -
-                  {{ item.timeslot_metadata.end_time }} /
-                  {{ item.category.type }}
-                </small>
-                <!-- Description-->
-                <div
-                  v-if="item.content"
-                  class="margin--top--sm margin--bottom--sm"
-                >
-                  <small>{{ item.content }}</small>
-                </div>
-                <!-- Speakers -->
-                <div v-for="(speaker, index) in item.speakers" :key="index">
-                  <p class="muted margin--bottom--none">
-                    <small v-if="Object.keys(speaker).length">
-                      {{ speaker.name }}, {{ speaker.title }}
-                    </small>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </table>
   </div>
 </template>
 
@@ -129,7 +112,7 @@
 import Card from "../lib/Card.vue";
 import Loader from "../lib/Loader.vue";
 import useLunrSearch from "../composables/useLunrSearch";
-import { computed, ref, watch, onMounted } from "@vue/composition-api";
+import { computed, watch } from "@vue/composition-api";
 
 export default {
   components: { Loader, Card },
@@ -140,92 +123,6 @@ export default {
     );
 
     const { jsonPath } = scriptElement.dataset;
-
-    // Inital rerender to true
-    const rerender = ref(true);
-    const categorySelectedValues = ref("");
-    const categoryOptions = ref([]);
-    const pillSelectedValues = ref([]);
-    const pillCheckboxOptions = ref([]);
-
-    // Functions
-    const clearAllFilters = () => {
-      const filteredSearchResult = searchResults.value.filter(item =>
-        item.timeslot_metadata.date.includes(categorySelectedValues.value)
-      );
-
-      // Get all the categories found within filteredSearchResult
-      const categories = new Set(
-        filteredSearchResult.map(item => item.category.type)
-      );
-
-      // Remove values in pillSelectedValues found in categories
-      pillSelectedValues.value = pillSelectedValues.value.filter(
-        item => !categories.has(item)
-      );
-    };
-
-    const initialiseCategoryValues = () => {
-      categoryOptions.value = computed(() => {
-        // Sort by date
-        const unfilteredSortedSearchResult = searchResults.value.sort(
-          (a, b) => {
-            const dateA = new Date(a.timeslot_metadata.start_date);
-            const dateB = new Date(b.timeslot_metadata.start_date);
-            return dateA - dateB;
-          }
-        );
-
-        // Get unique dates
-        const filteredSortedSearchResult = Array.from(
-          new Set(
-            unfilteredSortedSearchResult.map(item => {
-              return item.timeslot_metadata.date;
-            })
-          )
-        );
-
-        // Set the active item to the first item in the sorted filtered options
-        categorySelectedValues.value = filteredSortedSearchResult[0];
-
-        return filteredSortedSearchResult;
-      });
-    };
-
-    const initialisePillCheckboxValues = () => {
-      pillCheckboxOptions.value = computed(() => {
-        const unfilteredOptions = searchResults.value.map(item => {
-          return {
-            category: item.category,
-            timeslot_metadata: item.timeslot_metadata,
-          };
-        });
-
-        // Get distinct and unique values from unfileredOptions
-        // note, category is an array of objects, such as [{type: "category1"}, {icon: "/assets/icons/circle.svg"}]
-        const filteredOptions = unfilteredOptions
-          .reduce((acc, curr) => {
-            if (!acc.find(item => item.category.type === curr.category.type)) {
-              acc.push(curr);
-            }
-            return acc;
-          }, [])
-          .sort((a, b) => {
-            const dateA = new Date(a.timeslot_metadata.start_date);
-            const dateB = new Date(b.timeslot_metadata.start_date);
-            return dateA - dateB;
-          });
-
-        // Spread the filtered options into an array of strings
-        const stringFilteredOptions = filteredOptions.map(item => {
-          return item.category.type;
-        });
-
-        pillSelectedValues.value = stringFilteredOptions;
-
-        return filteredOptions;
-      });
-    };
 
     // Search
     const {
@@ -243,70 +140,52 @@ export default {
       lunrIndexFields: [],
     });
 
-    onMounted(() => {
-      initialiseCategoryValues();
-      initialisePillCheckboxValues();
-    });
-
-    watch(categorySelectedValues, function (newValue) {
-      categorySelectedValues.value = newValue;
-      rerender.value = true;
-    });
-
-    watch(pillSelectedValues, function (newValue) {
-      pillSelectedValues.value = newValue;
-      rerender.value = true;
-    });
-
     const filteredResult = computed(() => {
-      // Filter based on categoryOptions
-      const filteredSearchResult = searchResults.value.filter(item =>
-        item.timeslot_metadata.date.includes(categorySelectedValues.value)
-      );
-
-      // Filter based on pillSelectedValues, which is an array of strings against category.type
-      const filteredSearchResultByCategory = filteredSearchResult.filter(item =>
-        pillSelectedValues.value.includes(item.category.type)
-      );
-
-      // Add extra attribute to the filteredSearchResultByCategory, isActive, which is used to display whether the event is currently active or not
-      let iterations = filteredSearchResultByCategory.length;
-      const filteredSearchResultByCategoryWithActive =
-        filteredSearchResultByCategory.map(item => {
-          if (rerender.value) {
-            if (!isLoading.value && !--iterations) {
-              rerender.value = false;
-            }
-
-            const currentDate = new Date();
-            const startDate = new Date(item.timeslot_metadata.start_date);
-            const endDate = new Date(item.timeslot_metadata.end_date);
-
-            const isActive = currentDate >= startDate && currentDate <= endDate;
-            return {
-              ...item,
-              isActive,
-            };
-          } else {
-            return item;
+      // Gets all the categories found within filteredSearchResult and sort it
+      const categories = searchResults.value
+        .map(item => {
+          return {
+            category: item.category,
+            timeslot_metadata: item.timeslot_metadata,
+          };
+        })
+        .reduce((acc, curr) => {
+          if (!acc.find(item => item.category.type === curr.category.type)) {
+            acc.push(curr);
           }
-        });
-
-      // After filtering the data, next we will sort the data by date
-      const sortedFilteredSearchResult =
-        filteredSearchResultByCategoryWithActive.sort((a, b) => {
+          return acc;
+        }, [])
+        .sort((a, b) => {
           const dateA = new Date(a.timeslot_metadata.start_date);
           const dateB = new Date(b.timeslot_metadata.start_date);
-
           return dateA - dateB;
         });
 
-      // After sorting the data, aggregrate / group the data by the date
-      const groupedFilteredSearchResult = sortedFilteredSearchResult.reduce(
+      // Sorts everything by timing
+      const sortedFilteredSearchResult = searchResults.value.sort((a, b) => {
+        const dateA = new Date(a.timeslot_metadata.start_date);
+        const dateB = new Date(b.timeslot_metadata.start_date);
+
+        return dateA - dateB;
+      });
+
+      // Aggregrate the data by it's day
+      let index = 1;
+      const groupedByDaySearchResults = sortedFilteredSearchResult.reduce(
         (acc, curr) => {
-          const date = curr.timeslot_metadata.start_time;
+          const date = new Date(curr.timeslot_metadata.start_date).getDay();
           if (!acc[date]) {
-            acc[date] = { events: [], isBannerActive: false };
+            acc[date] = {
+              events: [],
+              day: index++,
+              categories: categories.filter(item => {
+                if (
+                  date === new Date(item.timeslot_metadata.start_date).getDay()
+                ) {
+                  return item.category;
+                }
+              }),
+            };
           }
 
           acc[date].events.push(curr);
@@ -315,30 +194,34 @@ export default {
         {}
       );
 
-      console.log(groupedFilteredSearchResult);
+      const groupedByTimingSearchResults = Object.values(
+        groupedByDaySearchResults
+      ).map(val => {
+        // Group by timing
+        const groupedByTiming = val.events.reduce((acc, curr) => {
+          const time = curr.timeslot_metadata.start_time;
+          if (!acc[time]) {
+            acc[time] = { events: [], time: time };
+          }
 
-      // Generate the categories that are unique to the categorySelectedValues.value using filteredSearchResult against pillCheckboxOptions
-      const categorySpecificToDay = filteredSearchResult
-        .map(item => {
-          return item.category.type;
-        })
-        .filter((item, index, array) => {
-          return array.indexOf(item) === index;
-        });
+          acc[time].events.push(curr);
+          return acc;
+        }, {});
+
+        return {
+          ...val,
+          events: Object.values(groupedByTiming),
+        };
+      });
+
+      console.log(groupedByTimingSearchResults);
 
       return {
-        filteredResult,
         sortedFilteredSearchResult,
-        groupedFilteredSearchResult,
-        categorySpecificToDay,
+        groupedByDaySearchResults,
+        groupedByTimingSearchResults,
       };
     });
-
-    // Every 20 seconds, set rerender to true, which will trigger the computed function to re-render the data
-    // this is because rerendering is expensive and shouldnt always be triggered
-    setInterval(() => {
-      rerender.value = true;
-    }, 20 * 1000);
 
     return {
       searchQuery,
@@ -347,11 +230,6 @@ export default {
       searchResults,
       errorMsg,
       filteredResult,
-      categorySelectedValues,
-      categoryOptions,
-      pillSelectedValues,
-      pillCheckboxOptions,
-      clearAllFilters,
     };
   },
 };
@@ -363,10 +241,20 @@ export default {
 }
 
 @media print {
-  /** If there the classes, print-container-header and print-container-body overflows, set break-inside to avoid  */
-  .print-container-header,
-  .print-container-body {
+  .print-container:not(:first-child) {
+    page-break-before: always;
+    margin-top: 5rem;
+  }
+
+  .print-inner-container {
     break-inside: avoid;
   }
 }
+
+@page {
+  size: A4;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 </style>

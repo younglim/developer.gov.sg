@@ -10,8 +10,18 @@ redirect_from:
 
 <style>
   @media print {
-    .pagebreak { page-break-before: always; } /* page-break-after works, as well */
+    @page {
+      size: A4; /* DIN A4 standard, Europe */
+      margin:0;
+    }
+
+    
+
+    .pagebreak {
+      page-break-before: always;
+    }
   }
+
 </style>
 
 <section class="sgds-section breadcrumb-title-section has-background-communities">
