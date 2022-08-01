@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table
+    <div
       :key="index"
       class="margin--bottom--lg print-container"
       v-for="(
@@ -8,13 +8,10 @@
       ) in filteredResult.groupedByTimingSearchResults"
     >
       <!-- Day -->
-      <thead>
-        <tr>
-          <th class="text--center" colspan="2">
-            <h2 class="margin--bottom--lg">Day: {{ daySpecifcResult.day }}</h2>
-          </th>
-        </tr>
-      </thead>
+      <h2 class="margin--bottom--lg">
+        Day:
+        {{ daySpecifcResult.day }}
+      </h2>
       <!-- Categories -->
       <div>
         <div class="margin--top">
@@ -104,7 +101,7 @@
           </div>
         </div>
       </div>
-    </table>
+    </div>
   </div>
 </template>
 
@@ -256,5 +253,4 @@ export default {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
 </style>
