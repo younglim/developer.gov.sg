@@ -15,7 +15,7 @@ bios:
     img_src: 1660198116032_daren-ng.png
     linkedin_url: https://www.linkedin.com/in/daren-ng-51b29537/
     
-    - name: Lam Shi Ling
+  - name: Lam Shi Ling
     title: Senior Software Engineer
     img_src: shi-ling-lam.png
     linkedin_url: https://www.linkedin.com/in/lamshiling/
@@ -34,12 +34,12 @@ bios:
     img_src: lijia-yang.png
     linkedin_url: https://www.linkedin.com/in/lijia-yang-b4b30088/
     
-    - name: Monika Gupta
+  - name: Monika Gupta
     title: Automation Engineer
     img_src: monika-gupta.png
     linkedin_url: https://www.linkedin.com/in/monikagu/
 
-    - name: Raymond Ng
+  - name: Raymond Ng
     title: Data Engineer
     img_src: raymond-ng.png
     linkedin_url: https://www.linkedin.com/in/raymond-n-45625224/ 
