@@ -42,8 +42,7 @@ bios:
     - name: Raymond Ng
     title: Data Engineer
     img_src: raymond-ng.png
-    linkedin_url: https://www.linkedin.com/in/raymond-n-45625224/
-    
+    linkedin_url: https://www.linkedin.com/in/raymond-n-45625224/ 
 ---
 
 ### Meet the team!
