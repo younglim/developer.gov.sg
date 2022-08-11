@@ -1,5 +1,5 @@
 ---
-title: Meet The Team of I<sub>2</sub>C
+title: Meet the Team of I<sub>2</sub>C
 mobile_title: Meet the Team
 layout: layout-page-sidenav
 category: Infrastructure and Hosting
