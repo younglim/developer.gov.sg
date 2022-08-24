@@ -8,7 +8,30 @@
     - Secure Infrastructure-as-Code
     - TechBiz
     - Transcribe
-
+ 
+- name: Business Efficiency Tools
+  description: Explore government products for businesses ranging from G2B services to open-source tech and more.
+  items:
+    - Overview
+    - Cloud File Transfer
+    - Corppass
+    - data.gov.sg
+    - GoBusiness
+    - identiface
+    - IRAS API Marketplace
+    - Land Transport Datamall
+    - Login
+    - MAS APIs
+    - Myinfo
+    - Myinfo Business
+    - OneMap APIs
+    - SingStat APIs
+    - SGFinDex
+    - Tourism Information and Services Hub
+    - TradeTrust
+    - URA APIs
+    - Verify
+    
 - name: Citizen-facing Products
   description: Explore the government products for providing citizens with the services they need. This includes citizen life journey, grant services, and more!
   items:
@@ -26,6 +49,7 @@
     - Login
     - MyInfo
     - Notarise
+    - OpenCerts
     - OurSG
     - Personal Alert Button
     - SafeEntry

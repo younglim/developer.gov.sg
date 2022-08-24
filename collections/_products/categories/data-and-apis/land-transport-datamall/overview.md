@@ -8,6 +8,7 @@ redirect_from:
     - /products/categories/data-and-apis/land-transport-datamall.html
 sub_collection_render: true
 single_level_nav: true
+collection_group: [Business Efficiency Tools]
 description: Land Transport DataMall contains land-transport-related datasets and APIs by LTA to promote public-private collaborations.
 ---
 

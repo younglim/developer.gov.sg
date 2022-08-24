@@ -8,6 +8,7 @@ redirect_from:
     - /products/categories/data-and-apis/iras-api-marketplace.html
 sub_collection_render: true
 single_level_nav: true
+collection_group: [Business Efficiency Tools]
 description: IRAS API Marketplace offers tax-related APIs, Q&As and a community platform for developers to co-create with IRAS.
 ---
 

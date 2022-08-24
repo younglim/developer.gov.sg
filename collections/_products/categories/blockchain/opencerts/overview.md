@@ -12,7 +12,7 @@ _data: single-level-nav
 sub_collection_render: true
 single_level_nav: true
 description: OpenCerts is a platform using blockchain to provide an easy and reliable way to issue and validate tamper-proof certificates.
-published: false
+collection_group: [Citizen-facing Products]
 ---
 
 ### Overview

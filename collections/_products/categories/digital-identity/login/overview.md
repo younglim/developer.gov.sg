@@ -13,7 +13,7 @@ redirect_from:
 sgts_collection_group: [digital_identity]
 sgts_layer_group: [services]
 sgts_title: Singpass Login
-collection_group: [Singapore Government Tech Stack, Citizen-facing Products]
+collection_group: [Singapore Government Tech Stack, Citizen-facing Products, Business Efficiency Tools]
 description: >
   Login is a password-less login method for users to access public and private sector digital services using the Singpass app.
 ---

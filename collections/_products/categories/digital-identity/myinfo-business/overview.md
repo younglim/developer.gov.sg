@@ -5,6 +5,7 @@ category: Digital Identity
 sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
+collection_group: [Business Efficiency Tools]
 redirect_from:
     - /products/categories/digital-identity/myinfo-business/
     - /products/categories/digital-identity/myinfo-business.html

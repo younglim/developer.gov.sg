@@ -10,6 +10,7 @@ redirect_from:
     - /technologies/data-and-apis/data-gov-sg.html
 sub_collection_render: true
 single_level_nav: true
+collection_group: [Business Efficiency Tools]
 description: data.gov.sg is a one-stop portal to publicly-available datasets from 70 public agencies.
 ---
 

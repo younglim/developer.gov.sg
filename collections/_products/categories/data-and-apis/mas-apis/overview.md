@@ -8,6 +8,7 @@ redirect_from:
     - /products/categories/data-and-apis/mas-apis.html
 sub_collection_render: true
 single_level_nav: true
+collection_group: [Business Efficiency Tools]
 description: >
   The Monetary Authority of Singapore (MAS) provides APIs for developers, allowing MAS’ applications to be streamlined.
 ---

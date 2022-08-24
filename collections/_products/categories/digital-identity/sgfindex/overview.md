@@ -5,7 +5,7 @@ category: Digital Identity
 sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
-collection_group: [Citizen-facing Products]
+collection_group: [Citizen-facing Products, Business Efficiency Tools]
 redirect_from:
     - /products/categories/digital-identity/sgfindex/
     - /products/categories/digital-identity/sgfindex.html
