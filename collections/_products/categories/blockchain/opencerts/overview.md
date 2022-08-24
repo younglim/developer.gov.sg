@@ -2,7 +2,6 @@
 title: OpenCerts - An Easy Way to Check and Verify Your Certificates
 layout: layout-page-sidenav
 category: Blockchain
-collection_group: [What's new]
 redirect_from:
     - /products/categories/blockchain/opencerts/
     - /products/categories/blockchain/opencerts.html
