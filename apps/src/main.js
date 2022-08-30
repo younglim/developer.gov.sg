@@ -171,6 +171,57 @@ $(function () {
     },
   });
 
+  //carousel
+  const carousel = new Swiper(".swiper-carousel", {
+    modules: [Pagination, Navigation],
+    // Optional parameters
+    observeSlideChildren: true,
+    loop: true,
+    roundLengths: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    centeredSlides: false,
+    allowTouchMove: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // breakpoints: {
+    //   // when window width is >= 768
+    //   320: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 8,
+    //     centeredSlides: true,
+    //   },
+    //   768: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 16,
+    //     loop: true,
+    //     centeredSlides: false,
+    //   },
+    //   // when window width is >= 1024
+    //   1215: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 32,
+    //     slidesPerGroup: 3,
+    //     loop: true,
+    //     centeredSlides: false,
+    //   },
+    // },
+  });
+
   //tippy
 
   tippy("[data-tooltip]", {
