@@ -2,7 +2,7 @@ import "./main.scss";
 import "sgds-govtech/js/sgds.js";
 
 // import Swiper JS
-import Swiper, { Pagination, Navigation } from "swiper";
+import Swiper, { Pagination, Navigation, Autoplay } from "swiper";
 // import Swiper styles
 import "swiper/css/bundle";
 
@@ -173,7 +173,7 @@ $(function () {
 
   //carousel
   const carousel = new Swiper(".swiper-carousel", {
-    modules: [Pagination, Navigation],
+    modules: [Pagination, Navigation, Autoplay],
     // Optional parameters
     observeSlideChildren: true,
     loop: true,
@@ -184,7 +184,7 @@ $(function () {
     centeredSlides: false,
     allowTouchMove: true,
     autoplay: {
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -197,29 +197,6 @@ $(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
-    // breakpoints: {
-    //   // when window width is >= 768
-    //   320: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 8,
-    //     centeredSlides: true,
-    //   },
-    //   768: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 16,
-    //     loop: true,
-    //     centeredSlides: false,
-    //   },
-    //   // when window width is >= 1024
-    //   1215: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 32,
-    //     slidesPerGroup: 3,
-    //     loop: true,
-    //     centeredSlides: false,
-    //   },
-    // },
   });
 
   //tippy
