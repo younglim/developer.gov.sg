@@ -17,12 +17,12 @@ describe("Home Page Carousel Test", function () {
     });
 
     it("Should it contain the carousel next and prev button", () => {
-      cy.get('.swiper-button-prev')
-      cy.get('.swiper-button-next')
+      cy.get('.swiper-button-prev1')
+      cy.get('.swiper-button-next1')
     });
 
     it("Should it contain the carousel pagination button", () => {
-      cy.get('.swiper-pagination')
+      cy.get('.swiper-pagination1')
     });
 
     it("Should it contain the one stop reource slide", () => {
@@ -30,13 +30,13 @@ describe("Home Page Carousel Test", function () {
     });
 
     it("Should it be able to navigate to next slide", () => {
-      cy.get('.swiper-button-next > img').click({
+      cy.get('.swiper-button-next1 > img').click({
             force: true,
       });
     });
 
     it("Should it be able to navigate to prev slide", () => {
-      cy.get('.swiper-button-prev > img').click({
+      cy.get('.swiper-button-prev1 > img').click({
             force: true,
       });
     });
@@ -57,12 +57,12 @@ describe("Home Page Carousel Test", function () {
     });
 
     it("Should it contain the carousel next and prev button", () => {
-      cy.get('.swiper-button-prev')
-      cy.get('.swiper-button-next')
+      cy.get('.swiper-button-prev1')
+      cy.get('.swiper-button-next1')
     });
 
     it("Should it contain the carousel pagination button", () => {
-      cy.get('.swiper-pagination')
+      cy.get('.swiper-pagination1')
     });
 
     it("Should it contain the one stop reource slide", () => {
@@ -70,13 +70,13 @@ describe("Home Page Carousel Test", function () {
     });
 
     it("Should it be able to navigate to next slide", () => {
-      cy.get('.swiper-button-next > img').click({
+      cy.get('.swiper-button-next1 > img').click({
             force: true,
       });
     });
 
     it("Should it be able to navigate to prev slide", () => {
-      cy.get('.swiper-button-prev > img').click({
+      cy.get('.swiper-button-prev1 > img').click({
             force: true,
       });
     });
