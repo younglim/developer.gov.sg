@@ -131,20 +131,20 @@ $(function () {
   });
   // END: annoucement banner
 
-  const swiper = new Swiper(".swiper2", {
+  const swiper = new Swiper(".swiper-explore", {
     modules: [Pagination, Navigation],
     // Optional parameters
     observeSlideChildren: true,
     loop: true,
     roundLengths: true,
     pagination: {
-      el: ".swiper-pagination2",
+      el: ".swiper-pagination-explore",
       type: "bullets",
     },
 
     navigation: {
-      nextEl: ".swiper-button-next2",
-      prevEl: ".swiper-button-prev2",
+      nextEl: ".swiper-button-next-explore",
+      prevEl: ".swiper-button-prev-explore",
     },
 
     breakpoints: {
@@ -172,7 +172,7 @@ $(function () {
   });
 
   //carousel
-  const carousel = new Swiper(".swiper1", {
+  const carousel = new Swiper(".swiper-hero", {
     modules: [Pagination, Navigation, Autoplay],
     // Optional parameters
     observeSlideChildren: true,
@@ -188,14 +188,14 @@ $(function () {
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination1",
+      el: ".swiper-pagination-hero",
       type: "bullets",
       clickable: true,
     },
 
     navigation: {
-      nextEl: ".swiper-button-next1",
-      prevEl: ".swiper-button-prev1",
+      nextEl: ".swiper-button-next-hero",
+      prevEl: ".swiper-button-prev-hero",
     },
   });
 
