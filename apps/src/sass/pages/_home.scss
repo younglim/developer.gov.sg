@@ -145,7 +145,7 @@ article {
       padding-top: 2rem !important;
     }
     @include until($tablet) {
-      padding-top: 0rem !important;
+      //padding-top: 0rem !important;
       padding: 3rem 1.5rem;
     }
   } 
