@@ -52,18 +52,19 @@ Vault has:
 
 - 4000+ unique users across 96 agencies
 
-- 1800+ dataset requests on the portal
-
+- served 1800+ dataset requests on the portal
 
 
 
 ### Getting Started
 
-Visit the [Verify portal](https://www.verify.gov.sg/){:target="_blank"} to start the process of verifying digital documents issued by Singapore Government entities.
+Public officers can access [Vault](https://vault.gov.sg){:target="_blank"} by using their work computers and logging in with their '.gov.sg' email. 
+No registration is required.
+
 
 ### Pricing
 
-Vault is free for public officers..
+Vault is free for public officers.
 
 ### Contact Us
 
