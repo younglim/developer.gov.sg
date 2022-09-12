@@ -3,13 +3,13 @@ title: Vault - A central data discovery and distribution platform for WOG
 layout: layout-page-sidenav
 category: Data and APIs
 redirect_from:
-    - /products/categories/data-and-apis/apex/vault/
-    - /products/categories/data-and-apis/apex.html
+    - /products/categories/data-and-apis/vault/
+    - /products/categories/data-and-apis/vault.html
 _data: single-level-nav
 sub_collection_render: true
 single_level_nav: true
 collection_group: [What's New]
-description: Vault is a platform where government data is consolidated, organised and made discoverable for public servants to explore, search and securely access..
+description: Vault is a platform where government data is consolidated, organised and made discoverable for public servants to explore, search and securely access.
 ---
 
 Vault was created by GovTech’s Open Government Products (OGP) to improve the efficiency of data discovery and sharing within the government. 
