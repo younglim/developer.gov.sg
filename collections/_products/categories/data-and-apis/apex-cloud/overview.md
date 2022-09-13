@@ -16,7 +16,7 @@ collection_group: [Singapore Government Tech Stack, What's New]
 sgts_collection_group: [communications]
 sgts_layer_group: [base]
 sgts_title: APEX Cloud
-description: APEX Cloud is a...
+description: APEX Cloud is an enhanced iteration of APEX on prem for centralised data sharing within the government. Find out more here!
 ---
 
 ![APEX header banner for the Singapore Government Developer Portal](/assets/img/APEX-HeaderBanner-v1.png)
