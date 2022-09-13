@@ -6,13 +6,8 @@ sub_collection_render: true
 single_level_nav: true
 _data: single-level-nav
 redirect_from:
-    - /singapore-government-tech-stack/communications/apex
-    - /products/categories/data-and-apis/apex/
-    - /products/categories/data-and-apis/apex.html
-    - /technologies/data-and-apis/apex/
-    - /technologies/data-and-apis/apex.html
-    - /products/categories/data-and-apis/apex/overview.html
     - /products/categories/data-and-apis/apex-cloud/overview.html
+    - /products/categories/data-and-apis/apex-cloud/overview
 collection_group: [Singapore Government Tech Stack, What's New]
 sgts_collection_group: [communications]
 sgts_layer_group: [base]
