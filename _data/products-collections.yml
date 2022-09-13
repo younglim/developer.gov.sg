@@ -2,6 +2,7 @@
   description: Discover the latest product additions to the Singapore Government Developer Portal here
   items:
     - Overview
+    - APEX Cloud
     - CloudSCAPE
     - MyMoneySense
     - Secure Infrastructure-as-Code
@@ -51,6 +52,7 @@
     - Overview
     - Asynchronous Data Exchange
     - APEX
+    - APEX Cloud
     - Cloud File Transfer
     - Container Stack
     - Corppass
