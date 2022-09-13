@@ -60,12 +60,6 @@ The Vault team is working on a completely revamped iteration of the platform - V
 The goal of Vault Workspace is to be the central repository for all types of data (Core, Non-Core, and Working), thereby replacing the need for agencies to build, commission or manage data infrastructure themselves. 
 
 
-### Getting Started
-
-Public officers can access [Vault](https://vault.gov.sg){:target="_blank"} by using their work computers and logging in with their '.gov.sg' email. 
-No registration is required.
-
-
 ### Pricing
 
 Vault is free for public officers.
