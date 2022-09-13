@@ -54,6 +54,11 @@
   items:
     - Overview
 
+- name: APEX Cloud
+  items:
+    - Overview
+    - Features
+
 - name: BookingSG
   items:
     - Overview
