@@ -21,3 +21,12 @@ By providing a centralised request and approval flow, workflows for data sharing
 
 ### Security measures to safeguard data
 
+Data owners can track each data request that comes in for their datasets. Moreover, even after approval, they can see the exact details of the requestor along with the agreed-upon expiration date of consuming the data, so that their data can be safeguarded and tracked back in the event of leaks. 
+
+### API support for advanced users 
+
+Vault also offers programmatic consumption of data for more advanced users. They can leverage Vault’s APIs to upload/download their data via the available endpoints. 
+
+### Vault Send mode for secure file sharing
+
+Vault Send is an alternate mode of simple data sharing on the platform. It allows public officers to send any file (for example, pdf/doc/csv formats etc.) via an end-to-end encrypted sharing link that automatically expires after a set period of time. 
