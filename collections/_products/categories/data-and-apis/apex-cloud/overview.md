@@ -21,7 +21,9 @@ description: APEX Cloud is a...
 
 ![APEX header banner for the Singapore Government Developer Portal](/assets/img/APEX-HeaderBanner-v1.png)
 
-APEX Cloud is a centralised data sharing portal for government agencies. It is an enhanced iteration of APEX on prem and is hosted on the [Government on Commercial Cloud](https://www.developer.tech.gov.sg/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/overview.html){:target="_blank"} to increase its scalability and the number of features/capabilities it can offer. APEX Cloud is currently in the pilot phase and will reach the General Availability (GA) phase in March/April 2023. Full migration of the workload from Apex on prem to APEX Cloud will be completed in Q1 of FY23
+APEX Cloud is a centralised data sharing portal for government agencies. It is an enhanced iteration of APEX on prem and is hosted on the [Government on Commercial Cloud](https://www.developer.tech.gov.sg/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/overview.html){:target="_blank"} to increase its scalability and the number of features/capabilities it can offer. 
+
+APEX Cloud is currently in the pilot phase and will reach the General Availability (GA) phase in March/April 2023. Full migration of the workload from [Apex on prem](https://www.developer.tech.gov.sg/products/categories/data-and-apis/apex/overview.html){:target="_blank"} to APEX Cloud will be completed in Q1 of FY23, after which APEX on prem will be decommissioned. 
 
 ### Key Features
 - API catalogue: A searchable library containing Whole-of-Government (WOG) APIs
