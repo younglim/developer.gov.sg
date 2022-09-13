@@ -1,7 +1,7 @@
 ---
 title: Vault Features
 layout: layout-page-sidenav
-description: Features of Vault.
+description: Features of Vault
 single_level_nav: true
 _data: single-level-nav
 ---
