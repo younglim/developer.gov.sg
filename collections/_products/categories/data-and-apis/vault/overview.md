@@ -55,7 +55,7 @@ Vault has:
 - served 1800+ dataset requests on the portal
 
 
-The Vault team is working on a completely revamped iteration of the platform - Vault Workspace, a managed database as a service - to solve the issue of large-scale data discovery, accessibility and management problems across the government. The initial scope of the prototype will be to optimise daily workflows for individual officers when it comes to data flows related to FormSG, Excel, Sharepoint, and email. 
+The Vault team is working on a completely revamped iteration of the platform – Vault Workspace, a managed database as a service — to solve the issue of large-scale data discovery, accessibility and management problems across the government. The initial scope of the prototype will be to optimise daily workflows for individual officers when it comes to data flows related to FormSG, Excel, Sharepoint, and email. 
 
 The goal of Vault Workspace is to be the central repository for all types of data (Core, Non-Core, and Working), thereby replacing the need for agencies to build, commission or manage data infrastructure themselves. 
 
