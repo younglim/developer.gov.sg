@@ -11,13 +11,13 @@ description: SearchSG is a Search-as-a-Service tech stack developed by GovTech t
 
 ![SearchSG banner](/assets/img/SearchSG-HeaderBanner-v1A.png)
 
-Powered by machine learning, SearchSG is a Search-as-a-Service tech stack developed by GovTech with the aim of making government information and services more easily findable and accessible for citizens. SearchSG also provides search insights to agencies to inform findability and content improvements through search analytics.
+Powered by machine learning, SearchSG is a Search-as-a-Service tech stack developed by GovTech with the aim of making government information and services more  accessible and easier for citizens to find. SearchSG also provides search insights to agencies to inform findability and content improvements through search analytics.
 
 As the population in Singapore becomes progressively digitally savvy and government agencies continue to deliver cutting-edge digital services, government information that is available online grows increasingly denser. SearchSG aspires to be the Whole-of-Government (WOG) search tool that aims to create the best experience in finding information in the government for its citizens and businesses.
 
 Compared to other search engines, SearchSG ensures that its search results will only show information from government sites. It provides a trustworthy platform for citizens to rely on, while at the same time providing better search results. 
 
-Additionally, SearchSG is bundled with a search analytics dashboard that captures both qualitative and quantitative search usage data for government agencies to review and act upon, such as emerging trends in search queries or content gaps on their websites.
+Additionally, SearchSG is bundled with a search analytics dashboard that captures both qualitative and quantitative usage data for government agencies to review and act upon, such as emerging trends in search queries or content gaps on their websites.
 
 Agency website administrators can easily deploy SearchSG and have a search tool ready on their website within 3 working days. All that is required is to insert 2 lines of code onto each website’s HTML. This saves time and effort to purchase and build a search engine tool on their site from scratch, as well as on future maintenance of the search tool.
 
