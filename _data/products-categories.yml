@@ -121,8 +121,8 @@
     - SNSP
     - SPOTON
 
-- name: Platform
-  description: Digital platform for citzens, agencies and businesses
+- name: Platforms
+  description: Digital platforms for citizens, agencies and businesses
   items:
     - Overview
     - GoBusiness
@@ -130,6 +130,7 @@
     - MyMoneySense
     - GovWallet
     - OurSG
+    - SearchSG
     - Virtual Intelligent Chat Assistant
 
 - name: Productivity Tools
