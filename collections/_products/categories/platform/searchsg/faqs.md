@@ -1,4 +1,4 @@
-
+---
 title: SearchSG FAQs
 layout: layout-page-sidenav
 description: SearchSG FAQs
