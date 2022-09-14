@@ -30,7 +30,7 @@ The key features of Vault include:
 - API support for advanced users
 - Vault Send mode to easily share any file securely
 
-### Benefits of Vault
+### Key Benefits
 
 - Centralisation of the entire approval flow process for data sharing and access 
 
