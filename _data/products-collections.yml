@@ -5,6 +5,7 @@
     - CloudSCAPE
     - MyMoneySense
     - Secure Infrastructure-as-Code
+    - SearchSG
     - Verify (Digital Certificates)
 
 - name: Citizen-facing Products
@@ -27,6 +28,7 @@
     - OurSG
     - Personal Alert Button
     - SafeEntry
+    - SearchSG
     - SGFinDex
     - Singpass
     - SmartGym
