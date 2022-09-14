@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 faqs:
   - name: What is the difference between web search engines and SearchSG?
-    description: >
+      description: >
       SearchSG is an enterprise search engine which bridges the experience for users by providing more succinct and accurate results, as compared to web search engines, by customising for Singapore Government content and context.
   - name: How much will it cost to onboard SearchSG?
     description: >
@@ -32,3 +32,4 @@ faqs:
 ---
 
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
+
