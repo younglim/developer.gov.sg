@@ -16,7 +16,7 @@ faqs:
       Onboarding is as simple as inserting 2 lines of our code into each agency’s website. Through collaboration and partnership, the SearchSG team will determine the best methods to meet each agency’s needs.
   - name: Our agency is using a specific Content Management System (CMS). Would SearchSG be compatible?
     description: >
-    The SearchSG team is currently working with various CMS but has yet to encounter issues. For exceptional situations, we will partner with your team to solve any problems.
+      The SearchSG team is currently working with various CMS but has yet to encounter issues. For exceptional situations, we will partner with your team to solve any problems.
   - name: Will I be able to customise SearchSG for my site?
     description: >
       Yes. SearchSG allows for multiple customisation options to cater for your agency’s needs. An admin portal will also be released in future for agencies to use self-service for customisation needs.
