@@ -11,17 +11,25 @@ faqs:
   - name: How much will it cost to onboard SearchSG?
     description: >
       SearchSG is currently free for all Singapore government agencies to use.
-  - name: I have successfully logged into CloudSCAPE with TechPass, but I am unable to view my CSP account(s).
+  - name: How difficult will it be to onboard SearchSG?
     description: >
-      Check with your Tenant Manager/Admin that you have been granted an eligible* GCC 2.0 User Role for the CSP account(s) that you would like to have access to.
-      <br /><br />
-      * All user roles, excluding “Tenant Billing Admin”, “Cloud Billing” & “Cloud AssumeRole” roles.
-  - name: I have a TechPass account but I did not onboard to SEED previously. How do I onboard to SEED now?
+      Onboarding is as simple as inserting 2 lines of our code into each agency’s website. through collaboration and partnership, the SearchSG team will determine, , the best methods to meet each agency’s needs.
+  - name: Our agency is using a specific Content Management System (CMS). Would SearchSG be compatible?
     description: >
-      You may follow the instructions <a href="https://docs.developer.tech.gov.sg/docs/security-suite-for-engineering-endpoint-devices/prerequisites-for-onboarding?id=seed-provisioning" target="_blank">here</a>
-  - name: I do not see my Microsoft Azure and Google Cloud Platform cloud accounts being listed in CloudSCAPE.
+    The SearchSG team is currently working with various CMS but has yet to encounter issues. For exceptional situations, we will partner with your team to solve any problems.
+  - name: Will I be able to customise SearchSG for my site?
     description: >
-      CloudSCAPE currently supports deployments on AWS only. Support for Microsoft Azure and Google Cloud Platform will be available in the future.
+      Yes. SearchSG allows for multiple customisation options to cater for your agency’s needs. An admin portal will also be released in future for agencies to use self-service for customisation needs.
+  - name: Is SearchSG available on the intranet?
+    description: >
+      SearchSG is hosted on Government on Commercial Cloud (GCC) and designed to be used for Internet content.
+  - name: Can we do site exclusions?
+    description: >
+      Yes, the SearchSG team can exclude certain URLs or sub-paths from your search results.
+  - name: What determines the page ranking and relevancy?
+    description: >
+      The SearchSG engine uses several parameters, such as date stamps for freshness of content and body text relevance to search query etc. Agencies can customise the parameters too. For more information, refer to the <a href="https://docs.developer.tech.gov.sg/docs/searchsg-onboarding-guide/customisation-search-filter" target="_blank">SearchSG onboarding guide</a>.
+   
 ---
 
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
