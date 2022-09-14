@@ -9,7 +9,7 @@ collection_group: [What's New]
 description: SearchSG is a Search-as-a-Service tech stack developed by GovTech that lets citizens discover and access government information and services more easily. Learn more!
 ---
 
-![SearchSG banner](/assets/img/I2C-HeaderBanner-v2.png)
+![SearchSG banner](/assets/img/SearchSG-HeaderBanner-v1A.png)
 
 Powered by machine learning, SearchSG is a Search-as-a-Service tech stack developed by GovTech with the aim of making government information and services more easily findable and accessible for citizens. SearchSG also provides search insights to agencies to inform findability and content improvements through search analytics.
 
