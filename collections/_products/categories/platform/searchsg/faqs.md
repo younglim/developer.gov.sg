@@ -28,7 +28,7 @@ faqs:
       Yes, the SearchSG team can exclude certain URLs or sub-paths from your search results.
   - name: What determines the page ranking and relevancy?
     description: >
-      The SearchSG engine uses several parameters, such as date stamps for freshness of content and body text relevance to search query etc. Agencies can customise the parameters too. For more information, refer to the <a href="https://docs.developer.tech.gov.sg/docs/searchsg-onboarding-guide/customisation-search-filter" target="_blank">SearchSG onboarding guide</a>.
+      The SearchSG engine uses several parameters, such as date stamps for freshness of content and body text relevance to search query etc. Agencies can customise the parameters too. For more information, refer to the <a href="https://docs.developer.tech.gov.sg/docs/searchsg-onboarding-guide/customisation-search-filter" target="_blank">SearchSG onboarding guide</a>
 ---
 
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
