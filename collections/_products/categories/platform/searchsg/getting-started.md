@@ -24,5 +24,5 @@ Add in another code snippet to demark where the search bar will be.
 
 This will allow SearchSG resources to be loaded on your page.
 
-
+<br />
 For more detailed onboarding or advanced customisation, refer to the SearchSG onboarding guide [here](https://docs.developer.tech.gov.sg/docs/searchsg-onboarding-guide/getting-started){:target="_blank"}. 
