@@ -255,7 +255,7 @@
     - Getting Started
     - Resources
 
-# Platform
+# Platforms
 - name: GoBusiness
   items:
     - Overview
@@ -276,6 +276,14 @@
     - Resources
 
 - name: OurSG
+  items:
+    - Overview
+    - Features
+    - Getting Started
+    - Resources
+    - FAQs
+
+- name: SearchSG
   items:
     - Overview
     - Features
