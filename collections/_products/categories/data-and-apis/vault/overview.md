@@ -1,5 +1,5 @@
 ---
-title: Vault - A central data discovery and distribution platform for WOG
+title: Vault - A Central Data Discovery and Distribution Platform for WOG
 layout: layout-page-sidenav
 category: Data and APIs
 redirect_from:
@@ -20,6 +20,11 @@ Open to all Singaporean public service officers with a valid gov.sg email acco
 
 Public service officers can therefore use Vault to discover and share government data securely.
 
+The Vault team is working on a completely revamped iteration of the platform – Vault Workspace, a managed database as a service — to solve the issue of large-scale data discovery, accessibility and management problems across the government. The initial scope of the prototype will be to optimise daily workflows for individual officers when it comes to data flows related to FormSG, Excel, Sharepoint, and email. 
+
+The goal of Vault Workspace is to be the central repository for all types of data (Core, Non-Core, and Working), thereby replacing the need for agencies to build, commission or manage data infrastructure themselves. 
+
+
 ### Key Features
 
 The key features of Vault include:
@@ -32,19 +37,13 @@ The key features of Vault include:
 
 ### Key Benefits
 
-- Centralisation of the entire approval flow process for data sharing and access 
+- With centralisation of the entire approval flow process for data sharing and access, public officers no longer need to understand differing approval processes and address layers of justification.
 
-  Public officers no longer need to understand differing approval processes and address layers of justification.
-
-- Removal of barriers to data discovery and accessibility
-
-  As a single platform, Vault allows public officers to discover data across agencies and understand what each dataset contains.
+- Removal of barriers to data discovery and accessibility, allowing public officers to discover data across agencies and understand what each dataset contains.
   
-- Multiple ways to securely consume data
+- Multiple ways to securely consume data, including programmatically via API, temporarily via Vault Send, or directly via the portal. 
 
-  Public officers can also tap onto different ways of consuming data on Vault, be it programmatically via API, temporarily via Vault Send, or directly via the portal.
-
-## Statistics
+## Use Case
 
 Vault has: 
 
@@ -55,10 +54,11 @@ Vault has:
 - served 1800+ dataset requests on the portal
 
 
-The Vault team is working on a completely revamped iteration of the platform – Vault Workspace, a managed database as a service — to solve the issue of large-scale data discovery, accessibility and management problems across the government. The initial scope of the prototype will be to optimise daily workflows for individual officers when it comes to data flows related to FormSG, Excel, Sharepoint, and email. 
+## Getting Started
 
-The goal of Vault Workspace is to be the central repository for all types of data (Core, Non-Core, and Working), thereby replacing the need for agencies to build, commission or manage data infrastructure themselves. 
+Public officers can access [Vault](https://vault.gov.sg){:target="_blank"} by using their work computers and logging in with their '.gov.sg' email. 
 
+No registration is required.
 
 ### Pricing
 
