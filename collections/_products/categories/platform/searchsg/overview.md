@@ -5,7 +5,7 @@ category: Infrastructure and Hosting
 _data: single-level-nav
 sub_collection_render: true
 single_level_nav: true
-collection_group: [What's New]
+collection_group: [What's New, Citizen-facing Products]
 description: SearchSG is a Search-as-a-Service tech stack developed by GovTech that lets citizens discover and access government information and services more easily. Learn more!
 ---
 
