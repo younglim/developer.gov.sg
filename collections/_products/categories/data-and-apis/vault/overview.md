@@ -51,7 +51,7 @@ Vault has:
 
 - 4000+ unique users across 96 agencies
 
-- served 1800+ dataset requests on the portal
+- Served 1800+ dataset requests on the portal
 
 
 ## Getting Started
