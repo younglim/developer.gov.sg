@@ -32,4 +32,3 @@ faqs:
 ---
 
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
-
