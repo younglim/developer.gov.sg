@@ -1,5 +1,5 @@
 ---
-title: Notarise - A Platform for Officials to Issue and Verify Digital Travel Documents
+title: Notarise - A Platform to Issue and Verify Digital Travel Documents
 category: Digital Solutions to Address COVID-19
 redirect_from:
     - /products/categories/digital-solutions-to-address-covid-19/notarise/
