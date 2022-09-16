@@ -1,5 +1,5 @@
 ---
-title: SearchSG – Machine Learning-powered Search-as-a-Service Tool for Enhanced Accessibility and Discoverability of WOG Content
+title: SearchSG – Machine Learning-powered Search-as-a-Service Tool for WOG Content
 layout: layout-page-sidenav
 category: Infrastructure and Hosting
 _data: single-level-nav
