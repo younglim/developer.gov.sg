@@ -4,9 +4,11 @@
     - Overview
     - CloudSCAPE
     - MyMoneySense
+    - Notify
     - Secure Infrastructure-as-Code
     - SearchSG
     - Verify (Digital Certificates)
+    - Vault
 
 - name: Citizen-facing Products
   description: Explore the government products for providing citizens with the services they need. This includes citizen life journey, grant services, and more!
@@ -25,6 +27,7 @@
     - Login
     - MyInfo
     - Notarise
+    - Notify
     - OurSG
     - Personal Alert Button
     - SafeEntry
@@ -71,9 +74,3 @@
     - VAS
     - Verify
     - WOGAA
-
-- name: What's New
-  description: Discover the latest product additions to the Singapore Government Developer Portal here
-  items:
-    - Overview
-    - Notify
