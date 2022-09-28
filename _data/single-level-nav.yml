@@ -93,6 +93,13 @@
   items:
     - Overview
 
+- name: RedactKit
+  items:
+    - Overview
+    - Features
+    - Resources
+    - Meet The Team
+    
 - name: SingStat APIs
   items:
     - Overview

@@ -3,6 +3,9 @@ title: 'I<sub>2</sub>C {{Infra to Code}} - Manage and Maintain Cloud Resources P
 layout: layout-page-sidenav
 category: Infrastructure and Hosting
 _data: single-level-nav
+redirect_from:
+    - /products/categories/infrastructure-and-hosting/i2c-infra-to-code/
+    - /products/categories/infrastructure-and-hosting/i2c-infra-to-code.html
 sub_collection_render: true
 single_level_nav: true
 collection_group: [What's New]
