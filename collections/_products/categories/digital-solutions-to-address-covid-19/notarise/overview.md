@@ -13,7 +13,7 @@ description: Notarise allows government agencies to authenticate and endorse Hea
 
 ![Notαrise header banner](/assets/img/1656558410111_notarise-HeaderBanner.png)
 
-Notαrise is a platform that allows residents’ [HealthCerts](https://www.developer.tech.gov.sg/products/categories/digital-solutions-to-address-covid-19/healthcerts/overview.html){:target="_blank"} to be authenticated and endorsed by Singapore’s [Ministry of Health (MOH)](https://www.moh.gov.sg/){:target="_balnk"}. The endorsed HealthCerts, such as the Pre-Departure Test (PDT), Vaccination and Recovery certificates, can then be readily verified by immigration authorities through Notαrise to ensure safe travel in accordance with COVID-19 safety measures. 
+Notαrise is a platform that allows residents’ [HealthCerts](https://www.developer.tech.gov.sg/products/categories/digital-solutions-to-address-covid-19/healthcerts/overview.html){:target="_blank"} to be authenticated and endorsed by Singapore’s [Ministry of Health (MOH)](https://www.moh.gov.sg/){:target="_blank"}. The endorsed HealthCerts, such as the Pre-Departure Test (PDT), Vaccination and Recovery certificates, can then be readily verified by immigration authorities through Notαrise to ensure safe travel in accordance with COVID-19 safety measures. 
 
 ### Key Features
 
