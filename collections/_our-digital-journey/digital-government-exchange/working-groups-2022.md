@@ -2,7 +2,7 @@
 title: Working Groups 2022
 layout: layout-page-sidenav
 description: >
-  Download our 2022 Digital Government Exchange reports on topics covering Artificial Intelligence, Digital Identity and Cybersecurity now!
+  Download our 2022 Digital Government Exchange reports on topics covering Artificial Intelligence, Digital Identity, and Cybersecurity now!
 ---
 
 ### Overview
