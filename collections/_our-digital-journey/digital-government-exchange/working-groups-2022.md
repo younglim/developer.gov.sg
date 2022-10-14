@@ -26,6 +26,6 @@ Looked at how Verifiable Credentials (VCs) were being utilised by member countri
 
 Summarised insights from several months of discussions on governments’ and the industry’s roles in Zero Trust, approaches that governments adopt to incorporate Zero Trust practices to their respective environments, and additional cybersecurity techniques to complement a Zero Trust architecture.
 
-- Download the Cybersecurity WG Update on Zero Trust through this [link](files/DGX Working Group_Cybersecurity.pdf){:target="_blank"}
+- Download the Cybersecurity WG's Update on Zero Trust through this [link](files/DGX Working Group_Cybersecurity.pdf){:target="_blank"}
 
 Feel free to contact us at <tmo@tech.gov.sg> for more information.
