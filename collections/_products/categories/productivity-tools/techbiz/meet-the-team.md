@@ -48,6 +48,11 @@ bios:
 ### Meet the team!
 {%- include meet-the-team-app.html bios=page.bios -%}
 
-Lam Shi Ling
-Hans Tjipto Febrianto
-
+- Lam Shi Ling, Senior Software Engineer
+- Hans Tjipto Febrianto, Software Engineer
+- Yang Lijia, Software Engineer
+- Monika Gupta, Automation Engineer
+- Raymond Ng, Data Engineer
+- Daren Ng, Senior UX Designer
+- Liang Tai Tey, UX Designer
+- Denise Collard, Senior Product Manager
