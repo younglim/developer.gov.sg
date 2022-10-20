@@ -1,7 +1,7 @@
 ---
-title: What are OpenAttestation's Features?
+title: OpenAttestation Features
 layout: layout-page-sidenav
-description: Learn more about OpenAttestation's product features and its benefits to government agencies and businesses
+description: Features of OpenAttestation
 single_level_nav: true
 _data: single-level-nav
 ---
