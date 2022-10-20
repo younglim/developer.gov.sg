@@ -15,5 +15,5 @@ _data: single-level-nav
 -	[OpenAttestation in the Digital Public Goods Registry](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"}
 
 ### Gallery
-- [OpenAttestation Gallery](https://digitalpublicgoods.net/registry/openattestation.html](https://gallery.openattestation.com/)){:target="\_blank"}
+- [OpenAttestation Gallery](https://gallery.openattestation.com/){:target="\_blank"}
 
