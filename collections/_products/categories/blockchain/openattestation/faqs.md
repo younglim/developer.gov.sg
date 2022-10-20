@@ -5,12 +5,12 @@ description: OpenAttestation FAQs
 single_level_nav: true
 _data: single-level-nav
 faqs:
-  - name: Will current market technologies be interoperable with TradeTrust?
+  - name: How can I have an estimate of the costs involved in using the Ethereum smart contracts for OpenAttestation? 
     description: >
-      TradeTrust’s digital utility will be interoperable with most digital solutions/platforms via standardised API calls, simplifying technical integrations.
-  - name: What is the role of the Government in TradeTrust’s network?
+      You can refer to the <a href="https://www.openattestation.com/docs/docs-section/appendix/contract-costs/" target="_blank">OpenAttestation Contract Costs page</a> for a breakdown of the estimates.
+  - name: What is Gas for OpenAttestation transactions on the Ethereum network? 
     description: >
-      The Government helps with legal recognition, establishing mutual G2G acknowledgements and industry engagements (collating feedback from industry partners, co-development of standards, pilot trials).
+      For more information on Gas and Gas Prices, check out <a href="https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas" target="_blank">this article</a>.
   - name: What is the role of industry partners in TradeTrust’s network?
     description: >
       Support and concurrence from industry partners across the supply chain is needed as trading transactions involves multiple stakeholders. 
