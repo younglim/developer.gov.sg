@@ -36,6 +36,14 @@ OpenAttestation’s key features include:
 - Decentralised rendering
 - Verification of Issuer’s Identity
 
+
+<figure style="text-align: center">
+  <img
+    src="/assets/img/TradeTrust_Table-v1.png" width="100%" height="100%"
+  />
+	  <figcaption>Fig 1: Key Features of TradeTrust</figcaption>
+</figure>
+
 ### Pricing
 
 TradeTrust is open sourced and free to use under the Apache License, click [here](https://github.com/TradeTrust){:target="\_blank"} to download TradeTrust's open source code. 
