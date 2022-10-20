@@ -8,13 +8,12 @@ _data: single-level-nav
 
 To use OpenAttestation, follow these steps:
 
-1. Visit the [OpenAttestation website](https://www.openattesation.com){:target="\_blank"}
+1. Visit the [OpenAttestation website](https://www.openattestation.com/){:target="\_blank"}.
 
 2. Follow the instructions on the ‘Introduction’ page.
 
 3. Explore the ‘Document integrity’, ‘Issuance Status’ and ‘Issuance Identity’ pages to understand the different properties of the framework.
 
-Visit the OpenAttestation gallery for samples.
+Visit the [OpenAttestation gallery](https://gallery.openattestation.com){:target="\_blank"} for samples.
 
-For more information, check out how OpenAttestation works and how to get started. 
-
+For more information, check out this [introduction to how OpenAttestation works](https://www.openattestation.com/docs/docs-section/introduction/){:target="\_blank"}.
