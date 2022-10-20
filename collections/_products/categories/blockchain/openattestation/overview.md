@@ -52,6 +52,12 @@ Most recently, OpenAttestation was leveraged for the issuance of HealthCerts. He
 
 The private sector has also applied the OpenAttestation framework internationally, for purposes such as the issuance of academic certificates and a pilot project that helps farmers deliver sustainable cashmere.
 
+<figure style="text-align: center">
+  <img
+    src="/assets/img/openattestation-product-examples.png" width="100%" height="100%"
+  />
+	  <figcaption>Fig 2: Products built using OpenAttestation</figcaption>
+</figure>
 
 ### Contact Us
 
