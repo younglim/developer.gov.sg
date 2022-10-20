@@ -2,6 +2,9 @@
 title: OpenAttestation - Endorse and Verify Documents on the Blockchain Securely and Seamlessly
 layout: layout-page-sidenav
 category: Blockchain
+redirect_from:
+    - /products/categories/blockchain/openattestation/
+    - /products/categories/data-and-apis/openattestation.html
 _data: single-level-nav
 sub_collection_render: true
 single_level_nav: true
