@@ -44,9 +44,14 @@ OpenAttestation’s key features include:
 	  <figcaption>Fig 1: Key Features of OpenAttestation</figcaption>
 </figure>
 
-### Pricing
+### Use Cases
 
-TradeTrust is open sourced and free to use under the Apache License, click [here](https://github.com/TradeTrust){:target="\_blank"} to download TradeTrust's open source code. 
+OpenCerts was the first project that leveraged the OpenAttestation framework to provide a convenient way for educational institutions to issue academic certificates, and for students to share with prospective employees.
+
+Most recently, OpenAttestation was leveraged for the issuance of HealthCerts. HealthCerts is a set of digital standards and schema for issuing digital COVID-19 certificates that are in line with international standards and the Singapore Government’s requirements.
+
+The private sector has also applied the OpenAttestation framework internationally, for purposes such as the issuance of academic certificates and a pilot project that helps farmers deliver sustainable cashmere.
+
 
 ### Contact Us
 
