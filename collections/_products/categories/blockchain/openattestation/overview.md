@@ -14,12 +14,15 @@ OpenAttestation, part of Singapore’s Smart Nation initiative, is an open-sourc
 
 Created by GovTech’s Government Digital Services (GDS), OpenAttestation allows an entity to prove the existence and authenticity of a digital document. It makes use of smart contracts on the Ethereum blockchain to store cryptographic proof of individual documents. 
 
-Key Components of TradeTrust include:
+Alternatively, it can also be used to create verifiable documents using digital signatures, forgoing the need to pay for Ethereum transactions. Verifiable documents (or verifiable credentials) are tamper-resistant and provide proof of who issued them. They are the electronic equivalent of physical documents that we possess today - such as passports, driving licenses, qualifications, awards and so forth.
 
-- **Legal Harmonisation**: It provides legal validity across various countries’ jurisdictions 
-- **Standards Development**: It establishes internationally accepted standards to facilitate interoperability
--	**Accreditation Structure**: It provides internationally accepted rules and policies to ensure technical solutions meet the requirements of the law
--	**Open-Source Software**: It has open-source codes and leverages Distributed Ledger Technology (DLT) that allows users to integrate backend solutions to the public TradeTrust blockchain network easily.
+The OpenAttestation framework can help you to:
+
+- **Ensure document integrity**: OpenAttestation ensures that the content of the document has not been modified since the document’s creation, with the exception of data omitted using the built-in mechanism. 
+- **Check issuance status**: OpenAttestation checks that the document has been issued and that its issuance status is in good standing, i.e. it hasn't been revoked, for example. Currently, OpenAttestation supports two ways to issue documents: Decentralised Identifier (DID) Signing and Ethereum Smart Contracts.
+-	**Check issuance identity**: OpenAttestation checks and returns the identity of the issuer through DNS primarily. It verifies that the issuing party in the document has provided some sort of proof that it is the same party as claimed by, for example, proving ownership over a domain by the ability to create a DNS record.
+
+Technically, OpenAttestation is a decentralised database with no single point of failure, such as a central database going down. Verifications also take place on the client browser without the need for backend integration.
 
 Visit [https://www.tradetrust.io](https://www.tradetrust.io){:target="\_blank"} for more information.
 
