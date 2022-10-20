@@ -6,7 +6,6 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-
 ### Verifiable credentials
 This feature ensures that the content of a document has not been modified since its creation (except in the event of data omission via the built-in obfuscation mechanism). This is done by wrapping a document through the creation of a data key and signature object.    
 
