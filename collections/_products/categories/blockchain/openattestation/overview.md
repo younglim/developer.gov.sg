@@ -39,9 +39,9 @@ OpenAttestation’s key features include:
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/TradeTrust_Table-v1.png" width="100%" height="100%"
+    src="/assets/img/openattestation-features.png" width="100%" height="100%"
   />
-	  <figcaption>Fig 1: Key Features of TradeTrust</figcaption>
+	  <figcaption>Fig 1: Key Features of OpenAttestation</figcaption>
 </figure>
 
 ### Pricing
