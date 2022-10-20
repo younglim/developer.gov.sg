@@ -54,7 +54,7 @@ The private sector has also applied the OpenAttestation framework internationall
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/openattestation-product-examples.png" width="100%" height="100%"
+    src="/assets/img/openattestation-product-examples.png" width="90%" height="90%"
   />
 	  <figcaption>Fig 2: Products built using OpenAttestation</figcaption>
 </figure>
