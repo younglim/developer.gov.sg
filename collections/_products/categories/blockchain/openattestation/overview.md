@@ -24,14 +24,17 @@ The OpenAttestation framework can help you to:
 
 Technically, OpenAttestation is a decentralised database with no single point of failure, such as a central database going down. Verifications also take place on the client browser without the need for backend integration.
 
-Visit [https://www.tradetrust.io](https://www.tradetrust.io){:target="\_blank"} for more information.
+OpenAttestation has been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} by the Digital Public Goods Alliance (DPGA). The DPAG is an initiative jointly supported by the current co-hosting entities, the Norwegian Agency for Development Cooperation (Norad), UNDP, and UNICEF.
+
 
 ### Key Features
 
-The core tech of TradeTrust comprises of two features:
+OpenAttestation’s key features include:
 
-- Verifiable documents
-- Transferable documents
+- Verifiable credentials
+- Selective Disclosure
+- Decentralised rendering
+- Verification of Issuer’s Identity
 
 ### Pricing
 
