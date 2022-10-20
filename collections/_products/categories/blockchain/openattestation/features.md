@@ -5,8 +5,9 @@ description: Features of OpenAttestation
 single_level_nav: true
 _data: single-level-nav
 ---
+
 ### Verifiable credentials
-This feature ensures that the content of a document has not been modified since its creation (except in the event of data omission via the built-in obfuscation mechanism). This is done by wrapping a document through the creation of a data key and signature object.    
+This feature ensures that the content of a document has not been modified since its creation (except in the event of data omission via the built-in obfuscation mechanism). This is done by wrapping a document through the creation of a data key and signature object.
 
 ### Selective Disclosure
 OpenAttestation users can control what data to share, based on the obfuscation mechanism in place. This can be used to generate a new document containing a subset of the original data and which still allows the recipient to prove the provenance of the document.
@@ -21,3 +22,4 @@ The verification process primarily seeks to address these questions:
 - Has the document been tampered with?
 - Is the issuance state of the document valid?
 - Is the document issuer’s identity valid?
+
