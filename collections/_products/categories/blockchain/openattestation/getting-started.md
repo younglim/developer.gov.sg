@@ -10,7 +10,7 @@ To use OpenAttestation, follow these steps:
 
 1. Visit the [OpenAttestation website](https://www.openattestation.com/){:target="\_blank"}.
 
-2. Follow the instructions on the ‘Introduction’ page.
+2. Click on the 'Docs' section and follow the instructions on the ‘Introduction’ page.
 
 3. Explore the ‘Document integrity’, ‘Issuance Status’ and ‘Issuance Identity’ pages to understand the different properties of the framework.
 
