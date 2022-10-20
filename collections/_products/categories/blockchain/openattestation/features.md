@@ -23,4 +23,3 @@ The verification process primarily seeks to address these questions:
 - Has the document been tampered with?
 - Is the issuance state of the document valid?
 - Is the document issuer’s identity valid?
-
