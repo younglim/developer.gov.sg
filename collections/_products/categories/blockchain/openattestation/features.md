@@ -19,3 +19,8 @@ OpenAttestation users can make changes to the codebase without any time lag, imp
 ### Verification of Issuer’s Identity
 The issuers can be identified against the DNS text records, which can be regarded as “the phonebook for the Internet”. The DNS system is a key part of the infrastructure and a decentralised system, which means a lower barrier to entry and no single point of failure.
 
+The verification process primarily seeks to address these questions:
+- Has the document been tampered with?
+- Is the issuance state of the document valid?
+- Is the document issuer’s identity valid?
+
