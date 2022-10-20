@@ -8,7 +8,7 @@ single_level_nav: true
 description: OpenAttestation is an open-source framework for verifiable documents and transferable records on the blockchain. Find out more.
 ---
 
-![TradeTrust header banner](/assets/img/OpenAttestation-HeaderBanner-v2.png)
+![OpenAttestation header banner](/assets/img/OpenAttestation-HeaderBanner-v2.png)
 
 OpenAttestation, part of Singapore’s Smart Nation initiative, is an open-source framework to simplify the endorsement and verification of documents using the blockchain. 
 
@@ -46,9 +46,9 @@ OpenAttestation’s key features include:
 
 ### Use Cases
 
-OpenCerts was the first project that leveraged the OpenAttestation framework to provide a convenient way for educational institutions to issue academic certificates, and for students to share with prospective employees.
+[OpenCerts](https://www.developer.tech.gov.sg/products/categories/blockchain/opencerts/overview.html){:target="\_blank"} was the first project that leveraged the OpenAttestation framework to provide a convenient way for educational institutions to issue academic certificates, and for students to share with prospective employees.
 
-Most recently, OpenAttestation was leveraged for the issuance of HealthCerts. HealthCerts is a set of digital standards and schema for issuing digital COVID-19 certificates that are in line with international standards and the Singapore Government’s requirements.
+Most recently, OpenAttestation was leveraged for the issuance of [HealthCert](https://www.healthcerts.gov.sg){:target="\_blank"}. HealthCerts is a set of digital standards and schema for issuing digital COVID-19 certificates that are in line with international standards and the Singapore Government’s requirements.
 
 The private sector has also applied the OpenAttestation framework internationally, for purposes such as the issuance of academic certificates and a pilot project that helps farmers deliver sustainable cashmere.
 
