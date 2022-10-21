@@ -38,16 +38,16 @@ OpenAttestation has been listed in the [Digital Public Goods registry](https://d
 OpenAttestation’s key features include:
 
 - Verifiable credentials
-- Selective Disclosure
+- Selective disclosure
 - Decentralised rendering
-- Verification of Issuer’s Identity
+- Verification of issuer’s identity
 
 
 <figure style="text-align: center">
   <img
     src="/assets/img/openattestation-features.png" width="100%" height="100%"
   />
-	  <figcaption>Fig 1: Key Features of OpenAttestation</figcaption>
+	  <figcaption>Fig 1: Key Features of OpenAttestation.</figcaption>
 </figure>
 
 ### Use Cases
@@ -62,8 +62,12 @@ The private sector has also applied the OpenAttestation framework internationall
   <img
     src="/assets/img/openattestation-product-examples.png" width="90%" height="90%"
   />
-	  <figcaption>Fig 2: Products built using OpenAttestation</figcaption>
+	  <figcaption>Fig 2: Products built using OpenAttestation.</figcaption>
 </figure>
+
+### Pricing
+
+OpenAttestation is an open source software that is free to use. Check out the [OpenAttestation listing](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} in the Digital Public Goods Registry.
 
 ### Contact Us
 
