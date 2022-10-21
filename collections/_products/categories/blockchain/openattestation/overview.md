@@ -28,7 +28,9 @@ The OpenAttestation framework can help you to:
 
 Technically, OpenAttestation is a decentralised database with no single point of failure, such as a central database going down. Verifications also take place on the client browser without the need for backend integration.
 
-OpenAttestation has been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} by the Digital Public Goods Alliance (DPGA). The DPAG is an initiative jointly supported by the current co-hosting entities, the Norwegian Agency for Development Cooperation (Norad), UNDP, and UNICEF.
+#Digital Public Good
+
+OpenAttestation has been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} by the [Digital Public Goods Alliance (DPGA)](https://digitalpublicgoods.net/who-we-are/){:target="\_blank"}. DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
 
 
 ### Key Features
@@ -50,9 +52,9 @@ OpenAttestation’s key features include:
 
 ### Use Cases
 
-[OpenCerts](https://www.developer.tech.gov.sg/products/categories/blockchain/opencerts/overview.html){:target="\_blank"} was the first project that leveraged the OpenAttestation framework to provide a convenient way for educational institutions to issue academic certificates, and for students to share with prospective employees.
+[OpenCerts](https://www.developer.tech.gov.sg/products/categories/blockchain/opencerts/overview.html){:target="\_blank"} was the first project that leveraged the OpenAttestation framework to provide a convenient way for educational institutions to issue academic certificates, and for students to share with prospective employers.
 
-Most recently, OpenAttestation was leveraged for the issuance of [HealthCert](https://www.healthcerts.gov.sg){:target="\_blank"}. HealthCerts is a set of digital standards and schema for issuing digital COVID-19 certificates that are in line with international standards and the Singapore Government’s requirements.
+Most recently, OpenAttestation was leveraged for the issuance of [HealthCerts](https://www.healthcerts.gov.sg){:target="\_blank"}. HealthCerts is a set of digital standards and schema for issuing digital COVID-19 certificates that are in line with international standards and the Singapore Government’s requirements.
 
 The private sector has also applied the OpenAttestation framework internationally, for purposes such as the issuance of academic certificates and a pilot project that helps farmers deliver sustainable cashmere.
 
