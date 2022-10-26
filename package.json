@@ -67,6 +67,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "@developer-portal/route-radar": "^1.0.5",
     "@vue/composition-api": "^1.4.6",
     "js-yaml": "^4.1.0",
     "swiper": "^8.1.6",

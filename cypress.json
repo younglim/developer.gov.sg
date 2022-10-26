@@ -1,9 +1,0 @@
-{
-  "projectId": "zmz8dj",
-  "baseUrl": "http://localhost:8000/",
-  "chromeWebSecurity": false,
-  "retries": {
-    "runMode": 5,
-    "openMode": 5
-  }
-}

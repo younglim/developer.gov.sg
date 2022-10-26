@@ -1,0 +1,30 @@
+---
+---
+
+{
+  "pages": [
+    {%- for document in site.documents -%}
+      {
+        "title": "{{ document.title | remove: '"' }}",
+        "category": "{{ document.category }}",
+        "content": {{ document.content | strip_html | strip_newlines | strip | jsonify }},
+        "url": "{{ document.url }}",
+        "directory": "{{ document.url | replace: '/index', '' | replace: '/overview', '' | replace: '.html', '' | replace: '/', ' > ' | remove_first: " > " | capitalise }}",
+        "meta": "document",
+        {%- if document.url contains '/products/'-%}
+          "sub_collection": "products"
+        {%- elsif document.url contains '/events/'-%}
+          "sub_collection": "events"
+        {%- elsif document.url contains '/communities/'-%}
+          "sub_collection": "communities"
+        {%- elsif document.url contains '/guidelines/'-%}
+          "sub_collection": "guidelines"
+        {%- else -%}
+          "sub_collection": "others"
+        {%- endif -%}
+      }
+
+      {%-if forloop.last == false -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}

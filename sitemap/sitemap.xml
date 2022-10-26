@@ -1,0 +1,23 @@
+---
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign basePath = 'https://www.developer.tech.gov.sg' -%}
+{%- for page in site.pages -%}
+    {%- if page.name contains '.html' %}
+        {%- unless page.url contains '/search' or page.url contains '404.html' -%}
+          {
+            "title": "{{ page.title | remove: '"' }}",
+            "category": "{{ page.category }}",
+            "content": {{ page.content | strip_html | strip_newlines | strip | jsonify }},
+            "url": "{{ page.url }}",
+            "directory": "{{ page.url | replace: '/index.html', '' | replace: '/index.md', '' | replace: '/', '>' | remove_first: ">"}}",
+            "meta": "page"
+        },
+
+        {%- endunless -%}
+        {%- if forloop.last -%}{%- endif -%}
+    {%- endif -%}
+{%- endfor -%}
+</urlset>
