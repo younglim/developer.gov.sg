@@ -67,7 +67,7 @@ The private sector has also applied the OpenAttestation framework internationall
 
 ### Pricing
 
-OpenAttestation is an open source framework that is free to use. Check out the [OpenAttestation listing](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} in the Digital Public Goods Registry.
+OpenAttestation is an open-source framework that is free to use. Check out the [OpenAttestation listing](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} in the Digital Public Goods Registry.
 
 ### Contact Us
 
