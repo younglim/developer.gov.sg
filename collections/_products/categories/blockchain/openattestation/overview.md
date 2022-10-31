@@ -28,7 +28,7 @@ The OpenAttestation framework can help you to:
 
 Technically, OpenAttestation is a decentralised database with no single point of failure, such as a central database going down. Verifications also take place on the client browser without the need for backend integration.
 
-### Accolades and Awards
+### Awards and Recognition
 
 OpenAttestation has been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} by the [Digital Public Goods Alliance (DPGA)](https://digitalpublicgoods.net/who-we-are/){:target="\_blank"}. DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
 
@@ -67,7 +67,7 @@ The private sector has also applied the OpenAttestation framework internationall
 
 ### Pricing
 
-OpenAttestation is an open source software that is free to use. Check out the [OpenAttestation listing](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} in the Digital Public Goods Registry.
+OpenAttestation is an open source framework that is free to use. Check out the [OpenAttestation listing](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} in the Digital Public Goods Registry.
 
 ### Contact Us
 
