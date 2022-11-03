@@ -30,6 +30,7 @@
   description: Distributed ledger technologies that enable the usage of decentralised, tamper-proof records
   items:
     - Overview
+    - OpenAttestation
     - OpenCerts
     - TradeTrust
 
@@ -53,7 +54,7 @@
     - APEX
     - BookingSG
     - Cloud File Transfer
-    - data.gov.sg
+    - Data.gov.sg
     - IRAS API Marketplace
     - Land Transport Datamall
     - MAS APIs
@@ -139,5 +140,6 @@
     - Overview
     - Asset Management System
     - GatherSG
+    - RedeemSG
     - TechBiz
     - Transcribe

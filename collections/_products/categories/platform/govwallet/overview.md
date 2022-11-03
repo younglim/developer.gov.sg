@@ -80,7 +80,7 @@ bios:
   - name: Raphael Tan, Software Engineer
     img_src: supplyally-raphael.png
     desc: |
-      Raphael likes to work on stuff that have applicable benefits for others and himself
+      Raphael likes to work on stuff that have applicable benefits for others and himself.
 
   - name: Yee Sheng Jie, Quality Engineer
     img_src: supplyally-shengjie.png
@@ -150,5 +150,5 @@ The GovWallet team is embarking on the journey to build a self-service portal fo
       </p>
     </div>
   </div>
-  {% endfor %}
+  {% endfor %}  
 </div>

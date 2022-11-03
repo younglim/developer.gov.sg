@@ -22,12 +22,11 @@ module.exports = (env, argv) => {
         "./apps/src/search/vue-search-app-all-events.js",
       "vue-search-app-all-event-videos":
         "./apps/src/search/vue-search-app-all-event-videos.js",
-      "community-overview": "./apps/src/communities/community-overview.js",
-      "conferences-webinars-sort":
-        "./apps/src/communities/conferences-webinars-sort.js",
+      "community-events": "./apps/src/communities/community-events.js",
       "layout-page-sidenav-calendar":
         "./apps/src/communities/layout-page-sidenav-calendar.js",
       "back-to-the-top": "./apps/src/communities/back-to-the-top.js",
+      "meet-the-team": "./apps/src/communities/meet-the-team.js",
       "toggle-accordion": "./apps/src/communities/toggle-accordion.js",
       "vue-app-all-sessions": "./apps/src/pages/vue-app-all-sessions.js",
       "main": "./apps/src/main.js",
@@ -86,7 +85,6 @@ module.exports = (env, argv) => {
       }),
     ],
     devtool: "source-map",
-
   };
 
   return config;

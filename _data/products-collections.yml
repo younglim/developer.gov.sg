@@ -3,11 +3,20 @@
   items:
     - Overview
     - CloudSCAPE
+    - Data.gov.sg
+    - Government on Commercial Cloud
+    - OpenAttestation
+    - I2C {{Infra to Code}}
     - MyMoneySense
+    - Notarise
     - Notify
+    - RedeemSG
     - Secure Infrastructure-as-Code
-    - Verify (Digital Certificates)
+    - Singpass
+    - TechBiz
+    - Transcribe
     - Vault
+    - Verify
 
 - name: Citizen-facing Products
   description: Explore the government products for providing citizens with the services they need. This includes citizen life journey, grant services, and more!
@@ -15,6 +24,7 @@
     - Overview
     - BookingSG
     - COVID-19 Chatbots
+    - Data.gov.sg
     - eCanvas
     - ePad
     - GovWallet
@@ -29,6 +39,7 @@
     - Notify
     - OurSG
     - Personal Alert Button
+    - RedeemSG
     - SafeEntry
     - SGFinDex
     - Singpass
@@ -55,9 +66,12 @@
     - Asynchronous Data Exchange
     - APEX
     - Cloud File Transfer
+    - CloudSCAPE
     - Container Stack
     - Corppass
     - DECADA IoT Tech Stack
+    - Government on Commercial Cloud
+    - GovWallet
     - Identiface
     - Login
     - Myinfo
@@ -69,6 +83,6 @@
     - StackOps
     - TechBiz
     - Transcribe
-    - VAS
     - Verify
+    - Video Analytics System
     - WOGAA

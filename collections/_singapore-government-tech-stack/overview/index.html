@@ -27,7 +27,6 @@ sgts_base_layer:
   monitoring:
     planned:
       - Gov Cyber Sec Ops Centre
-      - Cloudscape
     work_in_progress:
       - Endpoint Det & Res
   runtime:
@@ -155,7 +154,6 @@ sgts_base_layer:
         </div>
       </div>
       <!-- Start of cards for each base-->
-      <!-- Start of each card for base layer-->
       <div class="row">
         <div class="col">
           <div class="card-grid-container sg-tech-stack">
@@ -165,7 +163,7 @@ sgts_base_layer:
           </div>
         </div>
       </div>
-      <!-- End of each card for base layer-->
+      <!-- End of cards for each base-->
       <!-- Start of service managment-->
       <div class="row">
         <div class="col">
@@ -192,7 +190,10 @@ sgts_base_layer:
             <div class="col width"><p class="has-text-weight-bold">On premise</p></div>
           </div>
           <div class="col is-2-desktop is-paddingless host-box sub-host-rows is-flex">
-            <div class="col width"><p class="has-text-weight-bold">Gov on Commercial Cloud</p></div>
+            <div class="col width">
+              <!--category should be sgts_collection_group, header is equal to sgts_title, layer is equal to sgts_layer_group-->
+              {% include sgts-host-layer-items.html category="infrastructure_and_hosting" header="Gov on Commercial Cloud" layer="host" %}
+            </div>
           </div>
           <div class="is-paddingless is-marginless is-hidden-desktop title-col">
               <p class="has-text-weight-bold">WoG Services</p>

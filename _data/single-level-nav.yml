@@ -16,6 +16,14 @@
     - Overview
 
 # Blockchain
+- name: OpenAttestation
+  items:
+    - Overview
+    - Features
+    - Getting Started
+    - Resources
+    - FAQs
+
 - name: Opencerts
   items:
     - Overview
@@ -65,9 +73,11 @@
     - Getting Started
     - Resources
 
-- name: data.gov.sg
+- name: Data.gov.sg
   items:
     - Overview
+    - Features
+    - Meet The Team
 
 - name: Enterprise Data Hub
   items:
@@ -109,7 +119,7 @@
   items:
     - Overview
     - Features
-
+    
 # Design
 - name: Singapore Government Design System
   items:
@@ -170,6 +180,12 @@
 - name: Singpass
   items:
     - Overview
+    - Features
+    - Pricing
+    - Getting Started
+    - Resources
+    - FAQs
+    - Meet The Team
 
 - name: TechPass
   items:
@@ -244,6 +260,9 @@
 - name: Government on Commercial Cloud
   items:
     - Overview
+    - Features
+    - Getting Started
+    - Resources 
     
 - name: 'I2C (Infra to Code)'
   items:
@@ -300,6 +319,14 @@
 - name: GatherSG
   items:
     - Overview
+
+- name: RedeemSG
+  items:
+    - Overview
+    - Features
+    - Getting Started
+    - Resources
+    - FAQs
 
 - name: TechBiz
   items:
