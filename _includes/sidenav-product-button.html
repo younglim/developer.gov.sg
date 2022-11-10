@@ -6,11 +6,11 @@
   {% if current_folder_name == folder_name %}
     {% if item.product_homepage_links and include.mobile == false %}
       <li>
-        <button id="dynamic-product-homepage-button" class="sgds-button is-secondary margin--top--xs is-hidden-touch product-login-button" onclick="window.open('{{ item.product_homepage_links }}', '_blank')" >Login</button>
+        <button id="dynamic-product-homepage-button" class="sgds-button is-secondary sgds-hero-buttons is-hidden-touch product-login-button" onclick="window.open('{{ item.product_homepage_links }}', '_blank')" >Login</button>
       </li>
     {%- endif -%}
     {% if item.product_homepage_links and include.mobile == true %}
-      <button id="dynamic-product-homepage-button" class="sgds-button is-secondary margin--top--sm is-hidden-desktop product-login-button" onclick="window.open('{{ item.product_homepage_links }}', '_blank')" >Login</button>
+      <button id="dynamic-product-homepage-button" class="sgds-button is-secondary sgds-hero-buttons is-hidden-desktop product-login-button" onclick="window.open('{{ item.product_homepage_links }}', '_blank')" >Login</button>
   {%- endif -%}
   {%- endif -%}  
 {% endfor %} 
