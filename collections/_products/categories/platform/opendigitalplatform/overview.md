@@ -15,6 +15,14 @@ description: The Open Digital Platform (ODP) by GovTech and JTC integrates smart
 The award-winning Open Digital Platform (ODP) is a key component in the digital infrastructure underpinning Singapore’s Smart Nation ambitions.
 
 ODP is a joint development between GovTech and JTC, and will power JTC’s Punggol Digital District (PDD) when it open progressively from 2024.
+
+<figure style="text-align: center">
+  <img
+    src="/assets/img/odp-punggol-digital-district.jpg" width="80%" height="80%"
+  />
+	  <figcaption>Fig 1: Master planned and developed by JTC, PDD will be Singapore’s first smart district. Photo credit: JTC.</figcaption>
+</figure>
+
 Built on the [Singapore Government Tech Stack (SGTS)](https://www.developer.tech.gov.sg/singapore-government-tech-stack/overview/index.html){:target="_blank"}, the ODP is designed to integrate various smart city solutions including:
 
 - facilities, building and estate management systems
