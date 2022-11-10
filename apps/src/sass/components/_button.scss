@@ -27,6 +27,8 @@
 }
 
 .product-login-button {
+  border-style: none !important;
+  justify-content: center !important;
   @media screen and (min-width: 1024px) {
     width: 100%;
   }
