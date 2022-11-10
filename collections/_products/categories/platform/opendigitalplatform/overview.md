@@ -24,7 +24,7 @@ ODP is a joint development between GovTech and JTC, and will power JTC’s Pungg
 </figure>
 
 
-
+###
 Built on the [Singapore Government Tech Stack (SGTS)](https://www.developer.tech.gov.sg/singapore-government-tech-stack/overview/index.html){:target="_blank"}, the ODP is designed to integrate various smart city solutions including:
 
 - facilities, building and estate management systems
@@ -48,20 +48,32 @@ The ODP will be a key enabler in delivering seamless convenience for citizens, b
 
 ### Key Features
 
-- Consolidated financial dashboard
-- Financial planning tools
-- Financial literacy resources
+The ODP’s key features include:
 
+- Communication with different smart city technologies
+- Digital Twin of PDD
+- Interoperability with Smart Nation Sensor Platform (SNSP)
+- Integration of building systems and building services
+- Real-time monitoring of district and facility systems and operations
+- Data ingestion, transformation, and analytics
+
+### Use Case
+
+Leveraging the potential of the ODP, the centralisation of district operations is estimated to halve the demand for manpower for facilities operations and management, and to progressively reduce the consumption of energy and water resources in PDD by as much as 30% when compared to the national average.
+
+There are plans to integrate more building systems into the ODP, including pneumatic waste conveyancing, district cooling and smart energy grid systems, extra-low voltage public address system (ELV-PA), and fire alarm and protection systems. Eventually, AI and machine learning solutions will be introduced to control building systems such as air-conditioning and mechanical ventilation (ACMV) and elevator systems, to optimise energy usage, increase cost savings and improve quality of life of occupants. There are also plans to implement a robotics traffic management system to facilitate the flow of autonomous robot traffic across ODP-enabled estates.
+
+The ODP has been on trial at the JTC Summit building since January 2022,  and will be expanding to the PDD in 2024. GovTech is also exploring further development of the platform to scale it up as our Smart Facilities Management (FM) solution within the Singapore Government, for agencies looking at such solutions.
+
+### Awards and Recognition
+
+The ODP won the category of Outstanding Smart City Project for Urban Planning and Land Use at the IDC Smart City Asia/Pacific Awards (SCAPA) in 2021.
 
 ### Getting Started
 
-1. Visit [MyMoneySense](https://www.mymoneysense.gov.sg){:target="_blank"}.
-2. Log in with Singpass to access the portal and set up your personal dashboard.
-
-### Pricing
-
-MyMoneySense is free to use for Singapore citizens.
+For onboarding information about ODP, please send in your request through this [form](https://form.gov.sg/62280856ba91100012050933){:target="_blank"}.
 
 ### Contact Us
 
 {% include contact-us-form.html %}
+
