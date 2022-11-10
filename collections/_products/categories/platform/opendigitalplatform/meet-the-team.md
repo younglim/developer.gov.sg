@@ -11,16 +11,12 @@ bios:
     img_src: james-tan-chee-kiang.png
     linkedin_url: https://www.linkedin.com/in/tan-james-941041a2/
 
-  - name: Chia Jiangyun
-    title: Cloud Infrastructure Engineer
-    img_src: chia-jiangyun-full.png
-    linkedin_url: https://www.linkedin.com/in/jiangyun-chia-0473394/
+  - name: Edmund Tan Boon Tat
+    title: Deputy Director
+    img_src: edmund-tan.png
+    linkedin_url: https://www.linkedin.com/in/eoslightbox
 
-  - name: Sam Loh
-    title: Associate DevOps Engineer
-    img_src: sam-loh-full.png
-    linkedin_url: https://www.linkedin.com/in/sam-loh-326832142/
-    
+
     
 ---
 
