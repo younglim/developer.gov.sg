@@ -34,7 +34,7 @@ Built on the [Singapore Government Tech Stack (SGTS)](https://www.developer.tech
 - access and security systems
 - carpark systems
 - traffic lights systems
-- autonomous vehicles in PDD.
+- autonomous vehicles in PDD
 
 
 The ODP is envisaged as the bedrock of day-to-day life in our Smart Nation, centralising various smart city solutions in a single district management system. It will facilitate the digitalisation and centralisation of district operations to:
