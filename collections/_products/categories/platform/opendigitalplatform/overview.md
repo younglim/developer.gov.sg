@@ -23,6 +23,8 @@ ODP is a joint development between GovTech and JTC, and will power JTC’s Pungg
 	  <figcaption>Fig 1: Master planned and developed by JTC, PDD will be Singapore’s first smart district. Photo credit: JTC.</figcaption>
 </figure>
 
+
+
 Built on the [Singapore Government Tech Stack (SGTS)](https://www.developer.tech.gov.sg/singapore-government-tech-stack/overview/index.html){:target="_blank"}, the ODP is designed to integrate various smart city solutions including:
 
 - facilities, building and estate management systems
