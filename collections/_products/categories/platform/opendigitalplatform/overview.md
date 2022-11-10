@@ -67,7 +67,7 @@ The ODP has been on trial at the JTC Summit building since January 2022,  and wi
 
 ### Awards and Recognition
 
-The ODP won the category of Outstanding Smart City Project for Urban Planning and Land Use at the IDC Smart City Asia/Pacific Awards (SCAPA) in 2021.
+The ODP won the category of Outstanding Smart City Project for Urban Planning and Land Use at the [IDC Smart City Asia/Pacific Awards (SCAPA) in 2021](https://www.idc.com/getdoc.jsp?containerId=prAP47682421){:target="_blank"}.
 
 ### Getting Started
 
