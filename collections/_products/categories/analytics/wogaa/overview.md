@@ -18,7 +18,6 @@ collection_group: [Singapore Government Tech Stack]
 description: >
   WOGAA is an analytics & performance platform for public officers to monitor the health of their government websites and optimise the performance of
   their digital services with data.
-product_homepage_links: https://wogaa.sg/login
 ---
 
 ### Overview
