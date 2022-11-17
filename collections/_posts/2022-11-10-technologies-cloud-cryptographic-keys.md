@@ -3,7 +3,7 @@ title: Technologies in Cloud to Protect Cryptographic Keys
 layout: layout-blog
 author: Alan Goh
 description: >
-  Cryptographic key management lifecycle
+  Key Management System (KMS) technologies which are integral to protecting data confidentiality and integrity on Cloud
 
 tags:
   - cryptographic key
