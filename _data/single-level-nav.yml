@@ -211,6 +211,9 @@
 - name: GoWhere Suite
   items:
     - Overview
+    - Features
+    - Getting Started
+    - Resources
 
 - name: HealthCerts
   items:
