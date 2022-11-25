@@ -36,6 +36,6 @@ To use SupportGoWhere:
   <img
     src="/assets/img/GoWhere-Support-Recommender.png" width="40%" height="40%"
   />
-	  <figcaption>Fig 2: The SupportGoWhere landing page.</figcaption>
+	  <figcaption>Fig 2: The Support Recommender on the SupportGoWhere page.</figcaption>
 </figure>
 
