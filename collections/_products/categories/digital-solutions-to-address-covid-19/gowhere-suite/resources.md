@@ -12,4 +12,4 @@ _data: single-level-nav
 
 ### Media coverage
 
-- [Challenge Magazine: Making GoWhere The Go-To Resource Platform](https://www.psd.gov.sg/challenge/covid-19/stories/finding-new-ways/making-gowhere-the-go-to-resource-platform){:target="_blank"}
+- [Challenge article: Making GoWhere The Go-To Resource Platform](https://www.psd.gov.sg/challenge/covid-19/stories/finding-new-ways/making-gowhere-the-go-to-resource-platform){:target="_blank"}
