@@ -14,20 +14,22 @@ collection_group: [Citizen-facing Products]
 description: Notarise allows government agencies to authenticate and endorse HealthCerts for safe travel. Learn from Singapore’s model here.
 ---
 
-The GoWhere Suite is a ground-up initiative by GovTech’s Government Digital Services (GDS). GoWhere was created in Feb 2020 in response to the COVID-19 pandemic and addresses the need for a rapid and reliable source of information. 
+![Notαrise header banner](/assets/img/1656558410111_notarise-HeaderBanner.png)
+
+The [GoWhere Suite](https://www.gowhere.gov.sg){:target="_blank"} is a ground-up initiative by GovTech’s Government Digital Services (GDS). GoWhere was created in Feb 2020 in response to the COVID-19 pandemic and addresses the need for a rapid and reliable source of information. 
 It also supports location/eligibility-based information queries/discoveries, functions as an inclusive mass media channel and provides OpsTech integration to support Government distribution operations. 
 
 The GoWhere Suite currently exists as a mini-stack featuring various government portals and has been used in 16 Government initiatives, garnering a total of 39 million website visits (as of Jun 2022).
 
 The GoWhere Suite serves two key functions:
 
-1. Provides authenticated COVID-19-related information quickly 
+1. **Provides authenticated COVID-19-related information quickly** 
 
 The COVID-19 pandemic was volatile and rapidly evolving between 2020 and 2022. This meant that the guidelines and measures in response to the pandemic were also constantly being updated. Furthermore, the extensive impact of COVID-19 necessitated response measures that cut across many Government agencies. 
 
 As a result, individuals and businesses found it difficult to keep up with the latest information, and it was taxing for them to gather information from multiple agencies. As a one-stop resource hub for all COVID-19-related information, GoWhere Directory facilitates citizens and businesses to access rapid and reliable information during the pandemic.
 
-2. Provides location information of distribution sites 
+2. **Provides location information of distribution sites**
 
 The pandemic also necessitated unprecedented nationwide distribution efforts. GoWhere’s suite of websites, such as ARTGoWhere and TokenGoWhere, facilitated these nationwide distribution efforts using location-based information queries/discoveries.
 
@@ -35,14 +37,14 @@ The pandemic also necessitated unprecedented nationwide distribution efforts. Go
 
 The GoWhere Suite consists of the following websites, developed by GovTech in collaboration with government agencies:
 
-- GoWhere Directory
-- SupportGoWhere
-- TokenGoWhere
-- PosterGoWhere
-- ARTGoWhere
-- FluGoWhere
-- CDCVouchersMerchantsGoWhere
-- MaskGoWhere
+- [GoWhere Directory](https://www.gowhere.gov.sg){:target="_blank"}
+- [SupportGoWhere](https://supportgowhere.life.gov.sg){:target="_blank"}
+- [TokenGoWhere](https://token.gowhere.gov.sg){:target="_blank"}
+- [PosterGoWhere](https://poster.gowhere.gov.sg){:target="_blank"}
+- [ARTGoWhere](https://www.gowhere.gov.sg/art){:target="_blank"}
+- [FluGoWhere](https://flu.gowhere.gov.sg){:target="_blank"}
+- [CDCVouchersMerchantsGoWhere](https://www.gowhere.gov.sg/cdcvouchersmerchants){:target="_blank"}
+- [MaskGoWhere](https://mask.gowhere.gov.sg){:target="_blank"}
 
 Beyond the Covid-19 pandemic, plans are in place for GoWhere Suite to continue providing up-to-date official information to Singapore residents.
 
