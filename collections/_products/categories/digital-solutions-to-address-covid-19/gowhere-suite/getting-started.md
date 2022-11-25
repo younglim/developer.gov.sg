@@ -22,21 +22,19 @@ To use SupportGoWhere:
 
 2. Select the category most relevant to you.
 
-
-<figure style="text-align: center">
-  <img
-    src="/assets/img/GoWhere-SupportGoWhere.png" width="40%" height="40%"
-  />
-	  <figcaption>Fig 2: The SupportGoWhere landing page.</figcaption>
-</figure>
-
+  <figure style="text-align: center">
+    <img
+      src="/assets/img/GoWhere-SupportGoWhere.png" width="40%" height="40%"
+    />
+	    <figcaption>Fig 1: The SupportGoWhere landing page.</figcaption>
+  </figure>
 
 3. You can also use the self-help Support Recommender on the SupportGoWhere page for more information on eligible schemes and services.
 
-<figure style="text-align: center">
-  <img
-    src="/assets/img/GoWhere-Support-Recommender.png" width="40%" height="40%"
-  />
-	  <figcaption>Fig 2: The Support Recommender on the SupportGoWhere page.</figcaption>
-</figure>
+  <figure style="text-align: center">
+    <img
+      src="/assets/img/GoWhere-Support-Recommender.png" width="40%" height="40%"
+    />
+	    <figcaption>Fig 2: The Support Recommender on the SupportGoWhere page.</figcaption>
+  </figure>
 
