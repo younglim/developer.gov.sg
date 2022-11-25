@@ -15,7 +15,7 @@ To use The GoWhere Directory:
 3. The GoWhere Suite will lead you to the relevant resources.
 
 
-
+<br/>
 To use SupportGoWhere:
 
 1. Visit [supportgowhere.life.gov.sg](https://supportgowhere.life.gov.sg){:target="_blank"}.
