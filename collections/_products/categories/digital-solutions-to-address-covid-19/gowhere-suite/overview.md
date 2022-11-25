@@ -48,5 +48,19 @@ Beyond the Covid-19 pandemic, plans are in place for GoWhere Suite to continue p
 
 The application stack of GoWhere Suite is relevant to any generic distribution operations or location/eligibility-based query information systems. Thus, the GoWhere Suite can potentially transform the delivery of social services.
 
+### Use Case
+
+One of the key websites in the Gowhere Suite is SupportGoWhere:
+
+- SupportGoWhere is a platform for citizens to seek assistance for various needs. It also has a support recommender to aid in determining eligibility for the various schemes.
+- SupportGoWhere was used to launch COVID-19 support grants such as the COVID-19 Recovery Grant (CRG), COVID-19 Recovery Grant - Temporary (Aug 21) (CRG-T) and the Courage Fund (TCF). As of Jun 2022, the site has experienced 4.8 million visits and 2 million unique visitors since Apr 2020.
+- In addition, government agencies and organisations such as the Ministry of Social and Family Development (MSF), National Council of Social Service (NCSS), SG Enable (SGE), and Agency for Integrated Care (AIC) are exploring the expansion of SupportGoWhere as a one-stop social assistance portal. 
+
+### Pricing
+
+GoWhere Suite is free for the public to use.
 
 
+### Contact Us
+
+{% include contact-us-form.html %}
