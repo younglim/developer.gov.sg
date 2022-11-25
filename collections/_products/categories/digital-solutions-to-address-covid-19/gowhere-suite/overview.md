@@ -52,6 +52,8 @@ The GoWhere Suite consists of the following websites, developed by GovTech in co
 - [FluGoWhere](https://flu.gowhere.gov.sg){:target="_blank"}
 - [CDCVouchersMerchantsGoWhere](https://www.gowhere.gov.sg/cdcvouchersmerchants){:target="_blank"}
 - [MaskGoWhere](https://mask.gowhere.gov.sg){:target="_blank"}
+- [TestCentreGoWhere](https://www.gowhere.gov.sg/testcentres){:target="_blank"}
+- [VaccineGoWhere](https://www.gowhere.gov.sg/vaccine){:target="_blank"}
 
 Beyond the Covid-19 pandemic, plans are in place for GoWhere Suite to continue providing up-to-date official information to Singapore residents.
 
