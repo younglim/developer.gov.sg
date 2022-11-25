@@ -21,6 +21,13 @@ It also supports location/eligibility-based information queries/discoveries, fun
 
 The GoWhere Suite currently exists as a mini-stack featuring various government portals and has been used in 16 Government initiatives, garnering a total of 39 million website visits (as of Jun 2022).
 
+<figure style="text-align: center">
+  <img
+    src="/assets/img/GoWhere-Suite-Directory.png" width="60%" height="60%"
+  />
+	  <figcaption>Fig 1: The GoWhere Suite directory.</figcaption>
+</figure>
+
 The GoWhere Suite serves two key functions:
 
 1. **Provides authenticated COVID-19-related information quickly** 
