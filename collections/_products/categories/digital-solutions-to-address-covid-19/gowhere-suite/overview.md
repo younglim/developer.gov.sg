@@ -30,15 +30,15 @@ The GoWhere Suite currently exists as a mini-stack featuring various government 
 
 The GoWhere Suite serves two key functions:
 
-  1. **Provides authenticated COVID-19-related information quickly** 
+**1. Provides authenticated COVID-19-related information quickly** 
 
-The COVID-19 pandemic was volatile and rapidly evolving between 2020 and 2022. This meant that the guidelines and measures in response to the pandemic were also constantly being updated. Furthermore, the extensive impact of COVID-19 necessitated response measures that cut across many Government agencies. 
+  The COVID-19 pandemic was volatile and rapidly evolving between 2020 and 2022. This meant that the guidelines and measures in response to the pandemic were also constantly being updated. Furthermore, the extensive impact of COVID-19 necessitated response measures that cut across many Government agencies. 
 
 As a result, individuals and businesses found it difficult to keep up with the latest information, and it was taxing for them to gather information from multiple agencies. As a one-stop resource hub for all COVID-19-related information, GoWhere Directory facilitates citizens and businesses to access rapid and reliable information during the pandemic.
 
-  2. **Provides location information of distribution sites**
+**2. Provides location information of distribution sites**
 
-The pandemic also necessitated unprecedented nationwide distribution efforts. GoWhere’s suite of websites, such as ARTGoWhere and TokenGoWhere, facilitated these nationwide distribution efforts using location-based information queries/discoveries.
+  The pandemic also necessitated unprecedented nationwide distribution efforts. GoWhere’s suite of websites, such as ARTGoWhere and TokenGoWhere, facilitated these nationwide distribution efforts using location-based information queries/discoveries.
 
 ### Key Features
 
