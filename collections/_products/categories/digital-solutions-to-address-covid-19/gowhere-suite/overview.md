@@ -27,3 +27,26 @@ The COVID-19 pandemic was volatile and rapidly evolving between 2020 and 2022. T
 
 As a result, individuals and businesses found it difficult to keep up with the latest information, and it was taxing for them to gather information from multiple agencies. As a one-stop resource hub for all COVID-19-related information, GoWhere Directory facilitates citizens and businesses to access rapid and reliable information during the pandemic.
 
+2. Provides location information of distribution sites 
+
+The pandemic also necessitated unprecedented nationwide distribution efforts. GoWhere’s suite of websites, such as ARTGoWhere and TokenGoWhere, facilitated these nationwide distribution efforts using location-based information queries/discoveries.
+
+### Key Features
+
+The GoWhere Suite consists of the following websites, developed by GovTech in collaboration with government agencies:
+
+- GoWhere Directory
+- SupportGoWhere
+- TokenGoWhere
+- PosterGoWhere
+- ARTGoWhere
+- FluGoWhere
+- CDCVouchersMerchantsGoWhere
+- MaskGoWhere
+
+Beyond the Covid-19 pandemic, plans are in place for GoWhere Suite to continue providing up-to-date official information to Singapore residents.
+
+The application stack of GoWhere Suite is relevant to any generic distribution operations or location/eligibility-based query information systems. Thus, the GoWhere Suite can potentially transform the delivery of social services.
+
+
+
