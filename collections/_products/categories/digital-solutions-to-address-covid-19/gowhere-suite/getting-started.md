@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-To use The GoWhere Directory:
+To use the GoWhere Directory:
 
 1. Visit [gowhere.gov.sg](https://www.gowhere.gov.sg){:target="_blank"}.
 
