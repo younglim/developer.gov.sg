@@ -14,7 +14,7 @@ collection_group: [Citizen-facing Products]
 description: Notarise allows government agencies to authenticate and endorse HealthCerts for safe travel. Learn from Singapore’s model here.
 ---
 
-![Notαrise header banner](/assets/img/1656558410111_notarise-HeaderBanner.png)
+![Notαrise header banner](/assets/img/GoWhereSuite-HeaderBanner-v3.png)
 
 The [GoWhere Suite](https://www.gowhere.gov.sg){:target="_blank"} is a ground-up initiative by GovTech’s Government Digital Services (GDS). GoWhere was created in Feb 2020 in response to the COVID-19 pandemic and addresses the need for a rapid and reliable source of information. 
 It also supports location/eligibility-based information queries/discoveries, functions as an inclusive mass media channel and provides OpsTech integration to support Government distribution operations. 
