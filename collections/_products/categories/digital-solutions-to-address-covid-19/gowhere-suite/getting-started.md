@@ -30,6 +30,7 @@ To use SupportGoWhere:
 	  <figcaption>Fig 2: The SupportGoWhere landing page.</figcaption>
 </figure>
 
+
 3. You can also use the self-help Support Recommender on the SupportGoWhere page for more information on eligible schemes and services.
 
 <figure style="text-align: center">
