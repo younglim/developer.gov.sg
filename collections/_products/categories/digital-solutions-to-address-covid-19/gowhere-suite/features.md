@@ -39,3 +39,13 @@ Helps the public discover where to spend their Community Development Council (CD
 ### MaskGoWhere
 
 For the public to discover mask collection locations closest to them. (Mask distribution has concluded since  Jun 2020.)
+
+### TestCentreGoWhere
+
+Allows the public to discover the locations of Covid-19 Test Centres that include Private Quick Test Centres (PQTCs), and Joint Testing and Vaccination Centres (JTVCs) established by the [Ministry of Health (MOH)](https://www.moh.gov.sg/covid-19/jtvc){:target="_blank"}.
+
+### VaccineGoWhere
+
+Helps the public to quickly locate COVID-19 vaccination locations.
+
+
