@@ -1,5 +1,5 @@
 ---
-title: APEX Cloud – A Centralized API Management Solution that Simplifies the Adoption, Management, and Security of APIs
+title: APEX Cloud - A Centralized API Management Solution that Simplifies Security, Management and Adoption of APIs
 layout: layout-page-sidenav
 category: Analytics
 sub_collection_render: true
