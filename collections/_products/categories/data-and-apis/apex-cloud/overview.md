@@ -21,6 +21,13 @@ APEX Cloud is a centralised data sharing portal for government agencies. It is a
 
 APEX Cloud is currently in the pilot phase and will reach the General Availability (GA) phase in March/April 2023. Full migration of the workload from [Apex on prem](https://www.developer.tech.gov.sg/products/categories/data-and-apis/apex/overview.html){:target="_blank"} to APEX Cloud will be completed in Q1 of FY23, after which APEX on prem will be decommissioned in Q2 of FY23. 
 
+<figure style="text-align: center">
+  <img
+    src="/assets/img/CFT-Airport_Animation.gif" width="70%" height="70%"
+  />
+	  <figcaption>Fig 1: CFT workflow via the airport luggage screening analogy.</figcaption>
+</figure>
+
 ### Key Features
 - API catalogue: A searchable library containing Whole-of-Government (WOG) APIs
 - Central logging system: This provides an overview of all API call logs
