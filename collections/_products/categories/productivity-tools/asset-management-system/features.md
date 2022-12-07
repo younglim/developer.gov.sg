@@ -24,7 +24,6 @@ The workflows and controls are built into AMS, allowing public agencies to compl
 
 ### Mobile channel
 
-AMS has a mobile touchpoint that allows public officers to loan assets, report faults and perform self-sighting and stocktaking of assets using RFID.
-
+AMS has a mobile touchpoint that allows public officers to perform stocktaking of assets using RFID.
 
 
