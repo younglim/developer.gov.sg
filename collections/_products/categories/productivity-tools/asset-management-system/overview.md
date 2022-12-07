@@ -10,7 +10,7 @@ redirect_from:
   - /products/categories/productivity-tools/asset-management-system.html
   - /technologies/productivity-tools/asset-management-system/
   - /technologies/productivity-tools/asset-management-system.html
-description: AMS is a single system for management of all asset and contract types in the Government.
+description: AMS is a single system for the management of all asset and contract types in the Government.
 ---
 
 The Asset Management System (AMS) is a single system for public agencies and Institutes of Higher Learning (IHLs) to track all types of assets and contracts, regardless of financial value and type. 
