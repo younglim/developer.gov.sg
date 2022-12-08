@@ -13,6 +13,7 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 
 ### Our Brand
 
+<p></p>
 <div class="sgds-container">
 	<div class="row is-multiline">
 		<div class="col is-3-desktop is-12-tablet is-flex">
@@ -34,6 +35,7 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 		</div>
 	</div>
 </div>
+<p></p>
 
 #### Download our logos and branding guide
 
