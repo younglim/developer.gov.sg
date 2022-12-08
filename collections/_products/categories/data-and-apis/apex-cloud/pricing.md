@@ -13,4 +13,4 @@ The pricing of APEX Cloud is as shown below
     src="/assets/img/APEXCloudPricing-v1.png" width="70%" height="70%"
   />
 	  <figcaption>Fig 1: Price schedule for APEX Cloud</figcaption>
-</figure>">
+</figure>
