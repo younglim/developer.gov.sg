@@ -6,11 +6,11 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-The pricing of APEX Cloud is as shown below
+The indicative price schedule for APEX Cloud is as shown below
 
 <figure style="text-align: center<figure style="text-align: center">
   <img
     src="/assets/img/APEXCloudPricing-v1.png" width="70%" height="70%"
   />
-	  <figcaption>Fig 1: Price schedule for APEX Cloud</figcaption>
+	  <figcaption>Fig 1: Indicative price schedule for APEX Cloud</figcaption>
 </figure>
