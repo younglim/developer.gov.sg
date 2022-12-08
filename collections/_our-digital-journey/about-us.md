@@ -18,13 +18,13 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 		<div class="col is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
 				<div class="sgds-card-image">
-					<p><img src="/assets/img/digital-transformation/logo_icon_color.png" alt="The Singapore Government Developer Portal logo" /></p>
+					<img src="/assets/img/digital-transformation/logo_icon_color.png" alt="The Singapore Government Developer Portal logo" />
 				</div>
 			</div>
 		</div>
 		<div class="col is-9-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
-				<div class="sgds-card-content">
+				<div class="sgds-card-image">
 					<p>Our logo represents the product development cycle. The overall look portrays a digital book or knowledge hub.</p>
 					<p><b>The curly brackets:</b> Mimic the book cover.</p>
 					<p><b>The inner bars:</b> Represent the code that embody our government products.</p>
