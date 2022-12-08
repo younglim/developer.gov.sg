@@ -18,7 +18,7 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 		<div class="col is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
 				<div class="sgds-card-image">
-					<img src="/assets/img/digital-transformation/logo_icon_color.png" alt="The Singapore Government Developer Portal logo" />
+					<p><img src="/assets/img/digital-transformation/logo_icon_color.png" alt="The Singapore Government Developer Portal logo" /></p>
 				</div>
 			</div>
 		</div>
