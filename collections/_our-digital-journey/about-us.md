@@ -34,20 +34,20 @@ bios:
     img_src: lim-seng-siong-sq.png
     linkedin_url: https://www.linkedin.com/in/sengsionglim/
 
-  - name: Teo Cheng Yong
-    title: Tech Lead
-    img_src: teo-cheng-yong-sq.png
-    linkedin_url: https://www.linkedin.com/in/teochengyong/
-
-  - name: Raymond Lei
-    title: Tech Lead
-    img_src: raymond-lei-sq.png
-    linkedin_url: https://www.linkedin.com/in/raymond-lei/
-
   - name: Wang Lixin
     title: Delivery Manager
     img_src: wang-lixin-sq.png
     linkedin_url: https://www.linkedin.com/in/lixinw/
+
+  - name: Teo Cheng Yong
+    title: Senior Software Engineer
+    img_src: teo-cheng-yong-sq.png
+    linkedin_url: https://www.linkedin.com/in/teochengyong/
+
+  - name: Raymond Lei
+    title: Software Enginner
+    img_src: raymond-lei-sq.png
+    linkedin_url: https://www.linkedin.com/in/raymond-lei/
 
   - name: Aung Yan Nyein
     title: Software Engineer
