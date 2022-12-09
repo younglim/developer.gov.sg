@@ -28,6 +28,36 @@ bios:
     title: Content Writer
     img_src: low-rui-ru-sq.png
     linkedin_url: https://www.linkedin.com/in/lowruiru/
+
+  - name: Teo Cheng Yong
+    title: Tech Lead
+    img_src: teo-cheng-yong-sq.png
+    linkedin_url: https://www.linkedin.com/in/teochengyong/
+
+  - name: Raymond Lei
+    title: Tech Lead
+    img_src: raymond-lei-sq.png
+    linkedin_url: https://www.linkedin.com/in/raymond-lei/
+
+  - name: Wang Lixin
+    title: Delivery Manager
+    img_src: wang-lixin-sq.png
+    linkedin_url: https://www.linkedin.com/in/lixinw/
+
+  - name: Aung Yan Nyein
+    title: Software Engineer
+    img_src: aung-yan-nyein-sq.png
+    linkedin_url: https://www.linkedin.com/in/yan-nyein-aung-025a15184/
+
+  - name: Anbarasan
+    title: Associate Software Engineer
+    img_src: anbarasan-sq.png
+    linkedin_url: https://www.linkedin.com/in/anba92/
+
+  - name: Chai Pin Zheng
+    title: Software Engineer (Intern)
+    img_src: chai-pin-zheng-sq.png
+    linkedin_url: https://www.linkedin.com/in/chai-pin-zheng-5610921aa/
 ---
 
 ### Transform with the Singapore Government Developer Portal
