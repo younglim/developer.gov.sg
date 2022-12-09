@@ -29,6 +29,11 @@ bios:
     img_src: low-rui-ru-sq.png
     linkedin_url: https://www.linkedin.com/in/lowruiru/
 
+  - name: Lim Seng Siong
+    title: Principal Software Engineer
+    img_src: lim-seng-siong-sq.png
+    linkedin_url: https://www.linkedin.com/in/sengsionglim/
+
   - name: Teo Cheng Yong
     title: Tech Lead
     img_src: teo-cheng-yong-sq.png
@@ -58,6 +63,21 @@ bios:
     title: Software Engineer (Intern)
     img_src: chai-pin-zheng-sq.png
     linkedin_url: https://www.linkedin.com/in/chai-pin-zheng-5610921aa/
+
+  - name: Daren Ng
+    title: Senior UX Designer
+    img_src: daren-ng-sq.png
+    linkedin_url: https://www.linkedin.com/in/daren-ng-51b29537/
+
+  - name: Ong Zi Kai
+    title: UX Designer
+    img_src: ong-zi-kai-sq.png
+    linkedin_url: https://www.linkedin.com/in/zi-kai-ong/
+
+  - name: Neo Yu Fang
+    title: UX Designer
+    img_src: neo-yu-fang-sq.png
+    linkedin_url: https://www.linkedin.com/in/yu-fang-neo-3bb491137/
 ---
 
 ### Transform with the Singapore Government Developer Portal
