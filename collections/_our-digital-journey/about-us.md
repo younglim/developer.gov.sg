@@ -3,6 +3,31 @@ title: Who We Are
 layout: layout-page-sidenav
 description: >
   TO UPDATE
+bios:
+  - name: Karen Kee
+    title: Duputy Director
+    img_src: karen-kee-sq.png
+    linkedin_url: https://www.linkedin.com/in/karenktl/
+
+  - name: Candy Yap
+    title: Product Manager
+    img_src: candy-yap-sq.png
+    linkedin_url: https://www.linkedin.com/in/candyyapss/
+
+  - name: Hazel Koh
+    title: Marketing Manager
+    img_src: hazel-koh-sq.png
+    linkedin_url: https://www.linkedin.com/in/hazel-koh/
+
+  - name: Billy Teo
+    title: Content Lead
+    img_src: billy-teo-sq.png
+    linkedin_url: https://www.linkedin.com/in/billy-teo-2350a3153/
+
+  - name: Low Rui Ru
+    title: Content Writer
+    img_src: low-rui-ru-sq.png
+    linkedin_url: https://www.linkedin.com/in/lowruiru/
 ---
 
 ### Transform with the Singapore Government Developer Portal
@@ -37,7 +62,7 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 </div>
 <p></p>
 
-#### Download our logos and branding guide
+**Download our logos and branding guide**
 
 to insert something on when and how they can use our logo and to following the branding guide?
 
@@ -50,7 +75,7 @@ infographics
 
 ### Meet the Team
 
-new teams pictures
+{%- include meet-the-team-app.html bios=page.bios -%}
 
 ### Learn More About Us - to update
 
