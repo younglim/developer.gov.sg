@@ -5,7 +5,7 @@ description: >
   TO UPDATE
 bios:
   - name: Karen Kee
-    title: Duputy Director
+    title: Deputy Director
     img_src: karen-kee-sq.png
     linkedin_url: https://www.linkedin.com/in/karenktl/
 
