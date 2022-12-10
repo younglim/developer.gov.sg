@@ -119,19 +119,7 @@ to insert something on when and how they can use our logo and to following the b
 - [The DevPortal logos](/assets/files/singapore-government-developer-portal-logos.zip){:target="_blank"}
 - The DevPortal branding guide
 
-### Our Milestones and Achievements
-
-#### test
-
-<div class="sgds-container">
-	<div class="row is-multiline">
-		<div class="col is-4-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<img alt="Launched All Products page" src="/assets/img/digital-transformation/milestone.svg" /><p>Launched the <a href="/products/all-products/" target="_blank">All Products</a> page<</p>
-			</div>
-		</div>
-	</div>
-</div>                
+### Our Milestones and Achievements               
 
 #### 2022
 
@@ -141,12 +129,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
-								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
+								<img src="/assets/img/digital-transformation/new-launched.svg" alt="Launched All Products page" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>Launched the <a href="/products/all-products/" target="_blank">All Products</a> page</p>
 							</div>
@@ -223,7 +211,7 @@ to insert something on when and how they can use our logo and to following the b
 					<div class="row">
 						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
-								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched DevPortal documentation service" />
+								<img src="/assets/img/digital-transformation/new-launched.svg" alt="Launched DevPortal documentation service" />
 							</div>
 						</div>
 						<div class="col is-9-desktop is-12-tablet is-flex">
@@ -303,7 +291,7 @@ to insert something on when and how they can use our logo and to following the b
 					<div class="row">
 						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
-								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched the Singapore Government Developer Portal" />
+								<img src="/assets/img/digital-transformation/new-launched.svg" alt="Launched the Singapore Government Developer Portal" />
 							</div>
 						</div>
 						<div class="col is-9-desktop is-12-tablet is-flex">
