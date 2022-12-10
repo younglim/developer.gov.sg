@@ -121,6 +121,21 @@ to insert something on when and how they can use our logo and to following the b
 
 ### Our Milestones and Achievements
 
+#### test
+
+<div class="sgds-container">
+	<div class="row is-multiline">
+		<div class="col is-4-desktop is-12-tablet is-flex">
+			<div class="sgds-card">
+				<img class="card-img-left" alt="Launched All Products page" src="/assets/img/digital-transformation/milestone.svg" />
+				<div class="card-body">
+					<p class="card-text">test</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>                
+
 #### 2022
 
 <div class="sgds-container">
