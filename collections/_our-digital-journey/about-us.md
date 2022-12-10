@@ -121,7 +121,89 @@ to insert something on when and how they can use our logo and to following the b
 
 ### Our Milestones and Achievements
 
-infographics
+**2022**
+
+<div class="sgds-container">
+	<div class="row is-multiline">
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />Launched All Products page</p>
+				</div>
+			</div>
+		</div>
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 200 content pieces" />&gt;200 content pieces</p>
+				</div>
+			</div>
+		</div>
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 1,500,000 pageviews" />&gt;1,500,000 pageviews</p>
+				</div>
+			</div>
+		</div>
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 350,000 visitors" />&gt;350,000 visitors</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+**2021**
+
+<div class="sgds-container">
+	<div class="row is-multiline">
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched DevPoral Documentation Service" />Launched DevPortal Documentation Service</p>
+				</div>
+			</div>
+		</div>
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100 content pieces" />&gt;100 content pieces</p>
+				</div>
+			</div>
+		</div>
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 400,000 pageviews" />&gt;400,000 pageviews</p>
+				</div>
+			</div>
+		</div>
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100,000 visitors" />&gt;100,000 visitors</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+**2020**
+
+<div class="sgds-container">
+	<div class="row is-multiline">
+		<div class="col is-3-desktop is-12-tablet is-flex">
+			<div class="sgds-card-no-border">
+				<div class="sgds-card-content">
+					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched the Singapore Government Developer Portal" />Launched DevPortal</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 ### Meet the Team
 
