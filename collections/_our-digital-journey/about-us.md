@@ -136,7 +136,7 @@ to insert something on when and how they can use our logo and to following the b
 						</div>
 						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
-								<p>Launched the <a href="/products/all-products/" target="_blank">All Products</a> page</p>
+								<p><a href="/products/all-products/" target="_blank">All Products</a> page</p>
 							</div>
 						</div>
 					</div>
@@ -147,12 +147,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 200 content pieces" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;200 content pieces</p>
 							</div>
@@ -165,12 +165,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 1,500,000 pageviews" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;1,500,000 pageviews</p>
 							</div>
@@ -183,12 +183,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 350,000 visitors" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;350,000 visitors</p>
 							</div>
@@ -209,14 +209,14 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/new-launched.svg" alt="Launched DevPortal documentation service" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
-								<p>Launched the <a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal documentation service</a></p>
+								<p><a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal doc service</a></p>
 							</div>
 						</div>
 					</div>
@@ -227,12 +227,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100 content pieces" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;100 content pieces</p>
 							</div>
@@ -245,12 +245,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 400,000 pageviews" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;400,000 pageviews</p>
 							</div>
@@ -263,12 +263,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100,000 visitors" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;100,000 visitors</p>
 							</div>
@@ -289,14 +289,14 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-12-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/new-launched.svg" alt="Launched the Singapore Government Developer Portal" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-12-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
-								<p>Launched the DevPortal</p>
+								<p>DevPortal</p>
 							</div>
 						</div>
 					</div>
