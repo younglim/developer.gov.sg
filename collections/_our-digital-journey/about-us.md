@@ -116,12 +116,12 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 
 to insert something on when and how they can use our logo and to following the branding guide?
 
-- The DevPortal logos
+- [The DevPortal logos](/assets/files/singapore-government-developer-portal-logos.zip){:target="_blank"}
 - The DevPortal branding guide
 
 ### Our Milestones and Achievements
 
-##### 2022
+#### 2022
 
 <div class="sgds-container">
 	<div class="row is-multiline">
@@ -129,12 +129,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>Launched the <a href="/products/all-products/" target="_blank">All Products page</a></p>
 							</div>
@@ -147,12 +147,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 200 content pieces" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;200 content pieces</p>
 							</div>
@@ -165,12 +165,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 1,500,000 pageviews" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;1,500,000 pageviews</p>
 							</div>
@@ -183,12 +183,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 350,000 visitors" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;350,000 visitors</p>
 							</div>
@@ -199,7 +199,6 @@ to insert something on when and how they can use our logo and to following the b
 		</div>
 	</div>
 </div>
-<p></p>
 
 #### 2021
 
@@ -209,12 +208,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>Launched the <a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal Documentation Service</a></p>
 							</div>
@@ -227,12 +226,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100 content pieces" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;100 content pieces</p>
 							</div>
@@ -245,12 +244,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 400,000 pageviews" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;400,000 pageviews</p>
 							</div>
@@ -263,12 +262,12 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100,000 visitors" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>&gt;100,000 visitors</p>
 							</div>
@@ -280,41 +279,7 @@ to insert something on when and how they can use our logo and to following the b
 	</div>
 </div>
 
-<div class="sgds-container">
-	<div class="row is-multiline">
-		<div class="col is-4-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched DevPoral Documentation Service" />Launched the <a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal Documentation Service</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col is-4-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100 content pieces" />&gt;100 content pieces</p>
-				</div>
-			</div>
-		</div>
-		<div class="col is-4-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 400,000 pageviews" />&gt;400,000 pageviews</p>
-				</div>
-			</div>
-		</div>
-		<div class="col is-4-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100,000 visitors" />&gt;100,000 visitors</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<p></p>
-
-**2020**
+#### 2020
 
 <div class="sgds-container">
 	<div class="row is-multiline">
@@ -322,29 +287,17 @@ to insert something on when and how they can use our logo and to following the b
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-2-desktop is-12-tablet is-flex">
+						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched the Singapore Government Developer Portal" />
 							</div>
 						</div>
-						<div class="col is-10-desktop is-12-tablet is-flex">
+						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>Launched the DevPortal</p>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="sgds-container">
-	<div class="row is-multiline">
-		<div class="col is-3-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched the Singapore Government Developer Portal" />Launched the DevPortal</p>
 				</div>
 			</div>
 		</div>
