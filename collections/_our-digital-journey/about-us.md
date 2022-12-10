@@ -125,16 +125,16 @@ to insert something on when and how they can use our logo and to following the b
 
 <div class="sgds-container">
 	<div class="row is-multiline">
-		<div class="col is-nested is-4-desktop is-12-tablet is-flex">
+		<div class="col is-nested is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
 				<div class="sgds-card-content">
 					<div class="row">
-						<div class="col is-3-desktop is-3-tablet is-flex">
+						<div class="col is-2-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
 								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
 							</div>
 						</div>
-						<div class="col is-9-desktop is-9-tablet is-flex">
+						<div class="col is-10-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
 								<p>Launched the <a href="/products/all-products/" target="_blank">All Products page</a></p>
 							</div>
@@ -143,24 +143,57 @@ to insert something on when and how they can use our logo and to following the b
 				</div>
 			</div>
 		</div>
-		<div class="col is-4-desktop is-12-tablet is-flex">
+		<div class="col is-nested is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
 				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 200 content pieces" />&gt;200 content pieces</p>
+					<div class="row">
+						<div class="col is-2-desktop is-12-tablet is-flex">
+							<div class="sgds-card-no-border">
+								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 200 content pieces" />
+							</div>
+						</div>
+						<div class="col is-10-desktop is-12-tablet is-flex">
+							<div class="sgds-card-no-border">	
+								<p>&gt;200 content pieces</a></p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col is-4-desktop is-12-tablet is-flex">
+		<div class="col is-nested is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
 				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 1,500,000 pageviews" />&gt;1,500,000 pageviews</p>
+					<div class="row">
+						<div class="col is-2-desktop is-12-tablet is-flex">
+							<div class="sgds-card-no-border">
+								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 1,500,000 pageviews" />
+							</div>
+						</div>
+						<div class="col is-10-desktop is-12-tablet is-flex">
+							<div class="sgds-card-no-border">	
+								<p>&gt;1,500,000 pageviews</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col is-4-desktop is-12-tablet is-flex">
+		<div class="col is-nested is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
 				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 350,000 visitors" />&gt;350,000 visitors</p>
+					<div class="row">
+						<div class="col is-2-desktop is-12-tablet is-flex">
+							<div class="sgds-card-no-border">
+								<img src="/assets/img/digital-transformation/achievement.svg" alt="more than 350,000 visitors" />
+							</div>
+						</div>
+						<div class="col is-10-desktop is-12-tablet is-flex">
+							<div class="sgds-card-no-border">	
+								<p>&gt;350,000 visitors</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
