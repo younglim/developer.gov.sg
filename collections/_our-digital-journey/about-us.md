@@ -127,10 +127,7 @@ to insert something on when and how they can use our logo and to following the b
 	<div class="row is-multiline">
 		<div class="col is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
-				<img class="card-img-left" alt="Launched All Products page" src="/assets/img/digital-transformation/milestone.svg" />
-				<div class="card-body">
-					<p class="card-text">test</p>
-				</div>
+				<img alt="Launched All Products page" src="/assets/img/digital-transformation/milestone.svg" /><p>Launched the <a href="/products/all-products/" target="_blank">All Products</a> page<</p>
 			</div>
 		</div>
 	</div>
@@ -151,7 +148,7 @@ to insert something on when and how they can use our logo and to following the b
 						</div>
 						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
-								<p>Launched the <a href="/products/all-products/" target="_blank">All Products page</a></p>
+								<p>Launched the <a href="/products/all-products/" target="_blank">All Products</a> page</p>
 							</div>
 						</div>
 					</div>
@@ -214,6 +211,7 @@ to insert something on when and how they can use our logo and to following the b
 		</div>
 	</div>
 </div>
+<p></p>
 
 #### 2021
 
@@ -225,12 +223,12 @@ to insert something on when and how they can use our logo and to following the b
 					<div class="row">
 						<div class="col is-3-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">
-								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
+								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched DevPortal documentation service" />
 							</div>
 						</div>
 						<div class="col is-9-desktop is-12-tablet is-flex">
 							<div class="sgds-card-no-border">	
-								<p>Launched the <a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal Documentation Service</a></p>
+								<p>Launched the <a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal documentation service</a></p>
 							</div>
 						</div>
 					</div>
@@ -293,6 +291,7 @@ to insert something on when and how they can use our logo and to following the b
 		</div>
 	</div>
 </div>
+<p></p>
 
 #### 2020
 
