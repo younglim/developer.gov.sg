@@ -126,18 +126,18 @@ to insert something on when and how they can use our logo and to following the b
 <div class="sgds-container">
 	<div class="row is-multiline">
 		<div class="col is-nested is-4-desktop is-12-tablet is-flex">
-			<div class="row">
-				<div class="col is-3-desktop is-3-tablet is-flex">
-					<div class="sgds-card">
-						<div class="sgds-card-content">
-							<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
+			<div class="sgds-card">
+				<div class="sgds-card-content">
+					<div class="row">
+						<div class="col is-3-desktop is-3-tablet is-flex">
+							<div class="sgds-card-no-border">
+								<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col is-9-desktop is-9-tablet is-flex">
-					<div class="sgds-card">
-						<div class="sgds-card-content">				
-							<p><a href="/products/all-products/" target="_blank">Launched All Products page</a></p>
+						<div class="col is-9-desktop is-9-tablet is-flex">
+							<div class="sgds-card-no-border">	
+								<p>Launched the <a href="/products/all-products/" target="_blank">All Products page</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -174,7 +174,7 @@ to insert something on when and how they can use our logo and to following the b
 		<div class="col is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
 				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched DevPoral Documentation Service" /><a href="https://docs.developer.tech.gov.sg" target="_blank">Launched DevPortal Documentation Service</a></p>
+					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched DevPoral Documentation Service" />Launched the <a href="https://docs.developer.tech.gov.sg" target="_blank">DevPortal Documentation Service</a></p>
 				</div>
 			</div>
 		</div>
@@ -187,14 +187,14 @@ to insert something on when and how they can use our logo and to following the b
 		</div>
 		<div class="col is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
-				<div class="sgds-card">
+				<div class="sgds-card-content">
 					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 400,000 pageviews" />&gt;400,000 pageviews</p>
 				</div>
 			</div>
 		</div>
 		<div class="col is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
-				<div class="sgds-card">
+				<div class="sgds-card-content">
 					<p><img src="/assets/img/digital-transformation/achievement.svg" alt="more than 100,000 visitors" />&gt;100,000 visitors</p>
 				</div>
 			</div>
