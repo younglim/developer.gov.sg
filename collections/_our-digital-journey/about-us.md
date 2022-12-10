@@ -125,10 +125,21 @@ to insert something on when and how they can use our logo and to following the b
 
 <div class="sgds-container">
 	<div class="row is-multiline">
-		<div class="col is-4-desktop is-12-tablet is-flex">
-			<div class="sgds-card">
-				<div class="sgds-card-content">
-					<p><img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" /><a href="/products/all-products/" target="_blank">Launched All Products page</a></p>
+		<div class="col is-nested is-4-desktop is-12-tablet is-flex">
+			<div class="row">
+				<div class="col is-3-desktop is-3-tablet is-flex">
+					<div class="sgds-card">
+						<div class="sgds-card-content">
+							<img src="/assets/img/digital-transformation/milestone.svg" alt="Launched All Products page" />
+						</div>
+					</div>
+				</div>
+				<div class="col is-9-desktop is-9-tablet is-flex">
+					<div class="sgds-card">
+						<div class="sgds-card-content">				
+							<p><a href="/products/all-products/" target="_blank">Launched All Products page</a></p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
