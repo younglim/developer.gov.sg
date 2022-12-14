@@ -93,14 +93,14 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 	<div class="row is-multiline">
 		<div class="col is-3-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
-				<div class="sgds-card-image">
+				<div class="sgds-card-content">
 					<img src="/assets/img/digital-transformation/logo_icon_color.png" alt="The Singapore Government Developer Portal logo" />
 				</div>
 			</div>
 		</div>
 		<div class="col is-9-desktop is-12-tablet is-flex">
 			<div class="sgds-card-no-border">
-				<div class="sgds-card-image">
+				<div class="sgds-card-content">
 					<p>Our logo represents the product development cycle. The overall look portrays a digital book or knowledge hub.</p>
 					<p><b>The curly brackets:</b> Mimic the book cover.</p>
 					<p><b>The inner bars:</b> Represent the code that embody our government products.</p>
@@ -122,8 +122,12 @@ to insert something on when and how they can use our logo and to following the b
 ### Our Milestones and Achievements               
 
 #### 2022
+- [Launched All Products page](/products/all-product){:target="_blank"}
+- Published more than 200 content pieces
+- Received close t0 1,000,000 pageviews
+- Received more than 350,000 visitors
 
-<div class="sgds-container">
+<!--<div class="sgds-container">
 	<div class="row is-multiline">
 		<div class="col is-nested is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
@@ -199,11 +203,15 @@ to insert something on when and how they can use our logo and to following the b
 		</div>
 	</div>
 </div>
-<p></p>
+<p></p>-->
 
 #### 2021
+- [Launched DevPortal documentation service](https://docs.developer.tech.gov.sg){:target="_blank"}
+- Published more than 100 content pieces
+- Received more than 400,000 pageviews
+- Received more than 100,000 visitors
 
-<div class="sgds-container">
+<!--<div class="sgds-container">
 	<div class="row is-multiline">
 		<div class="col is-nested is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
@@ -279,11 +287,12 @@ to insert something on when and how they can use our logo and to following the b
 		</div>
 	</div>
 </div>
-<p></p>
+<p></p>-->
 
 #### 2020
+Launched the Singapore Government Developer Portal
 
-<div class="sgds-container">
+<!--<div class="sgds-container">
 	<div class="row is-multiline">
 		<div class="col is-nested is-4-desktop is-12-tablet is-flex">
 			<div class="sgds-card">
@@ -304,7 +313,7 @@ to insert something on when and how they can use our logo and to following the b
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->
 
 ### Meet the Team
 
