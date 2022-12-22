@@ -117,7 +117,7 @@ The Singapore Government Developer Portal (DevPortal) offers public officers, go
 to insert something on when and how they can use our logo and to following the branding guide?
 
 - [The DevPortal logos](/assets/files/singapore-government-developer-portal-logos.zip){:target="_blank"}
-- The DevPortal branding guide
+- The DevPortal branding guide (coming soon)
 
 ### Our Milestones and Achievements               
 
@@ -319,14 +319,14 @@ Launched the Singapore Government Developer Portal
 
 {%- include meet-the-team-app.html bios=page.bios -%}
 
-### Learn More About Us - to update
+### Our Key Offerings
 
 <div class="row is-multiline">
 	<div class="col is-4-desktop is-12-tablet is-flex">
 		<div class="sgds-card">
 			<div class="sgds-card-content">
 				<h4><a href="/our-digital-journey/singapore-digital-government-journey">Singapore Digital Government Journey</a></h4>
-				<p>Learn about our digital government journey, partnerships, platforms and the Singapore Government Developer here.</p>
+				<p>Learn how GovTech spearheaded our government digital transformation and the Smart Nation vision.</p>
 			</div>
 		</div>
 	</div>
@@ -334,7 +334,7 @@ Launched the Singapore Government Developer Portal
 		<div class="sgds-card">
 			<div class="sgds-card-content">
 				<h4><a href="/products/all-products">All Products</a></h4>
-				<p>Insert writeup.</p>
+				<p>Explore our product catalogue here and find the perfect product for your digital transformation project!</p>
 			</div>
 		</div>
 	</div>
@@ -342,7 +342,7 @@ Launched the Singapore Government Developer Portal
 		<div class="sgds-card">
 			<div class="sgds-card-content">
 				<h4><a href="/communities/events/all-events">Events</a></h4>
-				<p>Join the tech community in a variety of events aimed at building stronger community connections, peer-to-peer learning, sharing of thought leadership from industry experts and the provision of industry updates. Our events are suited for individuals of all ages!</p>
+				<p>Meet like-minded individuals from the government, vendors, or tech community through our various events.</p>
 			</div>
 		</div>
 	</div>
