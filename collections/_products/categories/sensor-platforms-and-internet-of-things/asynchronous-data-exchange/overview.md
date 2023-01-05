@@ -39,6 +39,7 @@ This diagram shows the components of ADEX and its ability to distribute real-tim
 </figure>
 
 ### Differences between APEX & ADEX
+
 | **APEX**                                                                                                                                   | **ADEX**                                                                                                                                       |
 | :----------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | **API gateway**<br>• REST and SOAP<br>• Up to Confidential                                                                                 | **Message-queue + stream hub**<br>• MQTT and Kafka<br>• Up to Restricted                                                                       |
