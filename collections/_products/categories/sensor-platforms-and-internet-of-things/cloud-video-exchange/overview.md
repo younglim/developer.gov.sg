@@ -12,7 +12,7 @@ collection_group: [SGTS, What's New]
 description: The Cloud Video Exchange (CVX) platform empowers government agencies to unify their video systems on a single cloud platform. Find out more.
 ---
 
-![Open Digital Platform header banner](/assets/img/ODP-HeaderBanner-v3.png)
+![Open Digital Platform header banner](/assets/img/cvx-HeaderBanner-v3.png)
 
 The Cloud Video Exchange (CVX), developed by GovTech, is part of the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} suite of product offerings. CVX helps government agencies to unify their video systems on a single cloud platform, to increase collaboration and productivity.
 
