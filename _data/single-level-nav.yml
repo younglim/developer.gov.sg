@@ -408,6 +408,11 @@
     - Resources
     - FAQs
 
+- name: Cloud Video Exchange
+  items:
+    - Overview
+    - Features
+    
 - name: DECADA - Cloud
   items:
     - Overview
