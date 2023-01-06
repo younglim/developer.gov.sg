@@ -38,8 +38,7 @@ The product is also part of the Service Layer of the [Singapore Technology Tech 
 - Intra-Agency sharing
 - Cross-Agency sharing
 
-Refer to Features for more details.
-
+Refer to [Features](/products/categories/sensor-platforms-and-internet-of-things/cloud-video-exchange/features){:target="_blank"} for more details.
 
 ### Getting Started
 
