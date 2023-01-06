@@ -1,5 +1,5 @@
 ---
-title: Cloud Video Exchange (CVX) - The Intelligent Smart City Operating System of the Future
+title: Cloud Video Exchange (CVX) - Connecting WOG Video Systems through the Cloud
 layout: layout-page-sidenav
 category: Platform
 _data: single-level-nav
@@ -14,7 +14,7 @@ description: The Cloud Video Exchange (CVX) platform empowers government agencie
 
 ![Open Digital Platform header banner](/assets/img/cvx-HeaderBanner-v3.png)
 
-The Cloud Video Exchange (CVX), developed by GovTech, is part of the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} suite of product offerings. CVX helps government agencies to unify their video systems on a single cloud platform, to increase collaboration and productivity.
+The Cloud Video Exchange (CVX), developed by GovTech, is part of the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} suite of product offerings. CVX helps government agencies to unify and connect their video systems on a single cloud platform, to increase collaboration and productivity.
 
 With the increasing availability of high-resolution cameras, government agencies are deriving more insights from video content/data using AI-powered algorithms – from simple detection and real-time alerts to complex intelligence about behaviours and events. However, over time, agencies may implement video systems and software from various sources that may hamper video access, video sharing and insights generation. 
 
