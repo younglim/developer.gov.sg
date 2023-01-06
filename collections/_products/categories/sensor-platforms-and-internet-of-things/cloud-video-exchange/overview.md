@@ -8,7 +8,7 @@ redirect_from:
     - /products/categories/sensor-platforms-and-internet-of-things/cloud-video-exchange.html
 sub_collection_render: true
 single_level_nav: true
-collection_group: [SGTS, What's New]
+collection_group: [What's New, SGTS]
 description: The Cloud Video Exchange (CVX) platform empowers government agencies to unify their video systems on a single cloud platform. Find out more.
 ---
 
