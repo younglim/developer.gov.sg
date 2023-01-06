@@ -16,12 +16,11 @@ The common API is built with pre-defined standards, providing a single point of 
 
 ### Integration with Video Analytics System (VAS)
 
-Agencies can quickly run video analytics through CVX‘s seamless integration with the Video Analytics System (VAS) developed by GovTech.
+Agencies can quickly run video analytics through CVX‘s seamless integration with the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} developed by GovTech.
 
 ### Intra-Agency sharing
 
-Once your video systems are linked to CVX, you can stream live video feeds to modern web browsers, access historical videos, control cameras (pan-tilt-zoom), record videos to the CVX cloud or download snippets to laptops within your agency.
-A powerful permissions management system enables administrators to grant or restrict permissions by users or user groups. 
+Once your video systems are linked to CVX, you can stream live video feeds to modern web browsers, access historical videos, control cameras (pan-tilt-zoom), record videos to the CVX cloud or download snippets to laptops within your agency. A powerful permissions management system enables administrators to grant or restrict permissions by users or user groups.
 
 ### Cross-Agency sharing
 
