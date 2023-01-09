@@ -1,7 +1,7 @@
 ---
 title: Cloud Video Exchange (CVX) - Connecting WOG Video Systems through the Cloud
 layout: layout-page-sidenav
-category: Platform
+category: Sensors and IOT
 _data: single-level-nav
 redirect_from:
     - /products/categories/sensor-platforms-and-internet-of-things/cloud-video-exchange/
@@ -9,6 +9,9 @@ redirect_from:
 sub_collection_render: true
 single_level_nav: true
 collection_group: [What's New, Singapore Government Tech Stack]
+sgts_collection_group: [data transfer]
+sgts_layer_group: [services]
+sgts_title: Cloud Video Exchange
 description: The Cloud Video Exchange (CVX) platform empowers government agencies to unify their video systems on a single cloud platform. Find out more.
 ---
 
