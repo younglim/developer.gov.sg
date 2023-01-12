@@ -9,7 +9,7 @@ redirect_from:
 sub_collection_render: true
 single_level_nav: true
 collection_group: [What's New, Singapore Government Tech Stack]
-sgts_collection_group: [data transfer]
+sgts_collection_group: [data_transfer]
 sgts_layer_group: [services]
 sgts_title: Cloud Video Exchange
 description: The Cloud Video Exchange (CVX) platform empowers government agencies to unify their video systems on a single cloud platform. Find out more.
