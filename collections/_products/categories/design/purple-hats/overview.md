@@ -53,4 +53,7 @@ Purple HATS been listed in the [Digital Public Goods registry](https://digitalpu
 
 Purple HATS is an open-source tool that is free to use. Check out the [Purple HATS listing](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"} in the Digital Public Goods Registry.
 
+### Contact Us
+
+{% include contact-us-form.html %} 
 
