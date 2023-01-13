@@ -8,7 +8,7 @@ _data: single-level-nav
 
 ### Technical Documentation
 -	[Purple HATS on Github](https://github.com/GovTechSG/purple-hats){:target="\_blank"} 
--	[Purple HATS installation guide] (https://go.gov.sg/purple-hats-install-guide){:target="\_blank"} 
+-	[Purple HATS installation guide](https://go.gov.sg/purple-hats-install-guide){:target="\_blank"} 
 
 ### Multimedia
 - [Purple HATS entry in the Digital Public Goods Registry](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"}
