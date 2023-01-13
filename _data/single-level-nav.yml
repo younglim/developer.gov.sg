@@ -160,6 +160,15 @@
     - Overview
     - Resources
 
+- name: Purple HATS
+  items:
+    - Overview
+    - Features
+    - Getting Started
+    - Resources
+    - FAQs
+    - Meet The Team
+
 # Devops
 - name: Container Stack
   items:
