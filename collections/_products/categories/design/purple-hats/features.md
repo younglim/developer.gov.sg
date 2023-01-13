@@ -16,7 +16,7 @@ Users can choose either scanning modes to achieve comprehensive coverage of your
 
 ### Identification of accessibility issues based on WCAG 2.1 specifications
 
-Purple HATS identifies accessibility issues using the Web Content Accessibility Guidelines (WCAG) 2.1 specifications. The WCAG 2.1 covers a wide range of recommendations for making web content more accessible.
+Purple HATS identifies accessibility issues using the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/){:target="\_blank"} specifications. The WCAG 2.1 covers a wide range of recommendations for making web content more accessible.
 
 ### Integration into CI/CD pipeline with single command-line 
 
