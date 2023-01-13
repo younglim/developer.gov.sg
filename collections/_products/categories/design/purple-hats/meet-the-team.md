@@ -16,41 +16,26 @@ bios:
     img_src: immanuel-goh.png
     linkedin_url: https://www.linkedin.com/in/immanuel-goh/
 
-  - name: Pearly Ong
-    title: Product Designer
-    img_src: pearly-ong.png
-    linkedin_url: https://www.linkedin.com/in/pearlyong/
+  - name: Kim Casper
+    title: Engagement Manager
+    img_src: kim-casper.png
+    linkedin_url: https://www.linkedin.com/in/kimrcasper
     
-  - name: Stacey Tan
-    title: Product Designer (Intern)
-    img_src: stacey-tan.png
-    linkedin_url: https://www.linkedin.com/in/staceytan0904/
+  - name: Lim Zui Young
+    title: Senior DevOps Engineer
+    img_src: lim-zui-young-new.png
+    linkedin_url: https://www.linkedin.com/in/zuiyoung/
     
-  - name: Kenneth Chang
-    title: Product Specialist
-    img_src: kenneth-chang.png
-    linkedin_url: https://www.linkedin.com/in/-kenneth-chang/
+  - name: Mary Heng
+    title: UX Designer
+    img_src: mary-heng.png
+    linkedin_url: https://www.linkedin.com/in/maryheng
 
-  - name: Timothee Groleau
-    title: Tech Lead
-    img_src: timothee-groleau.png
-    linkedin_url: https://www.linkedin.com/in/timotheegroleau/
+  - name: Royce Cheng
+    title: UX Designer
+    img_src: royce-cheng-new.png
+    linkedin_url: https://www.linkedin.com/in/roycecheng 
 
-  - name: Antariksh Mahajan
-    title: Software Engineer
-    img_src: antariksh-mahajan.png
-    linkedin_url: https://www.linkedin.com/in/antarikshm/
- 
-  - name: Lau Kar Rui
-    title: Software Engineer
-    img_src: lau-kar-rui.png
-    linkedin_url: https://www.linkedin.com/in/karrui/
-
-  - name: Teo Shu Li
-    title: Software Engineer
-    img_src: teo-shu-li.png
-    linkedin_url: https://www.linkedin.com/in/teoshuli/
-    
 ---
 
 ### Meet the team!
