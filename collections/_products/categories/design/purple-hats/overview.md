@@ -12,7 +12,6 @@ collection_group: [What's New]
 description: Purple HATS is a customisable automated testing tool that detects accessibility issues, helping developers to build more inclusive digital products.
 ---
 
-![Open Digital Platform header banner](/assets/img/ODP-HeaderBanner-v3.png)
 
 
 Purple HATS is a customizable, automated web accessibility testing tool that allows software development teams to find and fix accessibility problems to improve the access of persons with disabilities (PWDs) to digital services.
@@ -43,7 +42,7 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
 - Integration into CI/CD pipeline with single command-line 
 - Accessibility reports generated in both JSON and HTML formats
 
-Please refer to the Features tab for more details.
+Please refer to [Features](/products/categories/design/purple-hats/features){:target="_blank"} for more details.
 
 ### Awards and Recognition
 
