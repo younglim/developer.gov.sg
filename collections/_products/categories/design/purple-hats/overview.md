@@ -49,3 +49,8 @@ Please refer to the Features tab for more details.
 
 Purple HATS been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/openattestation.html){:target="\_blank"} by the [Digital Public Goods Alliance (DPGA)](https://digitalpublicgoods.net/who-we-are/){:target="\_blank"}. DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
 
+### Pricing
+
+Purple HATS is an open-source tool that is free to use. Check out the [Purple HATS listing](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"} in the Digital Public Goods Registry.
+
+
