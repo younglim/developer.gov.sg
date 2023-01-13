@@ -15,6 +15,6 @@ Before you begin, please note that:
 -  It is recommended that you log on as an admin user to run Purple HATS.
 
 
-1. Check the Purple HATS Readme section for more information.
-2. Follow the step-by-step Purple HATS Installation Guide, which contains easy illustrated installation steps on Windows and macOS.
+1. Check the [Purple HATS Readme section](https://go.gov.sg/purple-hats){:target="_blank"} for more information.
+2. Follow the step-by-step [Purple HATS Installation Guide](https://go.gov.sg/purple-hats-install-guide){:target="_blank"}, which contains easy illustrated installation steps on Windows and macOS.
 
