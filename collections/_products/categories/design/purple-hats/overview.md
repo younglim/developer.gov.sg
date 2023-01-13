@@ -26,3 +26,7 @@ Purple HATS includes a bot that scans through and analyses web pages for accessi
 
 The bot then provides the impact of the accessibility issues by mapping them against the axe-core library of Deque System, a company that provides digital accessibility audits and software tools. Deque’s AXE accessibility testing engine is used to test the accessibility of websites and other HTML-based user interfaces.
 
+The results of Purple HATS’s scans are then compiled in JSON format, and an HTML report is generated, providing users flexibility as to how they review accessibility findings. 
+
+
+
