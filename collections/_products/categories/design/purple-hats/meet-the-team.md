@@ -6,15 +6,15 @@ category: Infrastructure and Hosting
 _data: single-level-nav
 single_level_nav: true
 bios:
-  - name: Sonjia Yan
-    title: Senior Product Manager
-    img_src: sonjia-yan.png
-    linkedin_url: https://www.linkedin.com/in/sonjiayan/
+  - name: Choong Ming Sien
+    title: Assistant Director
+    img_src: choong-ming-sien.png
+    linkedin_url: https://www.linkedin.com/in/choongms
 
-  - name: Amit Samdarshi
-    title: Product Manager
-    img_src: amit-samdarshi.png
-    linkedin_url: https://www.linkedin.com/in/amitsam/
+  - name: Immanuel Goh
+    title: UX Designer
+    img_src: immanuel-goh.png
+    linkedin_url: https://www.linkedin.com/in/immanuel-goh/
 
   - name: Pearly Ong
     title: Product Designer
