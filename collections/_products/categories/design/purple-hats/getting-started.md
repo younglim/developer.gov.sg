@@ -12,7 +12,7 @@ Before you begin, please note that:
   - macOS Big Sur or later (Intel and Apple Silicon)
   - Windows 10 or later (64-bit)
 -  One-time Internet access is required to download and install Purple HATS.
--  It is recommended that you log on as an admin user to run Purple HATS.
+-  It is recommended that you log on as an admin user to run Purple HATS.  
 
 
 1. Check the [Purple HATS Readme section](https://go.gov.sg/purple-hats){:target="_blank"} for more information.
