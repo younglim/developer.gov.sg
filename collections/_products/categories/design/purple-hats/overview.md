@@ -28,5 +28,10 @@ The bot then provides the impact of the accessibility issues by mapping them aga
 
 The results of Purple HATS’s scans are then compiled in JSON format, and an HTML report is generated, providing users flexibility as to how they review accessibility findings. 
 
-
+<figure style="text-align: center">
+  <img
+    src="/assets/img/openattestation-features.png" width="100%" height="100%"
+  />
+	  <figcaption>Fig 1: Sample screenshot of a Purple HATS report showing accessibility issues regarding images and links with missing alt text.</figcaption>
+</figure>
 
