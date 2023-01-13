@@ -35,3 +35,17 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
 	  <figcaption>Fig 1: Sample screenshot of a Purple HATS report showing accessibility issues regarding images and links with missing alt text.</figcaption>
 </figure>
 
+### Key Features
+
+- Automated accessibility testing tool based on axe-core engine
+- Choice of sitemap or website scans
+- Identification of accessibility issues based on WCAG 2.1 specifications
+- Integration into CI/CD pipeline with single command-line 
+- Accessibility reports generated in both JSON and HTML formats
+
+Please refer to the Features tab for more details.
+
+### Awards and Recognition
+
+Purple HATS been listed in the Digital Public Goods registry by the Digital Public Goods Alliance (DPGA). DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
+
