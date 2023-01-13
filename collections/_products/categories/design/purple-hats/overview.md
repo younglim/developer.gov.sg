@@ -30,7 +30,7 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/openattestation-features.png" width="100%" height="100%"
+    src="/assets/img/purple-hats-screenshot-one.png" width="100%" height="100%"
   />
 	  <figcaption>Fig 1: Sample screenshot of a Purple HATS report showing accessibility issues regarding images and links with missing alt text.</figcaption>
 </figure>
