@@ -16,7 +16,7 @@ The common API is built with pre-defined standards, providing a single point of 
 
 ### Integration with Video Analytics System (VAS)
 
-Agencies can quickly run video analytics through CVX‘s seamless integration with the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} developed by GovTech.
+Agencies can quickly run video analytics through CVX‘s seamless integration with the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} developed by GovTech, using this upcoming feature.
 
 ### Intra-Agency sharing
 
