@@ -37,7 +37,7 @@ The product is also part of the Service Layer of the [Singapore Technology Tech 
 
 - Single viewpoint across video systems
 - Common CVX API for external systems
-- Integration with Video Analytics System (VAS) – Coming soon
+- Integration with Video Analytics System (VAS) coming soon
 - Intra-Agency sharing
 - Cross-Agency sharing
 
