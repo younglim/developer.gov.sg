@@ -14,9 +14,9 @@ CVX links up existing video systems from multiple brands, allowing you to have a
 
 The common API is built with pre-defined standards, providing a single point of connectivity and faster connections to external systems. For example, if your agency has a staff app, it can utilise the CVX common API to draw video feeds.
 
-### Integration with Video Analytics System (VAS)
+### Integration with Video Analytics System (VAS) coming soon
 
-Agencies can quickly run video analytics through CVX‘s seamless integration with the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} developed by GovTech, using this upcoming feature.
+Agencies can soon quickly run video analytics through CVX‘s seamless integration with the [Video Analytics System (VAS)](/products/categories/analytics/vas/){:target="_blank"} developed by GovTech, using this upcoming feature.
 
 ### Intra-Agency sharing
 
