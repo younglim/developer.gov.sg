@@ -46,7 +46,7 @@ Please refer to [Features](/products/categories/design/purple-hats/features){:ta
 
 ### Awards and Recognition
 
-Purple HATS been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"} by the [Digital Public Goods Alliance (DPGA)](https://digitalpublicgoods.net/who-we-are/){:target="\_blank"}. DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
+- Purple HATS been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"} by the [Digital Public Goods Alliance (DPGA)](https://digitalpublicgoods.net/who-we-are/){:target="\_blank"}. DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
 
 ### Pricing
 
