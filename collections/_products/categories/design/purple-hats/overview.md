@@ -48,6 +48,8 @@ Please refer to [Features](/products/categories/design/purple-hats/features){:ta
 
 - Purple HATS been listed in the [Digital Public Goods registry](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"} by the [Digital Public Goods Alliance (DPGA)](https://digitalpublicgoods.net/who-we-are/){:target="\_blank"}. DPGA is a multistakeholder initiative supported by the Norwegian Agency for Development Cooperation (Norad), United Nations Development Programme (UNDP), and UNICEF.
 
+- Purple HATS has been published as a case study in the [Case Study Library](https://oecd-opsi.org/innovations/purple-hats/){:target="\_blank"} of the OECD [Observatory of Public Sector Innovation (OPSI)](https://oecd-opsi.org){:target="\_blank"}.
+
 ### Pricing
 
 Purple HATS is an open-source tool that is free to use. Check out the [Purple HATS listing](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"} in the Digital Public Goods Registry.
