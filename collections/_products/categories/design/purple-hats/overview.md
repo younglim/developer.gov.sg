@@ -29,7 +29,7 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
 
 <figure style="text-align: center">
   <img
-    src="/assets/img/purple-hats-screenshot-one.png" width="100%" height="100%"
+    src="/assets/img/purple-hats-accessibility-report-new.png" width="100%" height="100%"
   />
 	  <figcaption>Fig 1: Sample screenshot of a Purple HATS report showing accessibility issues regarding images and links with missing alt text.</figcaption>
 </figure>
@@ -42,7 +42,6 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
 - Integration into CI/CD pipeline with single command-line 
 - Accessibility reports generated in both JSON and HTML formats
 
-Please refer to [Features](/products/categories/design/purple-hats/features){:target="_blank"} for more details.
 
 ### Awards and Recognition
 
