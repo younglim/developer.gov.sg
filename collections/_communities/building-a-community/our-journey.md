@@ -42,24 +42,24 @@ In short, we took every opportunity we could to learn from the people around us!
 
 ### STACK Meetups
 
- By August 2019, the groundwork had been laid and we organised our very first [STACK-X Meetup](/communities/stack-x-meetups/overview.html){:target="_blank"} (around 80 people showed up!) on agile development. As this was our first time, we partnered with YOW!, an established tech community organiser familiar with holding similar events.
+ By August 2019, the groundwork had been laid and we organised our very first [STACK Meetup](/communities/stack-x-meetups/overview.html){:target="_blank"} (around 80 people showed up!) on agile development. As this was our first time, we partnered with YOW!, an established tech community organiser familiar with holding similar events.
 
 <figure style="text-align: center">
   <img
     src="/assets/img/stack-x-journey-cheow-hoe.png"  
-    alt="Fig 2: Chan Cheow Hoe, Government Chief Digital Technology Officer speaking at STACK-X Meetup at GovTech's office."
+    alt="Fig 2: Chan Cheow Hoe, Government Chief Digital Technology Officer speaking at STACK Meetup at GovTech's office."
   />
-  <figcaption>Fig 2: Chan Cheow Hoe, Government Chief Digital Technology Officer (GCDTO) speaking at STACK-X Meetup at GovTech's office.</figcaption>
+  <figcaption>Fig 2: Chan Cheow Hoe, Government Chief Digital Technology Officer (GCDTO) speaking at STACK Meetup at GovTech's office.</figcaption>
 </figure>
 
-By early February 2020, it became clear that in-person Meetups were going to be impossible with the ongoing pandemic. It was a small struggle to pivot to online meetups as we had to learn new ways to engage our community. In April 2020, we held our very first [online STACK-X Meetup](/communities/stack-x-meetups/past-webinars/){:target="_blank"}, where we talked about how tech could address some of the problems emerging as a result of the COVID-19 crisis. For this online event, we similarly partnered with EDB’s Tech +65 who was experienced with hosting digital events. Our partner helped to shed some much-needed light on how online events could be run effectively, and we were very grateful for the learning points we gained that night.
+By early February 2020, it became clear that in-person Meetups were going to be impossible with the ongoing pandemic. It was a small struggle to pivot to online meetups as we had to learn new ways to engage our community. In April 2020, we held our very first [online STACK Meetup](/communities/stack-x-meetups/past-webinars/){:target="_blank"}, where we talked about how tech could address some of the problems emerging as a result of the COVID-19 crisis. For this online event, we similarly partnered with EDB’s Tech +65 who was experienced with hosting digital events. Our partner helped to shed some much-needed light on how online events could be run effectively, and we were very grateful for the learning points we gained that night.
 
 <figure style="text-align: center">
   <img
     src="/assets/img/stack-x-journey-tech-for-public-good.png"  
-    alt="Fig 3: First online STACK-X Meetup - Discussion on Tech for Public Good."
+    alt="Fig 3: First online STACK Meetup - Discussion on Tech for Public Good."
   />
-  <figcaption>Fig 3: First online STACK-X Meetup - Discussion on Tech for Public Good.</figcaption>
+  <figcaption>Fig 3: First online STACK Meetup - Discussion on Tech for Public Good.</figcaption>
 </figure>
 
 It has been over a year since that first digital Meetup and this format has now become the norm for us. Looking back, the sudden onset of the COVID-19 crisis helped us to realise the importance of curating and organising timely, relevant Meetups that best help the community. Going online also provided new challenges and pushed us to come up with innovative solutions. For example, as a substitute for live engagement, we had to introduce polls and video Q&A with upvoting. This all sounds rather straightforward today, but remember that this was at a time when we were all still unfamiliar with online events and webinars!
