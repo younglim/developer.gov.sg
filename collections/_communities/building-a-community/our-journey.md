@@ -12,7 +12,7 @@ redirect_from:
 
 It has been almost two years since we started the STACK-X community. Take a look at our journey and how we pivoted our efforts amidst the COVID-19 pandemic.
 
-If you have attended one of our STACK-X Meetups, you are probably quite familiar with [GovTech](https://www.tech.gov.sg/who-we-are/our-role/){:target="_blank"}. Chances are, you are also well acquainted with some products we have developed — for example, [TraceTogether](/products/categories/digital-solutions-to-address-covid-19/tracetogether){:target="_blank"} and our [Whole-of-Government Application Analytics](/products/categories/analytics/wogaa){:target="_blank"}.
+If you have attended one of our STACK Meetups, you are probably quite familiar with [GovTech](https://www.tech.gov.sg/who-we-are/our-role/){:target="_blank"}. Chances are, you are also well acquainted with some products we have developed — for example, [TraceTogether](/products/categories/digital-solutions-to-address-covid-19/tracetogether){:target="_blank"} and our [Whole-of-Government Application Analytics](/products/categories/analytics/wogaa){:target="_blank"}.
 
 If not, that is fine too! To get you up to speed — GovTech is a statutory board that is part of the [Smart Nation and Digital Government Group](https://www.tech.gov.sg/media/technews/govtech-joins-the-smart-nation-and-digital-government-group){:target="_blank"} (SNDGG), reporting to the Prime Minister’s Office. Our mission is to develop technologies for the government to ultimately make a difference in the lives of everyday Singaporeans.
 
@@ -40,7 +40,7 @@ While it was not easy to start from scratch, we were thankfully not alone. As it
 
 In short, we took every opportunity we could to learn from the people around us!
 
-### STACK-X Meetups
+### STACK Meetups
 
  By August 2019, the groundwork had been laid and we organised our very first [STACK-X Meetup](/communities/stack-x-meetups/overview.html){:target="_blank"} (around 80 people showed up!) on agile development. As this was our first time, we partnered with YOW!, an established tech community organiser familiar with holding similar events.
 
