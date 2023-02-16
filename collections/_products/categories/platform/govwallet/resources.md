@@ -11,7 +11,7 @@ STACK Meetup: Reimagining Government Payouts with GovWallet
 ### Multimedia
 
 - [GovWallet website](http://www.wallet.gov.sg/){:target="_blank"}
-- [STACK Meetup: Remimagining Government Pay-outs with GovWallet video recording](/communities/events/stack-x-meetups/hybrid-reimagining-government-payouts-with-govwallet/overview.html){:target="_blank"}
+- [STACK Meetup: Remimagining Government Pay-outs with GovWallet video recording](/communities/events/stack-meetups/hybrid-reimagining-government-payouts-with-govwallet/overview.html){:target="_blank"}
 - [STACK Meetup: Remimagining Government Pay-outs with GovWallet presentation slides](/assets/files/govwallet-stack-x-presentation.pdf){:target="_blank"}
 
 ### Media coverage
