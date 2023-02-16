@@ -107,6 +107,18 @@
     - item_name: Overview
 
 # Stack Events
+- name: "Managed ML Pipelines for WoG Video Analytics"
+  description: >-
+    Curious about GovTech's Video Analytics System? Hear more from GovTech's Jason See, Elizabeth Lim, Goh Jia Yi and AWS Bill Cai. Our experts will share about this centralised AI-powered platform that enables rapid development and deployment of video analytics solutions.
+  category: STACK Meetup
+  location: 10 Pasir Panjang Rd
+  event_date: 2023-02-23T19:00:00+08:00 - 2023-02-23T20:30:00+08:00
+  registration_end_date: 2023-02-22T18:30:00+08:00
+  recording_link: 
+  registration_link: https://go.gov.sg/stackmeetup23feb2023
+  items:
+    - item_name: Overview
+    
 - name: "Developing SGTS [Engineering Productivity Series]"
   description: >-
     In our inaugural STACK Meetup for 2023, Government Chief Digital Technology Officer, Chan Cheow Hoe and Kevin Ng, Director of Government Digital Services, GovTech will share GovTech's engineering productivity approach and showcase SGTS. They will be joined by Ketan Mujumdar, Director of Engineering from Carousell, who will talk about the company's development practices.
