@@ -5,8 +5,6 @@ _data: events-nav
 multi_level_nav: true
 ---
 
-<!-- Header -->
-
 ### Participation Eligibility
 
 STACK the Codes is open to all.
