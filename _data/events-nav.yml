@@ -106,7 +106,7 @@
   items:
     - item_name: Overview
 
-# Stack-X Events
+# STACK Events
 - name: "CIO - Edition"
   description: >-
     Sing Khang Leong, Chief Information Officer, Ministry of Manpower and Cluster Director of Manpower Cluster, Services Group, GovTech will be sharing on the increasing importance of Ops-Tech integration as a key success factor for digitalisation/business transformation in today's world.
@@ -337,3 +337,23 @@
     /communities/events/stack-x-meetups/where-s-the-security-in-the-internet-of-things/overview.html
   items:
     - item_name: Overview
+
+# Jaga the STACK
+- name: STACK the Codes 2022
+  description: Compete in STACK the Codes Hackathon and stand a chance to bring your ideas to life. STACK the Codes gives competitors 30 days to ideate and develop minimum viable products. The top solutions will be considered for mentorship opportunities under GovTech’s Cyber Security Group to produce a fully functioning Proof-of-Concept!
+  category: Jaga the STACK
+  location: In-person/virtual event
+  event_date: 2022-10-07T00:00:00+08:00 - 2022-11-15T00:00:00+08:00
+  registration_end_date: 2022-11-06T23:59:00+08:00
+  registration_link: https://form.gov.sg/6347be2822675200119b9fb9
+  recording_link:
+  items:
+    - item_name: Overview
+    - item_name: Schedule
+    - item_name: Participation
+    - item_name: Prizes
+    - item_name: General Terms and Conditions
+    - item_name: Rules
+    - item_name: Privacy Statement
+    - item_name: Frequently Asked Questions
+    - item_name: Contact Us
