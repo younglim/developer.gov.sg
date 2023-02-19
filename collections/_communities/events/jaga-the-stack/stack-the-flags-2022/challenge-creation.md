@@ -28,7 +28,7 @@ To submit a challenge, please follow the [challenge submission requirements](htt
 
 ### Submit Now!!
 
-To submit a challenge, click [here](https://form.gov.sg/6315af7e0ba1c90013c6a643){:target="_blank"}. Please attach your challenge in a zip file format, along with the required documentation, and the [signed T&C](/communities/events/jaga-the-stack/stack-the-flags-2022/files/TnC_Community_Sourced_Challenges.pdf){:target="_blank"}.
+To submit a challenge, click [here](https://form.gov.sg/6315af7e0ba1c90013c6a643){:target="_blank"}. Please attach your challenge in a zip file format, along with the required documentation, and the [signed T&C](/communities/events/jaga-the-stack/files/TnC_Community_Sourced_Challenges.pdf){:target="_blank"}.
 
 Challenge submission closes on 10 October 2022, 2359 HRS.
 
