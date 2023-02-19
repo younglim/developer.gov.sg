@@ -35,7 +35,7 @@ Participating team members may withdraw consent for use of their personal data a
 
 ### Contact Information
 
-Please [contact us](/communities/events/jaga-the-stack/stack-the-codes-2022/contact-us){:target="_blank"} if you:
+Please [contact us](/communities/events/jaga-the-stack/stack-the-flags-2022/contact-us){:target="_blank"} if you:
 
 1. have any enquires or feedback on our data protection, policies and procedures; or
 2. need more information on or access to data which you have provided directly to us in the past.

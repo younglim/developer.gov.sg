@@ -31,7 +31,7 @@ Here are some submission rules. Unless otherwise specified, the rules refer to y
 
 #### Participation
 
-All participating teams are subject to the terms and conditions written in the [participation section](/communities/events/jaga-the-stack/stack-the-flags-2020/participation){:target="_blank"} of this website.
+All participating teams are subject to the terms and conditions written in the [participation section](/communities/events/jaga-the-stack/stack-the-flags-2022/participation){:target="_blank"} of this website.
 
 #### Competition Schedule
 
@@ -39,7 +39,7 @@ All participating teams are to abide by the schedule for each period of the comp
 
 #### Prizes
 
-We will award the prizes as laid out in the [prizes section](/communities/events/jaga-the-stack/stack-the-flags-2020/prizes){:target="_blank"} of this website. GovTech will announce the final winner and recipients of the prizes and awards during the Prize Ceremony (as indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-flags-2022/overview#schedule){:target="_blank"}). Prizes will be awarded within 60 days after the conclusion of the competition\*. If a potential winner declines, is found to have broken the rules of the competition, does not respond to prize notification, is found to be ineligible for the prize, or is otherwise found to be unable to claim the prize for some reason, GovTech may award the prize to the next best team(s).
+We will award the prizes as laid out in the [prizes section](/communities/events/jaga-the-stack/stack-the-flags-2022/prizes){:target="_blank"} of this website. GovTech will announce the final winner and recipients of the prizes and awards during the Prize Ceremony (as indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-flags-2022/overview#schedule){:target="_blank"}). Prizes will be awarded within 60 days after the conclusion of the competition\*. If a potential winner declines, is found to have broken the rules of the competition, does not respond to prize notification, is found to be ineligible for the prize, or is otherwise found to be unable to claim the prize for some reason, GovTech may award the prize to the next best team(s).
 
 Prize categories will be updated in this section soon.
 
@@ -55,6 +55,6 @@ The Organising Committee does not condone cheating at any point during the CTF c
 
 By participating in this competition, all participating teams and its members agree to the provisions as written in the following:
 
-1. STACK the Flags [General Terms and Conditions](/communities/events/jaga-the-stack/stack-the-flags-2020/general-terms-and-conditions){:target="_blank"};
-2. STACK the Flags [Privacy Statement](/communities/events/jaga-the-stack/stack-the-flags-2020/privacy-statement){:target="_blank"}; and
+1. STACK the Flags [General Terms and Conditions](/communities/events/jaga-the-stack/stack-the-flags-2022/general-terms-and-conditions){:target="_blank"};
+2. STACK the Flags [Privacy Statement](/communities/events/jaga-the-stack/stack-the-flags-2022/privacy-statement){:target="_blank"}; and
 3. STACK the Flags Rules.

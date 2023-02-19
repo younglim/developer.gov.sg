@@ -27,16 +27,16 @@ Each submission shall follow the criteria provided on the Competition Site and m
 
 #### Participation
 
-All participating teams are subject to the terms and conditions written in the [participation section](/communities/events/jaga-the-stack/stack-the-codes-2020/participation){:target="_blank"} of this website.
+All participating teams are subject to the terms and conditions written in the [participation section](/communities/events/jaga-the-stack/stack-the-codes-2022/participation){:target="_blank"} of this website.
 
 #### Competition Schedule
 
-All participating teams are to abide by the schedule for each period of the competition. The relevant dates and times of the competition are indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-codes-2022/overview#schedule).
+All participating teams are to abide by the schedule for each period of the competition. The relevant dates and times of the competition are indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-codes-2022/overview#schedule){:target="_blank"}.
 
 #### General Terms and Conditions and Privacy Statement
 
 By participating in this competition, all participating teams and its members agree to the provisions as written in the following:
 
-1. STACK the Codes [General Terms and Conditions](/communities/events/jaga-the-stack/stack-the-codes-2020/general-terms-and-conditions){:target="_blank"};
-2. STACK the Codes [Privacy Statement](/communities/events/jaga-the-stack/stack-the-codes-2020/privacy-statement){:target="_blank"}; and
+1. STACK the Codes [General Terms and Conditions](/communities/events/jaga-the-stack/stack-the-codes-2022/general-terms-and-conditions){:target="_blank"};
+2. STACK the Codes [Privacy Statement](/communities/events/jaga-the-stack/stack-the-codes-2022/privacy-statement){:target="_blank"}; and
 3. STACK the Codes Rules.
