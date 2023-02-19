@@ -39,3 +39,5 @@ There will be a cash bounty awarded to the best write-up of the specified challe
 | Reliability of the Exploit/Attack Path | Solutions that can be reliably executed.                                                         | 20             |
 | Usefulness of the Write-up             | Write-ups that can be easily used by the community to learn and gain new knowledge and concepts. | 20             |
 | Thought Process                        | Sharing of thought process with the community, along with tips and tricks where possible.        | 20             |
+
+<br />
