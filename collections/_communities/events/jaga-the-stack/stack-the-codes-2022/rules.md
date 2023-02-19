@@ -31,7 +31,7 @@ All participating teams are subject to the terms and conditions written in the [
 
 #### Competition Schedule
 
-All participating teams are to abide by the schedule for each period of the competition. The relevant dates and times of the competition are indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-codes-2020#schedule){:target="_blank"}.
+All participating teams are to abide by the schedule for each period of the competition. The relevant dates and times of the competition are indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-codes-2020/overview#schedule){:target="_blank"}.
 
 #### General Terms and Conditions and Privacy Statement
 
