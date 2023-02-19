@@ -35,11 +35,11 @@ All participating teams are subject to the terms and conditions written in the [
 
 #### Competition Schedule
 
-All participating teams are to abide by the schedule for each period of the competition. The relevant dates and times of the competition are indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-flags-2020/overview#schedule){:target="_blank"}.
+All participating teams are to abide by the schedule for each period of the competition. The relevant dates and times of the competition are indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-flags-2022/overview#schedule){:target="_blank"}.
 
 #### Prizes
 
-We will award the prizes as laid out in the [prizes section](/communities/events/jaga-the-stack/stack-the-flags-2020/prizes){:target="_blank"} of this website. GovTech will announce the final winner and recipients of the prizes and awards during the Prize Ceremony (as indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-flags-2020#schedule){:target="_blank"}). Prizes will be awarded within 60 days after the conclusion of the competition\*. If a potential winner declines, is found to have broken the rules of the competition, does not respond to prize notification, is found to be ineligible for the prize, or is otherwise found to be unable to claim the prize for some reason, GovTech may award the prize to the next best team(s).
+We will award the prizes as laid out in the [prizes section](/communities/events/jaga-the-stack/stack-the-flags-2020/prizes){:target="_blank"} of this website. GovTech will announce the final winner and recipients of the prizes and awards during the Prize Ceremony (as indicated in the [schedule](/communities/events/jaga-the-stack/stack-the-flags-2022/overview#schedule){:target="_blank"}). Prizes will be awarded within 60 days after the conclusion of the competition\*. If a potential winner declines, is found to have broken the rules of the competition, does not respond to prize notification, is found to be ineligible for the prize, or is otherwise found to be unable to claim the prize for some reason, GovTech may award the prize to the next best team(s).
 
 Prize categories will be updated in this section soon.
 
