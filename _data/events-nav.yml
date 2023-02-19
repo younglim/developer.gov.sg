@@ -346,7 +346,7 @@
   event_date: 2022-12-02T00:00:00+08:00 - 2022-12-04T00:00:00+08:00
   registration_end_date: 2022-12-02T23:59:00+08:00
   registration_link:
-  recording_link:
+  photo_link: https://drive.google.com/drive/folders/1AGMVyIrEaFk4-PC_co2BOdshAOfScbM4
   items:
     - item_name: Overview
     - item_name: Participation
@@ -366,7 +366,7 @@
   event_date: 2022-10-07T00:00:00+08:00 - 2022-11-15T00:00:00+08:00
   registration_end_date: 2022-11-06T23:59:00+08:00
   registration_link: https://form.gov.sg/6347be2822675200119b9fb9
-  recording_link:
+  photo_link: https://drive.google.com/drive/folders/1AGMVyIrEaFk4-PC_co2BOdshAOfScbM4
   items:
     - item_name: Overview
     - item_name: Participation

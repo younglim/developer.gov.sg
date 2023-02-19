@@ -10,7 +10,11 @@
     {%- assign url_str = page.url | remove: 'index.html' | append: sub_section_slug -%}
 
     {%- comment -%} Optional Fields {%- endcomment -%}
-    {%- assign recordings_uploaded = event.recording_link | default: false -%}
+	{%- if event.category contains "Jaga the STACK" -%}
+      {%- assign photos_uploaded = event.photo_link | default: false -%}
+	{%- else -%}
+	  {%- assign recordings_uploaded = event.recording_link | default: false -%}
+	{%- endif -%}
 
     {%- if event.category contains "Conference" -%}
       {%- assign img_src = '/assets/img/communities/conferences.svg' -%}
@@ -51,6 +55,7 @@
     name=name
     category=event.category
     description=event.description
+	photos_uploaded=photos_uploaded
     recordings_uploaded=recordings_uploaded
     event_number_of_days=event_number_of_days
     img_src=img_src

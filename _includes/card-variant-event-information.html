@@ -12,8 +12,13 @@
 {%- assign target_group_joined = current_collection.target_group | join: ", " -%}
 {%- assign event_number_of_days = current_collection.event_number_of_days | default : 1-%}
 
+{%- if current_collection.category contains "Jaga the STACK" -%}
+{%- assign event_photo_link = current_collection.event_photo_link | default: false-%}
+{%- assign photos_uploaded = current_collection.event_photo_link | default: false -%}
+{%- else -%}
 {%- assign event_recording_link = current_collection.event_recording_link | default: false-%}
 {%- assign recordings_uploaded = current_collection.event_recording_link | default: false -%}
+{%- endif -%}
 
 {%- assign event_title = current_collection.name -%}
 {% if event_number_of_days >= 2 %}
@@ -56,6 +61,7 @@
   data-end-date="{{ end_date }}" data-number-of-days="{{ event_number_of_days }}"
   data-registration-end-date="{{ current_collection.registration_end_date | default : start_date }}"
   data-registration-link="{{ current_collection.registration_link }}"
+  data-photo-link="{{ current_collection.photo_link }}"
   data-recording-link="{{ current_collection.recording_link }}">
   <div class="has-text-centered event-status-container">
     <p class="has-text-weight-bold has-text-white event-status">DUMMY TEXT</p>
