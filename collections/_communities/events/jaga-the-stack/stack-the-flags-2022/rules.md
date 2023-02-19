@@ -9,7 +9,7 @@ multi_level_nav: true
 
 #### General
 
-In these Rules, **“GovTech”** refers to the Government Technology Agency, a statutory board of the Government of Singapore who is the organiser of this STACK the Codes competition and event.
+In these Rules, **“GovTech”** refers to the Government Technology Agency, a statutory board of the Government of Singapore who is the organiser of this STACK the Flags competition and event.
 
 **“You”** or **“you”** refers to each participating team and its members.
 

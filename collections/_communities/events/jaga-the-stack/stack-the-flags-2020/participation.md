@@ -1,11 +1,11 @@
 ---
-title: STACK the Flags 2022
+title: STACK the Flags 2020
 layout: layout-page-sidenav
 _data: events-nav
 multi_level_nav: true
 ---
 
-### Participation Categories and Eligibility
+### Participation Categories and Requirements
 
 STACK the Flags is open to all and the competition is divided into three categories:
 
@@ -13,13 +13,13 @@ STACK the Flags is open to all and the competition is divided into three categor
 2. Universities and Polytechnics; and
 3. Junior Colleges, Integrated Programmes and Institutes of Technical Education.
 
-All participating teams can have a maximum of 4 team members. **To be eligible for prizes**, teams requires at least 1 Singapore Citizen or Permanent Resident in the team.
+All participating teams shall have a maximum of 4 team members, with at least 1 Singapore Citizen or Permanent Resident in the team.
 
 Employees of GovTech and officers seconded to GovTech are not eligible to participate.
 
-Participants under the age of 18 at the start date of the Competition must obtain proper parental/guardian’s consent to participate in the Competition. The parental/guardian consent form can be found [here](/communities/events/jaga-the-stack/files/STACK%20the%20Flags%20Consent%20and%20Indemnity%20Form.docx){:target="_blank"} and must be submitted before the competition starts.
+Participants who are below 18 years old as at the date of the Competition must have proper parental/guardian’s consent to participate in the Competition. The parental/guardian consent form is provided [here](/communities/events/jaga-the-stack/files/STACK%20the%20Flags%20Consent%20and%20Indemnity%20Form.docx){:target="_blank"}. Participants under 18 years old will be automatically disqualified from the Competition if proper consent has not been obtained and submitted before the start of the Competition.
 
-Teams that fail to comply with the above-mentioned requirements can be automatically disqualified from the Competition.
+Teams which fail to comply with the above mentioned requirements shall be automatically disqualified from the Competition.
 
 ### How Will Teams Be Categorised?
 

@@ -342,7 +342,7 @@
 - name: STACK the Flags 2022
   description: STACK the Flags is back for its second edition! Pit your skills against local and international cybersecurity communities in a 48-hour jeopardy style Capture-the-Flag competition. STACK the Flags offers challenges across 11 different cybersecurity domains such as Binary Exploitation, Cloud, Cryptography and Internet of Things. Capture the most flags and stand a chance to win attractive prizes!
   category: Jaga the STACK
-  location: In-person/virtual event
+  location: In-person
   event_date: 2022-12-02T00:00:00+08:00 - 2022-12-04T00:00:00+08:00
   registration_end_date: 2022-12-02T23:59:00+08:00
   registration_link:
@@ -362,7 +362,7 @@
 - name: STACK the Codes 2022
   description: Compete in STACK the Codes Hackathon and stand a chance to bring your ideas to life. STACK the Codes gives competitors 30 days to ideate and develop minimum viable products. The top solutions will be considered for mentorship opportunities under GovTech’s Cyber Security Group to produce a fully functioning Proof-of-Concept!
   category: Jaga the STACK
-  location: In-person/virtual event
+  location: In-person
   event_date: 2022-10-07T00:00:00+08:00 - 2022-11-15T00:00:00+08:00
   registration_end_date: 2022-11-06T23:59:00+08:00
   registration_link: https://form.gov.sg/6347be2822675200119b9fb9
@@ -371,6 +371,26 @@
     - item_name: Overview
     - item_name: Participation
     - item_name: Prizes
+    - item_name: General Terms and Conditions
+    - item_name: Rules
+    - item_name: Privacy Statement
+    - item_name: Frequently Asked Questions
+    - item_name: Contact Us
+    
+- name: STACK the Flags 2020
+  description: Organised by GovTech's Cyber Security Group, join the technology community in the STACK the Flags 2020!
+  category: Jaga the STACK
+  location: Virtual event
+  event_date: 2020-11-02T00:00:00+08:00 - 2020-12-06T00:00:00+08:00
+  registration_end_date: 2022-12-03T23:59:00+08:00
+  registration_link:
+  recording_link:
+  items:
+    - item_name: Overview
+    - item_name: Participation
+    - item_name: Prizes
+    - item_name: Winners
+    - item_name: Contributors
     - item_name: General Terms and Conditions
     - item_name: Rules
     - item_name: Privacy Statement
