@@ -4,22 +4,15 @@ layout: layout-page-sidenav
 _data: events-nav
 multi_level_nav: true
 faqs:
-  - name: What is the maximum number of participants for one team?
+  - name: My team qualifies for Category 2, can we opt to compete in Category 1?
     description: >
-      All participating teams can have a maximum of 3 team members, with at least 1 Singapore Citizen or Permanent Resident in the team.
-  - name: Can I submit for multiple problem statements?
+      The organising committee will take that request in consideration when verifying the participating category. We will first allocate the team based on the current eligibility first (in this case, Category 2) and note that request. When the dates are closer, we will readjust the eligibility if and only if we have a comfortable pool of participants. This is to ensure a fair competition within each category.
+  - name: The website states that students in Integrated Programme (IP) are eligible to join. I am currently a Secondary 4 student, but I am not part of IP, am I still eligible to join?
     description: >
-      Each team may submit for multiple problem statements. Please note that each problem statement is unique and not transferrable, and teams are advised to evaluate the resource required for each problem statement. 
-  - name: How are the winning teams selected?
+      Yes, for participants under the age of 18, we will need your guardian/parent to fill up the Consent and Indemnity form and submit it to us. The steps are detailed in the registration form. 
+  - name: What if I have more than 4 friends who want to join the competition?
     description: >
-     Winning teams will undergo two rounds of evaluation and are selected based on the completeness of their solutions including but not limited to; scalability, uniqueness and feasibility.
-  - name: Are we required to create a technical solution?
-    description: >
-     Teams are expected to create a technical solution. The extended duration for Round One (30 days) is specially crafted to ensure the completeness of your prototype. For more details, please refer to the submission instructions that will be sent to all participants.     
+     We strongly encourage you and your friends to divide yourselves into teams of up to 4 members. Please ensure that there is at least one Singapore Citizen/Permanent Resident in the team with a local residential address to be eligible for prizes. The Organising Committee will require each team to comply strictly to this requirement. This is to ensure fair competition play and ease of administration for the CTF. Do note that the top 3 winners from each category will go through a video interview to validate the CTF experience.  
 ---
 
-### Frequently Asked Questions
-
-![STACK the Codes 2022 FAQs](/assets/img/jaga-faq.jpg)
-
-{% include faqs-app.html sectionName="" sectionDescription=page.section_description faqData=page.faqs %}
+{% include faqs-app.html sectionName="Frequently Asked Questions" sectionDescription=page.section_description faqData=page.faqs %}
