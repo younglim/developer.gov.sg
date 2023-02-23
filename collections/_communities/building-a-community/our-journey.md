@@ -10,7 +10,7 @@ redirect_from:
 
 ### Levelling Up Collectively — Our Community Engagement Journey
 
-It has been almost two years since we started the STACK-X community. Take a look at our journey and how we pivoted our efforts amidst the COVID-19 pandemic.
+It has been almost two years since we started the STACK community. Take a look at our journey and how we pivoted our efforts amidst the COVID-19 pandemic.
 
 If you have attended one of our STACK Meetups, you are probably quite familiar with [GovTech](https://www.tech.gov.sg/who-we-are/our-role/){:target="_blank"}. Chances are, you are also well acquainted with some products we have developed — for example, [TraceTogether](/products/categories/digital-solutions-to-address-covid-19/tracetogether){:target="_blank"} and our [Whole-of-Government Application Analytics](/products/categories/analytics/wogaa){:target="_blank"}.
 
@@ -64,7 +64,7 @@ By early February 2020, it became clear that in-person Meetups were going to be 
 
 It has been over a year since that first digital Meetup and this format has now become the norm for us. Looking back, the sudden onset of the COVID-19 crisis helped us to realise the importance of curating and organising timely, relevant Meetups that best help the community. Going online also provided new challenges and pushed us to come up with innovative solutions. For example, as a substitute for live engagement, we had to introduce polls and video Q&A with upvoting. This all sounds rather straightforward today, but remember that this was at a time when we were all still unfamiliar with online events and webinars!
 
-Also, while our live sessions became a great place for developers to network and meet up, the digital space made it difficult for our community members to connect, especially amongst themselves. So, we started the [STACK-X Telegram group](https://go.gov.sg/stackxtelegram){:target="_blank"} for more casual engagement with our growing community outside of Meetups. These days, we also invite our speakers into this channel so the community can continue to engage with them and learn beyond the time limitations of our webinars.
+Also, while our live sessions became a great place for developers to network and meet up, the digital space made it difficult for our community members to connect, especially amongst themselves. So, we started the [STACK Telegram group]([https://go.gov.sg/stacktelegram](https://go.gov.sg/stacktelegram){:target="_blank"} for more casual engagement with our growing community outside of Meetups. These days, we also invite our speakers into this channel so the community can continue to engage with them and learn beyond the time limitations of our webinars.
 
 ### Our Successes in Singapore & Beyond!
 
@@ -86,6 +86,6 @@ If you’d like to connect and exchange ideas, please reach out to [Karen](http:
 
 - [Community playbook](resources/community_playbook.pdf){:target="_blank"}
 - Hear from our Community Leaders: [Min Li](resources/interview-with-lim-min-li){:target="_blank"}, [Mindy](resources/interview-with-mindy-lim){:target="_blank"}, and [Melvin and Michael](resources/interview-with-melvin-tan-and-michael-cheng){:target="_blank"}
-- [STACK-X Deck Template](resources/STACK-X_deck_template_for_public_use.pptx){:target="_blank"}
-- [STACK-X Virtual Background for Speakers](resources/STACK-X_virtual_backgrounds.zip){:target="_blank"}
-- Join our STACK-X Community on [Meetup](https://www.meetup.com/stack-x-by-govtech-singapore){:target="_blank"} and [Telegram](https://go.gov.sg/stackxtelegram){:target="_blank"}
+- [STACK Deck Template](resources/STACK-X_deck_template_for_public_use.pptx){:target="_blank"}
+- [STACK Virtual Background for Speakers](resources/STACK-X_virtual_backgrounds.zip){:target="_blank"}
+- Join our STACK Community on [Meetup](https://www.meetup.com/stack-by-govtech-singapore/){:target="_blank"} and [Telegram](https://go.gov.sg/stacktelegram){:target="_blank"}
