@@ -125,7 +125,7 @@
                   border-radius: 0.25rem;
                 "
               >
-                Recordings available
+                Recording available
               </div>
             </template>
             <!-- Category Slot-->

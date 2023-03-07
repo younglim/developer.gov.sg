@@ -63,7 +63,7 @@ import {
           case status === "past":
             if (recordingLink) {
               eventInformationAnchorTag.href = recordingLink;
-              eventInformationAnchorTag.textContent = "View Recording";
+              eventInformationAnchorTag.textContent = "View Recordings";
               eventInformationAnchorTag.style.backgroundColor = "#0161AF";
               break;
             }
