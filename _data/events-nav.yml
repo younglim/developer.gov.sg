@@ -79,7 +79,7 @@
   location: Online (via Zoom)
   event_date: 2020-12-04T00:00:00+08:00 - 2020-12-04T23:59:00+08:00
   registration_end_date: 2020-12-04T00:00:00+08:00
-  recording_link: /communities/events/conferences/stack-the-flags-2020
+  recording_link:
   registration_link: "https://www.google.com/"
   items:
     - item_name: Overview
