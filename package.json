@@ -64,7 +64,7 @@
     "vue-loading-overlay": "^6.0.2",
     "vue-moment": "^4.1.0",
     "vuex": "^4.1.0",
-    "webpack": "^5.72.1",
+    "webpack": "^5.76.0",
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
