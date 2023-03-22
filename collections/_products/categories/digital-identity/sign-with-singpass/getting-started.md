@@ -21,7 +21,7 @@ Businesses can reach out to any of the digital signing partners to use commercia
 - Tessaract Technologies
 - Zoho Sign
 
-More information on digital signing partners can be found [here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners).{:target="_blank"}
+More information on digital signing partners can be found [here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners){:target="_blank"}.
 
 **For Developers**
 
