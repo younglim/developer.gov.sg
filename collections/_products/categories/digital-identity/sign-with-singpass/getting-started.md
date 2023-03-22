@@ -26,5 +26,14 @@ More information on digital signing partners can be found [here](https://api.sin
 **For Developers**
 
 Developers from businesses that want to use the Sign with Singpass UAT/Production APIs will need to submit a request to be onboarded. 
-To submit the linkup request for approval, please provide required information
+To submit the linkup request for approval, please provide required information:
+- The nature of your business (e.g. financial institution)
+- Your detailed business use case
+- A graphical envisioned user journey for your use case
+- The timeline of your product roadmap (Expected go-live date)
+- The expected annual transaction volume for your use case
+- Any industry certifications (e.g. ISO27001)
+
+You can submit your request via email [here](mailto:sign_support@ndi.gov.sg).
+
 
