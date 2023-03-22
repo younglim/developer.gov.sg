@@ -15,7 +15,7 @@ description: >
   Sign with Singpass allows documents to be signed remotely with secure electronic signatures using the Singpass app. 
 ---
 
-![Singpass header banner](/assets/img/singpass-HeaderBanner-v2.png)
+![Sign with Singpass header banner](/assets/img/sign-HeaderBanner-v2.png)
 
 Sign with Singpass allows Singapore residents to use the Singpass app to digitally sign an electronic document. This is a secure electronic signature that is uniquely linked to the signer.
 
