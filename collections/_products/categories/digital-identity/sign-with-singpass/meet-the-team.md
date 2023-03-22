@@ -6,15 +6,15 @@ category: Infrastructure and Hosting
 _data: single-level-nav
 single_level_nav: true
 bios:
-  - name: Talitha Chin
+  - name: Javier Png
     title: Senior Product Manager
-    img_src: talitha_chin.png
-    linkedin_url: https://www.linkedin.com/in/talithachin/
+    img_src: 
+    linkedin_url: https://linkedin.com/in/javier-png
 
-  - name: Paul Tay
-    title: Senior Product Manager
-    img_src: paul_tay.png
-    linkedin_url: https://www.linkedin.com/in/taypaulhong/
+  - name: Emma Pei
+    title: Product Manager
+    img_src: 
+    linkedin_url: https://sg.linkedin.com/in/zi-ang-emma-pei-b3747095
 
 ---
 
