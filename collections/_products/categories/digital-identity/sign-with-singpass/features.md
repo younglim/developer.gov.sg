@@ -14,8 +14,8 @@ Sign with Singpass uses signing certificates issued by the National Certificatio
 
 Signing with Singpass provides convenience and increases productivity and business efficiency – users no longer need to be physically present to sign documents and agreements.
 
+### Choice of adoption methods
 
-
-Myinfo allows users to consent to the use of their data from government sources to pre-fill digital forms. This reduces manual form filling and ensures that government agencies and businesses receive a higher quality of data. Read more about Myinfo [here.](https://www.developer.tech.gov.sg/products/categories/digital-identity/myinfo/overview.html){:target="_blank"}
-
-
+Government agencies and businesses can choose to adopt Sign with Singpass in two ways:
+- Integrate the Sign with Singpass API with internal document management systems, or, 
+- Use commercial document management products that are pre-integrated with the Sign API as provided by the digital signing partners [here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners){:target="_blank"}.
