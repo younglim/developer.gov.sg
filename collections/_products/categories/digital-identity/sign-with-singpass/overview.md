@@ -19,6 +19,15 @@ description: >
 
 Sign with Singpass allows Singapore residents to use the Singpass app to digitally sign an electronic document. This is a secure electronic signature that is uniquely linked to the signer.
 
+The user journey for Sign with Singpass is similar to logging in with [Singpass](/products/categories/digital-identity/singpass/){:target="\_blank"}, Singapore’s National Digital Identity (NDI) – users can simply scan the QR code displayed on the screen using their Singpass app, and follow the on-screen instructions to complete the authentication and signing process.
 
-Singpass, Singapore’s National Digital Identity (NDI), is a strategic national project implemented and managed by the [Government Technology Agency (GovTech)](http://www.tech.gov.sg/){:target="\_blank"} under the [Smart Nation Digital Government Group (SNDGG)](https://www.smartnation.gov.sg/about-smart-nation/sndgg){:target="\_blank"}. SNDGG was formed in 2017 and is housed under the [Prime Minister’s Office (PMO)](https://www.pmo.gov.sg/){:target="\_blank"}. 
+The signed document is platform-agnostic, allowing the validated signature to be viewed with the user’s preferred system.
+
+### Pricing
+
+Onboarding for Sign with Singpass is free until further notice.
+
+### Contact Us
+
+{% include contact-us-form.html %}
 
