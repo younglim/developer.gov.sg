@@ -33,7 +33,7 @@ Volunteers can scan the identity cards of residents to verify their eligibility 
 
 <figure style="text-align: center">
       <img src="/assets/img/SupplyAlly-reg-recipients.png" width="20%" height="20%" />
-	      <figcaption>Fig 1: Volunteers can scan residents’ identification cards with the SupplyAlly mobile app for quick verification of the transactions.</figcaption>
+	      <figcaption>Fig 2: Volunteers can scan residents’ identification cards with the SupplyAlly mobile app for quick verification of the transactions.</figcaption>
     </figure><br />
 
 ### Quick updates
