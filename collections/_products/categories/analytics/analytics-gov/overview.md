@@ -28,7 +28,7 @@ These tools include:
 
 To date, Analytics.gov offers two virtual environments that are available for users: 
 - Government Data Center (GDC)
-- [Government on Commercial Cloud (GCC)](products/categories/infrastructure-and-hosting/government-on-commercial-cloud/){:target="_blank"}
+- [Government on Commercial Cloud (GCC)](/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/){:target="_blank"}
 
 It was first commissioned with its on-premise Government Data Centre (AG@GDC) set up in December 2021. 
 
