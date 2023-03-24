@@ -56,11 +56,6 @@ bios:
     img_src: dickson-tan.png
     linkedin_url: https://www.linkedin.com/in/dickson-tan/
 
-  - name: Eida Tan
-    title: UX Designer
-    img_src: eida_tan.png
-    linkedin_url: https://www.linkedin.com/in/eidatan/
-
   - name: Raphael Tan 
     title: Software Engineer
     img_src: raphael-tan.png
