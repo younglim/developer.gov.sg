@@ -58,11 +58,11 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
       <img src="/assets/img/purple-hats-fig-3.png" width="70%" height="70%" />
 	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
     </figure><br />
-&emsp;&ensp;&nbsp;              iv. Commit the changes to GitLab.
+&emsp;&ensp;&nbsp;         iv. Commit the changes to GitLab.
 <br>
 <br />&emsp;&nbsp;c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:
-<br>            i. A summary of total issue count and issue breakdown will be in the job log.
-<br>            ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
+<br />&emsp;&emsp;         i. A summary of total issue count and issue breakdown will be in the job log.
+<br />&emsp;&emsp;         ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
   
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" />
