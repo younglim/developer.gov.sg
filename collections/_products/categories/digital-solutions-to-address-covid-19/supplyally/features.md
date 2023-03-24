@@ -22,4 +22,12 @@ With SupplyAlly in use, eligible individuals can collect items on behalf of thei
 
 SupplyAlly does not require volunteers to sign up with personal details. Instead, volunteers are issued a QR code to be scanned using the app on their devices. After which, they are authorised to use the app with no further details required. The QR codes are permanently affiliated with the user’s device, meaning that they cannot be used for unauthorised logins even if someone else obtains them.
 
+<figure style="text-align: center">
+      <img src="/assets/img/SupplyAlly-volunteer-reg.png" width="50%" height="50%" />
+	      <figcaption>Fig 1: A screenshot of the Merge Request.</figcaption>
+    </figure><br />
+
+
+### Secured transactions with data privacy
+
 
