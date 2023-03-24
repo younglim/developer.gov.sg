@@ -1,7 +1,7 @@
 ---
 title: Purple HATS Use Cases
 layout: layout-page-sidenav
-description: USe Cases for Purple HATS
+description: Use Cases for Purple HATS
 single_level_nav: true
 _data: single-level-nav
 ---
@@ -57,7 +57,6 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
     </figure>
 &emsp;&emsp;&ensp;         iv. Commit the changes to GitLab.
-<br />
 <br />&emsp;&nbsp;c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:
 <br />&emsp;&emsp;&ensp;i. A summary of total issue count and issue breakdown will be in the job log.
 <br />&emsp;&emsp;&ensp;ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
