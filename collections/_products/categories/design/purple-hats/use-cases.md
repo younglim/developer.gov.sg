@@ -29,4 +29,22 @@ A product owner is concerned about the state of their websites’ accessibility 
 
 ### Example 3
 
+A website is currently undergoing a sprint where accessibility fixes have been made, and a DevOps engineer would like to ensure that these fixes have not disrupted any other part of the code base.
+
+**How Purple HATS can help:**
+
+Agencies can run Purple HATS on any CI/CD tool which supports Docker-based runners. The specific instructions provided below are for SHIP GitLab.
+
+The steps below will show you how to implement Purple HATS in the CI / CD pipeline:
+
+1. Create a SHIP GitLab Testing Pipeline under your Project.
+2. Build and push the Docker container.
+   a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.
+   b. Build and push the image to your GitLab’s project’s container registry.
+   
+   
+   
+3. Configure the pipeline on GitLab 
+
+
 
