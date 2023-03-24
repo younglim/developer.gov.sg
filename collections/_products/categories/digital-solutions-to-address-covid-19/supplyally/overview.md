@@ -26,13 +26,13 @@ In response to these urgent logistical challenges, GovTech’s Government Digita
 
 SupplyAlly has a user-friendly app that helps volunteers quickly scan the ID cards of recipients who show up to collect the items being distributed, and track the distribution process to ensure that there has been no duplication of distributions.
 
-In addition, SupplyAlly has been integrated with various distribution channels, such as vending machines and Point-of-Sales (POS) terminals, to alleviate the manual tedium of agencies performing the distribution of physical items.  SupplyAlly has recently integrated with GovWallet to help agencies distribute payouts as a form of physical vouchers to non-digital and less tech-savvy citizens.
+In addition, SupplyAlly has been integrated with various distribution channels, such as vending machines and Point-of-Sales (POS) terminals, to alleviate the manual tedium of agencies performing the distribution of physical items.  SupplyAlly has recently integrated with [GovWallet](/products/categories/platform/govwallet/){:target="_blank"} to help agencies distribute payouts as a form of physical vouchers to non-digital and less tech-savvy citizens.
 
 SupplyAlly will continue to be used in partnership with charities for the allocation of food packs and meal credit redemptions. GovTech will continue to work with SupplyAlly partners to make improvements where necessary.
 
 ### How It Works
 
-By adopting serverless cloud technologies on our Government on Commercial Cloud (GCC) framework, SupplyAlly is able to  spin up and run different distribution campaigns simultaneously at an effective cost mode. 
+By adopting serverless cloud technologies on the [Government on Commercial Cloud (GCC)](/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/ framework){:target="_blank"}, SupplyAlly is able to  spin up and run different distribution campaigns simultaneously at an effective cost mode. 
 
 SupplyAlly can provide a mobile app or integrate with other platforms, such as vending machines, to facilitate the distribution.
 
