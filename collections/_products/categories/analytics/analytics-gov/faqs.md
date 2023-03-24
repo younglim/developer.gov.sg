@@ -15,10 +15,18 @@ faqs:
     description: >
       AG is a WOG platform open to all Singaporean public service officers with a valid gov.sg email account and non-SE GSIB machine.
 
-  - name: Can users from different departments/agencies view my website's data?
+  - name: How do I get access to use AG?
     description: >
-      All WOGAA users can view analytics data of any Informational/Transactional Service on the dashboard. However, they can only manage services which they own.
+      To get access, you would need to register for an account. The account creation request will take about five working days, and an email with your account details will be sent to you.
+      <br/>
+      <br/>Your AG@GDC/GCC account will be provisioned based on the tools, data classification and other requirements as indicated on your account registration form.
  
+  - name: I have been provisioned a user account, but there’s an error when I try to access the AG website. What may be the issue and what should I do?
+    description: >
+      Although you have been provisioned a user account, your agency needs to ensure that the relevant firewalls are open in order for you to access the AG website. Kindly check with your agency’s IT team to verify if this has been done already.
+      <br/>
+      <br/>Otherwise, please contact the Analytics.gov product team via this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a>to confirm which firewalls need to be opened.
+      
   - name: Does WOGAA track internal government websites (e.g. OneSpace, iLearn)
     description: >
       No, WOGAA only tracks internet-facing websites.
