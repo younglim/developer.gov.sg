@@ -55,11 +55,14 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp iii. Edit the accessibility scan parameters with the type of scan you want to run:
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-3.png" width="70%" height="70%" />
-	      <figcaption>Fig 2: Scanning with the Gitlab Editor.</figcaption>
+	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
     </figure><br />
 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp iv. Commit the changes to GitLab.
 <br>
 <br>&nbsp&nbsp&nbsp&nbsp c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:
 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp i. A summary of total issue count and issue breakdown will be in the job log.
 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
-
+  <figure style="text-align: center">
+      <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" />
+	      <figcaption>Fig 4: A screenshot of the GitLab pipeline running an accessibility scan.</figcaption>
+    </figure><br />
