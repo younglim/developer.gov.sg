@@ -30,5 +30,22 @@ In the second half of 2023, AG@GCC will bring in new cloud services to support M
 
 <br>
 
+2. Analytics.gov Government Data Centre (AG@GDC) offers the following features:
+
+### Analytics Tools
+
+AG@GDC provides Integrated Development Environments (IDEs), including JupyterHub and RStudio.
+
+### Collaboration and Repository
+
+AG@GDC also provides GitLab and Nexus Repository for teams and agencies to share and collaborate.
+
+### Data Classification Support
+
+AG@GDC supports Confidential, Sensitive Normal data for data exploitation work.
+
+### Data Visualisation Tools
+
+AG@GDC users can utilise their data for visualisation and dashboard purposes through tools like Tableau and QlikSense. Both tools follow 'Bring Your Own License' (BYOL) schemes, which are needed if agencies intend to use them within AG@GDC.
 
 
