@@ -2,12 +2,14 @@
   description: Discover the latest product additions to the Singapore Government Developer Portal here
   items:
     - Overview
+    - ACAS
+    - CrowdTaskSG
     - FormSG
     - GovText
     - MASH
-    - Open Digital Platform
+    - Postman
     - Purple HATS
-    - SEED
+    - XCA
 
 - name: Citizen-facing Products
   description: Explore the government products for providing citizens with the services they need. This includes citizen life journey, grant services, and more!
