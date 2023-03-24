@@ -18,8 +18,7 @@ The following system requirements are needed before you proceed:
 **Prerequisites for Mac OS users**
 
 - Google Chrome
-<br>
-<br>
- 1. Download Portable Purple HATS: Once you have ensured that you have the right system requirements and prerequisites, please refer to the [Purple HATS Installation Guide](https://go.gov.sg/purple-hats-install-guide){:target="_blank"} for detailed instructions on downloading and running Purple HATS in one package.
-<br>
+
+<b>Download Portable Purple HATS</b>
+1. Once you have ensured that you have the right system requirements and prerequisites, please refer to the [Purple HATS Installation Guide](https://github.com/GovTechSG/purple-hats/blob/master/INSTALLATION.md){:target="_blank"} for detailed instructions on downloading and running Purple HATS in one package.
 2. You can also check the [Purple HATS Readme section](https://github.com/GovTechSG/purple-hats/blob/master/README.md){:target="_blank"} on GitHub for more information.
