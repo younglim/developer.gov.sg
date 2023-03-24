@@ -76,11 +76,6 @@ bios:
     img_src: yong-jia-jie.png
     linkedin_url: https://www.linkedin.com/in/yongjiajie/
 
-  - name: Patricia Zhao
-    title: Product Manager
-    img_src: patricia-zhao.png
-    linkedin_url: https://www.linkedin.com/in/patzhao/
-
 ---
 
 ### Meet the team!
