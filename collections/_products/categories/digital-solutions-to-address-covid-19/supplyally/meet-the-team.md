@@ -6,6 +6,11 @@ category: Infrastructure and Hosting
 _data: single-level-nav
 single_level_nav: true
 bios:
+  - name: Eida Tan
+    title: Product Manager
+    img_src: eida_tan.png
+    linkedin_url: https://www.linkedin.com/in/eidatan/
+  
   - name: Adam Chee
     title: Software Engineer
     img_src: adam-chee.png
