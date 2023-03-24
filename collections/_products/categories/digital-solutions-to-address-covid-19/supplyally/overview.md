@@ -10,6 +10,13 @@ redirect_from:
 _data: single-level-nav
 sub_collection_render: true
 single_level_nav: true
-collection_group: [Citizen-facing Products]
+collection_group: []
 description: SupplyAlly helps to digitally facilitate the large-scale distribution of physical items. Find out more.
 ---
+
+![GoWhere Suite header banner](/assets/img/GoWhereSuite-HeaderBanner-v3.png)
+
+Since 2020, SupplyAlly has been the centralised distribution system for WOG and organisations to issue items that improve the lives of Singaporeans.
+
+The COVID-19 pandemic produced an urgent need to address logistical challenges on a national scale. During the onset of the pandemic, the distribution of reusable face masks to all Singapore residents created a logistical challenge to track collection quotas and manage a flexible pool of volunteers.
+
