@@ -27,6 +27,12 @@ faqs:
       <br/>
       <br/>Otherwise, please contact the Analytics.gov product team via this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a>to confirm which firewalls need to be opened.
       
+  - name: What are the tools available in AG?
+    description: >
+      The following tools are available on AG now: JupyterHub, RStudio, VS Code (AG@GCC only), GitLab, Nexus Repository, Tableau (AG@GDC only), and Qlik Sense (AG@GDC only).
+      <br/>
+      <br/>More tools will be made available in AG@GCC, such as Amazon Sagemaker Studio, in later releases, so please keep an eye out for them.
+
   - name: Does WOGAA track internal government websites (e.g. OneSpace, iLearn)
     description: >
       No, WOGAA only tracks internet-facing websites.
