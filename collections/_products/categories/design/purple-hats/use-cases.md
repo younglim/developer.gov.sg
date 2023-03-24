@@ -47,6 +47,7 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 	      <figcaption>Fig 2: A screenshot of the Gitlab Editor.</figcaption>
     </figure><br />
 <br>
+<p></p>
 3. Configure the pipeline on GitLab.
 <br />&emsp;&nbsp;a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
 <br />&emsp;          b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
