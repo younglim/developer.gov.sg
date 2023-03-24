@@ -48,7 +48,7 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
     </figure><br />
 <br>3. Configure the pipeline on GitLab.
 <br />&emsp;&nbsp;a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
-<br />&emsp;          b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
+<br />&emsp;b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
 <br />&emsp;&emsp;&ensp;i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.
 <br />&emsp;&emsp;&ensp;ii. Replace <some registry> with the URL to docker image.
 <br />&emsp;&emsp;&ensp;iii. Edit the accessibility scan parameters with the type of scan you want to run:
@@ -57,7 +57,7 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
     </figure>
 <br />&emsp;&emsp;&ensp;         iv. Commit the changes to GitLab.
-<br>
+<br />
 <br />&emsp;&nbsp;c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:
 <br />&emsp;&emsp;&ensp;i. A summary of total issue count and issue breakdown will be in the job log.
 <br />&emsp;&emsp;&ensp;ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
