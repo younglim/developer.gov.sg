@@ -26,21 +26,25 @@ bios:
     img_src: yeap_gim_lye.png
     linkedin_url: https://www.linkedin.com/in/gim-lye-yeap-9b099a28
 
-  - name: Ng Yong Kiat
-    title: Lead Engagement Manager
-    img_src: ng_yong_kiat.png
-    linkedin_url: https://www.linkedin.com/in/yong-kiat-ng-2b55b72/
+  - name: Ismahfaris Bin Ismail
+    title: Data Engineer
+    img_src: ismahfaris_bin_ismail.png
+    linkedin_url: https://www.linkedin.com/in/ismahfaris-ismail
 
-  - name: Henry Luo
-    title: Senior AI Engineer
-    img_src: henry_luo.png
-    linkedin_url: 
+  - name: Syahri Ikram Bin Ismail
+    title: Data Engineer
+    img_src: syahri_ikram_bin_ismail.png
+    linkedin_url: https://www.linkedin.com/in/syahriikram
  
-  - name: Elizabeth Lim
-    title: Product Manager (Insights)
-    img_src: elizabeth_lim.png
-    linkedin_url: https://www.linkedin.com/in/elizabethlimsm/
+  - name: Ameera Chumma Adam
+    title: Data Engineer
+    img_src: ameera_chumma_adam.png
+    linkedin_url: https://www.linkedin.com/in/ameera-adam-593a5a228
  
+  - name: Colin Ng
+    title: Data Engineer
+    img_src: colin_ng.png
+    linkedin_url: https://www.linkedin.com/in/colin-ng-aaaa46136
 ---
 
 ### Meet the team!
