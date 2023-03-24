@@ -8,13 +8,13 @@ single_level_nav: true
 bios:
   - name: Jeffrey Chai
     title: Product Manager
-    img_src: ethan_goh.png
-    linkedin_url: https://www.linkedin.com/in/ethangohtk/
+    img_src: jeffrey_chai.png
+    linkedin_url: https://www.linkedin.com/in/jeffreyczy/
 
-  - name: Lee Ning Sung
+  - name: Joshua Na
     title: Assistant Director/Lead Product Manager (VideoIO)
-    img_src: ning_sung_lee.png
-    linkedin_url: https://www.linkedin.com/in/ning-sung-lee-591021b6/
+    img_src: joshua_na.png
+    linkedin_url: https://www.linkedin.com/in/joshua-na-4043a213/
   
   - name: Henry Lim
     title: Lead Product Manager (VAS)
