@@ -32,11 +32,17 @@ It helps product development teams rapidly scan and check for potential accessib
 Purple HATS runs a bot that scans through and analyses web pages for accessibility issues. For example, some of the common accessibility issues that the bot will scan for are:
 
 - Proper Labelling of Images
-  - These are important as it affects how a button is read by assistive technologies such as screen readers.
+  - These are important as it affects how a button is read by assistive technologies such as screen readers
+  - If a button is improperly labelled, screen reader users will not be able to understand what the button does
 
-The bot then provides the impact of the accessibility issues by mapping them against the axe-core library of Deque System, a company that provides digital accessibility audits and software tools. Deque’s AXE accessibility testing engine is used to test the accessibility of websites and other HTML-based user interfaces.
+- Proper Labelling of Images
+  - Accessibility is affected when images have improper or missing alt text, because a screen reader user will have difficulty understanding the content of the image.
 
-The results of Purple HATS’s scans are then compiled in JSON format, and an HTML report is generated, providing users flexibility as to how they review accessibility findings. 
+<br>
+
+After the scan, the bot assesses the impact rating of the accessibility issues by mapping them against the axe-core library of Deque System, which is a recognised standard that has comprehensive coverage of Web Content Accessibility Guidelines (WCAG) clauses. (Deque’s AXE accessibility testing engine is used to test the accessibility of websites and other HTML-based user interfaces.)
+
+The scan results are then compiled in JSON format, and an HTML report is generated. The report provides a recommendation on how these fixes should be prioritised.
 
 <figure style="text-align: center">
   <img
@@ -44,7 +50,6 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
   />
 	  <figcaption>Fig 1: Sample screenshot of a Purple HATS report showing accessibility issues regarding images and links with missing alt text.</figcaption>
 </figure>
-
 
 ### Awards and Recognition
 
