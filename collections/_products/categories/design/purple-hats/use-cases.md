@@ -42,7 +42,10 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
    a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.
    b. Build and push the image to your GitLab’s project’s container registry.
    
-   
+<figure style="text-align: center">
+      <img src="/assets/img/purple-hats-fig-2.png" width="80%" height="80%" />
+	      <figcaption>Fig 1: A screenshot of the Merge Request.</figcaption>
+    </figure><br />
    
 3. Configure the pipeline on GitLab 
 
