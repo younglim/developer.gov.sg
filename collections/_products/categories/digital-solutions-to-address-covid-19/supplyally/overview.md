@@ -39,7 +39,13 @@ SupplyAlly can provide a mobile app or integrate with other platforms, such as v
 ### Key Benefits
 
 - **Easy to deploy and use**: Volunteers involved in the distribution exercises do not need dedicated training to use SupplyAlly during distribution exercises, as the mobile app is user-friendly and easy to use.
-- 
+- **Accelerates distribution campaigns**: The SupplyAlly app significantly lowers the lead time required to roll out new campaigns by leveraging reusable components.
+- **Preserves data privacy**: SupplyAlly does not track the personal data of volunteers or recipients.
 
+### Pricing
 
+For pricing enquiries, please contact the SupplyAlly team using the form below.
 
+### Contact Us
+
+{% include contact-us-form.html %}
