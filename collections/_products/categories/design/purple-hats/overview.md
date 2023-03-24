@@ -31,8 +31,8 @@ It helps product development teams rapidly scan and check for potential accessib
 
 Purple HATS runs a bot that scans through and analyses web pages for accessibility issues. For example, some of the common accessibility issues that the bot will scan for are:
 
-- Proper Labelling of Buttons
-   - 
+- Proper Labelling of Images
+  - These are important as it affects how a button is read by assistive technologies such as screen readers.
 
 The bot then provides the impact of the accessibility issues by mapping them against the axe-core library of Deque System, a company that provides digital accessibility audits and software tools. Deque’s AXE accessibility testing engine is used to test the accessibility of websites and other HTML-based user interfaces.
 
