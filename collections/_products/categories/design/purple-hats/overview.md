@@ -38,8 +38,6 @@ Purple HATS runs a bot that scans through and analyses web pages for accessibili
 - Proper Labelling of Images
   - Accessibility is affected when images have improper or missing alt text, because a screen reader user will have difficulty understanding the content of the image.
 
-<br>
-
 After the scan, the bot assesses the impact rating of the accessibility issues by mapping them against the axe-core library of Deque System, which is a recognised standard that has comprehensive coverage of Web Content Accessibility Guidelines (WCAG) clauses. (Deque’s AXE accessibility testing engine is used to test the accessibility of websites and other HTML-based user interfaces.)
 
 The scan results are then compiled in JSON format, and an HTML report is generated. The report provides a recommendation on how these fixes should be prioritised.
