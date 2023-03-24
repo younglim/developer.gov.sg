@@ -12,19 +12,19 @@ bios:
     linkedin_url: https://www.linkedin.com/in/jeffreyczy/
 
   - name: Joshua Na
-    title: Assistant Director/Lead Product Manager (VideoIO)
+    title: Data Engineer (Technical Lead)
     img_src: joshua_na.png
     linkedin_url: https://www.linkedin.com/in/joshua-na-4043a213/
   
-  - name: Henry Lim
-    title: Lead Product Manager (VAS)
-    img_src: henry_lim.png
-    linkedin_url: https://www.linkedin.com/in/henrylimky/
+  - name: Lu Yaomin
+    title: Data Engineer (Technical Lead)
+    img_src: lu_yaomin.png
+    linkedin_url: https://www.linkedin.com/in/yaomin-lu
     
-  - name: Chua Teck Wee
-    title: Lead AI Engineer
-    img_src: chua_teck_wee.png
-    linkedin_url: https://www.linkedin.com/in/chua-teck-wee-3919297/
+  - name: Yeap Gim Lye
+    title: Senior Project Manager (Operations)
+    img_src: yeap_gim_lye.png
+    linkedin_url: https://www.linkedin.com/in/gim-lye-yeap-9b099a28
 
   - name: Ng Yong Kiat
     title: Lead Engagement Manager
