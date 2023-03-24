@@ -33,9 +33,13 @@ faqs:
       <br/>
       <br/>More tools will be made available in AG@GCC, such as Amazon Sagemaker Studio, in later releases, so please keep an eye out for them.
 
-  - name: Does WOGAA track internal government websites (e.g. OneSpace, iLearn)
+  - name: Is there any subscription cost or payment fee to use AG?
     description: >
-      No, WOGAA only tracks internet-facing websites.
+      Presently, there is no cost for using AG, except for Tableau and QlikSense on AG@GDC, which are on a ‘Bring Your Own License’ (BYOL) model.
+  
+  - name: Can I use Analytics.gov to access data from my agency’s database system?
+    description: >
+      For AG users to access data from their agency's database systems, there is a requirement to set up connectivity between AG and the agency's system(s). The agency may contact the product team ia this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a> to arrange for an exploratory discussion.
 ---
 
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
