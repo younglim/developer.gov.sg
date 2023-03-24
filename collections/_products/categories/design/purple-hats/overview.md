@@ -4,8 +4,8 @@ layout: layout-page-sidenav
 category: Design
 _data: single-level-nav
 redirect_from:
-    - /products/categories/design//purple-hats/
-    - /products/categories/design//purple-hats.html
+    - /products/categories/design/purple-hats/
+    - /products/categories/design/purple-hats.html
 sub_collection_render: true
 single_level_nav: true
 collection_group: [What's New]
