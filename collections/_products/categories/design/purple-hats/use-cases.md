@@ -55,7 +55,7 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-3.png" width="70%" height="70%" />
 	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
-    </figure><br />
+    </figure>
 <br />&emsp;&emsp;&ensp;         iv. Commit the changes to GitLab.
 <br>
 <br />&emsp;&nbsp;c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:
