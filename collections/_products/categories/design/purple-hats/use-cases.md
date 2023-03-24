@@ -46,10 +46,10 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
       <img src="/assets/img/purple-hats-fig-2.png" width="70%" height="70%" />
 	      <figcaption>Fig 1: A screenshot of the Gitlab Editor.</figcaption>
     </figure><br />
-<br>
+<br/>
 3. Configure the pipeline on GitLab.
-<br>a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
-<br>b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
+<br>&nbsp&nbsp&nbsp&nbsp a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
+<br>&nbsp&nbsp&nbsp&nbsp b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
 <br>  i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.
 <br>  ii. Replace <some registry> with the URL to docker image.
   <br>  iii. Edit the accessibility scan parameters with the type of scan you want to run:
