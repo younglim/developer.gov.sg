@@ -46,7 +46,7 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
       <img src="/assets/img/purple-hats-fig-2.png" width="70%" height="70%" />
 	      <figcaption>Fig 1: A screenshot of the Gitlab Editor.</figcaption>
     </figure><br />
-   
+<br>
 3. Configure the pipeline on GitLab 
 <br>a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
 <br>b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
