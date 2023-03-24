@@ -16,4 +16,12 @@ AG@GCC provides Integrated Development Environments (IDEs), including JupyterHub
 
 AG@GCC provides GitLab and Nexus Repository for teams and agencies to share and collaborate. Nexus Repository allows users to get the latest versions of open-source Python/R libraries into their JupyterHub & RStudio instances with Analytics.gov.
 
+### Data Classification Support
+
+AG@GCC now supports Confidential (Cloud-Eligible), Sensitive High data for data exploitation work, up from Sensitive Normal. For now, agencies must connect the data sources to Analytics.gov if they are Sensitive High data. The mode of connection has to be API integration.
+
+### Connectivity with Vault
+
+AG@GCC is integrated with [Vault](/products/categories/data-and-apis/vault/){:target="_blank"} a central data discovery and distribution platform for WOG, allowing users to download approved data from Vault by simply running simple curl commands within JupyterHub and RStudio. With the new data classification and sensitivity support, users can now access Vault datasets containing up to Confidential (Cloud-Eligible), Sensitive High data from AG@GCC.
+
 
