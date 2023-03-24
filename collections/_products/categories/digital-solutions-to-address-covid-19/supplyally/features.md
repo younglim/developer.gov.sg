@@ -24,10 +24,18 @@ SupplyAlly does not require volunteers to sign up with personal details. Instead
 
 <figure style="text-align: center">
       <img src="/assets/img/SupplyAlly-volunteer-reg.png" width="20%" height="20%" />
-	      <figcaption>Fig 1: The QR codes in the SupplyAlly app enable quick volunteer registration.</figcaption>
+	      <figcaption>Fig 1: The QR codes in the SupplyAlly mobile app enable quick volunteer registration.</figcaption>
     </figure><br />
-
 
 ### Secured transactions with data privacy
 
+Volunteers can scan the identity cards of residents to verify their eligibility and log the transaction. No personally identifiable information is stored, except for a time-stamped digital signature that prevents the same identity card from being used for a duplicate collection.
 
+<figure style="text-align: center">
+      <img src="/assets/img/SupplyAlly-reg-recipients.png" width="20%" height="20%" />
+	      <figcaption>Fig 1: Volunteers can scan residents’ identification cards with the SupplyAlly mobile app for quick verification of the transactions.</figcaption>
+    </figure><br />
+
+### Quick updates
+
+With over-the-air updates and Continuous Integration (CI) setups, the SupplyAlly team can push fully-developed features to users within 30 minutes. This drastically cuts turnaround time.
