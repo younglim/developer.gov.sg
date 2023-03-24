@@ -1,5 +1,5 @@
 ---
-title: Purple HATS - Automates web accessibility testing to find and fix accessibility problems
+title: Purple HATS - Automating testing to improve web accessibility for apps and websitess
 layout: layout-page-sidenav
 category: Design
 _data: single-level-nav
@@ -9,19 +9,30 @@ redirect_from:
 sub_collection_render: true
 single_level_nav: true
 collection_group: [What's New]
-description: Purple HATS is a customisable automated testing tool that detects accessibility issues, helping developers to build more inclusive digital products.
+description: Purple HATS is an automated testing tool that detects accessibility issues, helping developers to build more inclusive digital products.
 ---
-
 
 
 Purple HATS is a customizable, automated web accessibility testing tool that allows software development teams to find and fix accessibility problems to improve the access of persons with disabilities (PWDs) to digital services.
 
-Developed by the Accessibility (A11Y) team in GovTech’s Government Digital Services (GDS), Purple HATS is an open-source tool  that  developers to build more inclusive products during the product development process.  It helps product development teams rapidly scan and check for potential accessibility issues from their development machines or within their Continuous Integration/Continuous Delivery (CI/CD) pipeline with very basic command-line knowledge.
+Developed by the Accessibility (A11Y) team in GovTech’s Government Digital Services (GDS), Purple HATS is an open-source tool  that developers can use to help them build more inclusive products during the product development process. 
 
-Purple HATS includes a bot that scans through and analyses web pages for accessibility issues. For example, the bot will check:
+It helps product development teams rapidly scan and check for potential accessibility issues from their development machines or within their Continuous Integration/Continuous Delivery (CI/CD) pipeline with basic command-line knowledge.
 
-- Whether buttons are labelled and how they are read by assistive technology, such as screen readers. For example, if the ‘Submit’ button on a webpage is read out only as ‘Button’, a PWD will find it difficult to determine what specific action the button actually performs.
-- Whether pictures or images are labelled correctly with alternate text (alt text) provided. Otherwise, the unlabeled images will be flagged as an accessibility issue, as blind or visually impaired users might have difficulty understanding the content of the images.
+### Key Benefits
+
+- Provides a preliminary detailed review of websites’ accessibility status at the code level
+- Helps to improve the access of digital services to users regardless of their abilities e.g. Persons with Disabilities (PwDs) and the elderly
+- Reduces the time taken for developers to perform scans and code-testing of digital services across various web browsers
+- Reduces the time taken for developers to accurately identify and debug accessibility-related code issues
+- Scans can be conveniently performed locally from development machines or within the Continuous Integration / Continuous Delivery (CI/CD) pipeline
+
+### How It Works
+
+Purple HATS runs a bot that scans through and analyses web pages for accessibility issues. For example, some of the common accessibility issues that the bot will scan for are:
+
+-  Proper Labelling of Buttons
+   - 
 
 The bot then provides the impact of the accessibility issues by mapping them against the axe-core library of Deque System, a company that provides digital accessibility audits and software tools. Deque’s AXE accessibility testing engine is used to test the accessibility of websites and other HTML-based user interfaces.
 
@@ -33,14 +44,6 @@ The results of Purple HATS’s scans are then compiled in JSON format, and an HT
   />
 	  <figcaption>Fig 1: Sample screenshot of a Purple HATS report showing accessibility issues regarding images and links with missing alt text.</figcaption>
 </figure>
-
-### Key Features
-
-- Automated accessibility testing tool based on axe-core engine
-- Choice of sitemap or website scans
-- Identification of accessibility issues based on WCAG 2.1 specifications
-- Integration into CI/CD pipeline with single command-line 
-- Accessibility reports generated in both JSON and HTML formats
 
 
 ### Awards and Recognition
