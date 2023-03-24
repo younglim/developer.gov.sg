@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-1. Analytics.gov@Government Commercial Cloud (AG@GCC) offers the following features:
+Analytics.gov@Government Commercial Cloud (AG@GCC) offers the following features:
 
 ### Analytics Tools
 
@@ -28,9 +28,8 @@ AG@GCC is integrated with [Vault](/products/categories/data-and-apis/vault/){:ta
 
 In the second half of 2023, AG@GCC will bring in new cloud services to support MLOps capabilities, starting with Amazon SageMaker Studio, so that agencies can efficiently develop and deploy ML models at scale in the future. Note that Analytics.gov, as a central WOG platform, will also explore MLOps services from other Cloud Service Providers.
 <br>
-<br/>
-
-2. Analytics.gov@Government Data Centre (AG@GDC) offers the following features:
+<br>
+<br>Analytics.gov@Government Data Centre (AG@GDC) offers the following features:
 
 ### Analytics Tools
 
