@@ -24,4 +24,11 @@ AG@GCC now supports Confidential (Cloud-Eligible), Sensitive High data for data 
 
 AG@GCC is integrated with [Vault](/products/categories/data-and-apis/vault/){:target="_blank"} a central data discovery and distribution platform for WOG, allowing users to download approved data from Vault by simply running simple curl commands within JupyterHub and RStudio. With the new data classification and sensitivity support, users can now access Vault datasets containing up to Confidential (Cloud-Eligible), Sensitive High data from AG@GCC.
 
+### Machine Learning Operations (MLOps)
+
+In the second half of 2023, AG@GCC will bring in new cloud services to support MLOps capabilities, starting with Amazon SageMaker Studio, so that agencies can efficiently develop and deploy ML models at scale in the future. Note that Analytics.gov, as a central WOG platform, will also explore MLOps services from other Cloud Service Providers.
+
+<br>
+
+
 
