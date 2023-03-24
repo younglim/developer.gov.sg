@@ -1,8 +1,8 @@
 ---
-title: Meet The Team of GovWallet
+title: Meet The Team of SupplyAlly
 mobile_title: Meet the Team
 layout: layout-page-sidenav
-category: Infrastructure and Hosting
+category: Digital Solutions to Address COVID-19
 _data: single-level-nav
 single_level_nav: true
 bios:
