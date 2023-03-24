@@ -25,7 +25,7 @@ faqs:
     description: >
       Although you have been provisioned a user account, your agency needs to ensure that the relevant firewalls are open in order for you to access the AG website. Kindly check with your agency’s IT team to verify if this has been done already.
       <br/>
-      <br/>Otherwise, please contact the Analytics.gov product team via this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a>to confirm which firewalls need to be opened.
+      <br/>Otherwise, please contact the Analytics.gov product team via this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a> to confirm which firewalls need to be opened.
       
   - name: What are the tools available in AG?
     description: >
@@ -39,7 +39,7 @@ faqs:
   
   - name: Can I use Analytics.gov to access data from my agency’s database system?
     description: >
-      For AG users to access data from their agency's database systems, there is a requirement to set up connectivity between AG and the agency's system(s). The agency may contact the product team ia this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a> to arrange for an exploratory discussion.
+      For AG users to access data from their agency's database systems, there is a requirement to set up connectivity between AG and the agency's system(s). The agency may contact the product team via this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a> to arrange for an exploratory discussion.
 ---
 
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
