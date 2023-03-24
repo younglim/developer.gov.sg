@@ -12,6 +12,7 @@ _data: single-level-nav
 
 ### Multimedia
 - [Purple HATS entry in the Digital Public Goods Registry](https://digitalpublicgoods.net/registry/purple-hats.html){:target="\_blank"}
+- [Purple HATS in the Case Study Library](https://oecd-opsi.org/innovations/purple-hats/){:target="\_blank"} of the OECD Observatory of Public Sector Innovation (OPSI)
 
 ### Media Coverage
 - [How GovTech created a web accessibility testing tool](https://www.tech.gov.sg/media/technews/how-govtech-created-web-accessibility-testing-tool){:target="\_blank"}
