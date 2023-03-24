@@ -8,7 +8,7 @@ _data: single-level-nav
 
 ### Automated testing tool based on axe-core
 
-This feature ensures that the content of a document has not been modified since its creation (except in the event of data omission via the built-in obfuscation mechanism). This is done by wrapping a document through the creation of a data key and signature object.
+Purple HATS runs a bot that can identify areas for accessibility improvement by identifying potential accessibility issues on a webpage. The bot then provides the impact of the identified accessibility issues using the axe-core library of the AXE accessibility testing engine from Deque Systems.
 
 ###  Choice of sitemap or website scans
 
