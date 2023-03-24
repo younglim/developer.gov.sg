@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-1. Analytics.gov Government Commercial Cloud (AG@GCC) offers the following features:
+1. Analytics.gov@Government Commercial Cloud (AG@GCC) offers the following features:
 
 ### Analytics Tools
 
@@ -30,7 +30,7 @@ In the second half of 2023, AG@GCC will bring in new cloud services to support M
 
 <br>
 
-2. Analytics.gov Government Data Centre (AG@GDC) offers the following features:
+2. Analytics.gov@Government Data Centre (AG@GDC) offers the following features:
 
 ### Analytics Tools
 
