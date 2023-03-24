@@ -1,5 +1,5 @@
 ---
-title: Meet The Team of FormSG
+title: Meet The Team of Purple HATS
 mobile_title: Meet the Team
 layout: layout-page-sidenav
 category: Infrastructure and Hosting
