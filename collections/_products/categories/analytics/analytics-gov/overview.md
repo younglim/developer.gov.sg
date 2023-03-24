@@ -44,7 +44,21 @@ Analytics.gov works by providing a readily available web-based platform where pu
 
 The Analytics.gov platform aims to: 
 
-- 
+- Eliminate barriers for users to access analytics tools on their GSIB machines with readily available, up-to-date libraries and packages
+- Enable users to work on production data in a secured virtual environment
+- Enable users to run analytical codes with sufficient computing power
+- Enable users to collaborate amongst themselves within and across agencies
+- Enable users to work on and produce deployable analytical codes that can be made operational
+
+### Pricing
+
+Analytics.gov is now free for public officers until further notice. In future, the service may be chargeable on a cost-recovery basis.
+
+### Contact Us
+
+{% include contact-us-form.html %}
+
+
 
 
 
