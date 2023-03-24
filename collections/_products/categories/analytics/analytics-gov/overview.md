@@ -15,6 +15,8 @@ description: >
   Analytics.gov is a Whole-Of-Government (WOG) data exploitation platform to support the analysis of data by agencies.
 ---
 
+![Analytics.gov header banner](/assets/img/VAS-HeaderBanner-v4.png)
+
 Analytics.gov (AG) is a WOG central secured data exploitation platform developed by GovTech’s [Data Science & Artificial Intelligence Division (DSAID)](https://www.tech.gov.sg/capability-centre-dsaid){:target="_blank"}, which is accessible via GSIB machines to support the analysis and exploitation of data by public agencies.
 
 It offers a virtual environment for all users to exploit data with built-in data security and governance and access a wide range of analytical tools.
