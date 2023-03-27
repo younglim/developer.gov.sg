@@ -28,11 +28,11 @@ These tools include:
 
 To date, Analytics.gov offers two virtual environments that are available for users: 
 - Government Data Center (GDC)
-- [Government on Commercial Cloud (GCC)](/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/){:target="_blank"}
+- Government on Commercial Cloud (GCC)
 
 It was first commissioned with its on-premise Government Data Centre (AG@GDC) set up in December 2021. 
 
-With the imperative to scale with the growing number of users, DSAID expanded the platform to the Government on Commercial Cloud (AG@GCC) in July 2022. This new environment promises greater value to users in meeting their demand for higher computing performance and elasticity of resources. 
+With the imperative to scale with the growing number of users, DSAID expanded the platform to the [Government on Commercial Cloud]((/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/){:target="_blank"} (AG@GCC) in July 2022. This new environment promises greater value to users in meeting their demand for higher computing performance and elasticity of resources. 
 
 The Analytics.gov team plans to bring in new features on AG@GCC to enhance the platform's capabilities, such as cloud services and tools to support Machine Learning Operations (MLOps) so that agencies can efficiently develop and deploy ML models at scale in the near future.
 
