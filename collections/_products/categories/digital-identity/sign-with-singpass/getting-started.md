@@ -8,7 +8,7 @@ _data: single-level-nav
 
 **For Businesses**
 
-Businesses can reach out to any of the digital signing partners [listed here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners){:target="_blank"}. to use commercial document management products that are pre-integrated with the Sign API.
+Businesses can reach out to any of the digital signing partners listed [here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners){:target="_blank"} to use commercial document management products that are pre-integrated with the Sign API.
 
 
 **For Developers**
