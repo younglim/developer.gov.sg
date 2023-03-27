@@ -8,20 +8,8 @@ _data: single-level-nav
 
 **For Businesses**
 
-Businesses can reach out to any of the digital signing partners to use commercial document management products that are pre-integrated with the Sign API:
-- Crimson Logic
-- Dedoco
-- DocuSign
-- iText
-- Kofax
-- Modus Consulting
-- Netrust
-- Redoc.co by Real Estate Doc
-- SigningCloud by Securemetrics
-- Tessaract Technologies
-- Zoho Sign
+Businesses can reach out to any of the digital signing partners [listed here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners){:target="_blank"}. to use commercial document management products that are pre-integrated with the Sign API.
 
-More information on digital signing partners can be found [here](https://api.singpass.gov.sg/library/sign/business/Digital%20Signing%20Partners){:target="_blank"}.
 
 **For Developers**
 
