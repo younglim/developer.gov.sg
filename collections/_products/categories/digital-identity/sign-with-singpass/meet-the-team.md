@@ -8,7 +8,7 @@ single_level_nav: true
 bios:
   - name: Javier Png
     title: Associate Delivery Manager
-    img_src: 
+    img_src: javier_png.png
     linkedin_url: https://linkedin.com/in/javier-png
 
   - name: Emma Pei
