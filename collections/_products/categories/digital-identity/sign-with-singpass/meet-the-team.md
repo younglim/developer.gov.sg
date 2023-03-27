@@ -13,7 +13,7 @@ bios:
 
   - name: Emma Pei
     title: Product Manager
-    img_src: 
+    img_src: emma_pei.png
     linkedin_url: https://sg.linkedin.com/in/zi-ang-emma-pei-b3747095
 
 ---
