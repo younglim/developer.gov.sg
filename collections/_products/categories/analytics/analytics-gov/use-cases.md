@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-### Enhancing data use for public agencies
+### Enhancing data analytics for public agencies
 
 To date, Analytics.gov has more than 1600 users – across 80 agencies such as MND, PSD, AGO, and EnterpriseSG – who have onboarded the platform to work on their use cases for policy making, service delivery and internal operations using the tools available, including:
 - Integrated Development Environments (IDEs) for building of analytical models (e.g. regression, classification, text analytics)
