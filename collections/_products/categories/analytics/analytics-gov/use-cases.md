@@ -16,3 +16,8 @@ To date, Analytics.gov has more than 1600 users – across 80 agencies such as M
 Notable agency use cases include analysing, predicting and visualising customer feedback data, development of chatbots, report summarisation, ML-assisted case outlier detection, automated data processing for governance checks on grants, campaigns planning and workflow processes, etc.
 
 On the enterprise level, AG supports MTI-NERVE (NERVE – National Economic Research & Visualisation Engine) as a central platform to access various data science tools in a secured environment.
+
+<figure style="text-align: center">
+      <img src="/assets/img/Analytics-gov-fig2-overview.png" width="80%" height="80%" />
+	      <figcaption>Fig 2: How AG supports MTI-NERVE (NERVE – National Economic Research & Visualisation Engine).</figcaption>
+    </figure><br />
