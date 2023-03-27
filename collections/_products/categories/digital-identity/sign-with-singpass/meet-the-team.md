@@ -7,7 +7,7 @@ _data: single-level-nav
 single_level_nav: true
 bios:
   - name: Javier Png
-    title: Senior Product Manager
+    title: Associate Delivery Manager
     img_src: 
     linkedin_url: https://linkedin.com/in/javier-png
 
