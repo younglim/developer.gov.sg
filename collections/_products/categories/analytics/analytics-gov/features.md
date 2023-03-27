@@ -8,7 +8,7 @@ _data: single-level-nav
 
 ### AG@GCC: Analytics Tools
 
-AG@GCC provides Integrated Development Environments (IDEs), including JupyterHub, RStudio, and the latest addition, VS Code.
+AG@GCC provides Integrated Development Environments (IDEs), including JupyterLab, RStudio, and the latest addition, VS Code.
 
 ### AG@GCC: Collaboration and Repository
 
@@ -30,7 +30,7 @@ In the second half of 2023, AG@GCC will bring in new cloud services to support M
 
 ### AG@GDC: Analytics Tools
 
-AG@GDC provides Integrated Development Environments (IDEs), including JupyterHub and RStudio.
+AG@GDC provides Integrated Development Environments (IDEs), including JupyterLab and RStudio.
 
 ### AG@GDC: Collaboration and Repository
 
