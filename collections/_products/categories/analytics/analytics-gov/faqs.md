@@ -13,7 +13,7 @@ faqs:
       
   - name: Who can use AG?
     description: >
-      AG is a WOG platform open to all Singaporean public service officers with a valid gov.sg email account and non-SE GSIB machine.
+      AG is a WOG platform open to all public service officers with a valid gov.sg email account and non-SE GSIB machine.
 
   - name: How do I get access to use AG?
     description: >
@@ -29,13 +29,13 @@ faqs:
       
   - name: What are the tools available in AG?
     description: >
-      The following tools are available on AG now: JupyterHub, RStudio, VS Code (AG@GCC only), GitLab, Nexus Repository, Tableau (AG@GDC only), and Qlik Sense (AG@GDC only).
+      The following tools are available on AG now: JupyterLab, RStudio, VS Code (AG@GCC only), GitLab, Nexus Repository, Tableau (AG@GDC only), and Qlik Sense (AG@GDC only).
       <br/>
       <br/>More tools will be made available in AG@GCC, such as Amazon Sagemaker Studio, in later releases, so please keep an eye out for them.
 
   - name: Is there any subscription cost or payment fee to use AG?
     description: >
-      Presently, there is no cost for using AG, except for Tableau and QlikSense on AG@GDC, which are on a ‘Bring Your Own License’ (BYOL) model.
+      Presently, there is no cost for using AG, except for Tableau and QlikSense on AG@GDC, which are on a ‘Bring Your Own License’ (BYOL) model. For Tableau and Qliksense on AG@GDC, please contact the Analytics.gov product team via this <a href="https://form.gov.sg/62280856ba91100012050933" target="_blank">form</a> before procuring the licenses.
   
   - name: Can I use Analytics.gov to access data from my agency’s database system?
     description: >
