@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-Onboarding to Analytics.gov is only for Singaporean public service officers with a valid gov.sg email account and a non-SE GSIB machine.
+Onboarding to Analytics.gov is only for public service officers with a valid gov.sg email account and a non-SE GSIB machine.
 
 1. To sign up for an user account, please fill in the [Analytics.gov User Account Registration Form](https://go.gov.sg/ag-acct-reg){:target="_blank"}.
 2. Ensure that your agency’s firewalls are open to access [AG@GCC](https://www.analytics.gov.sg){:target="_blank"}.
