@@ -52,7 +52,7 @@ The Analytics.gov platform aims to:
 
  <figure style="text-align: center">
       <img src="/assets/img/Analytics-gov-fig1-screenshots.jpg" width="90%" height="90%" />
-	      <figcaption>Fig 1: Screenshots of Analytics.gov.</figcaption>
+	      <figcaption>Fig 1: Some ways in which Analytics.gov empowers public service officers.</figcaption>
     </figure><br />
 
 ### Pricing
