@@ -23,7 +23,7 @@ The user journey for Sign with Singpass is similar to logging in with [Singpass]
 
 The signed document is platform-agnostic, allowing the validated signature to be viewed with the user’s preferred system.
 
-To date, more than 400,000 signatures have been made using Sign with Singpass in various use cases piloted by companies in industries including insurance, real estate and banking.
+To date, more than 500,000 signatures have been made using Sign with Singpass in various use cases piloted by companies in industries including insurance, real estate and banking.
 
 ### Pricing
 
