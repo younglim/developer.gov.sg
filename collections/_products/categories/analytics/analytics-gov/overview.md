@@ -50,6 +50,11 @@ The Analytics.gov platform aims to:
 - Enable users to collaborate amongst themselves within and across agencies
 - Enable users to work on and produce deployable analytical codes that can be made operational
 
+ <figure style="text-align: center">
+      <img src="/assets/img/xca-fig-1-merge-request.png" width="80%" height="80%" />
+	      <figcaption>Fig 1: A screenshot of the Merge Request.</figcaption>
+    </figure><br />
+
 ### Pricing
 
 Analytics.gov is now free for public officers until further notice. In future, the service may be chargeable on a cost-recovery basis.
