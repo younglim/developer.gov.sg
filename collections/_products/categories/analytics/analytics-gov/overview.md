@@ -51,8 +51,8 @@ The Analytics.gov platform aims to:
 - Enable users to work on and produce deployable analytical codes that can be made operational
 
  <figure style="text-align: center">
-      <img src="/assets/img/xca-fig-1-merge-request.png" width="80%" height="80%" />
-	      <figcaption>Fig 1: A screenshot of the Merge Request.</figcaption>
+      <img src="/assets/img/Analytics-gov-fig1-screenshots.jpg" width="90%" height="90%" />
+	      <figcaption>Fig 1: Screenshots of Analytics.gov.</figcaption>
     </figure><br />
 
 ### Pricing
