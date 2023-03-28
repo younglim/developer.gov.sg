@@ -1,5 +1,5 @@
 ---
-title: Sign with Singpass – Convenient and secure digital signing of documents
+title: Sign with Singpass – Convenient and Secure Digital Signing of Documents
 layout: layout-page-sidenav
 category: Digital Identity
 sub_collection_render: true
