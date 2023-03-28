@@ -1,5 +1,5 @@
 ---
-title: Purple HATS - Automating testing to improve web accessibility for apps and websites
+title: Purple HATS - Automating Testing to Improve Web Accessibility for Apps and Websites
 layout: layout-page-sidenav
 category: Design
 _data: single-level-nav
