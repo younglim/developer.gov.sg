@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-### Improving website accesibility for screen reader users
+### Improving website accessibility for screen reader users
 
 A screen reader user provides feedback that they are not able to understand and navigate across the different website pages because all the navigational buttons read out as "Buttons".
 
