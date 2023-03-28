@@ -21,7 +21,9 @@ faqs:
       Signed documents will not be stored in your Singpass app.
 ---
 
+For more Sign with Singpass FAQs, refer to this [link](https://www.singpass.gov.sg/main/html/faq.html){:target="_blank"}.
+
 {% include faqs-app.html sectionName="FAQs" sectionDescription=page.section_description faqData=page.faqs %}
 
 
-For more Sign with Singpass FAQs, refer to this [link](https://www.singpass.gov.sg/main/html/faq.html){:target="_blank"}.
+
