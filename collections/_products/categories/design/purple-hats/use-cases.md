@@ -80,17 +80,17 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
             A11Y_SCAN_TYPE: "website"
 
             # Set the maximum number of pages to scan [default: 100]
-            A11Y_SCAN_MAX
-  <figure style="text-align: center">
-      <img src="/assets/img/purple-hats-fig-3.png" width="70%" height="70%" />
-	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
-    </figure>
-&emsp;&emsp;&ensp;         iv. Commit the changes to GitLab.
-<br />&emsp;&nbsp;c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:
-<br />&emsp;&emsp;&ensp;i. A summary of total issue count and issue breakdown will be in the job log.
-<br />&emsp;&emsp;&ensp;ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
+            A11Y_SCAN_MAX_NUM_PAGES: 100
+  
+            # Zip filename of the artifact
+            A11Y_SCAN_ARTIFACT)NAME: "ally-scan-results.zip"
+            ```
+        iv. Commit the changes to GitLab.<br />
+    c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:<br />
+        i. A summary of total issue count and issue breakdown will be in the job log.<br />
+        ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
   
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" />
-	      <figcaption>Fig 4: A screenshot of the GitLab pipeline running an accessibility scan.</figcaption>
+	      <figcaption>Fig 1: A screenshot of the GitLab pipeline running an accessibility scan.</figcaption>
     </figure><br />
