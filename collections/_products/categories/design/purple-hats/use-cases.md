@@ -27,7 +27,7 @@ A product owner is concerned about the state of their websites’ accessibility 
 - This report can be used to relay information about the website's accessibility to stakeholders and aid in decisions around accessibility practices
 - Based on the team's resourcing, the report can also be used to inform/guide the accessibility roadmap
 
-### Continuously scanning for wewbsite accessiblity
+### Continuously scanning for website accessiblity
 
 A website is currently undergoing a sprint where accessibility fixes have been made, and a DevOps engineer would like to ensure that these fixes have not disrupted any other part of the code base.
 
@@ -39,19 +39,38 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 
 1. Create a SHIP GitLab Testing Pipeline under your Project.
 2. Build and push the Docker container.
-<br>a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.
-<br>b. Build and push the image to your GitLab’s project’s container registry.
-   
-<figure style="text-align: center">
-      <img src="/assets/img/purple-hats-fig-2.png" width="70%" height="70%" />
-	      <figcaption>Fig 2: A screenshot of the Gitlab Editor.</figcaption>
-    </figure>
-<br>3. Configure the pipeline on GitLab.
-<br />&emsp;&nbsp;a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
-<br />&emsp;&nbsp;b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
-<br />&emsp;&emsp;&ensp;i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.
-<br />&emsp;&emsp;&ensp;ii. Replace <some registry> with the URL to docker image.
-<br />&emsp;&emsp;&ensp;iii. Edit the accessibility scan parameters with the type of scan you want to run:
+    a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.
+    b. Build and push the image to your GitLab’s project’s container registry.
+    
+    ```bash
+    # Checkout the Purple hats repository
+    git clone https://github.com/GovTechSG/purple-hats/git
+    
+    # Navigate to Purple-hats
+    cd purple-hats
+    
+    # Build the image locally
+    docker buildx build --platform linux/amd64 -t purple-hats
+    
+    # Login to your container registry with you username and personal access token
+    # You may generate personal access tokens with read registry and write registry permissions at
+    # https://sgts.gitlab-dedicated.com/profile/personal_access_tokens
+    
+    docker login registry.sgts.gitlab-dedicated.com
+    
+    # Tag your image ready for SHIP GitLab
+    docker tag purple-hats:latest registry.sgts.gitlab-dedicated.com/<GitLab username>/<project name>
+    
+    # Push to the GitLab container registry
+    docker push registry.sgts.gitlab-dedicated.com/<GitLab username>/<project name>
+    ```  
+
+3. Configure the pipeline on GitLab.
+    a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
+    b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
+        i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.
+        ii. Replace <some registry> with the URL to docker image.
+        iii. Edit the accessibility scan parameters with the type of scan you want to run:
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-3.png" width="70%" height="70%" />
 	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
