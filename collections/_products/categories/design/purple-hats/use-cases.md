@@ -39,7 +39,7 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 
 1. Create a SHIP GitLab Testing Pipeline under your Project.
 2. Build and push the Docker container.
-    a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.
+    a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.<br />
     b. Build and push the image to your GitLab’s project’s container registry.
     
     ```bash
@@ -66,11 +66,21 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
     ```  
 
 3. Configure the pipeline on GitLab.
-    a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor.
-    b. Copy the contents of gitlab-pipeline-template.yml and configure the following:
-        i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.
-        ii. Replace <some registry> with the URL to docker image.
-        iii. Edit the accessibility scan parameters with the type of scan you want to run:
+    a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor. <br />
+    b. Copy the contents of gitlab-pipeline-template.yml and configure the following:<br />
+        i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.<br />
+        ii. Replace <some registry> with the URL to docker image.<br />
+        iii. Edit the accessibility scan parameters with the type of scan you want to run:<br />
+
+            ```bash
+            # URL of the website or sitemap
+            A11Y_SCAN_URL: "https://example.com"
+
+            # Set the scan type [choices: "sitemap:", "website"]
+            A11Y_SCAN_TYPE: "website"
+
+            # Set the maximum number of pages to scan [default: 100]
+            A11Y_SCAN_MAX
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-3.png" width="70%" height="70%" />
 	      <figcaption>Fig 3: Scanning with the Gitlab Editor.</figcaption>
