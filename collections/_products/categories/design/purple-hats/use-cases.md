@@ -42,54 +42,54 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
     a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.<br />
     b. Build and push the image to your GitLab’s project’s container registry.
     
-    ```bash
-    # Checkout the Purple hats repository
-    git clone https://github.com/GovTechSG/purple-hats/git
+```bash
+# Checkout the Purple hats repository
+git clone https://github.com/GovTechSG/purple-hats/git
     
-    # Navigate to Purple-hats
-    cd purple-hats
+# Navigate to Purple-hats
+cd purple-hats
     
-    # Build the image locally
-    docker buildx build --platform linux/amd64 -t purple-hats
+# Build the image locally
+docker buildx build --platform linux/amd64 -t purple-hats
     
-    # Login to your container registry with you username and personal access token
-    # You may generate personal access tokens with read registry and write registry permissions at
-    # https://sgts.gitlab-dedicated.com/profile/personal_access_tokens
+# Login to your container registry with you username and personal access token
+# You may generate personal access tokens with read registry and write registry permissions at
+# https://sgts.gitlab-dedicated.com/profile/personal_access_tokens
     
-    docker login registry.sgts.gitlab-dedicated.com
+docker login registry.sgts.gitlab-dedicated.com
     
-    # Tag your image ready for SHIP GitLab
-    docker tag purple-hats:latest registry.sgts.gitlab-dedicated.com/<GitLab username>/<project name>
+# Tag your image ready for SHIP GitLab
+docker tag purple-hats:latest registry.sgts.gitlab-dedicated.com/<GitLab username>/<project name>
     
-    # Push to the GitLab container registry
-    docker push registry.sgts.gitlab-dedicated.com/<GitLab username>/<project name>
-    ```  
+# Push to the GitLab container registry
+docker push registry.sgts.gitlab-dedicated.com/<GitLab username>/<project name>
+```  
 
-3. Configure the pipeline on GitLab.
+3. Configure the pipeline on GitLab.<br />
     a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor. <br />
     b. Copy the contents of gitlab-pipeline-template.yml and configure the following:<br />
-            i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.<br />
-            ii. Replace <some registry> with the URL to docker image.<br />
-            iii. Edit the accessibility scan parameters with the type of scan you want to run:<br />
+    &nbsp;&nbsp;&nbsp;i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.<br />
+    &nbsp;&nbsp;&nbsp;ii. Replace <some registry> with the URL to docker image.<br />
+    &nbsp;&nbsp;&nbsp;iii. Edit the accessibility scan parameters with the type of scan you want to run:<br />
 
-    ```bash
-    # URL of the website or sitemap
-    A11Y_SCAN_URL: "https://example.com"
+```bash
+# URL of the website or sitemap
+A11Y_SCAN_URL: "https://example.com"
 
-    # Set the scan type [choices: "sitemap:", "website"]
-    A11Y_SCAN_TYPE: "website"
+# Set the scan type [choices: "sitemap:", "website"]
+A11Y_SCAN_TYPE: "website"
 
-    # Set the maximum number of pages to scan [default: 100]
-    A11Y_SCAN_MAX_NUM_PAGES: 100
+# Set the maximum number of pages to scan [default: 100]
+A11Y_SCAN_MAX_NUM_PAGES: 100
   
-    # Zip filename of the artifact
-    A11Y_SCAN_ARTIFACT_NAME: "ally-scan-results.zip"
-    ```
+# Zip filename of the artifact
+A11Y_SCAN_ARTIFACT_NAME: "ally-scan-results.zip"
+```
   
-            iv. Commit the changes to GitLab.<br />
+    &nbsp;&nbsp;&nbsp;iv. Commit the changes to GitLab.<br />
     c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:<br />
-            i. A summary of total issue count and issue breakdown will be in the job log.<br />
-            ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
+    &nbsp;&nbsp;&nbsp;i. A summary of total issue count and issue breakdown will be in the job log.<br />
+    &nbsp;&nbsp;&nbsp;ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
   
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" />
