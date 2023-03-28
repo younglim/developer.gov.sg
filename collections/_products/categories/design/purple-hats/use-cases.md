@@ -72,19 +72,19 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
             ii. Replace <some registry> with the URL to docker image.<br />
             iii. Edit the accessibility scan parameters with the type of scan you want to run:<br />
 
-            ```bash
-            # URL of the website or sitemap
-            A11Y_SCAN_URL: "https://example.com"
+    ```bash
+    # URL of the website or sitemap
+    A11Y_SCAN_URL: "https://example.com"
 
-            # Set the scan type [choices: "sitemap:", "website"]
-            A11Y_SCAN_TYPE: "website"
+    # Set the scan type [choices: "sitemap:", "website"]
+    A11Y_SCAN_TYPE: "website"
 
-            # Set the maximum number of pages to scan [default: 100]
-            A11Y_SCAN_MAX_NUM_PAGES: 100
+    # Set the maximum number of pages to scan [default: 100]
+    A11Y_SCAN_MAX_NUM_PAGES: 100
   
-            # Zip filename of the artifact
-            A11Y_SCAN_ARTIFACT)NAME: "ally-scan-results.zip"
-            ```
+    # Zip filename of the artifact
+    A11Y_SCAN_ARTIFACT_NAME: "ally-scan-results.zip"
+    ```
   
             iv. Commit the changes to GitLab.<br />
     c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:<br />
