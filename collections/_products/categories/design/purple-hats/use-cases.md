@@ -6,7 +6,7 @@ single_level_nav: true
 _data: single-level-nav
 ---
 
-### Enhancing website accesibility for users of screen readers
+### Improving website accesibility for screen reader users
 
 A screen reader user provides feedback that they are not able to understand and navigate across the different website pages because all the navigational buttons read out as "Buttons".
 
@@ -17,7 +17,7 @@ A screen reader user provides feedback that they are not able to understand and 
 - If the affected code is part of a component, fixing it at the component level may improve the accessibility across all other pages that uses the component
 - The other accessibility issues in the report can also be used to plan the team’s accessibility roadmap.
 
-### Improving website accessibility through the Purple HATS report
+### Prioritising accessibility improvements
 
 A product owner is concerned about the state of their websites’ accessibility and looking to start improving accessibility.
 
@@ -27,7 +27,7 @@ A product owner is concerned about the state of their websites’ accessibility 
 - This report can be used to relay information about the website's accessibility to stakeholders and aid in decisions around accessibility practices
 - Based on the team's resourcing, the report can also be used to inform/guide the accessibility roadmap
 
-### Checking website accessiblity fixes without causing disruption
+### Continuously scanning for wewbsite accessiblity
 
 A website is currently undergoing a sprint where accessibility fixes have been made, and a DevOps engineer would like to ensure that these fixes have not disrupted any other part of the code base.
 
