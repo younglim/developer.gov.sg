@@ -38,7 +38,7 @@ Agencies can run Purple HATS on any CI/CD tool which supports Docker-based runne
 The steps below will show you how to implement Purple HATS in the CI / CD pipeline:
 
 1. Create a SHIP GitLab Testing Pipeline under your Project.
-2. Build and push the Docker container.
+2. Build and push the Docker container.<br />
     a. Purple HATS can be installed in a container environment using the included Docker template at Dockerfile.<br />
     b. Build and push the image to your GitLab’s project’s container registry.
     
@@ -68,9 +68,9 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
 3. Configure the pipeline on GitLab.
     a. Create .gitlab-ci.yml in a test pipeline in the GitLab Editor. <br />
     b. Copy the contents of gitlab-pipeline-template.yml and configure the following:<br />
-        i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.<br />
-        ii. Replace <some registry> with the URL to docker image.<br />
-        iii. Edit the accessibility scan parameters with the type of scan you want to run:<br />
+            i. Set any tags required to identify the GitLab runner you wish to run your pipeline, e.g. ship_docker.<br />
+            ii. Replace <some registry> with the URL to docker image.<br />
+            iii. Edit the accessibility scan parameters with the type of scan you want to run:<br />
 
             ```bash
             # URL of the website or sitemap
@@ -85,10 +85,11 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
             # Zip filename of the artifact
             A11Y_SCAN_ARTIFACT)NAME: "ally-scan-results.zip"
             ```
-        iv. Commit the changes to GitLab.<br />
+  
+            iv. Commit the changes to GitLab.<br />
     c. Check to see if the pipeline starts by navigating to your project > CI/CD > Jobs. You will then see the job complete, and the following:<br />
-        i. A summary of total issue count and issue breakdown will be in the job log.<br />
-        ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
+            i. A summary of total issue count and issue breakdown will be in the job log.<br />
+            ii. A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
   
   <figure style="text-align: center">
       <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" />
