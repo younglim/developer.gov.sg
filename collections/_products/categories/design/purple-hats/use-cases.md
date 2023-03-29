@@ -90,6 +90,6 @@ The steps below will show you how to implement Purple HATS in the CI / CD pipeli
     &nbsp;&nbsp;&nbsp;&nbsp;ii. &nbsp;A generated Purple HATS report can be downloaded at “Job artefacts” panel on the right panel as shown in the screenshot below.
     
   <figure style="text-align: center">
-      <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" />
+      <img src="/assets/img/purple-hats-fig-4.png" width="70%" height="70%" alt="Fig 1: A screenshot of the GitLab pipeline running an accessibility scan."/>
 	      <figcaption>Fig 1: A screenshot of the GitLab pipeline running an accessibility scan.</figcaption>
     </figure>
