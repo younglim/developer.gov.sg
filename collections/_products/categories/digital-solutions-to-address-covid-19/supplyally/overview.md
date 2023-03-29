@@ -4,7 +4,7 @@ layout: layout-page-sidenav
 category: Digital Solutions to Address COVID-19
 redirect_from:
     - /products/categories/digital-solutions-to-address-covid-19/supplyally/
-    - /products/categories/digital-solutions-to-address-covid-19/supplyally/.html
+    - /products/categories/digital-solutions-to-address-covid-19/supplyally.html
     - /technologies/digital-solutions-to-address-covid-19/supplyally/
     - /technologies/digital-solutions-to-address-covid-19/supplyally.html
 _data: single-level-nav
@@ -32,7 +32,7 @@ SupplyAlly will continue to be used in partnership with charities for the alloca
 
 ### How It Works
 
-By adopting serverless cloud technologies on the [Government on Commercial Cloud (GCC)](/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/ framework){:target="_blank"}, SupplyAlly is able to  spin up and run different distribution campaigns simultaneously at an effective cost mode. 
+By adopting serverless cloud technologies on the [Government on Commercial Cloud (GCC)](/products/categories/infrastructure-and-hosting/government-on-commercial-cloud/){:target="_blank"}, SupplyAlly is able to  spin up and run different distribution campaigns simultaneously at an effective cost mode. 
 
 SupplyAlly can provide a mobile app or integrate with other platforms, such as vending machines, to facilitate the distribution.
 
