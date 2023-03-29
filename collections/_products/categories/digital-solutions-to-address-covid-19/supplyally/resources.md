@@ -9,7 +9,7 @@ _data: single-level-nav
 ### Multimedia
 
 - [SupplyAlly website](https://www.supplyally.gov.sg){:target="_blank"}
-- Blog: [SupplyAlly — A journey down memory lane](https://medium.com/singapore-gds/supplyally-a-journey-down-memory-lane-13699c7da96e){:target="_blank"}
+- [SupplyAlly — A journey down memory lane](https://medium.com/singapore-gds/supplyally-a-journey-down-memory-lane-13699c7da96e){:target="_blank"}
 
 ### Media Coverage
 
